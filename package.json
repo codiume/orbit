@@ -1,7 +1,7 @@
 {
   "name": "astro-seo-schema",
   "description": "Easily insert valid Schema.org JSON-LD in your Astro apps.",
-  "version": "0.0.1-beta",
+  "version": "0.0.2-beta",
   "scripts": {
     "astro:dev": "astro dev",
     "astro:build": "astro build",
@@ -18,14 +18,7 @@
     "type": "git",
     "url": "https://github.com/codiume/astro-seo-schema.git"
   },
-  "keywords": [
-    "astro",
-    "astro-integration",
-    "astro-component",
-    "astro-component-seo",
-    "meta",
-    "seo"
-  ],
+  "keywords": [],
   "bugs": "https://github.com/codiume/astro-seo-schema/issues",
   "homepage": "https://github.com/codiume/astro-seo-schema",
   "files": [
