@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    // Enable top-level await, and other modern ESM features.
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "baseUrl": "src",
+    "lib": ["ES2021"]
+  },
+  "include": ["src/**/*"]
+}
