@@ -62,13 +62,20 @@ import { Schema } from "astro-seo-schema"
 </html>
 ```
 
-## Change log
+## Looking for a simpler approach ?
 
-Please see the [changelog](CHANGELOG.md) for more information on what has changed recently.
+If you are not into `schema.org` and want a simpler approach,
+you might want to check another alternative [astro-seo-meta][astro-seo-meta].
+
+`astro-seo-meta` helps you to add tags that are relevant for search engine optimization (SEO) to your astro pages.
+
+## Changelog
+
+Please see the [Changelog](CHANGELOG.md) for more information on what has changed recently.
 
 ## Contributing
 
-Please see [contributing.md](CONTRIBUTING.md) for details.
+Please see [Contributing.md](CONTRIBUTING.md) for details.
 
 ## Security
 
@@ -81,19 +88,20 @@ If you discover any security related issues, please email author instead of usin
   
 ## License
 
-license. Please see the [license file](LICENSE) for more information.
+Please see the [LICENSE](LICENSE) for more information.
 
+<!-- Links -->
 [npm]: https://npmjs.com/package/astro-seo-schema
+[astro-seo-meta]: https://github.com/codiume/astro-seo-meta
+[react-schemaorg]: https://www.npmjs.com/package/react-schemaorg
+[tony-sull]: https://github.com/tony-sull/rfcs/blob/main/proposals/025-seo-components.md
 
 <!-- Readme Badges -->
 [version-badge]: https://img.shields.io/npm/v/astro-seo-schema.svg
 [downloads-badge]: https://img.shields.io/npm/dt/astro-seo-schema
-[size-badge]: https://img.shields.io/bundlephobia/minzip/astro-seo-schema
-[github-actions]: https://github.com/codiume/astro-seo-schema/actions
-[github-actions-badge]: https://github.com/codiume/astro-seo-schema/actions/workflows/node.js.yml/badge.svg
+[github-actions]: https://github.com/codiume/astro-seo-schema/actions/workflows/node.js.yml
+[github-actions-badge]: https://github.com/codiume/astro-seo-schema/actions/workflows/node.js.yml/badge.svg?branch=main
 [typescript]: https://www.typescriptlang.org/dt/search?search=astro-seo-schema
 [typescript-badge]: https://img.shields.io/npm/types/astro-seo-schema
 [makepr]: https://makeapullrequest.com
 [makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square?style=flat
-[tony-sull]: https://github.com/tony-sull/rfcs/blob/main/proposals/025-seo-components.md
-[react-schemaorg]: https://www.npmjs.com/package/react-schemaorg
