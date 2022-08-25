@@ -1,6 +1,4 @@
-# 🚀 Astro JSON-LD Schema (WIP)
-
-> This package is still (WIP) not version is available
+# 🚀 Astro JSON-LD Schema
 
 [![version][version-badge]][npm]
 [![downloads][downloads-badge]][npm]
@@ -8,11 +6,15 @@
 [![typescript][typescript-badge]][typescript]
 [![makepr][makepr-badge]][makepr]
 
+Easily insert valid Schema.org JSON-LD in your Astro apps.
+
 The `<Schema>` component is inspired by [`react-schemaorg`](https://www.npmjs.com/package/react-schemaorg) and powered by the [`schema-dts`](https://www.npmjs.com/package/schema-dts) package for full TypeScript definitions.
 
-The component (1) adds type checking to validate user-provided schema JSON, (2) escapes the JSON data, and (3) outputs a `<script type="type="application/ld+json">` with the escaped schema.
+This `<Schema>` component:
 
-Users can provide one or more schema object. If an array of related objects is provided, they will be included in a graph schema with the `@graph` syntax.
+1. Adds type checking to validate user-provided schema JSON
+2. Escapes the JSON data.
+3. Outputs a `<script type="type="application/ld+json">` with the escaped schema.
 
 ## 📦 Installation
 
@@ -30,44 +32,28 @@ yarn add astro-seo-schema
 
 ## 🥑 Usage
 
-To add a base set of SEO tags in any of your Astro pages, import Astro `Seo` and then use the component inside the `<head>` section of your HTML:
+To insert a simple JSON-LD snippet in any of your Astro pages, import `Schema` component and then use the component inside the `<head>` section of your HTML:
 
 ```jsx index.astro
 ---
 import { Schema } from "astro-seo-schema"
-import { BlogPosting } from 'schema-dts';
-
-/** metadata defined by user with full TypeScript validation from `schema-dts` */
-const schema: BlogPosting = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://astro.build/blog/astro-1/"
-  },
-  "headline": "We are thrilled to announce Astro v1.0: a web framework for building fast, content-focused websites.",
-  "description": "Astro 1.0 is out now! Astro is a web framework for building fast, content-focused websites. Performance powered by Astro next-gen island architecture. Learn more about Astro 1.0 release, our new website, and what people are saying about Astro.",
-  "image": "https://astro.build/_image/assets/blog/astro-1-release-update/social_1200x600.jpg",  
-  "author": {
-    "@type": "Person",
-    "name": "Fred Schott",
-    "url": "https://twitter.com/FredKSchott"
-  },  
-  "publisher": {
-    "@type": "Organization",
-    "name": "",
-    "logo": {
-      "@type": "ImageObject",
-      "url": ""
-    }
-  },
-  "datePublished": "2022-08-09"
-}
 ---
 
 <html lang="en">
     <head>
-        <Schema json={schema} />
+        <Schema
+            item={{
+                "@context": "https://schema.org",
+                "@type": "Person",
+                name: "Grace Brewster",
+                alternateName: "Grace Brewster Murray Hopper",
+                alumniOf: {
+                    "@type": "CollegeOrUniversity",
+                    name: ["Yale University", "Vassar College"],
+                },
+                knowsAbout: ["Compilers", "Computer Science"],
+            }}
+        />
     </head>
 
     <body>
@@ -90,8 +76,8 @@ If you discover any security related issues, please email author instead of usin
 
 ## Acknowledgements
 
-- [https://github.com/tony-sull/rfcs/blob/main/proposals/025-seo-components.md]
-- [https://www.npmjs.com/package/react-schemaorg]
+- [React Schemaorg][react-schemaorg]
+- [Tony Sull RFC][tony-sull]
   
 ## License
 
@@ -109,3 +95,5 @@ license. Please see the [license file](LICENSE) for more information.
 [typescript-badge]: https://img.shields.io/npm/types/astro-seo-schema
 [makepr]: https://makeapullrequest.com
 [makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square?style=flat
+[tony-sull]: https://github.com/tony-sull/rfcs/blob/main/proposals/025-seo-components.md
+[react-schemaorg]: https://www.npmjs.com/package/react-schemaorg

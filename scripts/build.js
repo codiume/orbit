@@ -7,7 +7,7 @@ import { deleteAsync } from "del";
   await clean("dist");
   await build({
     bundle: false,
-    entryPoints: ["src/index.ts"],
+    entryPoints: ["src/index.ts","src/jsonld.ts"],
     format: "esm",
     minify: false,
     outdir: "dist",

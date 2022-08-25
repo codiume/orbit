@@ -1,9 +1,13 @@
 ---
+import { JsonLd } from "../jsonld";
+import type { Graph, Thing, WithContext } from "schema-dts";
+
 export type Props = {
-    space?: string;
+    item: Graph | WithContext<Thing>;
+    space?: string | number;
 };
 
-const { space: _space } = Astro.props as Props;
+const { item, space } = Astro.props;
 ---
 
-<script type="application/ld+json"></script>
+<script type="application/ld+json" set:html={JsonLd(item, space)}></script>
