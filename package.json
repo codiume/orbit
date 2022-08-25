@@ -18,7 +18,14 @@
     "type": "git",
     "url": "https://github.com/codiume/astro-seo-schema.git"
   },
-  "keywords": [],
+  "keywords": [
+    "astro",
+    "astro-integration",
+    "astro-component",
+    "json-ld",
+    "schema-org",
+    "semantic-web"
+  ],
   "bugs": "https://github.com/codiume/astro-seo-schema/issues",
   "homepage": "https://github.com/codiume/astro-seo-schema",
   "files": [
