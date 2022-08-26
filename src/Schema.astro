@@ -1,6 +1,7 @@
 ---
-import { JsonLd } from "../jsonld";
 import type { Graph, Thing, WithContext } from "schema-dts";
+
+import { JsonLd } from "./jsonld";
 
 export type Props = {
     item: Graph | WithContext<Thing>;

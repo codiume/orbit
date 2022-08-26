@@ -6,7 +6,8 @@
     "astro:dev": "astro dev",
     "astro:build": "astro build",
     "astro:check": "astro check",
-    "build": "node ./scripts/build.js && npm run typecheck:emit",
+    "build": "node ./scripts/build.js",
+    "postbuild": "npm run typecheck:emit",
     "typecheck": "tsc --noEmit",
     "typecheck:emit": "tsc --declaration --emitDeclarationOnly --outDir dist"
   },
@@ -39,7 +40,7 @@
     "astro": "^1.0.0",
     "del": "^7.0.0",
     "esbuild": "^0.14.54",
-    "esbuild-plugin-copy": "^1.3.0"
+    "esbuild-plugin-clean": "^0.9.0"
   },
   "dependencies": {
     "schema-dts": "^1.1.0"
