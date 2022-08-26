@@ -1,1 +1,1 @@
-export { default as Schema } from "./components/Schema.astro";
+export { default as Schema } from "./Schema.astro";
