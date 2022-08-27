@@ -19,7 +19,8 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/codiume/astro-seo-schema.git"
+    "url": "https://github.com/codiume/orbit.git",
+    "directory": "packages/astro-seo-schema"
   },
   "keywords": [
     "astro",
@@ -29,8 +30,8 @@
     "schema-org",
     "semantic-web"
   ],
-  "bugs": "https://github.com/codiume/astro-seo-schema/issues",
-  "homepage": "https://github.com/codiume/astro-seo-schema",
+  "bugs": "https://github.com/codiume/orbit/issues",
+  "homepage": "https://github.com/codiume/orbit",
   "files": [
     "dist"
   ],

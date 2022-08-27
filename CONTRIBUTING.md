@@ -4,7 +4,7 @@ I would love your help to improve this project! Here are a few ways to contribut
 
 ## 🐛 Issues
 
-If you come across any bugs or something that doesn't seem right, please [open an issue](https://github.com/codiume/astro-seo-schema/issues). Also, if you have an idea for the project, open an issue to start the discussion.
+If you come across any bugs or something that doesn't seem right, please [open an issue](https://github.com/codiume/orbit/issues). Also, if you have an idea for the project, open an issue to start the discussion.
 
 When possible, please include a link to a `git` repository or a CodeSandbox which illustrates the problem you're facing. This is especially important when you find a bug.
 

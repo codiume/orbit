@@ -11,9 +11,10 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 yarn.lock
-
+*.log
 
 # environment variables
+*.env
 .env
 .env.production
 
@@ -21,3 +22,8 @@ yarn.lock
 .DS_Store
 
 .turbo/
+.vercel
+*.tsbuildinfo
+
+# exclude IntelliJ/WebStorm stuff
+.idea
