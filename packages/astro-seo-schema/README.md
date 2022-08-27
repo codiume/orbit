@@ -73,23 +73,11 @@ you might want to check another alternative [astro-seo-meta][astro-seo-meta].
 
 Please see the [Changelog](CHANGELOG.md) for more information on what has changed recently.
 
-## Contributing
-
-Please see [Contributing.md](CONTRIBUTING.md) for details.
-
-## Security
-
-If you discover any security related issues, please email author instead of using the issue tracker.
-
 ## Acknowledgements
 
 - [React Schemaorg][react-schemaorg]
 - [Tony Sull RFC][tony-sull]
   
-## License
-
-Please see the [LICENSE](LICENSE) for more information.
-
 <!-- Links -->
 [npm]: https://npmjs.com/package/astro-seo-schema
 [astro-seo-meta]: https://github.com/codiume/astro-seo-meta
