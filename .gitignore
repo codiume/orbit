@@ -1,6 +1,6 @@
 # build output
-dist/
-build/
+**/dist/**/*
+**/build/**/*
 
 # dependencies
 node_modules/
@@ -19,3 +19,5 @@ yarn.lock
 
 # macOS-specific files
 .DS_Store
+
+.turbo/

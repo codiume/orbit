@@ -1,14 +1,16 @@
 ---
-import { Schema } from "..";
+import { Schema } from "astro-seo-schema";
 ---
 
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-        <Schema
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+		
+		<Schema
             item={{
                 "@context": "https://schema.org",
                 "@type": "Person",
@@ -21,9 +23,8 @@ import { Schema } from "..";
                 knowsAbout: ["Compilers", "Computer Science"],
             }}
         />
-    </head>
-
-    <body>
-        <h1>Hello from astro</h1>
-    </body>
+	</head>
+	<body>
+		<h1>Astro</h1>
+	</body>
 </html>

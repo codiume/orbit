@@ -1,52 +1,25 @@
 {
-  "name": "astro-seo-schema",
-  "description": "Easily insert valid Schema.org JSON-LD in your Astro apps.",
-  "version": "0.0.2",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "astro:dev": "astro dev",
-    "astro:build": "astro build",
-    "astro:check": "astro check",
-    "build": "node ./scripts/build.js",
-    "postbuild": "npm run typecheck:emit",
-    "typecheck": "tsc --noEmit",
-    "typecheck:emit": "tsc --declaration --emitDeclarationOnly --outDir dist",
-    "prerelease": "npm run build",
-    "release": "changeset publish"
-  },
-  "type": "module",
-  "types": "dist/index.d.ts",
-  "author": "codiume",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/codiume/astro-seo-schema.git"
-  },
-  "keywords": [
-    "astro",
-    "astro-integration",
-    "astro-component",
-    "json-ld",
-    "schema-org",
-    "semantic-web"
-  ],
-  "bugs": "https://github.com/codiume/astro-seo-schema/issues",
-  "homepage": "https://github.com/codiume/astro-seo-schema",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index.mjs",
-  "exports": {
-    ".": "./dist/index.mjs"
+    "build": "turbo run build",
+    "dev": "turbo run dev --no-cache --parallel --continue",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build && changeset publish"
   },
   "devDependencies": {
-    "astro": "^1.0.0",
+    "@changesets/changelog-github": "^0.4.6",
+    "@changesets/cli": "^2.24.3",
+    "astro": "^1.1.0-next.0",
     "del": "^7.0.0",
     "esbuild": "^0.14.54",
     "esbuild-plugin-clean": "^0.9.0",
-    "@changesets/changelog-github": "^0.4.6",
-    "@changesets/cli": "^2.24.3"
-  },
-  "dependencies": {
-    "schema-dts": "^1.1.0"
+    "turbo": "latest"
   }
 }
