@@ -1,6 +1,6 @@
 # build output
-dist/
-build/
+**/dist/**/*
+**/build/**/*
 
 # dependencies
 node_modules/
@@ -11,11 +11,19 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 yarn.lock
-
+*.log
 
 # environment variables
+*.env
 .env
 .env.production
 
 # macOS-specific files
 .DS_Store
+
+.turbo/
+.vercel
+*.tsbuildinfo
+
+# exclude IntelliJ/WebStorm stuff
+.idea

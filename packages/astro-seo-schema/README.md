@@ -99,8 +99,8 @@ Please see the [LICENSE](LICENSE) for more information.
 <!-- Readme Badges -->
 [version-badge]: https://img.shields.io/npm/v/astro-seo-schema.svg
 [downloads-badge]: https://img.shields.io/npm/dt/astro-seo-schema
-[github-actions]: https://github.com/codiume/astro-seo-schema/actions/workflows/node.js.yml
-[github-actions-badge]: https://github.com/codiume/astro-seo-schema/actions/workflows/node.js.yml/badge.svg?branch=main
+[github-actions]: https://github.com/codiume/orbit/actions/workflows/node.js.yml
+[github-actions-badge]: https://github.com/codiume/orbit/actions/workflows/node.js.yml/badge.svg?branch=main
 [typescript]: https://www.typescriptlang.org/dt/search?search=astro-seo-schema
 [typescript-badge]: https://img.shields.io/npm/types/astro-seo-schema
 [makepr]: https://makeapullrequest.com
