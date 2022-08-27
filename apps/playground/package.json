@@ -1,5 +1,5 @@
 {
-  "name": "@example/minimal",
+  "name": "@astro/playground",
   "version": "0.0.1",
   "private": true,
   "scripts": {
