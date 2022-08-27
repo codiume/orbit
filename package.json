@@ -9,7 +9,9 @@
     "build": "node ./scripts/build.js",
     "postbuild": "npm run typecheck:emit",
     "typecheck": "tsc --noEmit",
-    "typecheck:emit": "tsc --declaration --emitDeclarationOnly --outDir dist"
+    "typecheck:emit": "tsc --declaration --emitDeclarationOnly --outDir dist",
+    "prerelease": "npm run build",
+    "release": "changeset publish"
   },
   "type": "module",
   "types": "dist/index.d.ts",
@@ -40,7 +42,9 @@
     "astro": "^1.0.0",
     "del": "^7.0.0",
     "esbuild": "^0.14.54",
-    "esbuild-plugin-clean": "^0.9.0"
+    "esbuild-plugin-clean": "^0.9.0",
+    "@changesets/changelog-github": "^0.4.6",
+    "@changesets/cli": "^2.24.3"
   },
   "dependencies": {
     "schema-dts": "^1.1.0"
