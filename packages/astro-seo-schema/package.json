@@ -3,15 +3,10 @@
   "description": "Easily insert valid Schema.org JSON-LD in your Astro apps.",
   "version": "0.0.2",
   "scripts": {
-    "astro:dev": "astro dev",
-    "astro:build": "astro build",
-    "astro:check": "astro check",
     "build": "node ./scripts/build.js",
     "postbuild": "npm run typecheck:emit",
     "typecheck": "tsc --noEmit",
-    "typecheck:emit": "tsc --declaration --emitDeclarationOnly --outDir dist",
-    "prerelease": "npm run build",
-    "release": "changeset publish"
+    "typecheck:emit": "tsc --declaration --emitDeclarationOnly --outDir dist"
   },
   "type": "module",
   "types": "dist/index.d.ts",
