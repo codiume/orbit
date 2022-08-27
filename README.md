@@ -4,7 +4,7 @@
   <img src="assets/banner.png" alt="Astro logo">
   <br/><br/>
   Orbit is a collection of useful components for the
-  <a href="https://astro.build">Astro</a> ecosystem. &mdash;
+  <a href="https://astro.build">Astro</a> ecosystem.
   <br/><br/>
 </p>
 
@@ -12,7 +12,7 @@
 
 | Package                                                 | Release Notes                                                                                                                     |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [astro-seo-schema](packages/astro-seo-schema)                                 | [![astro version](https://img.shields.io/npm/v/astro-seo-schema.svg?label=%20)](packages/astro-seo-schema/CHANGELOG.md)                                 |
+| [astro-seo-schema](packages/astro-seo-schema)                                 | [![version](https://img.shields.io/npm/v/astro-seo-schema.svg)](packages/astro-seo-schema/CHANGELOG.md)                                 |
 
 ## Support
 
