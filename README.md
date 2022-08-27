@@ -1,6 +1,22 @@
 # 🚀 Orbit
 
-Orbit is a collection of useful components for the Astro ecosystem.
+<p align="center">
+  <img src="assets/banner.png" alt="Astro logo">
+  <br/><br/>
+  Orbit is a collection of useful components for the
+  <a href="https://astro.build">Astro</a> ecosystem. &mdash;
+  <br/><br/>
+</p>
+
+## Directory
+
+| Package                                                 | Release Notes                                                                                                                     |
+| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| [astro-seo-schema](packages/astro-seo-schema)                                 | [![astro version](https://img.shields.io/npm/v/astro-seo-schema.svg?label=%20)](packages/astro-seo-schema/CHANGELOG.md)                                 |
+
+## Support
+
+Having trouble? Get help in the official [Astro Discord](https://astro.build/chat).
 
 ## Contributing
 
