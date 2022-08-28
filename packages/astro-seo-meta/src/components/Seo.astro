@@ -1,0 +1,54 @@
+---
+import Meta, { ColorScheme } from "./Meta.astro";
+import Facebook, { Props as FacebookProps } from "./Facebook.astro";
+import Twitter, { Props as TwitterProps } from "./Twitter.astro";
+
+export type Props = {
+    title?: string;
+    description?: string;
+    keywords?: string[];
+    icon?: string;
+    themeColor?: string;
+    colorScheme?: ColorScheme;
+    facebook?: Pick<FacebookProps, "image" | "type" | "url">;
+    twitter?: Pick<TwitterProps, "image" | "card" | "site">;
+};
+
+const {
+    title,
+    description,
+    keywords,
+    icon,
+    themeColor,
+    colorScheme,
+    facebook,
+    twitter,
+} = Astro.props as Props;
+---
+
+<>
+    <Meta
+        title={title}
+        description={description}
+        keywords={keywords}
+        icon={icon}
+        themeColor={themeColor}
+        colorScheme={colorScheme}
+    />
+
+    <Facebook
+        title={title}
+        description={description}
+        image={facebook?.image}
+        url={facebook?.url}
+        type={facebook?.type}
+    />
+
+    <Twitter
+        title={title}
+        description={description}
+        image={twitter?.image}
+        site={twitter?.site}
+        card={twitter?.card}
+    />
+</>

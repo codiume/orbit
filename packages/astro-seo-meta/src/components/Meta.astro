@@ -1,0 +1,29 @@
+---
+export type ColorScheme = "normal" | "light" | "dark" | "only light";
+
+export type Props = {
+	title?: string;
+	description?: string;
+	keywords?: string[];
+	icon?: string;
+	themeColor?: string;
+	colorScheme?: ColorScheme;
+};
+
+const { title, description, keywords, icon, themeColor, colorScheme } =
+	Astro.props as Props;
+---
+
+<>
+	{title && <title>{title}</title>}
+
+	{description && <meta name="description" content={description} />}
+
+	{keywords && <meta name="keywords" content={keywords.join(", ")} />}
+
+	{icon && <link rel="icon" href={icon} />}
+
+	{themeColor && <meta name="theme-color" content={themeColor} />}
+
+	{colorScheme && <meta name="color-scheme" content={colorScheme} />}
+</>

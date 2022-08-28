@@ -1,7 +1,7 @@
 {
-  "name": "astro-seo-schema",
-  "description": "Easily insert valid Schema.org JSON-LD in your Astro apps.",
-  "version": "1.0.0",
+  "name": "astro-seo-meta",
+  "description": "Astro seo provides a <Seo> component to update meta tags",
+  "version": "0.0.5",
   "scripts": {
     "build": "node ./scripts/build.js",
     "postbuild": "npm run typecheck:emit",
@@ -15,15 +15,15 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/codiume/orbit.git",
-    "directory": "packages/astro-seo-schema"
+    "directory": "packages/astro-seo-meta"
   },
   "keywords": [
     "astro",
     "astro-integration",
     "astro-component",
-    "json-ld",
-    "schema-org",
-    "semantic-web"
+    "astro-component-seo",
+    "meta",
+    "seo"
   ],
   "bugs": "https://github.com/codiume/orbit/issues",
   "homepage": "https://github.com/codiume/orbit",
@@ -36,8 +36,5 @@
   },
   "peerDependencies": {
     "astro": "^1.0.0"
-  },
-  "dependencies": {
-    "schema-dts": "^1.1.0"
   }
 }
