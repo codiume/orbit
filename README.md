@@ -8,11 +8,15 @@
   <br/><br/>
 </p>
 
+[![github actions][github-actions-badge]][github-actions]
+[![typescript][typescript-badge]][typescript]
+[![makepr][makepr-badge]][makepr]
+
 ## Directory
 
-| Package                                                 | Release Notes                                                                                                                     |
-| ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [astro-seo-schema](packages/astro-seo-schema)                                 | [![version](https://img.shields.io/npm/v/astro-seo-schema.svg)](packages/astro-seo-schema/CHANGELOG.md)                                 |
+| Package                                       | Release Notes                                                                                           |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [astro-seo-schema](packages/astro-seo-schema) | [![version](https://img.shields.io/npm/v/astro-seo-schema.svg)](packages/astro-seo-schema/CHANGELOG.md) |
 
 ## Support
 
@@ -29,3 +33,10 @@ If you discover any security related issues, please email author instead of usin
 ## License
 
 Please see the [LICENSE](LICENSE) for more information.
+
+[github-actions]: https://github.com/codiume/orbit/actions/workflows/node.js.yml
+[github-actions-badge]: https://github.com/codiume/orbit/actions/workflows/node.js.yml/badge.svg?branch=main
+[typescript]: https://www.typescriptlang.org/dt/search?search=astro-seo-schema
+[typescript-badge]: https://img.shields.io/npm/types/astro-seo-schema
+[makepr]: https://makeapullrequest.com
+[makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square?style=flat

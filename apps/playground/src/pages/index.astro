@@ -1,5 +1,6 @@
 ---
 import { Schema } from "astro-seo-schema";
+import { Seo } from "astro-seo-meta";
 ---
 
 <html lang="en">
@@ -9,7 +10,26 @@ import { Schema } from "astro-seo-schema";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
-		
+
+        <Seo
+            title="My Astro website"
+            description="My blazing fast astro website"
+            keywords={["website", "blog", "astro"]}
+            icon="/favicon.ico"
+            themeColor="#000000"
+            colorScheme="light"
+            facebook={{
+                image: "/facebook.png",
+                url: "https://astro.build",
+                type: "website",
+            }}
+            twitter={{
+                image: "/twitter.png",
+                site: "@astrodotbuild",
+                card: "summary",
+            }}
+        />
+
 		<Schema
             item={{
                 "@context": "https://schema.org",

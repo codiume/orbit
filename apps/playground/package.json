@@ -13,6 +13,7 @@
     "astro": "^1.1.1"
   },
   "dependencies": {
-    "astro-seo-schema": "*"
+    "astro-seo-schema": "*",
+    "astro-seo-meta": "*"
   }
 }

@@ -1,0 +1,25 @@
+---
+type CardType = "summary" | "summary_large_image" | "app" | "player";
+
+export type Props = {
+    title?: string;
+    description?: string;
+    image?: string;
+    card?: CardType;
+    site?: string;
+};
+
+const { card, site, title, description, image } = Astro.props as Props;
+---
+
+<>
+    {card && <meta name="twitter:card" content={card} />}
+
+    {site && <meta name="twitter:site" content={site} />}
+
+    {title && <meta name="twitter:title" content={title} />}
+
+    {description && <meta name="twitter:description" content={description} />}
+
+    {image && <meta name="twitter:image" content={image} />}
+</>

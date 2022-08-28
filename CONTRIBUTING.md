@@ -14,4 +14,4 @@ Yes, I accept pull requests! You can submit a pull request to fix a bug, impleme
 
 ## Working on your first Pull Request?
 
-You can learn how from this *free* series [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request)
+You can learn how from this _free_ series [How to Contribute to an Open Source Project on GitHub](https://kcd.im/pull-request)
