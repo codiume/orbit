@@ -19,11 +19,11 @@
   },
   "keywords": [
     "astro",
-    "astro-integration",
     "astro-component",
     "json-ld",
     "schema-org",
-    "semantic-web"
+    "semantic-web",
+    "seo"
   ],
   "bugs": "https://github.com/codiume/orbit/issues",
   "homepage": "https://github.com/codiume/orbit",
