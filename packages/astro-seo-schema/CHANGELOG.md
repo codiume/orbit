@@ -1,5 +1,11 @@
 # astro-seo-schema
 
+## 1.0.2
+
+### Patch Changes
+
+- [#13](https://github.com/codiume/orbit/pull/13) [`f58f28c`](https://github.com/codiume/orbit/commit/f58f28cf3d50656e525d22a0e99df0773ac09887) Thanks [@mohammed-elhaouari](https://github.com/mohammed-elhaouari)! - Add seo keyword inorder for package to be listed by astro.build
+
 ## 1.0.1
 
 ### Patch Changes

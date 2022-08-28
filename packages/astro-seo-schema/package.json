@@ -1,7 +1,7 @@
 {
   "name": "astro-seo-schema",
   "description": "Easily insert valid Schema.org JSON-LD in your Astro apps.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "build": "node ./scripts/build.js",
     "postbuild": "npm run typecheck:emit",
