@@ -1,11 +1,11 @@
 ---
-import type { Graph, Thing, WithContext } from "schema-dts";
+import type { Graph, Thing, WithContext } from 'schema-dts';
 
-import { JsonLd } from "./jsonld";
+import { JsonLd } from './jsonld';
 
 export type Props = {
-    item: Graph | WithContext<Thing>;
-    space?: string | number;
+  item: Graph | WithContext<Thing>;
+  space?: string | number;
 };
 
 const { item, space } = Astro.props;

@@ -9,7 +9,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev --no-cache --parallel --continue",
     "clean": "turbo run clean && rm -rf node_modules",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,md,astro}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo run build && changeset publish"
@@ -21,6 +21,7 @@
     "esbuild": "^0.14.54",
     "esbuild-plugin-clean": "^0.9.0",
     "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.3",
     "tiny-glob": "^0.2.9",
     "turbo": "latest"
   }

@@ -16,8 +16,8 @@
 
 | Package                                       | Release Notes                                                                                           |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [astro-seo-meta](packages/astro-seo-meta)     | [![version](https://img.shields.io/npm/v/astro-seo-meta.svg)](packages/astro-seo-meta/CHANGELOG.md)     |
 | [astro-seo-schema](packages/astro-seo-schema) | [![version](https://img.shields.io/npm/v/astro-seo-schema.svg)](packages/astro-seo-schema/CHANGELOG.md) |
-| [astro-seo-meta](packages/astro-seo-meta) | [![version](https://img.shields.io/npm/v/astro-seo-meta.svg)](packages/astro-seo-meta/CHANGELOG.md) |
 
 ## Support
 

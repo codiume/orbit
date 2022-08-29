@@ -1,17 +1,17 @@
 ---
 type ObjectType =
-  | "music.song"
-  | "music.album"
-  | "music.playlist"
-  | "music.radio_station"
-  | "video.movie"
-  | "video.episode"
-  | "video.tv_show"
-  | "video.other"
-  | "article"
-  | "book"
-  | "profile"
-  | "website";
+  | 'music.song'
+  | 'music.album'
+  | 'music.playlist'
+  | 'music.radio_station'
+  | 'video.movie'
+  | 'video.episode'
+  | 'video.tv_show'
+  | 'video.other'
+  | 'article'
+  | 'book'
+  | 'profile'
+  | 'website';
 
 export type Props = {
   url?: string;
@@ -25,13 +25,13 @@ const { url, type, title, description, image } = Astro.props as Props;
 ---
 
 <>
-    {url && <meta property="og:url" content={url} />}
+  {url && <meta property="og:url" content={url} />}
 
-    {type && <meta property="og:type" content={type} />}
+  {type && <meta property="og:type" content={type} />}
 
-    {title && <meta property="og:title" content={title} />}
+  {title && <meta property="og:title" content={title} />}
 
-    {description && <meta property="og:description" content={description} />}
+  {description && <meta property="og:description" content={description} />}
 
-    {image && <meta property="og:image" content={image} />}
+  {image && <meta property="og:image" content={image} />}
 </>
