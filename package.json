@@ -21,6 +21,7 @@
     "commander": "^9.4.0",
     "esbuild": "^0.14.54",
     "esbuild-plugin-clean": "^0.9.0",
+    "ora": "^6.1.2",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.5.3",
     "tiny-glob": "^0.2.9",

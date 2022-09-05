@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
+import { oraPromise } from 'ora';
 import glob from 'tiny-glob';
 
 import { build } from './commands.mjs';
@@ -27,5 +28,8 @@ const findEntryPoints = async (paths) => {
   const entryPoints = await findEntryPoints(src);
 
   // Building files using esbuild
-  await build(entryPoints, outdir);
+  await oraPromise(build(entryPoints, outdir), {
+    text: 'Building entrypoints',
+    successText: 'Completed',
+  });
 })();

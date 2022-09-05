@@ -3,7 +3,7 @@
   "description": "Astro seo provides a <Seo> component to update meta tags",
   "version": "1.0.0",
   "scripts": {
-    "build": "astro-build --src \"src/index.ts\" \"src/components/*.astro\"",
+    "build": "astro-build --src src/index.ts src/components/*.astro",
     "postbuild": "npm run typecheck:emit",
     "typecheck": "tsc --noEmit",
     "typecheck:emit": "tsc --declaration --emitDeclarationOnly --outDir dist"
