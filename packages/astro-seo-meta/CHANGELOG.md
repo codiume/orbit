@@ -1,5 +1,11 @@
 # astro-seo-meta
 
+## 1.0.1
+
+### Patch Changes
+
+- [#20](https://github.com/codiume/orbit/pull/20) [`6ecf523`](https://github.com/codiume/orbit/commit/6ecf5238ce4e65a8b3d421fc9d5eb5aa0e1dfb00) Thanks [@mohammed-elhaouari](https://github.com/mohammed-elhaouari)! - Change build scripts to astro-build
+
 ## 1.0.0
 
 ### Major Changes
