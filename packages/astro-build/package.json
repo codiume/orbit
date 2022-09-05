@@ -1,0 +1,25 @@
+{
+  "name": "astro-build",
+  "description": "Helper scripts to build astro components with ease",
+  "version": "1.0.0",
+  "private": true,
+  "bin": {
+    "astro-build": "./src/index.mjs"
+  },
+  "scripts": {
+    "start": "node ./src/index.mjs"
+  },
+  "author": "codiume",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codiume/orbit.git",
+    "directory": "packages/astro-build"
+  },
+  "bugs": "https://github.com/codiume/orbit/issues",
+  "homepage": "https://github.com/codiume/orbit",
+  "main": "./src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs"
+  }
+}

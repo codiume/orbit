@@ -1,14 +1,11 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.1.1/schema.json",
-  "changelog": [
-    "@changesets/changelog-github",
-    { "repo": "codiume/orbit" }
-  ],
+  "changelog": ["@changesets/changelog-github", { "repo": "codiume/orbit" }],
   "commit": true,
   "fixed": [],
   "linked": [],
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": []
+  "ignore": ["astro-build"]
 }
