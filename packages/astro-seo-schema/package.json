@@ -34,9 +34,6 @@
   "exports": {
     ".": "./dist/index.mjs"
   },
-  "devDependencies": {
-    "astro-build": "*"
-  },
   "peerDependencies": {
     "astro": "^1.0.0"
   },
