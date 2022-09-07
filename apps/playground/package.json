@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "astro-seo-schema": "*",
-    "astro-seo-meta": "*"
+    "astro-seo-meta": "*",
+    "astro-svg-loaders": "*"
   }
 }

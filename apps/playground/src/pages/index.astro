@@ -1,6 +1,20 @@
 ---
 import { Schema } from 'astro-seo-schema';
 import { Seo } from 'astro-seo-meta';
+import {
+  Audio,
+  BallTriangle,
+  Bars,
+  Circles,
+  Grid,
+  Hearts,
+  Oval,
+  Puff,
+  Rings,
+  SpinningCircles,
+  TailSpin,
+  ThreeDots
+} from 'astro-svg-loaders';
 ---
 
 <html lang="en">
@@ -9,6 +23,7 @@ import { Seo } from 'astro-seo-meta';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/main.css" />
     <title>Astro</title>
 
     <Seo
@@ -45,6 +60,25 @@ import { Seo } from 'astro-seo-meta';
     />
   </head>
   <body>
-    <h1>Astro</h1>
+    <section class="main">
+      <h1>Orbit</h1>
+      <p>This is a playground to check all the packages on this repository</p>
+
+      <h1>Loaders</h1>
+      <div class="loaders">
+        <div class="loader"><Audio /></div>
+        <div class="loader"><BallTriangle /></div>
+        <div class="loader"><Bars /></div>
+        <div class="loader"><Circles /></div>
+        <div class="loader"><Grid /></div>
+        <div class="loader"><Hearts /></div>
+        <div class="loader"><Oval /></div>
+        <div class="loader"><Puff /></div>
+        <div class="loader"><Rings /></div>
+        <div class="loader"><SpinningCircles /></div>
+        <div class="loader"><TailSpin /></div>
+        <div class="loader"><ThreeDots /></div>
+      </div>
+    </section>
   </body>
 </html>
