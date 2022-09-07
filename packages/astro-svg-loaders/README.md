@@ -6,7 +6,7 @@
 [![typescript][typescript-badge]][typescript]
 [![makepr][makepr-badge]][makepr]
 
-This [Astro](https://astro.build/) package provides you with a collection of loading animations built with pure SVG by the amazing **@sherb**.
+This [Astro](https://astro.build/) package provides you with a collection of loading animations built with pure SVG by the amazing [@sherb][sam-herbert].
 
 ## 📦 Installation
 
@@ -28,7 +28,7 @@ To add a loading indicator in any of your Astro pages or components, just import
 
 ```jsx index.astro
 ---
-import { Hearts } from "astro-svg-loaders"
+import { SpinningCircles } from "astro-svg-loaders"
 ---
 
 <html lang="en">
