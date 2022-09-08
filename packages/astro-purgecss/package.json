@@ -1,6 +1,6 @@
 {
   "name": "astro-purgecss",
-  "description": "Use Purgecss within Astro",
+  "description": "Remove unused CSS rules from your final Astro bundle",
   "version": "0.0.1",
   "scripts": {
     "build": "astro-build --src src/**/*.ts",
@@ -19,7 +19,10 @@
   },
   "keywords": [
     "astro",
-    "astro-component"
+    "astro-component",
+    "astro-integration",
+    "css",
+    "optimization"
   ],
   "bugs": "https://github.com/codiume/orbit/issues",
   "homepage": "https://github.com/codiume/orbit",

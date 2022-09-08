@@ -6,61 +6,55 @@
 [![typescript][typescript-badge]][typescript]
 [![makepr][makepr-badge]][makepr]
 
-Astro [Purgecss](https://purgecss.com/) package helps you remove unused CSS.
+[Purgecss][purgecss] helps you remove unused CSS rules from your final astro bundle.
 
 ## 📦 Installation
 
-This package is hosted on [`npm`][npm].
+### Quick Install
+
+the `astro add` command-line tool automates the installation for you. Run one of the following commands in a new terminal window. (If you aren’t sure which package manager you’re using, run the first command.) Then, follow the prompts, and type “y” in the terminal (meaning “yes”) for each one.
 
 ```bash
+# Using NPM
+npx astro add astro-purgecss
+# Using Yarn
+yarn astro add astro-purgecss
+# Using PNPM
+pnpm astro add astro-purgecss
+```
+
+### Manual Install
+
+First, install the `astro-purgecss` package using your package manager. If you’re using [npm][npm] run this in the terminal:
+
+```bash
+# Using NPM
 npm install astro-purgecss
-```
-
-Or using yarn
-
-```bash
+# Using Yarn
 yarn add astro-purgecss
+# Using PNPM
+pnpm install astro-purgecss
 ```
 
-## 🥑 Usage
+Then, apply this integration to your `astro.config.mjs` file using the integrations property:
 
-To add a loading indicator in any of your Astro pages or components, just import a loader from `astro-purgecss` then use it inside the your HTML:
+```js
+import purgecss from 'astro-purgecss';
 
-```jsx index.astro
----
-import { SpinningCircles } from "astro-purgecss"
----
-
-<html lang="en">
-    <body>
-        // renders a spining cercle animation
-        <p>Please wait while content is loading</p>
-        <SpinningCircles />
-    </body>
-</html>
+export default {
+  // ...
+  integrations: [purgecss()]
+};
 ```
-
-List of all available loaders:
 
 > **Note**
 >
-> You can check a demo of all the available animations [here][demo]
+> To make sure this integration works properly, it's recommended to put `purgecss()`
+> as the last element in the `integrations` array.
 
-```jsx
-// renders all available loader animations
-<Audio />
-<BallTriangle />
-<Bars />
-<Circles />
-<Grid />
-<Hearts />
-<Oval />
-<Puff />
-<Rings />
-<SpinningCircles />
-<TailSpin />
-<ThreeDots />
-```
+## What does this integration do, exactly?
+
+This integration hooks into your astro build step, more precisely `astro:build:done`, it reads all your generated HTML and css files, and analyzes unsued css rules, to be removed later using [Purgecss][purgecss].
 
 ## Change log
 
@@ -68,12 +62,10 @@ Please see the [changelog](CHANGELOG.md) for more information on what has change
 
 ## Acknowledgements
 
-Astro SVG Loaders relies _heavily_ on the amazing work **Sam Herbert** is doing developing: [SVG-Loaders][svg-loaders] , Thanks [Sam][sam-herbert]! ❤️
+- [Purgecss][purgecss]
 
 [npm]: https://npmjs.com/package/astro-purgecss
-[svg-loaders]: https://github.com/SamHerbert/SVG-Loaders
-[sam-herbert]: https://github.com/SamHerbert
-[demo]: https://samherbert.net/svg-loaders
+[purgecss]: https://purgecss.com
 
 <!-- Readme Badges -->
 
