@@ -19,7 +19,7 @@
 | [astro-seo-meta](packages/astro-seo-meta)       | [![version](https://img.shields.io/npm/v/astro-seo-meta.svg)](packages/astro-seo-meta/CHANGELOG.md)       |
 | [astro-seo-schema](packages/astro-seo-schema)   | [![version](https://img.shields.io/npm/v/astro-seo-schema.svg)](packages/astro-seo-schema/CHANGELOG.md)   |
 | [astro-svg-loaders](packages/astro-svg-loaders) | [![version](https://img.shields.io/npm/v/astro-svg-loaders.svg)](packages/astro-svg-loaders/CHANGELOG.md) |
-| [astro-purgecss](packages/astro-purgecss) | [![version](https://img.shields.io/npm/v/astro-purgecss.svg)](packages/astro-purgecss/CHANGELOG.md) |
+| [astro-purgecss](packages/astro-purgecss)       | [![version](https://img.shields.io/npm/v/astro-purgecss.svg)](packages/astro-purgecss/CHANGELOG.md)       |
 
 ## Support
 
