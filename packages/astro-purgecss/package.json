@@ -1,0 +1,39 @@
+{
+  "name": "astro-purgecss",
+  "description": "Use Purgecss within Astro",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "astro-build --src src/**/*.ts",
+    "postbuild": "npm run typecheck:emit",
+    "typecheck": "tsc --noEmit",
+    "typecheck:emit": "tsc --declaration --emitDeclarationOnly --outDir dist"
+  },
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "author": "codiume",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codiume/orbit.git",
+    "directory": "packages/astro-purgecss"
+  },
+  "keywords": [
+    "astro",
+    "astro-component"
+  ],
+  "bugs": "https://github.com/codiume/orbit/issues",
+  "homepage": "https://github.com/codiume/orbit",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.mjs",
+  "exports": {
+    ".": "./dist/index.mjs"
+  },
+  "peerDependencies": {
+    "astro": "^1.0.0"
+  },
+  "devDependencies": {
+    "purgecss": "^4.1.3"
+  }
+}

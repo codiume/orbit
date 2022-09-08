@@ -2,6 +2,9 @@
   "name": "@astro/playground",
   "version": "0.0.1",
   "private": true,
+  "keywords": [
+    "astro-integration"
+  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -13,8 +16,9 @@
     "astro": "^1.1.1"
   },
   "dependencies": {
-    "astro-seo-schema": "*",
     "astro-seo-meta": "*",
-    "astro-svg-loaders": "*"
+    "astro-seo-schema": "*",
+    "astro-svg-loaders": "*",
+    "astro-purgecss": "*"
   }
 }
