@@ -27,3 +27,4 @@ yarn.lock
 
 # exclude IntelliJ/WebStorm stuff
 .idea
+.vscode
