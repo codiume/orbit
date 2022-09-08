@@ -52,9 +52,13 @@ export default {
 > To make sure this integration works properly, it's recommended to put `purgecss()`
 > as the last element in the `integrations` array.
 
+## 🥑 Usage
+
+When you install this integration, things will be auto-wired for you. and all your generated css files should be purged from unused classes automagically.
+
 ## What does this integration do, exactly?
 
-This integration hooks into your astro build step, more precisely `astro:build:done`, it reads all your generated HTML and css files, and analyzes unsued css rules, to be removed later using [Purgecss][purgecss].
+This integration hooks into your astro build step, more precisely `astro:build:done`, it reads all your generated `HTML` and `CSS` files, and analyzes them using [Purgecss][purgecss] to remove any unsued CSS rules.
 
 ## Change log
 
