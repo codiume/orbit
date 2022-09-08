@@ -25,7 +25,7 @@ pnpm astro add astro-purgecss
 
 ### Manual Install
 
-First, install the `astro-purgecss` package using your package manager. If you’re using [npm][npm] run this in the terminal:
+First, install the `astro-purgecss` package using your package manager. (If you aren’t sure which package manager you’re using, run the first command.)
 
 ```bash
 # Using NPM
@@ -58,7 +58,7 @@ When you install this integration, things will be auto-wired for you. and all yo
 
 ## What does this integration do, exactly?
 
-This integration hooks into your astro build step, more precisely `astro:build:done`, it reads all your generated `HTML` and `CSS` files, and analyzes them using [Purgecss][purgecss] to remove any unsued CSS rules.
+This integration hooks into your astro build cycle, more precisely `astro:build:done`, it reads all your generated `HTML` and `CSS` files, and analyzes them using [Purgecss][purgecss] to remove any unsued CSS rules.
 
 ## Change log
 
