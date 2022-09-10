@@ -6,7 +6,11 @@
 [![typescript][typescript-badge]][typescript]
 [![makepr][makepr-badge]][makepr]
 
-This astro integration adds Vanilla Extract support to astro
+This [Astro][astro] integration adds Vanilla Extract support to astro
+
+> **Note**
+>
+> This integration is still in beta and not ready to be shipped, it might break your Astro project during build.
 
 ## 📦 Installation
 
@@ -49,41 +53,9 @@ export default {
 
 ## 🥑 Usage
 
-When you install this integration, things will be auto-wired for you. and all your generated css files should be purged from unused classes automagically.
+When you install this integration, things will be auto-wired for you.
 
-## 📖 Configuration
-
-[vanilla-extract][vanilla-extract] has a list of options that allow you to customize its behavior. And this Astro integration allow you to pass those options easily in your `astro.config.mjs` file:
-
-```js
-export default defineConfig({
-  // Add purgeCss support to Astro
-  integrations: [
-    cssPurge({
-      fontFace: true,
-      keyframes: true,
-      safelist: ['random', 'yep', 'button', /^nav-/],
-      blocklist: ['usedClass', /^nav-/]
-    })
-  ]
-});
-```
-
-### Available Options
-
-Here is a list of options, that are allowed to be passed in the config:
-
-```ts
-export type PurgeCSSOptions = {
-  fontFace?: boolean;
-  keyframes?: boolean;
-  rejected?: boolean;
-  rejectedCss?: boolean;
-  variables?: boolean;
-  safelist?: UserDefinedSafelist;
-  blocklist?: StringRegExpArray;
-};
-```
+To learn more about using Vanilla Extract library, head to the [vanilla-extract][vanilla-extract] official documentation.
 
 ## Changelog
 
@@ -95,6 +67,7 @@ Please see the [Changelog](CHANGELOG.md) for more information on what has change
 
 [npm]: https://npmjs.com/package/astro-vanilla-extract
 [vanilla-extract]: https://vanilla-extract.style/
+[astro]: https://astro.build
 
 <!-- Readme Badges -->
 

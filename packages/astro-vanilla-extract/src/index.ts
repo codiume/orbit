@@ -13,7 +13,6 @@ export default function (): AstroIntegration {
           }
         });
       },
-      'astro:build:setup': () => {}
     }
   };
 }
