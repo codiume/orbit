@@ -56,13 +56,49 @@ export default {
 
 When you install this integration, things will be auto-wired for you. and all your generated css files should be purged from unused classes automagically.
 
-## What does this integration do, exactly?
+## 📖 Configuration
 
-This integration hooks into your astro build cycle, more precisely `astro:build:done`, it reads all your generated `HTML` and `CSS` files, and analyzes them using [Purgecss][purgecss] to remove any unsued CSS rules.
+[PurgeCSS][purgecss] has a list of options that allow you to customize its behavior. And this Astro integration allow you to pass those options easily in your `astro.config.mjs` file:
 
-## Change log
+```js
+export default defineConfig({
+  // Add purgeCss support to Astro
+  integrations: [
+    cssPurge({
+      fontFace: true,
+      keyframes: true,
+      safelist: ['random', 'yep', 'button', /^nav-/],
+      blocklist: ['usedClass', /^nav-/]
+    })
+  ]
+});
+```
 
-Please see the [changelog](CHANGELOG.md) for more information on what has changed recently.
+### Available Options
+
+Here is a list of options, that are allowed to be passed in the config:
+
+```ts
+export type PurgeCSSOptions = {
+  fontFace?: boolean;
+  keyframes?: boolean;
+  rejected?: boolean;
+  rejectedCss?: boolean;
+  variables?: boolean;
+  safelist?: UserDefinedSafelist;
+  blocklist?: StringRegExpArray;
+};
+```
+
+To learn more about the available options, please refer to [PurgeCSS][purgecss-options] official docs.
+
+### Caveats
+
+Certain options (ex: `css`, `content`), are not allowed to be passed in your `astro.config.mjs` config file, to not interfere with the internals of this integration.
+
+## Changelog
+
+Please see the [Changelog](CHANGELOG.md) for more information on what has changed recently.
 
 ## Acknowledgements
 
@@ -70,6 +106,7 @@ Please see the [changelog](CHANGELOG.md) for more information on what has change
 
 [npm]: https://npmjs.com/package/astro-purgecss
 [purgecss]: https://purgecss.com
+[purgecss-options]: https://purgecss.com/configuration.html#options
 
 <!-- Readme Badges -->
 
