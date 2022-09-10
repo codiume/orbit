@@ -16,9 +16,10 @@
     "astro": "^1.1.1"
   },
   "dependencies": {
+    "@vanilla-extract/css": "^1.9.0",
+    "astro-purgecss": "*",
     "astro-seo-meta": "*",
     "astro-seo-schema": "*",
-    "astro-svg-loaders": "*",
-    "astro-purgecss": "*"
+    "astro-svg-loaders": "*"
   }
 }
