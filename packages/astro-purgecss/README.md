@@ -93,7 +93,9 @@ To learn more about the available options, please refer to [PurgeCSS][purgecss-o
 
 ### Caveats
 
-Certain options (ex: `css`, `content`), are not allowed to be passed in your `astro.config.mjs` config file, to not interfere with the internals of this integration.
+- Certain options (ex: `css`, `content`), are not allowed to be passed in your `astro.config.mjs` config file, to not interfere with the internals of this integration.
+
+- If you are using `tailwind.css`, please read about purge limitations in this guide [writing-purgeable-html](https://v2.tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html)
 
 ## Changelog
 
