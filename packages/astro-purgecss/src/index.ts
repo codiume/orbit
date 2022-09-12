@@ -22,7 +22,8 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
         const purged = await new PurgeCSS().purge({
           ...options,
           content: [`${outDir}/**/*.html`],
-          css: [`${outDir}/**/*.css`]
+          css: [`${outDir}/**/*.css`],
+          defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || []
         });
         await Promise.all(
           purged

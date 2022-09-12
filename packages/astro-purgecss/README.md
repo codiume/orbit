@@ -62,9 +62,8 @@ When you install this integration, things will be auto-wired for you. and all yo
 
 ```js
 export default defineConfig({
-  // Add purgeCss support to Astro
   integrations: [
-    cssPurge({
+    purgecss({
       fontFace: true,
       keyframes: true,
       safelist: ['random', 'yep', 'button', /^nav-/],
@@ -80,13 +79,13 @@ Here is a list of options, that are allowed to be passed in the config:
 
 ```ts
 export type PurgeCSSOptions = {
-  fontFace?: boolean;
-  keyframes?: boolean;
-  rejected?: boolean;
-  rejectedCss?: boolean;
-  variables?: boolean;
-  safelist?: UserDefinedSafelist;
-  blocklist?: StringRegExpArray;
+  fontFace?: boolean; // removes any unused @font-face if set to true
+  keyframes?: boolean; // removes unused keyframes by setting if set to true
+  rejected?: boolean; // scan through the removed list to see if there's anything wrong
+  rejectedCss?: boolean; // keeps the discarded CSS
+  variables?: boolean; // removes any unused CSS variables if set to true
+  safelist?: UserDefinedSafelist; // indicates which selectors are safe to leave in the final CSS
+  blocklist?: StringRegExpArray; // blocks the CSS selectors from appearing in the final output CSS
 };
 ```
 
@@ -94,7 +93,9 @@ To learn more about the available options, please refer to [PurgeCSS][purgecss-o
 
 ### Caveats
 
-Certain options (ex: `css`, `content`), are not allowed to be passed in your `astro.config.mjs` config file, to not interfere with the internals of this integration.
+- Certain options (ex: `css`, `content`), are not allowed to be passed in your `astro.config.mjs` config file, to not interfere with the internals of this integration.
+
+- If you are using `tailwind.css`, please read about purge limitations in this guide [writing-purgeable-html](https://v2.tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html)
 
 ## Changelog
 
