@@ -1,0 +1,1 @@
+export { useUserAgent } from './useUserAgent';
