@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 1.1.1
+
+### Patch Changes
+
+- [#38](https://github.com/codiume/orbit/pull/38) [`9689265`](https://github.com/codiume/orbit/commit/96892659b6f10a19534c5c421eaf0070ac605468) Thanks [@mohammed-elhaouari](https://github.com/mohammed-elhaouari)! - support tailwind reponsive classes in purgecss extractor
+
 ## 1.1.0
 
 ### Minor Changes
