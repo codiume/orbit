@@ -1,11 +1,11 @@
 import { defineConfig } from 'astro/config';
-import cssPurge from 'astro-purgecss';
+import purgecss from 'astro-purgecss';
 
 // https://astro.build/config
 export default defineConfig({
-  // Add purgeCss support to Astro
+  // Add purgecss support to Astro
   integrations: [
-    cssPurge({
+    purgecss({
       fontFace: true,
       keyframes: true,
       safelist: ['random', 'yep', 'button', /^nav-/],

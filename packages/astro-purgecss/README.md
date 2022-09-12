@@ -79,7 +79,6 @@ Here is a list of options, that are allowed to be passed in the config:
 
 ```ts
 export type PurgeCSSOptions = {
-  tailwind?: boolean; // preserve tailwind responsive css classes (ex: sm:hidden)
   fontFace?: boolean; // removes any unused @font-face if set to true
   keyframes?: boolean; // removes unused keyframes by setting if set to true
   rejected?: boolean; // scan through the removed list to see if there's anything wrong
@@ -88,20 +87,6 @@ export type PurgeCSSOptions = {
   safelist?: UserDefinedSafelist; // indicates which selectors are safe to leave in the final CSS
   blocklist?: StringRegExpArray; // blocks the CSS selectors from appearing in the final output CSS
 };
-```
-
-### Using Tailwind ?
-
-[PurgeCSS][purgecss] is known to purge tailwind responsive classes ex: `sm:hidden`. To make sure this is not the case. we need to set the `tailwind` flag to `true` in the config file:
-
-```js
-export default defineConfig({
-  integrations: [
-    purgecss({
-      tailwind: true // preserve tailwind responsive css classes (ex: sm:hidden)
-    })
-  ]
-});
 ```
 
 To learn more about the available options, please refer to [PurgeCSS][purgecss-options] official docs.
