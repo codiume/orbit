@@ -4,6 +4,7 @@ import { writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
 export type PurgeCSSOptions = {
+  tailwind?: boolean;
   fontFace?: boolean;
   keyframes?: boolean;
   rejected?: boolean;
@@ -12,6 +13,12 @@ export type PurgeCSSOptions = {
   safelist?: UserDefinedSafelist;
   blocklist?: StringRegExpArray;
 };
+
+// see https://github.com/codiume/orbit/issues/37
+const tailwindAwareExtractor = (content) =>
+  [...content.matchAll(/(?:class:)*([\w\d-/:%.]+)/gm)].map(
+    ([_match, group, ..._rest]) => group
+  );
 
 export default function (options: PurgeCSSOptions = {}): AstroIntegration {
   return {
@@ -22,7 +29,10 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
         const purged = await new PurgeCSS().purge({
           ...options,
           content: [`${outDir}/**/*.html`],
-          css: [`${outDir}/**/*.css`]
+          css: [`${outDir}/**/*.css`],
+          defaultExtractor: options.tailwind
+            ? tailwindAwareExtractor
+            : undefined
         });
         await Promise.all(
           purged

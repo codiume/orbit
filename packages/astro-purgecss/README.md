@@ -62,13 +62,26 @@ When you install this integration, things will be auto-wired for you. and all yo
 
 ```js
 export default defineConfig({
-  // Add purgeCss support to Astro
   integrations: [
-    cssPurge({
+    purgecss({
       fontFace: true,
       keyframes: true,
       safelist: ['random', 'yep', 'button', /^nav-/],
       blocklist: ['usedClass', /^nav-/]
+    })
+  ]
+});
+```
+
+### Using Tailwind
+
+[PurgeCSS][purgecss] is known to remove some tailwind specifique classes. so make sure to pass `tailwind` flag to your config, if you are using tailwind.css.
+
+```js
+export default defineConfig({
+  integrations: [
+    purgecss({
+      tailwind: true
     })
   ]
 });
@@ -80,6 +93,7 @@ Here is a list of options, that are allowed to be passed in the config:
 
 ```ts
 export type PurgeCSSOptions = {
+  tailwind?: boolean;
   fontFace?: boolean;
   keyframes?: boolean;
   rejected?: boolean;
