@@ -8,9 +8,7 @@
 
 Astro Useragent is a simple helper for parsing `user-agent` header strings for browser matching inside your Astro API routes / Pages, when using [SSR Mode][astro-ssr]
 
-> **Note**
->
-> Due to the nature of Astro being an SSG by trade, This package only works when used with astro in [SSR Mode][astro-ssr].
+> **Note** Due to the nature of Astro being an SSG by trade, This package only works when used with astro in [SSR Mode][astro-ssr].
 
 ## 📦 Installation
 
