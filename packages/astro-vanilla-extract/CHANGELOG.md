@@ -1,5 +1,11 @@
 # astro-vanilla-extract
 
+## 1.0.0
+
+### Major Changes
+
+- [#41](https://github.com/codiume/orbit/pull/41) [`2614c51`](https://github.com/codiume/orbit/commit/2614c5181ddf964b28dc9fa11119fd0be3f38bfa) Thanks [@mohammed-elhaouari](https://github.com/mohammed-elhaouari)! - add vanilla-extract support to astro using vite plugin
+
 ## 0.0.1
 
 ### Patch Changes
