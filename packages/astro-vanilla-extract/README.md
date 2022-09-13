@@ -8,10 +8,6 @@
 
 This [Astro][astro] integration adds Vanilla Extract support to astro
 
-> **Note**
->
-> This integration is still in beta and not ready to be shipped, it might break your Astro project during build.
-
 ## 📦 Installation
 
 ### Quick Install
@@ -57,6 +53,8 @@ When you install this integration, things will be auto-wired for you.
 
 To learn more about using Vanilla Extract library, head to the [vanilla-extract][vanilla-extract] official documentation.
 
+You can also check the following example [Repository][ave-example]
+
 ## Changelog
 
 Please see the [Changelog](CHANGELOG.md) for more information on what has changed recently.
@@ -68,6 +66,7 @@ Please see the [Changelog](CHANGELOG.md) for more information on what has change
 [npm]: https://npmjs.com/package/astro-vanilla-extract
 [vanilla-extract]: https://vanilla-extract.style/
 [astro]: https://astro.build
+[ave-example]: https://github.com/codiume/astro-vanilla-extract-example
 
 <!-- Readme Badges -->
 
