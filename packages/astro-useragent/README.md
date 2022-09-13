@@ -93,6 +93,8 @@ export async function get({ request }: APIContext) {
 
 > **Note** Read more about Astro API routes here: [Astro Docs](https://docs.astro.build/en/guides/server-side-rendering/#api-routes)
 
+We have also setup for you an example repository available here [example-useragent](../../apps/example-useragent)
+
 ### Parsed object interface
 
 The parsed `UserAgent` object will have the following interface:
