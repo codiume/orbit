@@ -22,6 +22,7 @@
 | [astro-svg-loaders](packages/astro-svg-loaders)         | [![version](https://img.shields.io/npm/v/astro-svg-loaders.svg)](packages/astro-svg-loaders/CHANGELOG.md)         |
 | [astro-purgecss](packages/astro-purgecss)               | [![version](https://img.shields.io/npm/v/astro-purgecss.svg)](packages/astro-purgecss/CHANGELOG.md)               |
 | [astro-vanilla-extract](packages/astro-vanilla-extract) | [![version](https://img.shields.io/npm/v/astro-vanilla-extract.svg)](packages/astro-vanilla-extract/CHANGELOG.md) |
+| [astro-useragent](packages/astro-useragent)             | [![version](https://img.shields.io/npm/v/astro-useragent.svg)](packages/astro-useragent/CHANGELOG.md)             |
 
 ## Support
 
