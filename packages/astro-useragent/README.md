@@ -6,7 +6,7 @@
 [![typescript][typescript-badge]][typescript]
 [![makepr][makepr-badge]][makepr]
 
-Astro Useragent is a simple helper for parsing `user-agent` header strings for browser matching inside your Astro API routes / Pages, when using [SSR Mode][astro-ssr]
+Astro UserAgent is a simple helper for parsing `user-agent` header strings for browser matching inside your Astro Pages / API routes, when using [SSR Mode][astro-ssr]
 
 > **Note** Due to the nature of Astro being an SSG by trade, This package only works when used with astro in [SSR Mode][astro-ssr].
 
@@ -37,9 +37,11 @@ export default defineConfig({
 });
 ```
 
+> **Note** For more info please refer to the official [docs][astro-ssr].
+
 ### Usage with Astro pages
 
-To parse a `useragent` string inside any of your top level Astro pages, import `useUserAgent` and then use it inside the frontmatter section:
+To parse a `user-agent` string inside any of your top level Astro pages, import `useUserAgent` and then use it inside the frontmatter section:
 
 ```jsx
 ---
@@ -65,9 +67,9 @@ const { source, isMobile } = useUserAgent(uaString);
 
 ### Usage with Astro API routes
 
-`useUserAgent` can also be used inside your API routes, to perform some logic based on client browser.
+`useUserAgent` can also be used inside your API routes, to perform some logic based on the client user-agent.
 
-In the example below, an API route is used to redirect a user to a different mobile page when he is using a mobile client, otherwise serves the normal content.
+In the example below, an API route is used to redirect a user to a different mobile page when he is using a mobile client, otherwise it serves the normal content.
 
 ```typescript
 import type { APIContext } from 'astro';
@@ -78,7 +80,7 @@ export async function get({ request }: APIContext) {
   const { isMobile } = useUserAgent(uaString);
 
   if (isMobile) {
-    return Response.redirect('mobile.example.com', 307);
+    return Response.redirect('mobile.mysite.com', 307);
   }
 
   const greetings = {
@@ -93,7 +95,7 @@ export async function get({ request }: APIContext) {
 
 > **Note** Read more about Astro API routes here: [Astro Docs](https://docs.astro.build/en/guides/server-side-rendering/#api-routes)
 
-We have also setup for you an example repository available here [example-useragent](../../apps/example-useragent)
+We have also setup an example repository available here: [example-useragent](../../apps/example-useragent)
 
 ### Parsed object interface
 
@@ -135,7 +137,7 @@ Please see the [Changelog](CHANGELOG.md) for more information on what has change
 
 ## Acknowledgements
 
-`astro-useragent` is a port from [next-useragent][next-useragent] to Astro. so big thanks to [Tsuyoshi Tokuda][tokuda109] and the contributors behind next-useragent.
+`astro-useragent` is a port from [next-useragent][next-useragent] to Astro. so big thanks to [Tsuyoshi Tokuda][tokuda109] and the contributors behind next-useragent package.
 
 [astro-ssr]: https://docs.astro.build/en/guides/server-side-rendering
 [npm]: https://npmjs.com/package/astro-useragent
