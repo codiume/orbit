@@ -67,12 +67,13 @@ const { source, isMobile } = useUserAgent(uaString);
 
 `useUserAgent` can also be used inside your API routes, to perfom some logic based on client browser.
 
-In the example below, an API route is used to redirect a user to a diffrent mobile page is he is using a mobile client, otherwise serve the normal content.
+In the example below, an API route is used to redirect a user to a diffrent mobile page is he is using a mobile client, otherwise serves the normal content.
 
-```javascript
+```typescript
+import type { APIContext } from 'astro';
 import { useUserAgent } from 'astro-useragent';
 
-export async function get({ request }) {
+export async function get({ request }: APIContext) {
   const uaString = request.headers.get('user-agent');
   const { isMobile } = useUserAgent(uaString);
 
@@ -80,7 +81,11 @@ export async function get({ request }) {
     return Response.redirect('mobile.example.com', 307);
   }
 
-  return new Response(JSON.stringify({ data: [...] }), {
+  const greetings = {
+    message: 'hello from astro API'
+  };
+
+  return new Response(JSON.stringify(greetings), {
     status: 200
   });
 }
