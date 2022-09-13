@@ -20,6 +20,7 @@
     "astro-purgecss": "*",
     "astro-seo-meta": "*",
     "astro-seo-schema": "*",
-    "astro-svg-loaders": "*"
+    "astro-svg-loaders": "*",
+    "astro-vanilla-extract": "*"
   }
 }
