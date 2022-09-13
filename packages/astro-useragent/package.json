@@ -20,7 +20,8 @@
   "keywords": [
     "astro",
     "astro-component",
-    "astro-integration"
+    "astro-integration",
+    "accessibility"
   ],
   "bugs": "https://github.com/codiume/orbit/issues",
   "homepage": "https://github.com/codiume/orbit",

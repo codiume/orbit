@@ -37,7 +37,7 @@ export default defineConfig({
 });
 ```
 
-> **Note** For more info please refer to the official [docs][astro-ssr].
+> **Note** For more info about SSR mode, please refer to the official [docs][astro-ssr].
 
 ### Usage with Astro pages
 
