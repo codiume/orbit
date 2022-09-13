@@ -6,7 +6,7 @@
 [![typescript][typescript-badge]][typescript]
 [![makepr][makepr-badge]][makepr]
 
-Astro Useragent is a simple helper for parsing `user-agent` header strings for browser matching inside your Astro API routes / Pages, when using [SSR Mode][astro-ssr]
+Astro UserAgent is a simple helper for parsing `user-agent` header strings for browser matching inside your Astro Pages / API routes, when using [SSR Mode][astro-ssr]
 
 > **Note** Due to the nature of Astro being an SSG by trade, This package only works when used with astro in [SSR Mode][astro-ssr].
 
@@ -25,58 +25,77 @@ pnpm install astro-useragent
 
 ## 🥑 Usage
 
+### Enable SSR mode
+
+To get started, enable SSR features in development mode with the `output: server` configuration option:
+
+```javascript
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  output: 'server'
+});
+```
+
+> **Note** For more info about SSR mode, please refer to the official [docs][astro-ssr].
+
 ### Usage with Astro pages
 
-To parse a `useragent` string inside any of your top level Astro pages, import `useUserAgent` and then use it inside the frontmatter section:
+To parse a `user-agent` string inside any of your top level Astro pages, import `useUserAgent` and then use it inside the frontmatter section:
 
 ```jsx
 ---
 import { useUserAgent } from "astro-useragent";
 
-const uaString = Astro.request.headers.get('user-agent');
-const { isMobile } = useUserAgent(uaString);
+const uaString = Astro.request.headers.get("user-agent");
+const { source, isMobile } = useUserAgent(uaString);
 ---
 
-<div>
-    <p>{ ua.source }</p>
-    { ua.isMobile ? (
-    <MobileContent />
-    ) : (
-    <DesktopContent />
-    ) }
-</div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Astro website</title>
+  </head>
+  <body>
+    <p>Source: {source}</p>
+    {isMobile ? <p>I'm on mobile</p> : <p>I'm on desktop</p>}
+  </body>
+</html>
 ```
 
-> **Note**
->
-> Read more about Astro request headers here: [Astro Docs](https://docs.astro.build/en/guides/server-side-rendering/#astrorequestheaders)
+> **Note** Read more about Astro request headers here: [Astro Docs](https://docs.astro.build/en/guides/server-side-rendering/#astrorequestheaders)
 
 ### Usage with Astro API routes
 
-`useUserAgent` can also be used inside your API routes, to perfom some logic based on client browser.
+`useUserAgent` can also be used inside your API routes, to perform some logic based on the client user-agent.
 
-In the example below, an API route is used to redirect a user to a diffrent mobile page is he is using a mobile client, otherwise serve the normal content.
+In the example below, an API route is used to redirect a user to a different mobile page when he is using a mobile client, otherwise it serves the normal content.
 
-```javascript
+```typescript
+import type { APIContext } from 'astro';
 import { useUserAgent } from 'astro-useragent';
 
-export async function get({ request }) {
+export async function get({ request }: APIContext) {
   const uaString = request.headers.get('user-agent');
   const { isMobile } = useUserAgent(uaString);
 
   if (isMobile) {
-    return Response.redirect('mobile.example.com', 307);
+    return Response.redirect('mobile.mysite.com', 307);
   }
 
-  return new Response(JSON.stringify({ data: [...] }), {
+  const greetings = {
+    message: 'hello from astro API'
+  };
+
+  return new Response(JSON.stringify(greetings), {
     status: 200
   });
 }
 ```
 
-> **Note**
->
-> Read more about Astro API routes here: [Astro Docs](https://docs.astro.build/en/guides/server-side-rendering/#api-routes)
+> **Note** Read more about Astro API routes here: [Astro Docs](https://docs.astro.build/en/guides/server-side-rendering/#api-routes)
+
+We have also setup an example repository available here: [example-useragent](../../apps/example-useragent)
 
 ### Parsed object interface
 
@@ -118,7 +137,7 @@ Please see the [Changelog](CHANGELOG.md) for more information on what has change
 
 ## Acknowledgements
 
-`astro-useragent` is _heavily_ inspired by [next-useragent][next-useragent] and all the amazing work the [Tsuyoshi Tokuda][tokuda109] and the comunity is doing developing it.
+`astro-useragent` is a port from [next-useragent][next-useragent] to Astro. so big thanks to [Tsuyoshi Tokuda][tokuda109] and the contributors behind next-useragent package.
 
 [astro-ssr]: https://docs.astro.build/en/guides/server-side-rendering
 [npm]: https://npmjs.com/package/astro-useragent

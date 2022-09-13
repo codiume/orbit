@@ -30,6 +30,6 @@ const findEntryPoints = async (paths) => {
   // Building files using esbuild
   await oraPromise(build(entryPoints, outdir), {
     text: 'Building entrypoints',
-    successText: 'Completed',
+    successText: 'Completed'
   });
 })();
