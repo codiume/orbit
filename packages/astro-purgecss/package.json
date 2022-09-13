@@ -34,7 +34,7 @@
     ".": "./dist/index.mjs"
   },
   "dependencies": {
-    "purgecss": "^4.1.3"
+    "purgecss": "^5.0.0"
   },
   "peerDependencies": {
     "astro": "^1.0.0"
