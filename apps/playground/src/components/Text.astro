@@ -1,11 +1,11 @@
 ---
-import * as styles from "./Text.css";
+import * as styles from './Text.css';
 
 interface Props {
   size?: keyof typeof styles.size;
 }
 
-const { size = "medium" } = Astro.props;
+const { size = 'medium' } = Astro.props;
 ---
 
 <div class:list={[styles.root, styles.size[size]]}><slot /></div>
