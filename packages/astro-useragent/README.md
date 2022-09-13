@@ -6,7 +6,7 @@
 [![typescript][typescript-badge]][typescript]
 [![makepr][makepr-badge]][makepr]
 
-[Useragent][useragent] is a simple helper, that helps you parse `user-agent` header strings for browser matching inside your Astro API routes / Pages, when using [SSR Mode][astro-ssr]
+Astro Useragent is a simple helper, that helps you parse `user-agent` header strings for browser matching inside your Astro API routes / Pages, when using [SSR Mode][astro-ssr]
 
 > **Note**
 >
@@ -86,13 +86,12 @@ Please see the [Changelog](CHANGELOG.md) for more information on what has change
 
 ## Acknowledgements
 
-- [useragent][useragent]
-- [next-useragent][next-useragent]
+`astro-useragent` is _heavily_ inspired by [next-useragent][next-useragent] and all the amazing work the [Tsuyoshi Tokuda][tokuda109] and the comunity is doing developing it.
 
 [astro-ssr]: https://docs.astro.build/en/guides/server-side-rendering
 [npm]: https://npmjs.com/package/astro-useragent
-[useragent]: https://github.com/3rd-Eden/useragent
 [next-useragent]: https://github.com/tokuda109/next-useragent
+[tokuda109]: https://github.com/tokuda109
 
 <!-- Readme Badges -->
 

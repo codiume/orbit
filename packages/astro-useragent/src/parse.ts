@@ -1,5 +1,6 @@
 import { UAParser } from 'ua-parser-js';
 
+// mostly ported from https://github.com/tokuda109/next-useragent
 export interface UserAgent {
   // The original user agent string.
   readonly source: string;
