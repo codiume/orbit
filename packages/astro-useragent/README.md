@@ -25,6 +25,18 @@ pnpm install astro-useragent
 
 ## 🥑 Usage
 
+### Enable SSR mode
+
+To get started, enable SSR features in development mode with the `output: server` configuration option:
+
+```javascript
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  output: 'server'
+});
+```
+
 ### Usage with Astro pages
 
 To parse a `useragent` string inside any of your top level Astro pages, import `useUserAgent` and then use it inside the frontmatter section:
@@ -33,23 +45,23 @@ To parse a `useragent` string inside any of your top level Astro pages, import `
 ---
 import { useUserAgent } from "astro-useragent";
 
-const uaString = Astro.request.headers.get('user-agent');
-const { isMobile } = useUserAgent(uaString);
+const uaString = Astro.request.headers.get("user-agent");
+const { source, isMobile } = useUserAgent(uaString);
 ---
 
-<div>
-    <p>{ ua.source }</p>
-    { ua.isMobile ? (
-    <MobileContent />
-    ) : (
-    <DesktopContent />
-    ) }
-</div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Astro website</title>
+  </head>
+  <body>
+    <p>Source: {source}</p>
+    {isMobile ? <p>I'm on mobile</p> : <p>I'm on desktop</p>}
+  </body>
+</html>
 ```
 
-> **Note**
->
-> Read more about Astro request headers here: [Astro Docs](https://docs.astro.build/en/guides/server-side-rendering/#astrorequestheaders)
+> **Note** Read more about Astro request headers here: [Astro Docs](https://docs.astro.build/en/guides/server-side-rendering/#astrorequestheaders)
 
 ### Usage with Astro API routes
 
@@ -74,9 +86,7 @@ export async function get({ request }) {
 }
 ```
 
-> **Note**
->
-> Read more about Astro API routes here: [Astro Docs](https://docs.astro.build/en/guides/server-side-rendering/#api-routes)
+> **Note** Read more about Astro API routes here: [Astro Docs](https://docs.astro.build/en/guides/server-side-rendering/#api-routes)
 
 ### Parsed object interface
 

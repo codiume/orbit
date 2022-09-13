@@ -30,7 +30,8 @@ export interface UserAgent {
   readonly isAndroid: boolean;
 }
 
-export const parse = (ua: string): UserAgent => {
+export const parse = (uastring?: string): UserAgent => {
+  const ua = uastring ?? '';
   const result: UAParser.IResult = new UAParser(ua).getResult();
 
   const browser: string = result.browser.name;

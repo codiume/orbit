@@ -1,0 +1,19 @@
+---
+import { useUserAgent } from 'astro-useragent';
+
+const uaString = Astro.request.headers.get('user-agent');
+const { source, isMobile } = useUserAgent(uaString);
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro + Useragent Demo</title>
+  </head>
+  <body>
+    <p>Source: {source}</p>
+    {isMobile ? <p>I'm on mobile</p> : <p>I'm on desktop</p>}
+  </body>
+</html>
