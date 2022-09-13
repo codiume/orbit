@@ -1,4 +1,4 @@
-# 🚀 Astro Vanilla Extract
+# 🚀&nbsp;Astro + 🧁&nbsp;vanilla-extract
 
 [![version][version-badge]][npm]
 [![downloads][downloads-badge]][npm]
@@ -6,7 +6,7 @@
 [![typescript][typescript-badge]][typescript]
 [![makepr][makepr-badge]][makepr]
 
-This [Astro][astro] integration adds Vanilla Extract support to astro
+This integration adds [vanilla-extract][vanilla-extract] support to [Astro][astro]
 
 ## 📦 Installation
 
@@ -52,6 +52,8 @@ export default {
 When you install this integration, things will be auto-wired for you.
 
 To learn more about using Vanilla Extract library, head to the [vanilla-extract][vanilla-extract] official documentation.
+
+### Example
 
 You can also check the following example [Repository][ave-example]
 
