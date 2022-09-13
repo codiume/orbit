@@ -65,9 +65,9 @@ const { source, isMobile } = useUserAgent(uaString);
 
 ### Usage with Astro API routes
 
-`useUserAgent` can also be used inside your API routes, to perfom some logic based on client browser.
+`useUserAgent` can also be used inside your API routes, to perform some logic based on client browser.
 
-In the example below, an API route is used to redirect a user to a diffrent mobile page when he is using a mobile client, otherwise serves the normal content.
+In the example below, an API route is used to redirect a user to a different mobile page when he is using a mobile client, otherwise serves the normal content.
 
 ```typescript
 import type { APIContext } from 'astro';
