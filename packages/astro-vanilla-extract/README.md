@@ -55,7 +55,7 @@ To learn more about using Vanilla Extract library, head to the [vanilla-extract]
 
 ### Example
 
-You can also check the following example [Repository][ave-example]
+We have also setup an example repository available here: [example-vanilla-extract](../../apps/example-vanilla-extract/)
 
 ## Changelog
 
@@ -68,9 +68,8 @@ Please see the [Changelog](CHANGELOG.md) for more information on what has change
 [npm]: https://npmjs.com/package/astro-vanilla-extract
 [vanilla-extract]: https://vanilla-extract.style/
 [astro]: https://astro.build
-[ave-example]: https://github.com/codiume/astro-vanilla-extract-example
 
-<!-- Readme Badges -->
+<!-- README Badges -->
 
 [version-badge]: https://img.shields.io/npm/v/astro-vanilla-extract.svg
 [downloads-badge]: https://img.shields.io/npm/dt/astro-vanilla-extract

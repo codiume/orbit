@@ -16,15 +16,15 @@
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.6",
-    "@changesets/cli": "^2.24.3",
-    "@types/node": "^18.7.16",
-    "astro": "^1.1.0-next.0",
-    "commander": "^9.4.0",
+    "@changesets/cli": "^2.24.4",
+    "@types/node": "^18.7.23",
+    "astro": "^1.4.0",
+    "commander": "^9.4.1",
     "esbuild": "^0.14.54",
     "esbuild-plugin-clean": "^0.9.0",
     "ora": "^6.1.2",
     "prettier": "^2.7.1",
-    "prettier-plugin-astro": "^0.5.3",
+    "prettier-plugin-astro": "^0.5.5",
     "tiny-glob": "^0.2.9",
     "turbo": "latest"
   }
