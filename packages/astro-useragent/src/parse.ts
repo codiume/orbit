@@ -34,10 +34,10 @@ export const parse = (uastring?: string): UserAgent => {
   const ua = uastring ?? '';
   const result: UAParser.IResult = new UAParser(ua).getResult();
 
-  const browser: string = result.browser.name;
-  const deviceType: string = result.device.type || null;
-  const os: string = result.os.name;
-  const engine: string = result.engine.name;
+  const browser: string = result.browser.name || '';
+  const deviceType: string = result.device.type || '';
+  const os: string = result.os.name || '';
+  const engine: string = result.engine.name || '';
   const isMobile: boolean = deviceType === 'mobile';
   const isTablet: boolean = deviceType === 'tablet';
   const isIos: boolean = os === 'iOS';
@@ -52,9 +52,9 @@ export const parse = (uastring?: string): UserAgent => {
     isIos,
     source: ua,
     deviceVendor: result.device.vendor || null,
-    osVersion: parseInt(result.os.version, 10),
-    browserVersion: parseFloat(result.browser.version),
-    engineVersion: parseFloat(result.engine.version),
+    osVersion: parseInt(result.os.version || '', 10),
+    browserVersion: parseFloat(result.browser.version || ''),
+    engineVersion: parseFloat(result.engine.version || ''),
     isIphone: isMobile && isIos,
     isIpad: isTablet && isIos,
     isDesktop: !isMobile && !isTablet,
