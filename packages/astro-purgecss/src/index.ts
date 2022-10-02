@@ -1,7 +1,7 @@
 import type { AstroIntegration } from 'astro';
-import { PurgeCSS, StringRegExpArray, UserDefinedSafelist } from 'purgecss';
 import { writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import { PurgeCSS, StringRegExpArray, UserDefinedSafelist } from 'purgecss';
 
 export type PurgeCSSOptions = {
   fontFace?: boolean;
@@ -27,8 +27,8 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
         });
         await Promise.all(
           purged
-            .filter(({ file }) => file.endsWith('.css'))
-            .map(async ({ css, file }) => await writeFile(file, css))
+            .filter(({ file }) => file?.endsWith('.css'))
+            .map(async ({ css, file }) => file && (await writeFile(file, css)))
         );
       }
     }
