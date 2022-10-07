@@ -21,17 +21,13 @@ export type Props = {
   type?: ObjectType;
 };
 
-const { url, type, title, description, image } = Astro.props as Props;
+const { url, type, title, description, image } = Astro.props;
 ---
 
-<>
+<Fragment>
   {url && <meta property="og:url" content={url} />}
-
   {type && <meta property="og:type" content={type} />}
-
   {title && <meta property="og:title" content={title} />}
-
   {description && <meta property="og:description" content={description} />}
-
   {image && <meta property="og:image" content={image} />}
-</>
+</Fragment>

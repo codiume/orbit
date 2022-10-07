@@ -11,19 +11,14 @@ export type Props = {
 };
 
 const { title, description, keywords, icon, themeColor, colorScheme } =
-  Astro.props as Props;
+  Astro.props;
 ---
 
-<>
+<Fragment>
   {title && <title>{title}</title>}
-
   {description && <meta name="description" content={description} />}
-
   {keywords && <meta name="keywords" content={keywords.join(', ')} />}
-
   {icon && <link rel="icon" href={icon} />}
-
-  {themeColor && <meta name="theme-color" content={themeColor} />}
-
   {colorScheme && <meta name="color-scheme" content={colorScheme} />}
-</>
+  {themeColor && <meta name="theme-color" content={themeColor} />}
+</Fragment>

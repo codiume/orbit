@@ -23,10 +23,10 @@ const {
   colorScheme,
   facebook,
   twitter
-} = Astro.props as Props;
+} = Astro.props;
 ---
 
-<>
+<Fragment>
   <Meta
     title={title}
     description={description}
@@ -35,7 +35,6 @@ const {
     themeColor={themeColor}
     colorScheme={colorScheme}
   />
-
   <Facebook
     title={title}
     description={description}
@@ -43,7 +42,6 @@ const {
     url={facebook?.url}
     type={facebook?.type}
   />
-
   <Twitter
     title={title}
     description={description}
@@ -51,4 +49,4 @@ const {
     site={twitter?.site}
     card={twitter?.card}
   />
-</>
+</Fragment>
