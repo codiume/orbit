@@ -1,5 +1,11 @@
 # astro-svg-loaders
 
+## 1.1.0
+
+### Minor Changes
+
+- [#75](https://github.com/codiume/orbit/pull/75) [`9ffb28b`](https://github.com/codiume/orbit/commit/9ffb28b3383aa7cffbb5b8176d409f0b802d8c7c) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Change tsconfig to be more strict
+
 ## 1.0.1
 
 ### Patch Changes
