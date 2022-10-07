@@ -27,8 +27,8 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
         });
         await Promise.all(
           purged
-            .filter(({ file }) => file.endsWith('.css'))
-            .map(async ({ css, file }) => await writeFile(file, css))
+            .filter(({ file }) => file?.endsWith('.css'))
+            .map(async ({ css, file }) => await writeFile(file!, css))
         );
       }
     }
