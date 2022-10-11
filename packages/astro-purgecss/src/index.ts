@@ -13,12 +13,23 @@ export type PurgeCSSOptions = {
   blocklist?: StringRegExpArray;
 };
 
+function handleWindowsPath(outputPath: string): string {
+  if(process.platform !== 'win32') return outputPath;
+
+  if(outputPath.endsWith('\\')){
+    outputPath = outputPath.substring(0, outputPath.length - 1);
+  }
+  outputPath = outputPath.replaceAll('\\', '/');
+
+  return outputPath;
+}
+
 export default function (options: PurgeCSSOptions = {}): AstroIntegration {
   return {
     name: 'astro-purgecss',
     hooks: {
       'astro:build:done': async ({ dir }) => {
-        const outDir = fileURLToPath(dir);
+        const outDir = handleWindowsPath(fileURLToPath(dir));
         const purged = await new PurgeCSS().purge({
           ...options,
           content: [`${outDir}/**/*.html`],
