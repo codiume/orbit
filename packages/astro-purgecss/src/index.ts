@@ -14,9 +14,9 @@ export type PurgeCSSOptions = {
 };
 
 function handleWindowsPath(outputPath: string): string {
-  if(process.platform !== 'win32') return outputPath;
+  if (process.platform !== 'win32') return outputPath;
 
-  if(outputPath.endsWith('\\')){
+  if (outputPath.endsWith('\\')) {
     outputPath = outputPath.substring(0, outputPath.length - 1);
   }
   outputPath = outputPath.replaceAll('\\', '/');
