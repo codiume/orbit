@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 1.2.1
+
+### Patch Changes
+
+- [#82](https://github.com/codiume/orbit/pull/82) [`71903a3`](https://github.com/codiume/orbit/commit/71903a3d0ca11c87b58ae6bbe7905ded80b0b7d4) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Fix output path on windows platform
+
 ## 1.2.0
 
 ### Minor Changes

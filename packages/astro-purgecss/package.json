@@ -1,7 +1,7 @@
 {
   "name": "astro-purgecss",
   "description": "Remove unused CSS rules from your final Astro bundle",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "scripts": {
     "build": "astro-build --src src/**/*.ts",
     "postbuild": "npm run typecheck:emit",
