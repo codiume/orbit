@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 1.2.2
+
+### Patch Changes
+
+- [#91](https://github.com/codiume/orbit/pull/91) [`d38b3f0`](https://github.com/codiume/orbit/commit/d38b3f069f5d2ccf89f52db6d52cd2af2f38c7fe) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Add example app to readme
+
 ## 1.2.1
 
 ### Patch Changes
