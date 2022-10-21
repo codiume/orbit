@@ -91,6 +91,8 @@ export type PurgeCSSOptions = {
 
 To learn more about the available options, please refer to [PurgeCSS][purgecss-options] official docs.
 
+We have also setup an example repository available here: [example-purgecss](../../apps/example-purgecss)
+
 ### Caveats
 
 - Certain options (ex: `css`, `content`), are not allowed to be passed in your `astro.config.mjs` config file, to not interfere with the internals of this integration.

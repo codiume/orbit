@@ -1,5 +1,5 @@
 {
-  "name": "@orbit/playground",
+  "name": "@orbit/example-purgecss",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -13,8 +13,6 @@
     "astro": "^1.0.0"
   },
   "dependencies": {
-    "astro-seo-meta": "*",
-    "astro-seo-schema": "*",
-    "astro-svg-loaders": "*"
+    "astro-purgecss": "*"
   }
 }
