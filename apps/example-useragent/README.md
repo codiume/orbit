@@ -1,3 +1,3 @@
-# PurgeCSS Example app
+# UserAgent Example app
 
-This is an example app to showcase the `astro-purgecss` integration
+This is an example app to showcase the `astro-useragent` integration
