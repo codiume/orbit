@@ -35,6 +35,6 @@
     ".": "./dist/index.mjs"
   },
   "peerDependencies": {
-    "astro": "1.5.3"
+    "astro": "1.6.0"
   }
 }
