@@ -1,5 +1,11 @@
 # astro-seo-schema
 
+## 1.2.0
+
+### Minor Changes
+
+- [`b8a81ae`](https://github.com/codiume/orbit/commit/b8a81aeea24a768deb0f3f58f8a557b5c7943cd1) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - upgrade astro/node & vite plugins
+
 ## 1.1.0
 
 ### Minor Changes
