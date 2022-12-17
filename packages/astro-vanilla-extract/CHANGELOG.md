@@ -1,5 +1,11 @@
 # astro-vanilla-extract
 
+## 1.2.1
+
+### Patch Changes
+
+- [`6c066f9`](https://github.com/codiume/orbit/commit/6c066f9374285a6ae6546a92399544bae76bfa3d) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Update astro dependency
+
 ## 1.2.0
 
 ### Minor Changes
