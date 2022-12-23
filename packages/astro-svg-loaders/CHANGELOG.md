@@ -1,5 +1,11 @@
 # astro-svg-loaders
 
+## 1.2.2
+
+### Patch Changes
+
+- [`d93bbcf`](https://github.com/codiume/orbit/commit/d93bbcf169523748c818946cfe01ca94d418996e) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Fix astro peer dependency version
+
 ## 1.2.1
 
 ### Patch Changes
