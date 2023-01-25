@@ -36,7 +36,7 @@
     "ua-parser-js": "^1.0.2"
   },
   "peerDependencies": {
-    "astro": "^1.0.0",
+    "astro": "^2.0.0",
     "@types/ua-parser-js": "^0.7.36"
   }
 }
