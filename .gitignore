@@ -27,4 +27,4 @@ yarn.lock
 
 # exclude IntelliJ/WebStorm stuff
 .idea
-.vscode
+.vscode.astro
