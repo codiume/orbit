@@ -32,7 +32,10 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
         const outDir = handleWindowsPath(fileURLToPath(dir));
         const purged = await new PurgeCSS().purge({
           ...options,
-          content: [`${outDir}/**/*.html`],
+          content: [
+            `${outDir}/**/*.html`,
+            `${outDir}/**/*.js`
+        ],
           css: [`${outDir}/**/*.css`],
           defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || []
         });
