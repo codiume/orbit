@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 2.0.1
+
+### Patch Changes
+
+- [`cb6fd00`](https://github.com/codiume/orbit/commit/cb6fd00ffc4727f465d2edda1611ed1991ee0866) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Fix purgecss removing css classes that exists in js files
+
 ## 2.0.0
 
 ### Major Changes
