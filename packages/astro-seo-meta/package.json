@@ -1,7 +1,7 @@
 {
   "name": "astro-seo-meta",
   "description": "Astro seo provides a <Seo> component to update meta tags",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "scripts": {
     "build": "astro-build --src src/index.ts src/**/*.astro",
     "postbuild": "npm run typecheck:emit",
