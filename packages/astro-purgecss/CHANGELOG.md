@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 2.1.0
+
+### Minor Changes
+
+- [`136119d`](https://github.com/codiume/orbit/commit/136119d32ed5abf39ebc6e3b101214387dbd7075) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Update astro dependencies
+
 ## 2.0.1
 
 ### Patch Changes
