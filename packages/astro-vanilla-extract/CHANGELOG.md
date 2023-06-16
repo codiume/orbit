@@ -1,5 +1,11 @@
 # astro-vanilla-extract
 
+## 2.2.0
+
+### Minor Changes
+
+- [`e11ddd6`](https://github.com/codiume/orbit/commit/e11ddd6e3c86f79c6c6b7541976ad2cbae84ee33) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Fix Typescript .d.ts emits
+
 ## 2.1.0
 
 ### Minor Changes
