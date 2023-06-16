@@ -9,7 +9,7 @@
     "typecheck:emit": "tsc --declaration --emitDeclarationOnly"
   },
   "type": "module",
-  "types": "dist/index.d.mts",
+  "types": "dist/index.d.ts",
   "author": "codiume",
   "license": "MIT",
   "repository": {
