@@ -6,10 +6,10 @@
     "build": "astro-build --src src/index.ts src/loaders/*.astro",
     "postbuild": "npm run typecheck:emit",
     "typecheck": "tsc --noEmit",
-    "typecheck:emit": "tsc --declaration --emitDeclarationOnly --outDir dist"
+    "typecheck:emit": "tsc --declaration --emitDeclarationOnly"
   },
   "type": "module",
-  "types": "dist/index.d.ts",
+  "types": "dist/index.d.mts",
   "author": "codiume",
   "license": "MIT",
   "repository": {
