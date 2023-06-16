@@ -1,6 +1,8 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "noEmit": false
-  }
+    "noEmit": false,
+    "jsx": "preserve",
+    "outDir": "./dist"
+  },
 }

@@ -3,10 +3,10 @@
   "description": "Remove unused CSS rules from your final Astro bundle",
   "version": "2.1.0",
   "scripts": {
-    "build": "astro-build --src src/**/*.ts",
+    "build": "astro-build --src src/index.ts",
     "postbuild": "npm run typecheck:emit",
     "typecheck": "tsc --noEmit",
-    "typecheck:emit": "tsc --declaration --emitDeclarationOnly --outDir dist"
+    "typecheck:emit": "tsc --declaration --emitDeclarationOnly"
   },
   "type": "module",
   "types": "dist/index.d.ts",
