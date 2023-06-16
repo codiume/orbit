@@ -1,7 +1,7 @@
 {
   "name": "astro-svg-loaders",
   "description": "Astro loading icons and small animations built with pure SVG.",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "scripts": {
     "build": "astro-build --src src/index.ts src/loaders/*.astro",
     "postbuild": "npm run typecheck:emit",
