@@ -11,6 +11,7 @@ export type PurgeCSSOptions = {
   variables?: boolean;
   safelist?: UserDefinedSafelist;
   blocklist?: StringRegExpArray;
+  includeSource?: StringRegExpArray;
 };
 
 function handleWindowsPath(outputPath: string): string {
@@ -34,7 +35,8 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
           ...options,
           content: [
             `${outDir}/**/*.html`,
-            `${outDir}/**/*.js`
+            `${outDir}/**/*.js`,
+            options.includeSource ? `./src/**/*.{vue,astro}` : undefined
         ],
           css: [`${outDir}/**/*.css`],
           defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || []
