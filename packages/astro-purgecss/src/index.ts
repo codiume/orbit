@@ -34,7 +34,8 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
           ...options,
           content: [
             `${outDir}/**/*.html`,
-            `${outDir}/**/*.js`
+            `${outDir}/**/*.js`,
+            ...options.content || []
         ],
           css: [`${outDir}/**/*.css`],
           defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || []
