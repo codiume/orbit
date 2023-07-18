@@ -67,11 +67,18 @@ export default defineConfig({
       fontFace: true,
       keyframes: true,
       safelist: ['random', 'yep', 'button', /^nav-/],
-      blocklist: ['usedClass', /^nav-/]
+      blocklist: ['usedClass', /^nav-/],
+      contents: [
+        process.cwd() + '/src/**/*.{astro,vue}', // Watching astro and vue sources (for SSR, read the note below)
+      ],
     })
   ]
 });
 ```
+
+> **Note**
+>
+> If you are using **Astro SSR** in your project, you must add your astro and framework sources files into the `content` option (see in the example). Otherwise, as the package only look at the final build sent to the client, with SSR, some pages may not be included and may break your CSS.
 
 ### Available Options
 
@@ -86,6 +93,7 @@ export type PurgeCSSOptions = {
   variables?: boolean; // removes any unused CSS variables if set to true
   safelist?: UserDefinedSafelist; // indicates which selectors are safe to leave in the final CSS
   blocklist?: StringRegExpArray; // blocks the CSS selectors from appearing in the final output CSS
+  content?: Array<string | RawContent>;
 };
 ```
 
@@ -95,7 +103,7 @@ We have also setup an example repository available here: [example-purgecss](../.
 
 ### Caveats
 
-- Certain options (ex: `css`, `content`), are not allowed to be passed in your `astro.config.mjs` config file, to not interfere with the internals of this integration.
+- Options `css` is not allowed to be passed in your `astro.config.mjs` config file, to not interfere with the internals of this integration.
 
 - If you are using `tailwind.css`, please read about purge limitations in this guide [writing-purgeable-html](https://v2.tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html)
 
