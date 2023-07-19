@@ -68,7 +68,7 @@ export default defineConfig({
       keyframes: true,
       safelist: ['random', 'yep', 'button', /^nav-/],
       blocklist: ['usedClass', /^nav-/],
-      contents: [
+      content: [
         process.cwd() + '/src/**/*.{astro,vue}', // Watching astro and vue sources (for SSR, read the note below)
       ],
     })
@@ -103,7 +103,7 @@ We have also setup an example repository available here: [example-purgecss](../.
 
 ### Caveats
 
-- Options `css` is not allowed to be passed in your `astro.config.mjs` config file, to not interfere with the internals of this integration.
+- Some options are not allowed to be passed in your `astro.config.mjs` config file, to not interfere with the internals of this integration.
 
 - If you are using `tailwind.css`, please read about purge limitations in this guide [writing-purgeable-html](https://v2.tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html)
 
