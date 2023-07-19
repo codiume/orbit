@@ -1,5 +1,11 @@
 # astro-useragent
 
+## 2.3.0
+
+### Minor Changes
+
+- [`84dca9c`](https://github.com/codiume/orbit/commit/84dca9c3535f90c620705dd969f772352bf54f53) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Add SSR support to astro-purgecss
+
 ## 2.2.0
 
 ### Minor Changes
