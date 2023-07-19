@@ -11,6 +11,7 @@ export type PurgeCSSOptions = {
   variables?: boolean;
   safelist?: UserDefinedSafelist;
   blocklist?: StringRegExpArray;
+  content?: Array<string | RawContent>;
 };
 
 function handleWindowsPath(outputPath: string): string {
