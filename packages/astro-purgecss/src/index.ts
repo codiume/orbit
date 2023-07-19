@@ -1,5 +1,5 @@
 import type { AstroIntegration } from 'astro';
-import { PurgeCSS, StringRegExpArray, UserDefinedSafelist } from 'purgecss';
+import { PurgeCSS, RawContent, StringRegExpArray, UserDefinedSafelist } from 'purgecss';
 import { writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
@@ -11,6 +11,7 @@ export type PurgeCSSOptions = {
   variables?: boolean;
   safelist?: UserDefinedSafelist;
   blocklist?: StringRegExpArray;
+  content?: Array<string | RawContent>;
 };
 
 function handleWindowsPath(outputPath: string): string {
@@ -34,7 +35,8 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
           ...options,
           content: [
             `${outDir}/**/*.html`,
-            `${outDir}/**/*.js`
+            `${outDir}/**/*.js`,
+            ...options.content || []
         ],
           css: [`${outDir}/**/*.css`],
           defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || []
