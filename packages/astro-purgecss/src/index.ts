@@ -1,5 +1,5 @@
 import type { AstroIntegration } from 'astro';
-import { PurgeCSS, StringRegExpArray, UserDefinedSafelist } from 'purgecss';
+import { PurgeCSS, RawContent, StringRegExpArray, UserDefinedSafelist } from 'purgecss';
 import { writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
