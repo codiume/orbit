@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- [`84dca9c`](https://github.com/codiume/orbit/commit/84dca9c3535f90c620705dd969f772352bf54f53) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Add SSR support to astro-purgecss
+- [`b53db19`](https://github.com/codiume/orbit/commit/b53db19730adb697f01b58b96aa69d48fdc43a44) Thanks [@IfnotFr](https://github.com/IfnotFr)! - Add SSR support to astro-purgecss
 
 ## 2.2.0
 
