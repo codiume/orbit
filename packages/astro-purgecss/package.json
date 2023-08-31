@@ -37,6 +37,6 @@
     "purgecss": "^5.0.0"
   },
   "peerDependencies": {
-    "astro": "^2.0.0"
+    "astro": "^3.0.0"
   }
 }
