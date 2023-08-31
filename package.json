@@ -18,7 +18,7 @@
     "@changesets/changelog-github": "^0.4.6",
     "@changesets/cli": "^2.24.4",
     "@types/node": "^18.7.23",
-    "astro": "^2.0.0",
+    "astro": "^3.0.0",
     "commander": "^11.0.0",
     "esbuild": "^0.19.0",
     "esbuild-plugin-clean": "^1.0.0",

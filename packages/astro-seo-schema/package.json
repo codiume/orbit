@@ -35,7 +35,7 @@
     ".": "./dist/index.mjs"
   },
   "peerDependencies": {
-    "astro": "^2.0.0"
+    "astro": "^3.0.0"
   },
   "dependencies": {
     "schema-dts": "^1.1.0"
