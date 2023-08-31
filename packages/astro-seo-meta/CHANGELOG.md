@@ -1,5 +1,11 @@
 # astro-seo-meta
 
+## 3.0.0
+
+### Major Changes
+
+- [#298](https://github.com/codiume/orbit/pull/298) [`f53ba6e`](https://github.com/codiume/orbit/commit/f53ba6e0aa39913955b81d872f0122469604359b) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Upgrade to Astro v3
+
 ## 2.2.0
 
 ### Minor Changes
