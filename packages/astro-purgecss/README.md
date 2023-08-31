@@ -69,8 +69,8 @@ export default defineConfig({
       safelist: ['random', 'yep', 'button', /^nav-/],
       blocklist: ['usedClass', /^nav-/],
       content: [
-        process.cwd() + '/src/**/*.{astro,vue}', // Watching astro and vue sources (for SSR, read the note below)
-      ],
+        process.cwd() + '/src/**/*.{astro,vue}' // Watching astro and vue sources (for SSR, read the note below)
+      ]
     })
   ]
 });

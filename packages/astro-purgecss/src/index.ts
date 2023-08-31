@@ -1,5 +1,10 @@
 import type { AstroIntegration } from 'astro';
-import { PurgeCSS, RawContent, StringRegExpArray, UserDefinedSafelist } from 'purgecss';
+import {
+  PurgeCSS,
+  type RawContent,
+  type StringRegExpArray,
+  type UserDefinedSafelist
+} from 'purgecss';
 import { writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
@@ -36,8 +41,8 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
           content: [
             `${outDir}/**/*.html`,
             `${outDir}/**/*.js`,
-            ...options.content || []
-        ],
+            ...(options.content || [])
+          ],
           css: [`${outDir}/**/*.css`],
           defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || []
         });
