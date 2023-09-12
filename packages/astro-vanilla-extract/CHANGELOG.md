@@ -1,5 +1,11 @@
 # astro-vanilla-extract
 
+## 3.1.0
+
+### Minor Changes
+
+- [#313](https://github.com/codiume/orbit/pull/313) [`66d0bd5`](https://github.com/codiume/orbit/commit/66d0bd55dfebcc7e239fd4844d0d35611d27240e) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Fix types resolution for esm modules using .mjs extension
+
 ## 3.0.0
 
 ### Major Changes
