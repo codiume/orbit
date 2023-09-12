@@ -30,7 +30,12 @@
   ],
   "main": "./dist/index.mjs",
   "exports": {
-    ".": "./dist/index.mjs"
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      }
+    }
   },
   "dependencies": {
     "ua-parser-js": "^1.0.2"

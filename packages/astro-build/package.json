@@ -20,6 +20,10 @@
   "homepage": "https://github.com/codiume/orbit",
   "main": "./src/index.mjs",
   "exports": {
-    ".": "./src/index.mjs"
+    ".": {
+      "import": {
+        "default": "./dist/index.mjs"
+      }
+    }
   }
 }

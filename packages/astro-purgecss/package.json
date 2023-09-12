@@ -31,7 +31,12 @@
   ],
   "main": "./dist/index.mjs",
   "exports": {
-    ".": "./dist/index.mjs"
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      }
+    }
   },
   "dependencies": {
     "purgecss": "^5.0.0"
