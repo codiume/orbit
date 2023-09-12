@@ -105,6 +105,8 @@ We have also setup an example repository available here: [example-purgecss](../.
 
 - Some options are not allowed to be passed in your `astro.config.mjs` config file, to not interfere with the internals of this integration.
 
+- If you are using [inline styles](https://docs.astro.build/en/guides/styling/#scoped-styles), this plugin won't be able to purge those css rules, due to astro's way of handling scoped css rules.
+
 - If you are using `tailwind.css`, please read about purge limitations in this guide [writing-purgeable-html](https://v2.tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html)
 
 ## Changelog
