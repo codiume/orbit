@@ -1,5 +1,11 @@
 # astro-seo-schema
 
+## 3.1.1
+
+### Patch Changes
+
+- [#316](https://github.com/codiume/orbit/pull/316) [`1d0a514`](https://github.com/codiume/orbit/commit/1d0a51457c2484be9b4d30d2467638d48f58c934) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Fix types for astro-seo-schema
+
 ## 3.1.0
 
 ### Minor Changes
