@@ -3,8 +3,8 @@ import type { Graph, Thing, WithContext } from 'schema-dts';
 
 import { JsonLd } from './jsonld';
 
-export type Props = {
-  item: Graph | WithContext<Thing>;
+export type Props<T extends Thing> = {
+  item: Graph | WithContext<Thing> | WithContext<T>;
   space?: string | number;
 };
 
