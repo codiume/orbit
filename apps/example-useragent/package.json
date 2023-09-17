@@ -14,6 +14,6 @@
   },
   "dependencies": {
     "@astrojs/node": "^6.0.0",
-    "astro-useragent": "*"
+    "astro-useragent": "workspace:*"
   }
 }
