@@ -40,9 +40,6 @@
   "peerDependencies": {
     "astro": "^3.0.0"
   },
-  "devDependencies": {
-    "astro-build": "workspace:*"
-  },
   "dependencies": {
     "@vanilla-extract/vite-plugin": "^3.4.0"
   }
