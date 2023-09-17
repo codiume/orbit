@@ -13,8 +13,8 @@
     "astro": "^3.0.0"
   },
   "dependencies": {
-    "astro-seo-meta": "*",
-    "astro-seo-schema": "*",
-    "astro-svg-loaders": "*"
+    "astro-seo-meta": "workspace:*",
+    "astro-seo-schema": "workspace:*",
+    "astro-svg-loaders": "workspace:*"
   }
 }

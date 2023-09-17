@@ -41,6 +41,9 @@
   "dependencies": {
     "purgecss": "^5.0.0"
   },
+  "devDependencies": {
+    "astro-build": "workspace:*"
+  },
   "peerDependencies": {
     "astro": "^3.0.0"
   }

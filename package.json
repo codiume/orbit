@@ -15,17 +15,17 @@
     "release": "turbo run build && changeset publish"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.4.6",
-    "@changesets/cli": "^2.24.4",
-    "@types/node": "^18.7.23",
-    "astro": "^3.0.0",
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.2",
+    "@types/node": "^18.17.17",
+    "astro": "^3.1.0",
     "commander": "^11.0.0",
-    "esbuild": "^0.19.0",
-    "esbuild-plugin-clean": "^1.0.0",
-    "ora": "^7.0.0",
-    "prettier": "^3.0.0",
+    "esbuild": "^0.19.3",
+    "esbuild-plugin-clean": "^1.0.1",
+    "ora": "^7.0.1",
+    "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0",
     "tiny-glob": "^0.2.9",
-    "turbo": "latest"
+    "turbo": "^1.10.14"
   }
 }
