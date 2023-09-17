@@ -15,25 +15,34 @@
 the `astro add` command-line tool automates the installation for you. Run one of the following commands in a new terminal window. (If you aren’t sure which package manager you’re using, run the first command.) Then, follow the prompts, and type “y” in the terminal (meaning “yes”) for each one.
 
 ```bash
+# Using PNPM
+pnpm astro add astro-purgecss
 # Using NPM
 npx astro add astro-purgecss
 # Using Yarn
 yarn astro add astro-purgecss
-# Using PNPM
-pnpm astro add astro-purgecss
 ```
 
 ### Manual Install
 
-First, install the `astro-purgecss` package using your package manager. (If you aren’t sure which package manager you’re using, run the first command.)
+First, install the `purgecss` & `astro-purgecss` packages using your package manager. (If you aren’t sure which package manager you’re using, run the first command.)
+
+Using PNPM
 
 ```bash
-# Using NPM
-npm install astro-purgecss
-# Using Yarn
-yarn add astro-purgecss
-# Using PNPM
-pnpm install astro-purgecss
+pnpm install purgecss astro-purgecss
+```
+
+Using NPM
+
+```bash
+npm install purgecss astro-purgecss
+```
+
+Using Yarn
+
+```bash
+yarn add purgecss astro-purgecss
 ```
 
 Then, apply this integration to your `astro.config.mjs` file using the integrations property:

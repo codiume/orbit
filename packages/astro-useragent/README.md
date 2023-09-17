@@ -14,13 +14,22 @@ Astro UserAgent is a simple helper for parsing `user-agent` header strings for b
 
 First, install the `astro-useragent` package using your package manager. (If you aren’t sure which package manager you’re using, run the first command.)
 
+Using PNPM
+
 ```bash
-# Using NPM
-npm install astro-useragent
-# Using Yarn
-yarn add astro-useragent
-# Using PNPM
 pnpm install astro-useragent
+```
+
+Using NPM
+
+```bash
+npm install astro-useragent
+```
+
+Using Yarn
+
+```bash
+yarn add astro-useragent
 ```
 
 ## 🥑 Usage

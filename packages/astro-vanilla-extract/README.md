@@ -15,25 +15,34 @@ This integration adds [vanilla-extract][vanilla-extract] support to [Astro][astr
 the `astro add` command-line tool automates the installation for you. Run one of the following commands in a new terminal window. (If you aren’t sure which package manager you’re using, run the first command.) Then, follow the prompts, and type “y” in the terminal (meaning “yes”) for each one.
 
 ```bash
+# Using PNPM
+pnpm astro add astro-vanilla-extract
 # Using NPM
 npx astro add astro-vanilla-extract
 # Using Yarn
 yarn astro add astro-vanilla-extract
-# Using PNPM
-pnpm astro add astro-vanilla-extract
 ```
 
 ### Manual Install
 
 First, install the `astro-vanilla-extract` package using your package manager. (If you aren’t sure which package manager you’re using, run the first command.)
 
+Using PNPM
+
 ```bash
-# Using NPM
-npm install astro-vanilla-extract
-# Using Yarn
-yarn add astro-vanilla-extract
-# Using PNPM
 pnpm install astro-vanilla-extract
+```
+
+Using NPM
+
+```bash
+npm install astro-vanilla-extract
+```
+
+Using Yarn
+
+```bash
+yarn add astro-vanilla-extract
 ```
 
 Then, apply this integration to your `astro.config.mjs` file using the integrations property:

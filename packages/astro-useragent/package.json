@@ -41,10 +41,10 @@
     "ua-parser-js": "^1.0.2"
   },
   "devDependencies": {
-    "astro-build": "workspace:*"
+    "astro-build": "workspace:*",
+    "@types/ua-parser-js": "^0.7.36"
   },
   "peerDependencies": {
-    "astro": "^3.0.0",
-    "@types/ua-parser-js": "^0.7.36"
+    "astro": "^3.0.0"
   }
 }
