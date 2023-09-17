@@ -18,16 +18,24 @@ This `<Schema>` component:
 
 ## 📦 Installation
 
-This package is hosted on [`npm`][npm].
+First, install the `schema-dts` & `astro-seo-schema` packages using your package manager. (If you aren’t sure which package manager you’re using, run the first command.)
+
+Using PNPM
 
 ```bash
-npm install astro-seo-schema
+pnpm install schema-dts astro-seo-schema
 ```
 
-Or using yarn
+Using NPM
 
 ```bash
-yarn add astro-seo-schema
+npm install schema-dts astro-seo-schema
+```
+
+Using Yarn
+
+```bash
+yarn add schema-dts astro-seo-schema
 ```
 
 ## 🥑 Usage
