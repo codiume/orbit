@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 3.2.0
+
+### Minor Changes
+
+- [#327](https://github.com/codiume/orbit/pull/327) [`539d27b`](https://github.com/codiume/orbit/commit/539d27b78e9dd1786ab13c48404a755f21d083cb) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Change dependencies to peerDependencies
+
 ## 3.1.0
 
 ### Minor Changes
