@@ -6,5 +6,11 @@
   "linked": [],
   "access": "public",
   "baseBranch": "main",
-  "updateInternalDependencies": "patch"
+  "updateInternalDependencies": "patch",
+  "ignore": [
+    "@orbit/example-purgecss",
+    "@orbit/example-useragent",
+    "@orbit/example-vanilla-extract",
+    "@orbit/playground"
+  ]
 }
