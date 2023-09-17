@@ -110,20 +110,12 @@ importers:
       purgecss:
         specifier: ^5.0.0
         version: 5.0.0
-    devDependencies:
-      astro-build:
-        specifier: workspace:*
-        version: link:../astro-build
 
   packages/astro-seo-meta:
     dependencies:
       astro:
         specifier: ^3.0.0
         version: 3.0.10(@types/node@18.17.17)
-    devDependencies:
-      astro-build:
-        specifier: workspace:*
-        version: link:../astro-build
 
   packages/astro-seo-schema:
     dependencies:
@@ -133,20 +125,12 @@ importers:
       schema-dts:
         specifier: ^1.1.0
         version: 1.1.2(typescript@5.2.2)
-    devDependencies:
-      astro-build:
-        specifier: workspace:*
-        version: link:../astro-build
 
   packages/astro-svg-loaders:
     dependencies:
       astro:
         specifier: ^3.0.0
         version: 3.0.10(@types/node@18.17.17)
-    devDependencies:
-      astro-build:
-        specifier: workspace:*
-        version: link:../astro-build
 
   packages/astro-useragent:
     dependencies:
@@ -159,10 +143,6 @@ importers:
       ua-parser-js:
         specifier: ^1.0.2
         version: 1.0.36
-    devDependencies:
-      astro-build:
-        specifier: workspace:*
-        version: link:../astro-build
 
   packages/astro-vanilla-extract:
     dependencies:
@@ -172,10 +152,6 @@ importers:
       astro:
         specifier: ^3.0.0
         version: 3.0.10(@types/node@18.17.17)
-    devDependencies:
-      astro-build:
-        specifier: workspace:*
-        version: link:../astro-build
 
 packages:
 
