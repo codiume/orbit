@@ -12,6 +12,7 @@
 [![typescript][typescript-badge]][typescript]
 [![makepr][makepr-badge]][makepr]
 [![maintainability][codeclimate-badge]][codeclimate]
+[![Built with Astro][astro-badge]][astro]
 
 ## Packages
 
@@ -48,3 +49,5 @@ Please see the [LICENSE](LICENSE) for more information.
 [makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square?style=flat
 [codeclimate]: https://codeclimate.com/github/codiume/orbit/maintainability
 [codeclimate-badge]: https://api.codeclimate.com/v1/badges/d9f004c55ba5a19a8810/maintainability
+[astro]: https://astro.build
+[astro-badge]: https://astro.badg.es/v2/built-with-astro/tiny.svg
