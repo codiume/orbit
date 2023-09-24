@@ -6,13 +6,14 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build && turbo run typecheck",
+    "build:no-cache": "turbo run build --no-cache && turbo run typecheck",
     "dev": "turbo run dev --no-cache --parallel --continue",
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md,astro,mjs}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build && changeset publish"
+    "release": "pnpm run build && changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
@@ -26,6 +27,7 @@
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0",
     "tiny-glob": "^0.2.9",
-    "turbo": "^1.10.14"
+    "turbo": "^1.10.14",
+    "typescript": "^5.2.2"
   }
 }

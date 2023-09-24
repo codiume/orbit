@@ -3,6 +3,7 @@
   "compilerOptions": {
     "noEmit": false,
     "jsx": "preserve",
-    "outDir": "./dist"
-  },
+    "outDir": "./dist",
+    "allowImportingTsExtensions": false
+  }
 }
