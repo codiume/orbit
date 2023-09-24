@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 3.2.1
+
+### Patch Changes
+
+- [#334](https://github.com/codiume/orbit/pull/334) [`5dcb83a`](https://github.com/codiume/orbit/commit/5dcb83a4c28461129d92f0571c1f110957fdabbc) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Fix missing type definitions
+
 ## 3.2.0
 
 ### Minor Changes

@@ -1,7 +1,7 @@
 {
   "name": "astro-vanilla-extract",
   "description": "Adds vanilla-extract support to Astro",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "scripts": {
     "build": "astro-build --src src/**/*.ts",
     "typecheck": "tsc --declaration --emitDeclarationOnly"
