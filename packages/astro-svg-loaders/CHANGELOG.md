@@ -1,5 +1,11 @@
 # astro-svg-loaders
 
+## 3.2.0
+
+### Minor Changes
+
+- [#355](https://github.com/codiume/orbit/pull/355) [`4103ff9`](https://github.com/codiume/orbit/commit/4103ff9b51edbb77c2f889a45c97c2b0d83616a6) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Upgrade to astro v4
+
 ## 3.1.1
 
 ### Patch Changes
