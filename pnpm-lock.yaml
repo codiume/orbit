@@ -51,8 +51,8 @@ importers:
   apps/example-purgecss:
     dependencies:
       '@astrojs/node':
-        specifier: ^6.0.0
-        version: 6.1.0(astro@4.0.1)
+        specifier: ^7.0.0
+        version: 7.0.0(astro@4.0.1)
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
@@ -64,8 +64,8 @@ importers:
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
-        specifier: ^6.0.0
-        version: 6.1.0(astro@4.0.1)
+        specifier: ^7.0.0
+        version: 7.0.0(astro@4.0.1)
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
@@ -77,8 +77,8 @@ importers:
   apps/example-vanilla-extract:
     dependencies:
       '@astrojs/node':
-        specifier: ^6.0.0
-        version: 6.1.0(astro@4.0.1)
+        specifier: ^7.0.0
+        version: 7.0.0(astro@4.0.1)
       astro-vanilla-extract:
         specifier: workspace:*
         version: link:../../packages/astro-vanilla-extract
@@ -222,10 +222,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/node@6.1.0(astro@4.0.1):
-    resolution: {integrity: sha512-rqhZuVDUHVynkBaI/a8Y/WjVeFvKaH4qyrTkC8ZFwYUVff2DPQHS5/wLlTtS3s1GglApYsvPB9DdTL7sqUe9Kg==}
+  /@astrojs/node@7.0.0(astro@4.0.1):
+    resolution: {integrity: sha512-G2NXEbinFqysOCa3mL8PqsyU4yot3I1lmF1WNPJaLGyW0LvG6pbz4iTa4Pk07O2oU+lE9J6JMC5GeNjaWQ0UFA==}
     peerDependencies:
-      astro: ^3.0.0
+      astro: ^4.0.0-beta.0
     dependencies:
       astro: 4.0.1(@types/node@20.10.3)(typescript@5.3.2)
       send: 0.18.0
