@@ -1,5 +1,11 @@
 # astro-vanilla-extract
 
+## 4.0.0
+
+### Major Changes
+
+- [#357](https://github.com/codiume/orbit/pull/357) [`7d7e780`](https://github.com/codiume/orbit/commit/7d7e780966d7d8273fbdb53567aadc3cde109fda) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Upgrade to astro@v4
+
 ## 3.2.1
 
 ### Patch Changes
