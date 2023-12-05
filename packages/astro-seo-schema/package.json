@@ -38,7 +38,7 @@
     }
   },
   "peerDependencies": {
-    "astro": "^3.0.0",
+    "astro": "^4.0.0",
     "schema-dts": "^1.1.0"
   },
   "devDependencies": {

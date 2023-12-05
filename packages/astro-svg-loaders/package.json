@@ -41,6 +41,6 @@
     "astro-build": "workspace:*"
   },
   "peerDependencies": {
-    "astro": "^3.0.0"
+    "astro": "^4.0.0"
   }
 }
