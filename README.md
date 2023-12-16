@@ -16,15 +16,14 @@
 
 ## Packages
 
-| Package                                                 | Release Notes                                                                                                     |
-| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| [astro-purgecss](packages/astro-purgecss)               | [![version](https://img.shields.io/npm/v/astro-purgecss.svg)](packages/astro-purgecss/CHANGELOG.md)               |
-| [astro-seo-meta](packages/astro-seo-meta)               | [![version](https://img.shields.io/npm/v/astro-seo-meta.svg)](packages/astro-seo-meta/CHANGELOG.md)               |
-| [astro-seo-schema](packages/astro-seo-schema)           | [![version](https://img.shields.io/npm/v/astro-seo-schema.svg)](packages/astro-seo-schema/CHANGELOG.md)           |
-| [astro-svg-loaders](packages/astro-svg-loaders)         | [![version](https://img.shields.io/npm/v/astro-svg-loaders.svg)](packages/astro-svg-loaders/CHANGELOG.md)         |
-| [astro-vanilla-extract](packages/astro-vanilla-extract) | [![version](https://img.shields.io/npm/v/astro-vanilla-extract.svg)](packages/astro-vanilla-extract/CHANGELOG.md) |
-| [astro-useragent](packages/astro-useragent)             | [![version](https://img.shields.io/npm/v/astro-useragent.svg)](packages/astro-useragent/CHANGELOG.md)             |
-
+| Package        | Release Notes            | Downloads  |
+| ------------- | ------------- | ----- |
+| [astro-purgecss](packages/astro-purgecss)       |  [![version](https://img.shields.io/npm/v/astro-purgecss.svg)](packages/astro-purgecss/CHANGELOG.md) |[![downloads][downloads-badge-purgecss]][npm-purgecss]|
+| [astro-seo-meta](packages/astro-seo-meta)     | [![version](https://img.shields.io/npm/v/astro-seo-meta.svg)](packages/astro-seo-meta/CHANGELOG.md)     |[![downloads][downloads-badge-seo-meta]][npm-seo-meta]|
+| [astro-seo-schema](packages/astro-seo-schema) | [![version](https://img.shields.io/npm/v/astro-seo-schema.svg)](packages/astro-seo-schema/CHANGELOG.md)      |[![downloads][downloads-badge-seo-schema]][npm-seo-schema]|
+| [astro-svg-loaders](packages/astro-svg-loaders)      | [![version](https://img.shields.io/npm/v/astro-svg-loaders.svg)](packages/astro-svg-loaders/CHANGELOG.md) |[![downloads][downloads-badge-svg-loaders]][npm-svg-loaders]|
+| [astro-vanilla-extract](packages/astro-vanilla-extract)  | [![version](https://img.shields.io/npm/v/astro-vanilla-extract.svg)](packages/astro-vanilla-extract/CHANGELOG.md)      |[![downloads][downloads-badge-vanilla-extract]][npm-vanilla-extract]|
+| [astro-useragent](packages/astro-useragent)      | [![version](https://img.shields.io/npm/v/astro-useragent.svg)](packages/astro-useragent/CHANGELOG.md)      |[![downloads][downloads-badge-useragent]][npm-useragent]|
 ## Support
 
 Having trouble? Get help in the official [Astro Discord](https://astro.build/chat).
@@ -51,3 +50,21 @@ Please see the [LICENSE](LICENSE) for more information.
 [codeclimate-badge]: https://api.codeclimate.com/v1/badges/d9f004c55ba5a19a8810/maintainability
 [astro]: https://astro.build
 [astro-badge]: https://astro.badg.es/v2/built-with-astro/tiny.svg
+
+[downloads-badge-purgecss]: https://img.shields.io/npm/dt/astro-purgecss
+[npm-purgecss]: https://npmjs.com/package/astro-purgecss
+
+[downloads-badge-seo-meta]: https://img.shields.io/npm/dt/astro-seo-meta
+[npm-seo-meta]: https://npmjs.com/package/astro-seo-meta
+
+[downloads-badge-seo-schema]: https://img.shields.io/npm/dt/astro-seo-schema
+[npm-seo-schema]: https://npmjs.com/package/astro-seo-schema
+
+[downloads-badge-svg-loaders]: https://img.shields.io/npm/dt/astro-svg-loaders
+[npm-svg-loaders]: https://npmjs.com/package/astro-svg-loaders
+
+[downloads-badge-useragent]: https://img.shields.io/npm/dt/astro-useragent
+[npm-useragent]: https://npmjs.com/package/astro-useragent
+
+[downloads-badge-vanilla-extract]: https://img.shields.io/npm/dt/astro-vanilla-extract
+[npm-vanilla-extract]: https://npmjs.com/package/astro-vanilla-extract
