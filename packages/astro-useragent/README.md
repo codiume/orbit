@@ -140,6 +140,18 @@ export interface UserAgent {
 }
 ```
 
+
+## Caveats 
+
+UserAgent-based mobile detection isn’t always accurate. Instead, use the following client-side function:
+
+```javascript
+function isMobile() {
+    const match = window.matchMedia('(pointer:coarse)')
+    return match && match.matches
+}
+```
+
 ## Changelog
 
 Please see the [Changelog](CHANGELOG.md) for more information on what has changed recently.
