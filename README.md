@@ -27,6 +27,17 @@
 
 
 
+## Mobile Device Detection Warning
+
+UserAgent-based mobile detection isn’t always accurate. Instead, use the following client-side function:
+
+```javascript
+function isMobile() {
+    const match = window.matchMedia('(pointer:coarse)')
+    return match && match.matches
+}
+```
+
 ## Support
 
 Having trouble? Get help in the official [Astro Discord](https://astro.build/chat).
