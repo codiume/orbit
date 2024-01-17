@@ -25,8 +25,6 @@
 | [astro-useragent](packages/astro-useragent)       | [![version](https://img.shields.io/npm/v/astro-useragent.svg)](packages/astro-useragent/CHANGELOG.md)        | This package parses browser user-agent strings for Astro. | [![downloads][downloads-badge-useragent]][npm-useragent] |
 | [astro-svg-loaders](packages/astro-svg-loaders)   | [![version](https://img.shields.io/npm/v/astro-svg-loaders.svg)](packages/astro-svg-loaders/CHANGELOG.md)    | Astro loading icons and small animations built with pure SVG. | [![downloads][downloads-badge-svg-loaders]][npm-svg-loaders] |
 
-
-
 ## Support
 
 Having trouble? Get help in the official [Astro Discord](https://astro.build/chat).
