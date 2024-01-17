@@ -25,19 +25,6 @@
 | [astro-useragent](packages/astro-useragent)       | [![version](https://img.shields.io/npm/v/astro-useragent.svg)](packages/astro-useragent/CHANGELOG.md)        | This package parses browser user-agent strings for Astro. | [![downloads][downloads-badge-useragent]][npm-useragent] |
 | [astro-svg-loaders](packages/astro-svg-loaders)   | [![version](https://img.shields.io/npm/v/astro-svg-loaders.svg)](packages/astro-svg-loaders/CHANGELOG.md)    | Astro loading icons and small animations built with pure SVG. | [![downloads][downloads-badge-svg-loaders]][npm-svg-loaders] |
 
-
-
-## Mobile Device Detection Warning
-
-UserAgent-based mobile detection isn’t always accurate. Instead, use the following client-side function:
-
-```javascript
-function isMobile() {
-    const match = window.matchMedia('(pointer:coarse)')
-    return match && match.matches
-}
-```
-
 ## Support
 
 Having trouble? Get help in the official [Astro Discord](https://astro.build/chat).
