@@ -1,5 +1,11 @@
 # astro-useragent
 
+## 4.0.1
+
+### Patch Changes
+
+- [`a6a5099`](https://github.com/codiume/orbit/commit/a6a50994c59355e6c7857e2e0d309965cd1313bd) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Add warning about using user-agent detection for mobile
+
 ## 4.0.0
 
 ### Major Changes
