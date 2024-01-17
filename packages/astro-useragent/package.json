@@ -1,7 +1,7 @@
 {
   "name": "astro-useragent",
   "description": "Parses browser user-agent strings for Astro",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "scripts": {
     "build": "astro-build --src src/index.ts src/parse.ts src/useUserAgent.ts",
     "typecheck": "tsc --declaration --emitDeclarationOnly"
