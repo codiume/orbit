@@ -1,23 +1,9 @@
 import type { AstroIntegration } from 'astro';
-import {
-  PurgeCSS,
-  type RawContent,
-  type StringRegExpArray,
-  type UserDefinedSafelist
-} from 'purgecss';
+import { PurgeCSS, type UserDefinedOptions } from 'purgecss';
 import { writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
-export type PurgeCSSOptions = {
-  fontFace?: boolean;
-  keyframes?: boolean;
-  rejected?: boolean;
-  rejectedCss?: boolean;
-  variables?: boolean;
-  safelist?: UserDefinedSafelist;
-  blocklist?: StringRegExpArray;
-  content?: Array<string | RawContent>;
-};
+export interface PurgeCSSOptions extends Partial<UserDefinedOptions> {}
 
 function handleWindowsPath(outputPath: string): string {
   if (process.platform !== 'win32') return outputPath;
@@ -37,14 +23,14 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
       'astro:build:done': async ({ dir }) => {
         const outDir = handleWindowsPath(fileURLToPath(dir));
         const purged = await new PurgeCSS().purge({
+          css: [`${outDir}/**/*.css`],
+          defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
           ...options,
           content: [
             `${outDir}/**/*.html`,
             `${outDir}/**/*.js`,
             ...(options.content || [])
           ],
-          css: [`${outDir}/**/*.css`],
-          defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || []
         });
         await Promise.all(
           purged
