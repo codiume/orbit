@@ -1,5 +1,11 @@
 # astro-seo-meta
 
+## 4.1.0
+
+### Minor Changes
+
+- [#374](https://github.com/codiume/orbit/pull/374) [`ab41046`](https://github.com/codiume/orbit/commit/ab4104650f689fdead207aecc15e4bc362e71f9f) Thanks [@tuzzmaniandevil](https://github.com/tuzzmaniandevil)! - Export SEO component properties to allow being referenced from layouts
+
 ## 4.0.0
 
 ### Major Changes
