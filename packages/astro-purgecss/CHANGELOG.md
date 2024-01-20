@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 4.1.0
+
+### Minor Changes
+
+- [#370](https://github.com/codiume/orbit/pull/370) [`063add6`](https://github.com/codiume/orbit/commit/063add63bfceaaf479fcc776def2e8f303192bd0) Thanks [@gavar](https://github.com/gavar)! - Allow to override any of purgecss options
+
 ## 4.0.0
 
 ### Major Changes
