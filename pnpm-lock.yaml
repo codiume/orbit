@@ -21,8 +21,8 @@ importers:
         specifier: ^4.0.0
         version: 4.2.1(@types/node@20.11.5)(typescript@5.3.3)
       commander:
-        specifier: ^11.0.0
-        version: 11.1.0
+        specifier: ^12.0.0
+        version: 12.0.0
       esbuild:
         specifier: ^0.20.0
         version: 0.20.0
@@ -2065,9 +2065,9 @@ packages:
   /comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
 
-  /commander@11.1.0:
-    resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
-    engines: {node: '>=16'}
+  /commander@12.0.0:
+    resolution: {integrity: sha512-MwVNWlYjDTtOjX5PiD7o5pK0UrFU/OYgcJfjjK4RaHZETNtjJqrZa9Y9ds88+A+f+d5lv+561eZ+yCKoS3gbAA==}
+    engines: {node: '>=18'}
     dev: true
 
   /commander@9.5.0:

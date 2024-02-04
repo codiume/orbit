@@ -20,7 +20,7 @@
     "@changesets/cli": "^2.26.2",
     "@types/node": "^20.0.0",
     "astro": "^4.0.0",
-    "commander": "^11.0.0",
+    "commander": "^12.0.0",
     "esbuild": "^0.20.0",
     "esbuild-plugin-clean": "^1.0.1",
     "ora": "^8.0.0",
