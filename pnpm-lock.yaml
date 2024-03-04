@@ -170,8 +170,8 @@ importers:
   packages/astro-vanilla-extract:
     dependencies:
       '@vanilla-extract/vite-plugin':
-        specifier: ^3.4.0
-        version: 3.9.5(@types/node@20.11.24)(vite@5.1.4)
+        specifier: ^4.0.0
+        version: 4.0.4(@types/node@20.11.24)(vite@5.1.4)
       astro:
         specifier: ^4.0.0
         version: 4.4.10(@types/node@20.11.24)(typescript@5.3.3)
@@ -1332,8 +1332,8 @@ packages:
       outdent: 0.8.0
     dev: false
 
-  /@vanilla-extract/integration@6.5.0(@types/node@20.11.24):
-    resolution: {integrity: sha512-E2YcfO8vA+vs+ua+gpvy1HRqvgWbI+MTlUpxA8FvatOvybuNcWAY0CKwQ/Gpj7rswYKtC6C7+xw33emM6/ImdQ==}
+  /@vanilla-extract/integration@7.1.1(@types/node@20.11.24):
+    resolution: {integrity: sha512-2JjDKL2HDTazis4oTkUFsQFUyw61k8oym9r0NOLSJC0JB0W25W1ryVZvDx74d3deIyB5AWbCselyzl3gja30kQ==}
     dependencies:
       '@babel/core': 7.24.0
       '@babel/plugin-syntax-typescript': 7.23.3(@babel/core@7.24.0)
@@ -1363,15 +1363,12 @@ packages:
     resolution: {integrity: sha512-17kVyLq3ePTKOkveHxXuIJZtGYs+cSoev7BlP+Lf4916qfDhk/HBjvlYDe8egrea7LNPHKwSZJK/bzZC+Q6AwQ==}
     dev: false
 
-  /@vanilla-extract/vite-plugin@3.9.5(@types/node@20.11.24)(vite@5.1.4):
-    resolution: {integrity: sha512-CWI/CtrVW6i3HKccI6T7uGQkTJ8bd8Xl2UMBg3Pkr7dwWMmavXTeucV0I9KSbmXaYXSbEj+Q8c9y0xAZwtmTig==}
+  /@vanilla-extract/vite-plugin@4.0.4(@types/node@20.11.24)(vite@5.1.4):
+    resolution: {integrity: sha512-cfg4GK274xzwbVFh8YWvQXNnsCMemvMMwej7V93TTBP2O8qzyTgsx5VJuiAPov3oUU8JWGboaTs16Vnoe5bZ9w==}
     peerDependencies:
-      vite: ^2.2.3 || ^3.0.0 || ^4.0.3 || ^5.0.0
+      vite: ^4.0.3 || ^5.0.0
     dependencies:
-      '@vanilla-extract/integration': 6.5.0(@types/node@20.11.24)
-      outdent: 0.8.0
-      postcss: 8.4.35
-      postcss-load-config: 4.0.2(postcss@8.4.35)
+      '@vanilla-extract/integration': 7.1.1(@types/node@20.11.24)
       vite: 5.1.4(@types/node@20.11.24)
     transitivePeerDependencies:
       - '@types/node'
@@ -1382,7 +1379,6 @@ packages:
       - sugarss
       - supports-color
       - terser
-      - ts-node
     dev: false
 
   /acorn@8.11.3:
@@ -3230,11 +3226,6 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  /lilconfig@3.1.1:
-    resolution: {integrity: sha512-O18pf7nyvHTckunPWCV1XUNXU1piu01y2b7ATJ0ppkUkk8ocqVWBrYjJBCwHDjD/ZWcfyrA0P4gKhzWGi5EINQ==}
-    engines: {node: '>=14'}
-    dev: false
-
   /lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
@@ -4095,23 +4086,6 @@ packages:
     resolution: {integrity: sha512-d7Uw+eZoloe0EHDIYoe+bQ5WXnGMOpmiZFTuMWCwpjzzkL2nTjcKiAk4hh8TjnGye2TwWOk3UXucZ+3rbmBa8Q==}
     engines: {node: '>= 0.4'}
     dev: true
-
-  /postcss-load-config@4.0.2(postcss@8.4.35):
-    resolution: {integrity: sha512-bSVhyJGL00wMVoPUzAVAnbEoWyqRxkjv64tUl427SKnPrENtq6hJwUojroMz2VB+Q1edmi4IfrAPpami5VVgMQ==}
-    engines: {node: '>= 14'}
-    peerDependencies:
-      postcss: '>=8.0.9'
-      ts-node: '>=9.0.0'
-    peerDependenciesMeta:
-      postcss:
-        optional: true
-      ts-node:
-        optional: true
-    dependencies:
-      lilconfig: 3.1.1
-      postcss: 8.4.35
-      yaml: 2.4.0
-    dev: false
 
   /postcss-selector-parser@6.0.15:
     resolution: {integrity: sha512-rEYkQOMUCEMhsKbK66tbEU9QVIxbhN18YiniAwA7XQYTVBqrBy+P2p5JcdqsHgKM2zWylp8d7J6eszocfds5Sw==}
@@ -5522,12 +5496,6 @@ packages:
 
   /yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
-
-  /yaml@2.4.0:
-    resolution: {integrity: sha512-j9iR8g+/t0lArF4V6NE/QCfT+CO7iLqrXAHZbJdo+LfjqP1vR8Fg5bSiaq6Q2lOD1AUEVrEVIgABvBFYojJVYQ==}
-    engines: {node: '>= 14'}
-    hasBin: true
-    dev: false
 
   /yargs-parser@18.1.3:
     resolution: {integrity: sha512-o50j0JeToy/4K6OZcaQmW6lyXXKhq7csREXcDwk2omFPJEwUNOVtJKvmDr9EI1fAJZUyZcRF7kxGBWmRXudrCQ==}
