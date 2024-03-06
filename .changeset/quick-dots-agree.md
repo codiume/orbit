@@ -1,5 +1,5 @@
 ---
-"astro-vanilla-extract": major
+'astro-vanilla-extract': major
 ---
 
-This package has been deprecated in favor of the official [vanilla-plugin][vanilla-plugin] Astro integration.
+This package has been deprecated in favor of the official [@vanilla-extract/vite-plugin][@vanilla-extract/vite-plugin].

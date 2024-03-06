@@ -9,7 +9,7 @@
 This integration adds [vanilla-extract][vanilla-extract] support to [Astro][astro]
 
 > [!WARNING]
-> This package has been deprecated in favor of the official [vanilla-plugin][vanilla-plugin] Astro integration.
+> This package has been deprecated in favor of the official [@vanilla-extract/vite-plugin][@vanilla-extract/vite-plugin].
 
 ## 📦 Installation
 
@@ -75,7 +75,7 @@ Please see the [Changelog](CHANGELOG.md) for more information on what has change
 
 [npm]: https://npmjs.com/package/astro-vanilla-extract
 [vanilla-extract]: https://vanilla-extract.style/
-[vanilla-plugin]: https://vanilla-extract.style/documentation/integrations/astro/
+[@vanilla-extract/vite-plugin]: https://vanilla-extract.style/documentation/integrations/astro/
 [astro]: https://astro.build
 
 <!-- README Badges -->
