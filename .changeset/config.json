@@ -10,7 +10,6 @@
   "ignore": [
     "@orbit/example-purgecss",
     "@orbit/example-useragent",
-    "@orbit/example-vanilla-extract",
     "@orbit/playground"
   ]
 }

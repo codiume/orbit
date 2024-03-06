@@ -9,7 +9,7 @@
 This integration adds [vanilla-extract][vanilla-extract] support to [Astro][astro]
 
 > [!WARNING]
-> This integration has been deprecated in favor of [vanilla-plugin][vanilla-plugin] Astro integration.
+> This package has been deprecated in favor of the official [vanilla-plugin][vanilla-plugin] Astro integration.
 
 ## 📦 Installation
 
