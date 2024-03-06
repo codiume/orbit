@@ -9,7 +9,7 @@ export default function (): AstroIntegration {
       'astro:config:setup': ({ updateConfig }) => {
         updateConfig({
           vite: {
-            plugins: [vanillaExtractPlugin()]
+            plugins: [vanillaExtractPlugin() as any]
           }
         });
       }
