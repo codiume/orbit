@@ -42,6 +42,7 @@
     "astro-build": "workspace:*"
   },
   "dependencies": {
-    "@vanilla-extract/vite-plugin": "^3.4.0"
+    "@vanilla-extract/css": "^1.14.1",
+    "@vanilla-extract/vite-plugin": "^4.0.4"
   }
 }
