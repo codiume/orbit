@@ -1,5 +1,11 @@
 # astro-vanilla-extract
 
+## 5.0.0
+
+### Major Changes
+
+- [#401](https://github.com/codiume/orbit/pull/401) [`3c1fd2d`](https://github.com/codiume/orbit/commit/3c1fd2d0b608649ded8a15d03c62e075c7759db9) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - This package has been deprecated in favor of the official @vanilla-extract/vite-plugin.
+
 ## 4.0.0
 
 ### Major Changes
