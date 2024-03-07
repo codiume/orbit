@@ -19,7 +19,7 @@ importers:
         version: 20.11.25
       astro:
         specifier: ^4.4.12
-        version: 4.4.13(@types/node@20.11.25)(typescript@5.3.3)
+        version: 4.4.13(@types/node@20.11.25)(typescript@5.4.2)
       commander:
         specifier: ^12.0.0
         version: 12.0.0
@@ -46,7 +46,7 @@ importers:
         version: 1.12.4
       typescript:
         specifier: ^5.3.3
-        version: 5.3.3
+        version: 5.4.2
 
   apps/example-purgecss:
     dependencies:
@@ -59,7 +59,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.4.13(@types/node@20.11.25)(typescript@5.3.3)
+        version: 4.4.13(@types/node@20.11.25)(typescript@5.4.2)
 
   apps/example-useragent:
     dependencies:
@@ -72,7 +72,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.4.13(@types/node@20.11.25)(typescript@5.3.3)
+        version: 4.4.13(@types/node@20.11.25)(typescript@5.4.2)
 
   apps/playground:
     dependencies:
@@ -88,7 +88,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.4.13(@types/node@20.11.25)(typescript@5.3.3)
+        version: 4.4.13(@types/node@20.11.25)(typescript@5.4.2)
 
   packages/astro-build: {}
 
@@ -218,7 +218,7 @@ packages:
     peerDependencies:
       astro: ^4.2.0
     dependencies:
-      astro: 4.4.13(@types/node@20.11.25)(typescript@5.3.3)
+      astro: 4.4.13(@types/node@20.11.25)(typescript@5.4.2)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -1763,7 +1763,7 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.4.13(@types/node@20.11.25)(typescript@5.3.3):
+  /astro@4.4.13(@types/node@20.11.25)(typescript@5.4.2):
     resolution: {integrity: sha512-kx2k2DJd9Os15zJBo8fK01/2F7/4wH6sAKmlBHlkGHIFm6CKSSzWCK/IWQ0DybNWtthK9A3HDZ4VYWv0BJDOBg==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -1824,7 +1824,7 @@ packages:
       shikiji-core: 0.9.19
       string-width: 7.1.0
       strip-ansi: 7.1.0
-      tsconfck: 3.0.2(typescript@5.3.3)
+      tsconfck: 3.0.2(typescript@5.4.2)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
       vite: 5.1.5(@types/node@20.11.25)
@@ -5202,6 +5202,19 @@ packages:
         optional: true
     dependencies:
       typescript: 5.3.3
+    dev: false
+
+  /tsconfck@3.0.2(typescript@5.4.2):
+    resolution: {integrity: sha512-6lWtFjwuhS3XI4HsX4Zg0izOI3FU/AI9EGVlPEUMDIhvLPMD4wkiof0WCoDgW7qY+Dy198g4d9miAqUHWHFH6Q==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+    peerDependencies:
+      typescript: ^5.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      typescript: 5.4.2
 
   /tty-table@4.2.3:
     resolution: {integrity: sha512-Fs15mu0vGzCrj8fmJNP7Ynxt5J7praPXqFN0leZeZBXJwkMxv9cb2D454k1ltrtUSJbZ4yH4e0CynsHLxmUfFA==}
@@ -5349,6 +5362,12 @@ packages:
 
   /typescript@5.3.3:
     resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: false
+
+  /typescript@5.4.2:
+    resolution: {integrity: sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
