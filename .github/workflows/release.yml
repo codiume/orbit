@@ -11,6 +11,8 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    env:
+      NPM_CONFIG_PROVENANCE: true
 
     steps:
       - uses: actions/checkout@v4
