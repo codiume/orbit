@@ -19,7 +19,7 @@ importers:
         version: 20.11.25
       astro:
         specifier: ^4.4.12
-        version: 4.4.14(@types/node@20.11.25)(typescript@5.4.2)
+        version: 4.4.15(@types/node@20.11.25)(typescript@5.4.2)
       commander:
         specifier: ^12.0.0
         version: 12.0.0
@@ -52,27 +52,27 @@ importers:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.2.3(astro@4.4.14)
+        version: 8.2.3(astro@4.4.15)
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.4.14(@types/node@20.11.25)(typescript@5.4.2)
+        version: 4.4.15(@types/node@20.11.25)(typescript@5.4.2)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.2.3(astro@4.4.14)
+        version: 8.2.3(astro@4.4.15)
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.4.14(@types/node@20.11.25)(typescript@5.4.2)
+        version: 4.4.15(@types/node@20.11.25)(typescript@5.4.2)
 
   apps/playground:
     dependencies:
@@ -88,7 +88,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.4.14(@types/node@20.11.25)(typescript@5.4.2)
+        version: 4.4.15(@types/node@20.11.25)(typescript@5.4.2)
 
   packages/astro-build: {}
 
@@ -213,12 +213,12 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/node@8.2.3(astro@4.4.14):
+  /@astrojs/node@8.2.3(astro@4.4.15):
     resolution: {integrity: sha512-VQQy7QIv4X+5dlKCEchYIxMFryS+BwDOFGNzeRmHe1/P819TlNup9/M8XqnWW4aZPxV7P6CoDeFxX6HuT/kOmQ==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
-      astro: 4.4.14(@types/node@20.11.25)(typescript@5.4.2)
+      astro: 4.4.15(@types/node@20.11.25)(typescript@5.4.2)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -1763,8 +1763,8 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.4.14(@types/node@20.11.25)(typescript@5.4.2):
-    resolution: {integrity: sha512-b8l8NyUP38sWDkCSx9PKTX8aISIXhEGCnsx5FugOTyMisYeeY2hwyaiUpL11WvNJafq28RY0RMO+HWBR6te6fA==}
+  /astro@4.4.15(@types/node@20.11.25)(typescript@5.4.2):
+    resolution: {integrity: sha512-RTiAnlO8hDp6GqMVvaeJxyuCJhHNEho09lHshMNQBqgRabYPOJGW0HZZrbLRGNOqN9I14ivhZIunYGgAaGQpWw==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
