@@ -161,7 +161,7 @@ importers:
         version: 1.14.1
       '@vanilla-extract/vite-plugin':
         specifier: ^4.0.4
-        version: 4.0.5(@types/node@20.11.25)(vite@5.1.5)
+        version: 4.0.6(@types/node@20.11.25)(vite@5.1.5)
       astro:
         specifier: ^4.0.0
         version: 4.4.12(@types/node@20.11.24)(typescript@5.3.3)
@@ -1467,8 +1467,8 @@ packages:
     resolution: {integrity: sha512-17kVyLq3ePTKOkveHxXuIJZtGYs+cSoev7BlP+Lf4916qfDhk/HBjvlYDe8egrea7LNPHKwSZJK/bzZC+Q6AwQ==}
     dev: false
 
-  /@vanilla-extract/vite-plugin@4.0.5(@types/node@20.11.25)(vite@5.1.5):
-    resolution: {integrity: sha512-Yd85OqAnf1mim2tfoQAP5M+AXTIQP1Yx6HnEhCleagbMrqVrpW6n9RhkX4+mMglHbBGtA4DbjOK3gpwqjZ8g9Q==}
+  /@vanilla-extract/vite-plugin@4.0.6(@types/node@20.11.25)(vite@5.1.5):
+    resolution: {integrity: sha512-uT2AhzxEC8qdn7SFxD/MHF7pxyFMb2e7HY3+isyPDzkTyIdiA/ZXk7qwWhcigFMNCJ6YuyxFQJmiDhP9U9oOmg==}
     peerDependencies:
       vite: ^4.0.3 || ^5.0.0
     dependencies:
@@ -1972,7 +1972,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001596
-      electron-to-chromium: 1.4.695
+      electron-to-chromium: 1.4.699
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
 
@@ -2421,8 +2421,8 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
 
-  /electron-to-chromium@1.4.695:
-    resolution: {integrity: sha512-eMijZmeqPtm774pCZIOrfUHMs/7ls++W1sLhxwqgu8KQ8E2WmMtzwyqOMt0XXUJ3HTIPfuwlfwF+I5cwnfItBA==}
+  /electron-to-chromium@1.4.699:
+    resolution: {integrity: sha512-I7q3BbQi6e4tJJN5CRcyvxhK0iJb34TV8eJQcgh+fR2fQ8miMgZcEInckCo1U9exDHbfz7DLDnFn8oqH/VcRKw==}
 
   /emoji-regex@10.3.0:
     resolution: {integrity: sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==}
