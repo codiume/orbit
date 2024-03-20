@@ -19,7 +19,7 @@ importers:
         version: 20.11.30
       astro:
         specifier: ^4.4.12
-        version: 4.5.7(@types/node@20.11.30)(typescript@5.4.2)
+        version: 4.5.7(@types/node@20.11.30)(typescript@5.4.3)
       commander:
         specifier: ^12.0.0
         version: 12.0.0
@@ -46,7 +46,7 @@ importers:
         version: 1.12.5
       typescript:
         specifier: ^5.3.3
-        version: 5.4.2
+        version: 5.4.3
 
   apps/example-purgecss:
     dependencies:
@@ -59,7 +59,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.5.7(@types/node@20.11.30)(typescript@5.4.2)
+        version: 4.5.7(@types/node@20.11.30)(typescript@5.4.3)
 
   apps/example-useragent:
     dependencies:
@@ -72,7 +72,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.5.7(@types/node@20.11.30)(typescript@5.4.2)
+        version: 4.5.7(@types/node@20.11.30)(typescript@5.4.3)
 
   apps/playground:
     dependencies:
@@ -88,7 +88,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.5.7(@types/node@20.11.30)(typescript@5.4.2)
+        version: 4.5.7(@types/node@20.11.30)(typescript@5.4.3)
 
   packages/astro-build: {}
 
@@ -161,7 +161,7 @@ importers:
         version: 1.14.1
       '@vanilla-extract/vite-plugin':
         specifier: ^4.0.4
-        version: 4.0.6(@types/node@20.11.30)(vite@5.2.1)
+        version: 4.0.6(@types/node@20.11.30)(vite@5.2.2)
       astro:
         specifier: ^4.0.0
         version: 4.5.5(@types/node@20.11.28)(typescript@5.4.2)
@@ -218,7 +218,7 @@ packages:
     peerDependencies:
       astro: ^4.2.0
     dependencies:
-      astro: 4.5.7(@types/node@20.11.30)(typescript@5.4.2)
+      astro: 4.5.7(@types/node@20.11.30)(typescript@5.4.3)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -1463,13 +1463,13 @@ packages:
     resolution: {integrity: sha512-17kVyLq3ePTKOkveHxXuIJZtGYs+cSoev7BlP+Lf4916qfDhk/HBjvlYDe8egrea7LNPHKwSZJK/bzZC+Q6AwQ==}
     dev: false
 
-  /@vanilla-extract/vite-plugin@4.0.6(@types/node@20.11.30)(vite@5.2.1):
+  /@vanilla-extract/vite-plugin@4.0.6(@types/node@20.11.30)(vite@5.2.2):
     resolution: {integrity: sha512-uT2AhzxEC8qdn7SFxD/MHF7pxyFMb2e7HY3+isyPDzkTyIdiA/ZXk7qwWhcigFMNCJ6YuyxFQJmiDhP9U9oOmg==}
     peerDependencies:
       vite: ^4.0.3 || ^5.0.0
     dependencies:
       '@vanilla-extract/integration': 7.1.1(@types/node@20.11.30)
-      vite: 5.2.1(@types/node@20.11.30)
+      vite: 5.2.2(@types/node@20.11.30)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -1674,7 +1674,7 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.5.7(@types/node@20.11.30)(typescript@5.4.2):
+  /astro@4.5.7(@types/node@20.11.30)(typescript@5.4.3):
     resolution: {integrity: sha512-Ioeg3TV42dOJvf6GlmykeR3EKZ8+JcnZyJ/X9qDPzVf2OREmtvW0182YCDXQBqwXFRHndZRcHLqinAWjzZYh/A==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
@@ -1732,7 +1732,7 @@ packages:
       shiki: 1.2.0
       string-width: 7.1.0
       strip-ansi: 7.1.0
-      tsconfck: 3.0.3(typescript@5.4.2)
+      tsconfck: 3.0.3(typescript@5.4.3)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
       vite: 5.2.0(@types/node@20.11.30)
@@ -5203,6 +5203,19 @@ packages:
         optional: true
     dependencies:
       typescript: 5.4.2
+    dev: false
+
+  /tsconfck@3.0.3(typescript@5.4.3):
+    resolution: {integrity: sha512-4t0noZX9t6GcPTfBAbIbbIU4pfpCwh0ueq3S4O/5qXI1VwK1outmxhe9dOiEWqMz3MW2LKgDTpqWV+37IWuVbA==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+    peerDependencies:
+      typescript: ^5.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dependencies:
+      typescript: 5.4.3
 
   /tty-table@4.2.3:
     resolution: {integrity: sha512-Fs15mu0vGzCrj8fmJNP7Ynxt5J7praPXqFN0leZeZBXJwkMxv9cb2D454k1ltrtUSJbZ4yH4e0CynsHLxmUfFA==}
@@ -5350,6 +5363,12 @@ packages:
 
   /typescript@5.4.2:
     resolution: {integrity: sha512-+2/g0Fds1ERlP6JsakQQDXjZdZMM+rqpamFZJEKh4kwTIn3iDkgKtby0CeNd5ATNZ4Ry1ax15TMx0W2V+miizQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: false
+
+  /typescript@5.4.3:
+    resolution: {integrity: sha512-KrPd3PKaCLr78MalgiwJnA25Nm8HAmdwN3mYUYZgG/wizIo9EainNVQI9/yDavtVFRN2h3k8uf3GLHuhDMgEHg==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -5658,8 +5677,8 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
 
-  /vite@5.2.1(@types/node@20.11.30):
-    resolution: {integrity: sha512-ZIE1f8IMISi1JytOKF3wQXI7R6nyHGWXwWFbJVdQEPWHFISoy7nyZ5ec+eGGzIoYy4qJWl/c8WgzBB16jN7Ghg==}
+  /vite@5.2.2(@types/node@20.11.30):
+    resolution: {integrity: sha512-FWZbz0oSdLq5snUI0b6sULbz58iXFXdvkZfZWR/F0ZJuKTSPO7v72QPXt6KqYeMFb0yytNp6kZosxJ96Nr/wDQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
