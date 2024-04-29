@@ -12,7 +12,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       id-token: write
     env:
       NPM_CONFIG_PROVENANCE: true
