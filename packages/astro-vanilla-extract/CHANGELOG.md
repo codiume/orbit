@@ -1,5 +1,11 @@
 # astro-vanilla-extract
 
+## 5.0.1
+
+### Patch Changes
+
+- [`214ecc7`](https://github.com/codiume/orbit/commit/214ecc7948affad8d0218f8d3620f90cd2734850) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Add Provenance Badges
+
 ## 5.0.0
 
 ### Major Changes
