@@ -13,24 +13,23 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
-      actions: read
-      contents: read
-    env:
-      NPM_CONFIG_PROVENANCE: true
-
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js 18.x
+      - name: Install Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: 20
           cache: "pnpm"
 
-      - name: Install Dependencies
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+          run_install: false
+
+      - name: Install dependencies
         run: pnpm install
 
       - name: Create Release Pull Request or Publish to npm
@@ -39,5 +38,6 @@ jobs:
         with:
           publish: pnpm run release
         env:
+          NPM_CONFIG_PROVENANCE: true
           GITHUB_TOKEN: ${{ github.token }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
