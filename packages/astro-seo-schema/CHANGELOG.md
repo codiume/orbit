@@ -1,5 +1,11 @@
 # astro-seo-schema
 
+## 4.0.1
+
+### Patch Changes
+
+- [#462](https://github.com/codiume/orbit/pull/462) [`5526808`](https://github.com/codiume/orbit/commit/5526808bf17db16ec8fcb7c1e86f8e86f992d47b) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Add props export to astro-seo-schema
+
 ## 4.0.0
 
 ### Major Changes
