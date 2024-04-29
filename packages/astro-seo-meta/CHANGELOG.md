@@ -1,5 +1,11 @@
 # astro-seo-meta
 
+## 4.1.1
+
+### Patch Changes
+
+- [`214ecc7`](https://github.com/codiume/orbit/commit/214ecc7948affad8d0218f8d3620f90cd2734850) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Add Provenance Badges
+
 ## 4.1.0
 
 ### Minor Changes
