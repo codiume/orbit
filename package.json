@@ -25,7 +25,7 @@
     "esbuild-plugin-clean": "^1.0.1",
     "ora": "^8.0.1",
     "prettier": "^3.2.5",
-    "prettier-plugin-astro": "^0.13.0",
+    "prettier-plugin-astro": "^0.14.0",
     "tiny-glob": "^0.2.9",
     "turbo": "^1.13.3",
     "typescript": "^5.4.5"
