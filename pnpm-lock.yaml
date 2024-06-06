@@ -19,7 +19,7 @@ importers:
         version: 20.14.2
       astro:
         specifier: ^4.7.0
-        version: 4.9.2(@types/node@20.14.2)(typescript@5.4.5)
+        version: 4.9.3(@types/node@20.14.2)(typescript@5.4.5)
       commander:
         specifier: ^12.0.0
         version: 12.1.0
@@ -52,27 +52,27 @@ importers:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.2.5(astro@4.9.2)
+        version: 8.2.5(astro@4.9.3)
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.9.2(@types/node@20.14.2)(typescript@5.4.5)
+        version: 4.9.3(@types/node@20.14.2)(typescript@5.4.5)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.2.5(astro@4.9.2)
+        version: 8.2.5(astro@4.9.3)
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.9.2(@types/node@20.14.2)(typescript@5.4.5)
+        version: 4.9.3(@types/node@20.14.2)(typescript@5.4.5)
 
   apps/playground:
     dependencies:
@@ -88,7 +88,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.9.2(@types/node@20.14.2)(typescript@5.4.5)
+        version: 4.9.3(@types/node@20.14.2)(typescript@5.4.5)
 
   packages/astro-build: {}
 
@@ -213,12 +213,12 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/node@8.2.5(astro@4.9.2):
+  /@astrojs/node@8.2.5(astro@4.9.3):
     resolution: {integrity: sha512-IdVD4dBNyg+ScmCATZ0FM7vNLAHq0TSdiJ3LpR4jcWIUhpN1ps5Jg+9CfzMaLmCCe/SJUZejK5EnzqUJdnGYyg==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
-      astro: 4.9.2(@types/node@20.14.2)(typescript@5.4.5)
+      astro: 4.9.3(@types/node@20.14.2)(typescript@5.4.5)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -1990,8 +1990,8 @@ packages:
       - typescript
     dev: false
 
-  /astro@4.9.2(@types/node@20.14.2)(typescript@5.4.5):
-    resolution: {integrity: sha512-apzpRoISk6L8g99m3zKIW5SYxw2GhOju/1Gq0Ccf3SH+X2UcFXF+MTdxPOFl5yJUQg7X0qsVQDOIVf8zHRRKFg==}
+  /astro@4.9.3(@types/node@20.14.2)(typescript@5.4.5):
+    resolution: {integrity: sha512-LhiKZMee56GI7+zIt15bXZVX4JSnj4syTrQdkYNgE+Y0udMad0x8RgJGzc2NMOK31e6w/SL+NFSvnt/d1kgs5w==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
     dependencies:
@@ -2146,8 +2146,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001627
-      electron-to-chromium: 1.4.788
+      caniuse-lite: 1.0.30001628
+      electron-to-chromium: 1.4.790
       node-releases: 2.0.14
       update-browserslist-db: 1.0.16(browserslist@4.23.0)
 
@@ -2185,8 +2185,8 @@ packages:
     resolution: {integrity: sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==}
     engines: {node: '>=14.16'}
 
-  /caniuse-lite@1.0.30001627:
-    resolution: {integrity: sha512-4zgNiB8nTyV/tHhwZrFs88ryjls/lHiqFhrxCW4qSTeuRByBVnPYpDInchOIySWknznucaf31Z4KYqjfbrecVw==}
+  /caniuse-lite@1.0.30001628:
+    resolution: {integrity: sha512-S3BnR4Kh26TBxbi5t5kpbcUlLJb9lhtDXISDPwOfI+JoC+ik0QksvkZtUVyikw3hjnkgkMPSJ8oIM9yMm9vflA==}
 
   /ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -2599,8 +2599,8 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
 
-  /electron-to-chromium@1.4.788:
-    resolution: {integrity: sha512-ubp5+Ev/VV8KuRoWnfP2QF2Bg+O2ZFdb49DiiNbz2VmgkIqrnyYaqIOqj8A6K/3p1xV0QcU5hBQ1+BmB6ot1OA==}
+  /electron-to-chromium@1.4.790:
+    resolution: {integrity: sha512-eVGeQxpaBYbomDBa/Mehrs28MdvCXfJmEFzaMFsv8jH/MJDLIylJN81eTJ5kvx7B7p18OiPK0BkC06lydEy63A==}
 
   /emoji-regex@10.3.0:
     resolution: {integrity: sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==}
