@@ -52,7 +52,7 @@ importers:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.2.6(astro@4.10.2)
+        version: 8.3.0(astro@4.10.2)
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
@@ -65,7 +65,7 @@ importers:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.2.6(astro@4.10.2)
+        version: 8.3.0(astro@4.10.2)
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
@@ -213,8 +213,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@astrojs/node@8.2.6(astro@4.10.2):
-    resolution: {integrity: sha512-WirUUECgvElKJWw8dt/YJv0WC1kjRMw54zrDvY1DX6npvf6VcsYKwx6UQ+CUxwvR0Aen3F6Vjj1BWDrGM+zpeg==}
+  /@astrojs/node@8.3.0(astro@4.10.2):
+    resolution: {integrity: sha512-XskynbRTrpY9nqzc4NDrulNWoynRvVO+8UmEKjw6KZABUYUmjZqN88sa/RXtXl0CPI2sPZ5Gzi3WXH8y2PKd5Q==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
