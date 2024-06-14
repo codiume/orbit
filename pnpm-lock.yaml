@@ -161,7 +161,7 @@ importers:
         version: 1.15.3
       '@vanilla-extract/vite-plugin':
         specifier: ^4.0.4
-        version: 4.0.10(@types/node@20.14.2)(vite@5.3.0)
+        version: 4.0.11(@types/node@20.14.2)(vite@5.3.0)
       astro:
         specifier: ^4.0.0
         version: 4.10.1(@types/node@20.14.2)(typescript@5.4.5)
@@ -1752,8 +1752,8 @@ packages:
       - babel-plugin-macros
     dev: false
 
-  /@vanilla-extract/integration@7.1.5(@types/node@20.14.2):
-    resolution: {integrity: sha512-UwwafgdaqDhF2n6ZvX6akNvSot1iiiCss/c+r6ofjnaJSzrI/3WUYhy7qX7NZsWdmG2omcajuPlqFZdo0pwzLA==}
+  /@vanilla-extract/integration@7.1.6(@types/node@20.14.2):
+    resolution: {integrity: sha512-5fDhW0Bm/MBG9B63On3dHl1tExcmvzG5hdrS9J8LR5qTIHuT5wIxeZ4LEhLgfqgl4b7PglGP+ey7N9rXb/FlOA==}
     dependencies:
       '@babel/core': 7.24.7
       '@babel/plugin-syntax-typescript': 7.24.7(@babel/core@7.24.7)
@@ -1765,7 +1765,7 @@ packages:
       find-up: 5.0.0
       javascript-stringify: 2.1.0
       mlly: 1.7.1
-      vite: 5.2.13(@types/node@20.14.2)
+      vite: 5.3.0(@types/node@20.14.2)
       vite-node: 1.6.0(@types/node@20.14.2)
     transitivePeerDependencies:
       - '@types/node'
@@ -1783,12 +1783,12 @@ packages:
     resolution: {integrity: sha512-6YXeOEKYTA3UV+RC8DeAjFk+/okoNz/h88R+McnzA2zpaVqTR/Ep+vszkWYlGBcMNO7vEkqbq5nT/JMMvhi+tw==}
     dev: false
 
-  /@vanilla-extract/vite-plugin@4.0.10(@types/node@20.14.2)(vite@5.3.0):
-    resolution: {integrity: sha512-bjX5ioQeBTKuV/MOweeSCrGU5m7z4a76yf8J/r4gC5MGJrEvYu0YHaQIiiL7o2wlFSc929JUEUO1ahnVXUET6A==}
+  /@vanilla-extract/vite-plugin@4.0.11(@types/node@20.14.2)(vite@5.3.0):
+    resolution: {integrity: sha512-8t9ErMKaUdaO1mykbtgQvnzOSWhXsr7wwTdxjd6j3nIHf049UbrrmNeA0On3x9+z7kDnIALYa9GhT3IICTDUdg==}
     peerDependencies:
       vite: ^4.0.3 || ^5.0.0
     dependencies:
-      '@vanilla-extract/integration': 7.1.5(@types/node@20.14.2)
+      '@vanilla-extract/integration': 7.1.6(@types/node@20.14.2)
       vite: 5.3.0(@types/node@20.14.2)
     transitivePeerDependencies:
       - '@types/node'
@@ -1806,6 +1806,12 @@ packages:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+
+  /acorn@8.12.0:
+    resolution: {integrity: sha512-RTvkC4w+KNXrM39/lWCUaG0IbRkWdCv7W/IOW9oU6SawyxulvkQy5HQPVTKxEjczcUvapcrw3cFx/60VN/NRNw==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: false
 
   /aggregate-error@3.1.0:
     resolution: {integrity: sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA==}
@@ -4159,7 +4165,7 @@ packages:
   /mlly@1.7.1:
     resolution: {integrity: sha512-rrVRZRELyQzrIUAVMHxP97kv+G786pHmOKzuFII8zDYahFBS7qnHh2AlYSl1GAHhaMPCz6/oHjVMcfFYgFYHgA==}
     dependencies:
-      acorn: 8.11.3
+      acorn: 8.12.0
       pathe: 1.1.2
       pkg-types: 1.1.1
       ufo: 1.5.3
@@ -5554,7 +5560,7 @@ packages:
       debug: 4.3.5
       pathe: 1.1.2
       picocolors: 1.0.1
-      vite: 5.2.13(@types/node@20.14.2)
+      vite: 5.3.0(@types/node@20.14.2)
     transitivePeerDependencies:
       - '@types/node'
       - less
