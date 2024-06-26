@@ -1,6 +1,7 @@
 {
   "name": "@codiume/orbit",
   "private": true,
+  "packageManager": "pnpm@9.2.0",
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -27,7 +28,7 @@
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.14.0",
     "tiny-glob": "^0.2.9",
-    "turbo": "^1.13.3",
+    "turbo": "^2.0.0",
     "typescript": "^5.4.5"
   }
 }
