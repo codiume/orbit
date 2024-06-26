@@ -1,6 +1,7 @@
 {
   "name": "@codiume/orbit",
   "private": true,
+  "packageManager": "pnpm@9.2.0",
   "workspaces": [
     "apps/*",
     "packages/*"
