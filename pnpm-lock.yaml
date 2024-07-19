@@ -19,7 +19,7 @@ importers:
         version: 20.14.11
       astro:
         specifier: ^4.7.0
-        version: 4.12.0(@types/node@20.14.11)(typescript@5.5.3)
+        version: 4.12.1(@types/node@20.14.11)(typescript@5.5.3)
       commander:
         specifier: ^12.0.0
         version: 12.1.0
@@ -52,27 +52,27 @@ importers:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.3.2(astro@4.12.0(@types/node@20.14.11)(typescript@5.5.3))
+        version: 8.3.2(astro@4.12.1(@types/node@20.14.11)(typescript@5.5.3))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.12.0(@types/node@20.14.11)(typescript@5.5.3)
+        version: 4.12.1(@types/node@20.14.11)(typescript@5.5.3)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.3.2(astro@4.12.0(@types/node@20.14.11)(typescript@5.5.3))
+        version: 8.3.2(astro@4.12.1(@types/node@20.14.11)(typescript@5.5.3))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.12.0(@types/node@20.14.11)(typescript@5.5.3)
+        version: 4.12.1(@types/node@20.14.11)(typescript@5.5.3)
 
   apps/playground:
     dependencies:
@@ -88,7 +88,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.12.0(@types/node@20.14.11)(typescript@5.5.3)
+        version: 4.12.1(@types/node@20.14.11)(typescript@5.5.3)
 
   packages/astro-build: {}
 
@@ -1063,8 +1063,8 @@ packages:
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
-  astro@4.12.0:
-    resolution: {integrity: sha512-JCfrJemDRgc87KVBQ9x4zIwadSuWdG1WjzR3b59nUY+mVeph8W5Y68DrYU5s1JMhQN3+yn2p3lexg4lJM41rsg==}
+  astro@4.12.1:
+    resolution: {integrity: sha512-KwBoXYL4L1XLTTjoj4z6q1g/tZfWDKR1pKSTAshVqt5FH2eu82pnGW737SxcT/Ssg/hLlb9KnWiclXmqWpcbCQ==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1340,8 +1340,8 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  electron-to-chromium@1.4.829:
-    resolution: {integrity: sha512-5qp1N2POAfW0u1qGAxXEtz6P7bO1m6gpZr5hdf5ve6lxpLM7MpiM4jIPz7xcrNlClQMafbyUDDWjlIQZ1Mw0Rw==}
+  electron-to-chromium@1.4.830:
+    resolution: {integrity: sha512-TrPKKH20HeN0J1LHzsYLs2qwXrp8TF4nHdu4sq61ozGbzMpWhI7iIOPYPPkxeq1azMT9PZ8enPFcftbs/Npcjg==}
 
   emoji-regex@10.3.0:
     resolution: {integrity: sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==}
@@ -2757,9 +2757,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@8.3.2(astro@4.12.0(@types/node@20.14.11)(typescript@5.5.3))':
+  '@astrojs/node@8.3.2(astro@4.12.1(@types/node@20.14.11)(typescript@5.5.3))':
     dependencies:
-      astro: 4.12.0(@types/node@20.14.11)(typescript@5.5.3)
+      astro: 4.12.1(@types/node@20.14.11)(typescript@5.5.3)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -3757,7 +3757,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.12.0(@types/node@20.14.11)(typescript@5.5.3):
+  astro@4.12.1(@types/node@20.14.11)(typescript@5.5.3):
     dependencies:
       '@astrojs/compiler': 2.9.2
       '@astrojs/internal-helpers': 0.4.1
@@ -3879,7 +3879,7 @@ snapshots:
   browserslist@4.23.2:
     dependencies:
       caniuse-lite: 1.0.30001642
-      electron-to-chromium: 1.4.829
+      electron-to-chromium: 1.4.830
       node-releases: 2.0.17
       update-browserslist-db: 1.1.0(browserslist@4.23.2)
 
@@ -4064,7 +4064,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  electron-to-chromium@1.4.829: {}
+  electron-to-chromium@1.4.830: {}
 
   emoji-regex@10.3.0: {}
 
