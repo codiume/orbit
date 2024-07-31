@@ -1,6 +1,5 @@
 import type { AstroIntegration } from 'astro';
-import { promises as fs } from 'node:fs';
-import { readFile, rename, writeFile } from 'node:fs/promises';
+import { readdir, readFile, rename, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { PurgeCSS, type UserDefinedOptions } from 'purgecss';
@@ -18,7 +17,7 @@ function handleWindowsPath(outputPath: string): string {
   return outputPath;
 }
 
-async function getHashFromFile(fileBuffer: BufferSource) {
+async function getHashFromFileBuffer(fileBuffer: BufferSource) {
   const hashBuffer = await crypto.subtle.digest('SHA-256', fileBuffer);
   const hashArray = Array.from(new Uint8Array(hashBuffer));
   const hashHex = hashArray
@@ -33,27 +32,27 @@ async function replaceStringInFile(
   replaceString: string
 ): Promise<void> {
   try {
-    const data = await fs.readFile(filePath, 'utf8');
+    const data = await readFile(filePath, 'utf8');
     if (data.includes(searchString)) {
       const updatedData = data.split(searchString).join(replaceString);
-      await fs.writeFile(filePath, updatedData, 'utf8');
+      await writeFile(filePath, updatedData, 'utf8');
     }
   } catch (error) {
     console.error(`Error processing file ${filePath}:`, error);
   }
 }
 
-async function processDirectory(
+async function replaceStringInDirectory(
   dir: string,
   searchString: string,
   replaceString: string
 ): Promise<void> {
   try {
-    const entries = await fs.readdir(dir, { withFileTypes: true });
+    const entries = await readdir(dir, { withFileTypes: true });
     for (const entry of entries) {
       const fullPath = path.join(dir, entry.name);
       if (entry.isDirectory()) {
-        await processDirectory(fullPath, searchString, replaceString);
+        await replaceStringInDirectory(fullPath, searchString, replaceString);
       } else if (entry.isFile()) {
         await replaceStringInFile(fullPath, searchString, replaceString);
       }
@@ -87,7 +86,7 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
               await writeFile(file, css);
 
               // Get content hash
-              const hash = await getHashFromFile(await readFile(file));
+              const hash = await getHashFromFileBuffer(await readFile(file));
 
               // Rename file
               const newPath = file.slice(0, -12) + hash + '.css';
@@ -97,7 +96,11 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
               const oldName = file.split('/').pop();
               const newName = newPath.split('/').pop();
               if (oldName && newName) {
-                await processDirectory(outDir + '../', oldName, newName);
+                await replaceStringInDirectory(
+                  outDir + '../',
+                  oldName,
+                  newName
+                );
               }
             })
         );
