@@ -1,4 +1,5 @@
 import type { AstroIntegration } from 'astro';
+import { createHash } from 'crypto';
 import { readdir, readFile, rename, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -17,48 +18,40 @@ function handleWindowsPath(outputPath: string): string {
   return outputPath;
 }
 
-async function getHashFromFileBuffer(fileBuffer: BufferSource) {
-  const hashBuffer = await crypto.subtle.digest('SHA-256', fileBuffer);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  const hashHex = hashArray
-    .map((b) => b.toString(16).padStart(2, '0'))
-    .join('');
-  return hashHex.substring(0, 7);
-}
-
 async function replaceStringInFile(
   filePath: string,
-  searchString: string,
-  replaceString: string
-): Promise<void> {
+  searchValue: string,
+  replaceValue: string
+) {
   try {
-    const data = await readFile(filePath, 'utf8');
-    if (data.includes(searchString)) {
-      const updatedData = data.split(searchString).join(replaceString);
-      await writeFile(filePath, updatedData, 'utf8');
+    const fileContent = await readFile(filePath, 'utf8');
+    if (fileContent.includes(searchValue)) {
+      const re = new RegExp(searchValue, 'g');
+      const newContent = fileContent.replace(re, replaceValue);
+      await writeFile(filePath, newContent, 'utf8');
     }
-  } catch (error) {
-    console.error(`Error processing file ${filePath}:`, error);
+  } catch (err) {
+    console.error(`Error processing file ${filePath}: ${err}`);
   }
 }
 
 async function replaceStringInDirectory(
-  dir: string,
-  searchString: string,
-  replaceString: string
-): Promise<void> {
+  directory: string,
+  searchValue: string,
+  replaceValue: string
+) {
   try {
-    const entries = await readdir(dir, { withFileTypes: true });
-    for (const entry of entries) {
-      const fullPath = path.join(dir, entry.name);
-      if (entry.isDirectory()) {
-        await replaceStringInDirectory(fullPath, searchString, replaceString);
-      } else if (entry.isFile()) {
-        await replaceStringInFile(fullPath, searchString, replaceString);
+    const files = await readdir(directory, { withFileTypes: true });
+    for (const file of files) {
+      const fullPath = path.join(directory, file.name);
+      if (file.isDirectory()) {
+        await replaceStringInDirectory(fullPath, searchValue, replaceValue);
+      } else if (file.isFile()) {
+        await replaceStringInFile(fullPath, searchValue, replaceValue);
       }
     }
-  } catch (error) {
-    console.error(`Error processing directory ${dir}:`, error);
+  } catch (err) {
+    console.error(`Error processing directory ${directory}: ${err}`);
   }
 }
 
@@ -83,25 +76,25 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
             .filter(({ file }) => file?.endsWith('.css'))
             .map(async ({ css, file }) => {
               if (!file) return;
+
               await writeFile(file, css);
 
               // Get content hash
-              const hash = await getHashFromFileBuffer(await readFile(file));
+              const hash = await createHash('sha256')
+                .update(css)
+                .digest('hex')
+                .substring(0, 7);
 
               // Rename file
               const newPath = file.slice(0, -12) + hash + '.css';
               await rename(file, newPath);
 
               // Replace old name references by newPath
-              const oldName = file.split('/').pop();
-              const newName = newPath.split('/').pop();
-              if (oldName && newName) {
-                await replaceStringInDirectory(
-                  outDir + '../',
-                  oldName,
-                  newName
-                );
-              }
+              await replaceStringInDirectory(
+                outDir + '../',
+                path.basename(file),
+                path.basename(newPath)
+              );
             })
         );
       }
