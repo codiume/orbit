@@ -85,9 +85,9 @@ export default defineConfig({
           // Example using a taiwindcss compatible class extractor
           extractor: (content) =>
             content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [],
-          extensions: ["astro", "html"],
-        },
-      ],
+          extensions: ['astro', 'html']
+        }
+      ]
     })
   ]
 });
@@ -111,11 +111,11 @@ export type PurgeCSSOptions = {
   safelist?: UserDefinedSafelist; // indicates which selectors are safe to leave in the final CSS
   blocklist?: StringRegExpArray; // blocks the CSS selectors from appearing in the final output CSS
   content?: Array<string | RawContent>;
-  extractors?:  // provides custom functions to extract CSS classes in specific ways (eg. when using tailwind.css) 
-    Array<{
-      extractor: (content: string) => string[]; // matched css classes
-      extensions: string[]; // file extensions for which this extractor is to be used
-    }>;
+  extractors?: // provides custom functions to extract CSS classes in specific ways (eg. when using tailwind.css)
+  Array<{
+    extractor: (content: string) => string[]; // matched css classes
+    extensions: string[]; // file extensions for which this extractor is to be used
+  }>;
 };
 ```
 
@@ -129,8 +129,8 @@ We have also setup an example repository available here: [example-purgecss](../.
 
 - If you are using [inline styles](https://docs.astro.build/en/guides/styling/#scoped-styles), this plugin won't be able to purge those css rules, due to astro's way of handling scoped css rules.
 
-
 - If you are using Astro view transitions, use the following options so that purgecss keeps the corresponding animations:
+
 ```diff
 export default defineConfig({
   integrations: [
@@ -145,6 +145,7 @@ export default defineConfig({
 ```
 
 - If you are using `tailwind.css`, please read about purge limitations in this guide [writing-purgeable-html](https://v2.tailwindcss.com/docs/optimizing-for-production#writing-purgeable-html). You may also need a custom class extractor compatible with arbitrary and container based `tailwind.css` classes. For example:
+
 ```js
 export default defineConfig({
   integrations: [
@@ -153,11 +154,11 @@ export default defineConfig({
         {
           extractor: (content) =>
             content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [],
-          extensions: ["astro", "html"],
-        },
-      ],
-    }),
-  ],
+          extensions: ['astro', 'html']
+        }
+      ]
+    })
+  ]
 });
 ```
 
