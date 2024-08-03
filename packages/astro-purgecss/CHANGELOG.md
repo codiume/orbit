@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 4.2.0
+
+### Minor Changes
+
+- [`26df36e`](https://github.com/codiume/orbit/commit/26df36e72ecc66eaf0fab6b1a99b9a1ad9a1377c) Thanks [@Diviei](https://github.com/Diviei)! - Fix astro-purgecss is modifying files keeping old hash
+
 ## 4.1.1
 
 ### Patch Changes
