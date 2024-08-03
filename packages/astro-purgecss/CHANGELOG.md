@@ -4,7 +4,7 @@
 
 ### Minor Changes
 
-- [`27ace28`](https://github.com/codiume/orbit/commit/27ace28de8e67fb9ead83bf4becfaccdbb81a211) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Fix astro-purgecss modifying files keeping the hash
+- [`26df36e`](https://github.com/codiume/orbit/commit/26df36e72ecc66eaf0fab6b1a99b9a1ad9a1377c) Thanks [@Diviei](https://github.com/Diviei)! - Fix astro-purgecss is modifying files keeping old hash
 
 ## 4.1.1
 
