@@ -1,20 +1,12 @@
 import type { AstroIntegration } from 'astro';
-import { PurgeCSS, type UserDefinedOptions } from 'purgecss';
-import { writeFile } from 'node:fs/promises';
+import { createHash } from 'crypto';
+import { rename, writeFile } from 'node:fs/promises';
+import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { PurgeCSS, type UserDefinedOptions } from 'purgecss';
+import { handleWindowsPath, replaceStringInDirectory } from './utils';
 
 export interface PurgeCSSOptions extends Partial<UserDefinedOptions> {}
-
-function handleWindowsPath(outputPath: string): string {
-  if (process.platform !== 'win32') return outputPath;
-
-  if (outputPath.endsWith('\\')) {
-    outputPath = outputPath.substring(0, outputPath.length - 1);
-  }
-  outputPath = outputPath.replaceAll('\\', '/');
-
-  return outputPath;
-}
 
 export default function (options: PurgeCSSOptions = {}): AstroIntegration {
   return {
@@ -30,12 +22,33 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
             `${outDir}/**/*.html`,
             `${outDir}/**/*.js`,
             ...(options.content || [])
-          ],
+          ]
         });
         await Promise.all(
           purged
             .filter(({ file }) => file?.endsWith('.css'))
-            .map(async ({ css, file }) => await writeFile(file!, css))
+            .map(async ({ css, file }) => {
+              if (!file) return;
+
+              await writeFile(file, css);
+
+              // Get content hash
+              const hash = await createHash('sha256')
+                .update(css)
+                .digest('hex')
+                .substring(0, 7);
+
+              // Rename file
+              const newPath = file.slice(0, -12) + hash + '.css';
+              await rename(file, newPath);
+
+              // Replace old name references by newPath
+              await replaceStringInDirectory(
+                outDir + '../',
+                path.basename(file),
+                path.basename(newPath)
+              );
+            })
         );
       }
     }
