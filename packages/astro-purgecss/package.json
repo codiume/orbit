@@ -3,7 +3,7 @@
   "description": "Remove unused CSS rules from your final Astro bundle",
   "version": "4.2.0",
   "scripts": {
-    "build": "astro-build --src src/index.ts src/utils.ts",
+    "build": "astro-build --src src/index.ts",
     "typecheck": "tsc --declaration --emitDeclarationOnly"
   },
   "type": "module",
