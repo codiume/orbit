@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 4.3.0
+
+### Minor Changes
+
+- [`891a5e8`](https://github.com/codiume/orbit/commit/891a5e888beee934ab940d1a557793e60da2a6d1) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Reverts #564
+
 ## 4.2.0
 
 ### Minor Changes
