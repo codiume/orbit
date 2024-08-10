@@ -19,7 +19,7 @@ importers:
         version: 20.14.15
       astro:
         specifier: ^4.13.1
-        version: 4.13.2(@types/node@20.14.15)(typescript@5.5.4)
+        version: 4.13.3(@types/node@20.14.15)(typescript@5.5.4)
       commander:
         specifier: ^12.1.0
         version: 12.1.0
@@ -52,27 +52,27 @@ importers:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.3.2(astro@4.13.2(@types/node@22.2.0)(typescript@5.5.4))
+        version: 8.3.2(astro@4.13.3(@types/node@22.2.0)(typescript@5.5.4))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.13.2(@types/node@22.2.0)(typescript@5.5.4)
+        version: 4.13.3(@types/node@22.2.0)(typescript@5.5.4)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.3.2(astro@4.13.2(@types/node@22.2.0)(typescript@5.5.4))
+        version: 8.3.2(astro@4.13.3(@types/node@22.2.0)(typescript@5.5.4))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.13.2(@types/node@22.2.0)(typescript@5.5.4)
+        version: 4.13.3(@types/node@22.2.0)(typescript@5.5.4)
 
   apps/playground:
     dependencies:
@@ -88,7 +88,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.13.2(@types/node@22.2.0)(typescript@5.5.4)
+        version: 4.13.3(@types/node@22.2.0)(typescript@5.5.4)
 
   packages/astro-build: {}
 
@@ -1022,8 +1022,8 @@ packages:
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
-  astro@4.13.2:
-    resolution: {integrity: sha512-bdfUV6zfOWOV/IbROqVx+1cuAFXY0PZpVxr4JO9YxCKa5AfQRR8RKXJ2k8QUjalA6dmxQ9FgAQw3FRrzHVOGEQ==}
+  astro@4.13.3:
+    resolution: {integrity: sha512-MyhmM0v5sphiVwxAm5jjKxWeuPZijWPJ8Ajdign9QzEmLWSH8vUYIJWx/dWRQ6vF1I0jXrksoj3wtw5nzXt9nw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1288,8 +1288,8 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  electron-to-chromium@1.5.5:
-    resolution: {integrity: sha512-QR7/A7ZkMS8tZuoftC/jfqNkZLQO779SSW3YuZHP4eXpj3EffGLFcB/Xu9AAZQzLccTiCV+EmUo3ha4mQ9wnlA==}
+  electron-to-chromium@1.5.6:
+    resolution: {integrity: sha512-jwXWsM5RPf6j9dPYzaorcBSUg6AiqocPEyMpkchkvntaH9HGfOOMZwxMJjDY/XEs3T5dM7uyH1VhRMkqUU9qVw==}
 
   emoji-regex@10.3.0:
     resolution: {integrity: sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==}
@@ -2666,9 +2666,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@8.3.2(astro@4.13.2(@types/node@22.2.0)(typescript@5.5.4))':
+  '@astrojs/node@8.3.2(astro@4.13.3(@types/node@22.2.0)(typescript@5.5.4))':
     dependencies:
-      astro: 4.13.2(@types/node@22.2.0)(typescript@5.5.4)
+      astro: 4.13.3(@types/node@22.2.0)(typescript@5.5.4)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -3583,7 +3583,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.13.2(@types/node@20.14.15)(typescript@5.5.4):
+  astro@4.13.3(@types/node@20.14.15)(typescript@5.5.4):
     dependencies:
       '@astrojs/compiler': 2.10.2
       '@astrojs/internal-helpers': 0.4.1
@@ -3660,7 +3660,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.13.2(@types/node@22.2.0)(typescript@5.5.4):
+  astro@4.13.3(@types/node@22.2.0)(typescript@5.5.4):
     dependencies:
       '@astrojs/compiler': 2.10.2
       '@astrojs/internal-helpers': 0.4.1
@@ -3776,7 +3776,7 @@ snapshots:
   browserslist@4.23.3:
     dependencies:
       caniuse-lite: 1.0.30001651
-      electron-to-chromium: 1.5.5
+      electron-to-chromium: 1.5.6
       node-releases: 2.0.18
       update-browserslist-db: 1.1.0(browserslist@4.23.3)
 
@@ -3949,7 +3949,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  electron-to-chromium@1.5.5: {}
+  electron-to-chromium@1.5.6: {}
 
   emoji-regex@10.3.0: {}
 
