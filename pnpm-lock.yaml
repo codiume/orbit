@@ -19,7 +19,7 @@ importers:
         version: 20.14.15
       astro:
         specifier: ^4.13.1
-        version: 4.14.0(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4)
+        version: 4.14.1(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4)
       commander:
         specifier: ^12.1.0
         version: 12.1.0
@@ -52,27 +52,27 @@ importers:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.3.3(astro@4.14.0(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4))
+        version: 8.3.3(astro@4.14.1(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.14.0(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4)
+        version: 4.14.1(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.3.3(astro@4.14.0(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4))
+        version: 8.3.3(astro@4.14.1(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.14.0(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4)
+        version: 4.14.1(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4)
 
   apps/playground:
     dependencies:
@@ -88,7 +88,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.14.0(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4)
+        version: 4.14.1(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4)
 
   packages/astro-build: {}
 
@@ -1031,8 +1031,8 @@ packages:
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
-  astro@4.14.0:
-    resolution: {integrity: sha512-UWUOy0aX+x3oDlItcrc4lgLqUXm63w6iChWnWiFijnfpUSJvogtKmJzb79ZmNj56i0ZVGhNVRsbtVhofJPdIXg==}
+  astro@4.14.1:
+    resolution: {integrity: sha512-tLhGE+vHl+n66KgzyV7ek6ro2dqKenHqdxPb/R6x9ci+fKG5lSSOeb/dP/XVhpKUMcuV98IGWTxL5VPzqPFUJQ==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2690,9 +2690,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@8.3.3(astro@4.14.0(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4))':
+  '@astrojs/node@8.3.3(astro@4.14.1(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4))':
     dependencies:
-      astro: 4.14.0(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4)
+      astro: 4.14.1(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -3615,7 +3615,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.14.0(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4):
+  astro@4.14.1(@types/node@20.14.15)(rollup@4.20.0)(typescript@5.5.4):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
