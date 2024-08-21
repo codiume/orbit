@@ -52,27 +52,27 @@ importers:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.3.3(astro@4.14.3(@types/node@22.4.1)(rollup@4.21.0)(typescript@5.5.4))
+        version: 8.3.3(astro@4.14.3(@types/node@22.4.2)(rollup@4.21.0)(typescript@5.5.4))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.14.3(@types/node@22.4.1)(rollup@4.21.0)(typescript@5.5.4)
+        version: 4.14.3(@types/node@22.4.2)(rollup@4.21.0)(typescript@5.5.4)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.3.3(astro@4.14.3(@types/node@22.4.1)(rollup@4.21.0)(typescript@5.5.4))
+        version: 8.3.3(astro@4.14.3(@types/node@22.4.2)(rollup@4.21.0)(typescript@5.5.4))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.14.3(@types/node@22.4.1)(rollup@4.21.0)(typescript@5.5.4)
+        version: 4.14.3(@types/node@22.4.2)(rollup@4.21.0)(typescript@5.5.4)
 
   apps/playground:
     dependencies:
@@ -88,7 +88,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.14.3(@types/node@22.4.1)(rollup@4.21.0)(typescript@5.5.4)
+        version: 4.14.3(@types/node@22.4.2)(rollup@4.21.0)(typescript@5.5.4)
 
   packages/astro-build: {}
 
@@ -161,7 +161,7 @@ importers:
         version: 1.15.5
       '@vanilla-extract/vite-plugin':
         specifier: ^4.0.4
-        version: 4.0.14(@types/node@22.4.1)(vite@5.4.2(@types/node@22.4.1))
+        version: 4.0.15(@types/node@22.4.2)(vite@5.4.2(@types/node@22.4.2))
       astro:
         specifier: ^4.0.0
         version: 4.14.2(@types/node@20.16.0)(rollup@4.21.0)(typescript@5.5.4)
@@ -934,8 +934,8 @@ packages:
   '@types/node@20.16.1':
     resolution: {integrity: sha512-zJDo7wEadFtSyNz5QITDfRcrhqDvQI1xQNQ0VoizPjM/dVAODqqIUWbJPkvsxmTI0MYRGRikcdjMPhOssnPejQ==}
 
-  '@types/node@22.4.1':
-    resolution: {integrity: sha512-1tbpb9325+gPnKK0dMm+/LMriX0vKxf6RnB0SZUqfyVkQ4fMgUSySqhxE/y8Jvs4NyF1yHzTfG9KlnkIODxPKg==}
+  '@types/node@22.4.2':
+    resolution: {integrity: sha512-nAvM3Ey230/XzxtyDcJ+VjvlzpzoHwLsF7JaDRfoI0ytO0mVheerNmM45CtA0yOILXwXXxOrcUWH3wltX+7PSw==}
 
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
@@ -955,14 +955,14 @@ packages:
   '@vanilla-extract/css@1.15.5':
     resolution: {integrity: sha512-N1nQebRWnXvlcmu9fXKVUs145EVwmWtMD95bpiEKtvehHDpUhmO1l2bauS7FGYKbi3dU1IurJbGpQhBclTr1ng==}
 
-  '@vanilla-extract/integration@7.1.8':
-    resolution: {integrity: sha512-qUZaD7SjbjIN6+rGS5fuQIfBtcdE3P8y9D7TEefyELa0oxXc/fHDaRWQVK5fzYadpILOsnbrdZX24cJlf7F0Ew==}
+  '@vanilla-extract/integration@7.1.9':
+    resolution: {integrity: sha512-bkikYnUdEiUoUZGX3tErmkpU43M4Q0McZcSUHutP/pQCeuDB29t8brLOLzdkahwD+RteX2/R3ukmIm3lAYzUnA==}
 
   '@vanilla-extract/private@1.0.6':
     resolution: {integrity: sha512-ytsG/JLweEjw7DBuZ/0JCN4WAQgM9erfSTdS1NQY778hFQSZ6cfCDEZZ0sgVm4k54uNz6ImKB33AYvSR//fjxw==}
 
-  '@vanilla-extract/vite-plugin@4.0.14':
-    resolution: {integrity: sha512-f4L+SJStqPHdunWNybTKmF34B4+x3SfB3EzCUv+MQpFk0WF2y3djRiXWyIDx01thINHAjvlnVEO0KDUVPQQjdw==}
+  '@vanilla-extract/vite-plugin@4.0.15':
+    resolution: {integrity: sha512-kl0EJ0DGRA3/cuZeXfBu4C9oPnkCr1PJIAr1/7Fu1mCrlE+fC6DCriPY2cRuGbbBE/ZhXryUSNT7rWjqAyHlkw==}
     peerDependencies:
       vite: ^4.0.3 || ^5.0.0
 
@@ -2433,6 +2433,9 @@ packages:
   undici-types@6.19.6:
     resolution: {integrity: sha512-e/vggGopEfTKSvj4ihnOLTsqhrKRN3LeO6qSN/GxohhuRv8qH9bNQ4B8W7e/vFL+0XTnmHPB4/kegunZGA4Org==}
 
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+
   unified@11.0.5:
     resolution: {integrity: sha512-xKvGhPWw3k84Qjh8bI3ZeJjqnyadK+GEFtazSfZv/rKeTkTjOJho6mFqh2SM96iIcZokxiOpg78GazTSg8+KHA==}
 
@@ -2677,9 +2680,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@8.3.3(astro@4.14.3(@types/node@22.4.1)(rollup@4.21.0)(typescript@5.5.4))':
+  '@astrojs/node@8.3.3(astro@4.14.3(@types/node@22.4.2)(rollup@4.21.0)(typescript@5.5.4))':
     dependencies:
-      astro: 4.14.3(@types/node@22.4.1)(rollup@4.21.0)(typescript@5.5.4)
+      astro: 4.14.3(@types/node@22.4.2)(rollup@4.21.0)(typescript@5.5.4)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -3411,9 +3414,9 @@ snapshots:
     dependencies:
       undici-types: 6.19.6
 
-  '@types/node@22.4.1':
+  '@types/node@22.4.2':
     dependencies:
-      undici-types: 6.19.6
+      undici-types: 6.19.8
 
   '@types/semver@7.5.8': {}
 
@@ -3446,7 +3449,7 @@ snapshots:
     transitivePeerDependencies:
       - babel-plugin-macros
 
-  '@vanilla-extract/integration@7.1.8(@types/node@22.4.1)':
+  '@vanilla-extract/integration@7.1.9(@types/node@22.4.2)':
     dependencies:
       '@babel/core': 7.25.2
       '@babel/plugin-syntax-typescript': 7.24.7(@babel/core@7.25.2)
@@ -3458,8 +3461,8 @@ snapshots:
       find-up: 5.0.0
       javascript-stringify: 2.1.0
       mlly: 1.7.1
-      vite: 5.4.1(@types/node@22.4.1)
-      vite-node: 1.6.0(@types/node@22.4.1)
+      vite: 5.4.2(@types/node@22.4.2)
+      vite-node: 1.6.0(@types/node@22.4.2)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -3474,10 +3477,10 @@ snapshots:
 
   '@vanilla-extract/private@1.0.6': {}
 
-  '@vanilla-extract/vite-plugin@4.0.14(@types/node@22.4.1)(vite@5.4.2(@types/node@22.4.1))':
+  '@vanilla-extract/vite-plugin@4.0.15(@types/node@22.4.2)(vite@5.4.2(@types/node@22.4.2))':
     dependencies:
-      '@vanilla-extract/integration': 7.1.8(@types/node@22.4.1)
-      vite: 5.4.2(@types/node@22.4.1)
+      '@vanilla-extract/integration': 7.1.9(@types/node@22.4.2)
+      vite: 5.4.2(@types/node@22.4.2)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -3699,7 +3702,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.14.3(@types/node@22.4.1)(rollup@4.21.0)(typescript@5.5.4):
+  astro@4.14.3(@types/node@22.4.2)(rollup@4.21.0)(typescript@5.5.4):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -3760,8 +3763,8 @@ snapshots:
       tsconfck: 3.1.1(typescript@5.5.4)
       unist-util-visit: 5.0.0
       vfile: 6.0.2
-      vite: 5.4.2(@types/node@22.4.1)
-      vitefu: 0.2.5(vite@5.4.2(@types/node@22.4.1))
+      vite: 5.4.2(@types/node@22.4.2)
+      vitefu: 0.2.5(vite@5.4.2(@types/node@22.4.2))
       which-pm: 3.0.0
       xxhash-wasm: 1.0.2
       yargs-parser: 21.1.1
@@ -4093,7 +4096,7 @@ snapshots:
 
   eval@0.1.8:
     dependencies:
-      '@types/node': 22.4.1
+      '@types/node': 22.4.2
       require-like: 0.1.2
 
   eventemitter3@5.0.1: {}
@@ -5412,6 +5415,8 @@ snapshots:
 
   undici-types@6.19.6: {}
 
+  undici-types@6.19.8: {}
+
   unified@11.0.5:
     dependencies:
       '@types/unist': 3.0.3
@@ -5490,13 +5495,13 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite-node@1.6.0(@types/node@22.4.1):
+  vite-node@1.6.0(@types/node@22.4.2):
     dependencies:
       cac: 6.7.14
       debug: 4.3.6
       pathe: 1.1.2
       picocolors: 1.0.1
-      vite: 5.4.1(@types/node@22.4.1)
+      vite: 5.4.2(@types/node@22.4.2)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -5517,15 +5522,6 @@ snapshots:
       '@types/node': 20.16.0
       fsevents: 2.3.3
 
-  vite@5.4.1(@types/node@22.4.1):
-    dependencies:
-      esbuild: 0.21.5
-      postcss: 8.4.41
-      rollup: 4.21.0
-    optionalDependencies:
-      '@types/node': 22.4.1
-      fsevents: 2.3.3
-
   vite@5.4.2(@types/node@20.16.1):
     dependencies:
       esbuild: 0.21.5
@@ -5535,13 +5531,13 @@ snapshots:
       '@types/node': 20.16.1
       fsevents: 2.3.3
 
-  vite@5.4.2(@types/node@22.4.1):
+  vite@5.4.2(@types/node@22.4.2):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.41
       rollup: 4.21.0
     optionalDependencies:
-      '@types/node': 22.4.1
+      '@types/node': 22.4.2
       fsevents: 2.3.3
 
   vitefu@0.2.5(vite@5.4.1(@types/node@20.16.0)):
@@ -5552,9 +5548,9 @@ snapshots:
     optionalDependencies:
       vite: 5.4.2(@types/node@20.16.1)
 
-  vitefu@0.2.5(vite@5.4.2(@types/node@22.4.1)):
+  vitefu@0.2.5(vite@5.4.2(@types/node@22.4.2)):
     optionalDependencies:
-      vite: 5.4.2(@types/node@22.4.1)
+      vite: 5.4.2(@types/node@22.4.2)
 
   web-namespaces@2.0.1: {}
 
