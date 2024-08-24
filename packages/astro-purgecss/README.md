@@ -65,7 +65,7 @@ export default {
 
 When you install this integration, things will be auto-wired for you. and all your generated css files should be purged from unused classes automagically.
 
-However, there's one small caveat: By default, Astro inlines small CSS files as part of its [bundle control](https://docs.astro.build/en/guides/styling/#bundle-control). This means that the plugin won't be able to purge CSS rules from those inlined files. To prevent Astro from inlining CSS styles, you can set the `inlineStylesheets` option to `never` in `your astro.config.mjs` file:
+However, there's one small caveat: By default, Astro inlines small CSS files as part of its [bundle control](https://docs.astro.build/en/guides/styling/#bundle-control). This means that the plugin won't be able to purge CSS rules from those inlined files. To prevent Astro from inlining CSS styles, you can set the `inlineStylesheets` option to `never` in your `astro.config.mjs` file:
 
 ```diff
 export default defineConfig({
