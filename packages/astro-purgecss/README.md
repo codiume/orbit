@@ -65,6 +65,16 @@ export default {
 
 When you install this integration, things will be auto-wired for you. and all your generated css files should be purged from unused classes automagically.
 
+However, there's one small caveat: By default, Astro inlines small CSS files as part of its [bundle control](https://docs.astro.build/en/guides/styling/#bundle-control). This means that the plugin won't be able to purge CSS rules from those inlined files. To prevent Astro from inlining CSS styles, you can set the `inlineStylesheets` option to `never` in `your astro.config.mjs` file:
+
+```diff
+export default defineConfig({
++  build: {
++    inlineStylesheets: 'never'
++  }
+});
+```
+
 ## 📖 Configuration
 
 [PurgeCSS][purgecss] has a list of options that allow you to customize its behavior. And this Astro integration allow you to pass those options easily in your `astro.config.mjs` file:
@@ -126,8 +136,6 @@ We have also setup an example repository available here: [example-purgecss](../.
 ### Caveats
 
 - Some options are not allowed to be passed in your `astro.config.mjs` config file, to not interfere with the internals of this integration.
-
-- If you are using [inline styles](https://docs.astro.build/en/guides/styling/#scoped-styles), this plugin won't be able to purge those css rules, due to astro's way of handling scoped css rules.
 
 - If you are using Astro view transitions, use the following options so that purgecss keeps the corresponding animations:
 
