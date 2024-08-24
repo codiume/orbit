@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 4.4.0
+
+### Minor Changes
+
+- [#603](https://github.com/codiume/orbit/pull/603) [`aa1e54b`](https://github.com/codiume/orbit/commit/aa1e54badadccefa0b3640c244a3c52072d29bca) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Replace astro-build with tsup
+
 ## 4.3.0
 
 ### Minor Changes
