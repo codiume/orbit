@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 4.4.1
+
+### Patch Changes
+
+- [#605](https://github.com/codiume/orbit/pull/605) [`63b2e9d`](https://github.com/codiume/orbit/commit/63b2e9d839eebeae7863dd04db6ad4a86675f886) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - [astro-purgecss] add docs for handling inline styles
+
 ## 4.4.0
 
 ### Minor Changes
