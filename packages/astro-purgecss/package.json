@@ -2,19 +2,10 @@
   "name": "astro-purgecss",
   "description": "Remove unused CSS rules from your final Astro bundle",
   "version": "4.3.0",
-  "scripts": {
-    "build": "astro-build --src src/index.ts",
-    "typecheck": "tsc --declaration --emitDeclarationOnly"
-  },
-  "type": "module",
-  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/codiume/orbit",
+  "bugs": "https://github.com/codiume/orbit/issues",
   "author": "codiume",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/codiume/orbit.git",
-    "directory": "packages/astro-purgecss"
-  },
   "keywords": [
     "astro",
     "astro-component",
@@ -22,22 +13,33 @@
     "css",
     "optimization"
   ],
-  "bugs": "https://github.com/codiume/orbit/issues",
-  "homepage": "https://github.com/codiume/orbit",
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/index.mjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codiume/orbit.git",
+    "directory": "packages/astro-purgecss"
+  },
+  "scripts": {
+    "build": "tsup",
+    "check-types": "tsc",
+    "check-exports": "attw --pack . --ignore-rules false-export-default",
+    "typecheck": "pnpm check-types && pnpm check-exports"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
   "exports": {
     ".": {
       "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/index.mjs"
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
       }
     }
-  },
-  "devDependencies": {
-    "astro-build": "workspace:*"
   },
   "peerDependencies": {
     "astro": "^4.0.0",

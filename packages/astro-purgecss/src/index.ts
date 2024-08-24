@@ -1,7 +1,7 @@
 import type { AstroIntegration } from 'astro';
-import { PurgeCSS, type UserDefinedOptions } from 'purgecss';
 import { writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import { PurgeCSS, type UserDefinedOptions } from 'purgecss';
 
 export interface PurgeCSSOptions extends Partial<UserDefinedOptions> {}
 
@@ -16,7 +16,7 @@ function handleWindowsPath(outputPath: string): string {
   return outputPath;
 }
 
-export default function (options: PurgeCSSOptions = {}): AstroIntegration {
+function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
   return {
     name: 'astro-purgecss',
     hooks: {
@@ -30,7 +30,7 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
             `${outDir}/**/*.html`,
             `${outDir}/**/*.js`,
             ...(options.content || [])
-          ],
+          ]
         });
         await Promise.all(
           purged
@@ -41,3 +41,5 @@ export default function (options: PurgeCSSOptions = {}): AstroIntegration {
     }
   };
 }
+
+export default Plugin;

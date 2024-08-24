@@ -13,22 +13,24 @@
     "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md,astro,mjs}\"",
     "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "pnpm run build && changeset publish"
+    "changeset:version": "changeset version",
+    "changeset:publish": "pnpm run build && changeset publish"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.15.4",
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.7",
-    "@types/node": "^20.14.14",
-    "astro": "^4.13.1",
+    "@types/node": "^20.16.1",
+    "astro": "^4.14.5",
     "commander": "^12.1.0",
-    "esbuild": "^0.23.0",
+    "esbuild": "^0.23.1",
     "esbuild-plugin-clean": "^1.0.1",
     "ora": "^8.0.1",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "tiny-glob": "^0.2.9",
-    "turbo": "^2.0.11",
+    "tsup": "^8.2.4",
+    "turbo": "^2.0.14",
     "typescript": "^5.5.4"
   }
 }
