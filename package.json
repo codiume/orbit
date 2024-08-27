@@ -7,11 +7,12 @@
     "packages/*"
   ],
   "scripts": {
+    "test": "vitest run",
     "build": "turbo run build && turbo run typecheck",
     "build:no-cache": "turbo run build --no-cache && turbo run typecheck",
     "dev": "turbo run dev --no-cache --parallel --continue",
-    "clean": "turbo run clean && rm -rf node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md,astro,mjs}\"",
+    "clean": "turbo run clean && rm -rf node_modules",
     "changeset": "changeset",
     "changeset:version": "changeset version",
     "changeset:publish": "pnpm run build && changeset publish"
@@ -25,12 +26,15 @@
     "commander": "^12.1.0",
     "esbuild": "^0.23.1",
     "esbuild-plugin-clean": "^1.0.1",
-    "ora": "^8.0.1",
+    "ora": "^8.1.0",
+    "pkg-pr-new": "^0.0.20",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "tiny-glob": "^0.2.9",
     "tsup": "^8.2.4",
-    "turbo": "^2.0.14",
-    "typescript": "^5.5.4"
+    "turbo": "^2.1.0",
+    "typescript": "^5.5.4",
+    "vite-tsconfig-paths": "^5.0.1",
+    "vitest": "^2.0.5"
   }
 }

@@ -1,5 +1,5 @@
-import { defineConfig } from 'astro/config';
 import purgecss from 'astro-purgecss';
+import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   // Add purgecss support to Astro
@@ -10,5 +10,8 @@ export default defineConfig({
       safelist: ['random', 'yep', 'button', /^nav-/],
       blocklist: ['usedClass', /^nav-/]
     })
-  ]
+  ],
+  build: {
+    inlineStylesheets: 'never'
+  }
 });
