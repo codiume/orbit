@@ -39,9 +39,9 @@ describe('resolveOutputPath', () => {
 });
 
 const mockCss = 'body { color: red; }';
-const mockFile = '/path/to/astro.44c50b3.css';
+const mockFile = '/path/to/astro.csjqp06s.css';
 const mockOutDir = '/path/to/outdir';
-const mockHash = 'abcdef1';
+const mockHash = 'abcdefg1';
 
 vi.mock('node:fs/promises', () => ({
   writeFile: vi.fn(() => Promise.resolve()),
@@ -73,7 +73,7 @@ describe('writeCssFile', () => {
   });
 
   it('should write new file, delete old file, and update references', async () => {
-    const newFile = '/path/to/astro.abcdef1.css';
+    const newFile = '/path/to/astro.abcdefg1.css';
 
     await writeCssFile({ css: mockCss, file: mockFile, outDir: mockOutDir });
 
@@ -90,7 +90,7 @@ describe('writeCssFile', () => {
       file: mockFile,
       outDir: mockOutDir
     });
-    expect(result).toBe('/path/to/astro.abcdef1.css');
+    expect(result).toBe('/path/to/astro.abcdefg1.css');
   });
 
   it('should handle errors gracefully', async () => {

@@ -61,10 +61,11 @@ export async function writeCssFile({
   if (!file) return;
 
   // Get content hash before writing to file
-  const hash = createHash('sha256').update(css).digest('hex').substring(0, 7);
+  const hash = createHash('sha256').update(css).digest('hex').substring(0, 8);
 
   // Generate new file name with hash
-  const newFile = `${file.slice(0, -12)}.${hash}.css`;
+  // Astro orignal hash is 8 characters long
+  const newFile = `${file.slice(0, -13)}.${hash}.css`;
 
   // Write purged CSS to new file
   await writeFile(newFile, css);
