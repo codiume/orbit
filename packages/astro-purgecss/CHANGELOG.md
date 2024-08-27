@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 4.5.0
+
+### Minor Changes
+
+- [#611](https://github.com/codiume/orbit/pull/611) [`cc70f58`](https://github.com/codiume/orbit/commit/cc70f58bf9339210ce9b236aca8c6c012297ddd7) Thanks [@Diviei](https://github.com/Diviei)! - Fix files modified without updating hash
+
 ## 4.4.1
 
 ### Patch Changes
