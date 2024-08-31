@@ -36,8 +36,8 @@ importers:
         specifier: ^8.1.0
         version: 8.1.0
       pkg-pr-new:
-        specifier: ^0.0.20
-        version: 0.0.20
+        specifier: ^0.0.22
+        version: 0.0.22
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -111,7 +111,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.14.5(@types/node@20.16.1)(rollup@4.21.1)(typescript@5.5.4)
+        version: 4.14.5(@types/node@22.5.1)(rollup@4.21.1)(typescript@5.5.4)
       purgecss:
         specifier: ^6.0.0
         version: 6.0.0
@@ -120,7 +120,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.14.5(@types/node@20.16.1)(rollup@4.21.1)(typescript@5.5.4)
+        version: 4.14.5(@types/node@22.5.1)(rollup@4.21.1)(typescript@5.5.4)
     devDependencies:
       astro-build:
         specifier: workspace:*
@@ -130,7 +130,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.14.5(@types/node@20.16.1)(rollup@4.21.1)(typescript@5.5.4)
+        version: 4.14.5(@types/node@22.5.1)(rollup@4.21.1)(typescript@5.5.4)
       schema-dts:
         specifier: ^1.1.0
         version: 1.1.2(typescript@5.5.4)
@@ -143,7 +143,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.14.5(@types/node@20.16.1)(rollup@4.21.1)(typescript@5.5.4)
+        version: 4.14.5(@types/node@22.5.1)(rollup@4.21.1)(typescript@5.5.4)
     devDependencies:
       astro-build:
         specifier: workspace:*
@@ -153,7 +153,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.14.5(@types/node@20.16.1)(rollup@4.21.1)(typescript@5.5.4)
+        version: 4.14.5(@types/node@22.5.1)(rollup@4.21.1)(typescript@5.5.4)
       ua-parser-js:
         specifier: ^1.0.2
         version: 1.0.38
@@ -175,7 +175,7 @@ importers:
         version: 4.0.15(@types/node@22.5.1)(vite@5.4.2(@types/node@22.5.1))
       astro:
         specifier: ^4.0.0
-        version: 4.14.5(@types/node@20.16.1)(rollup@4.21.1)(typescript@5.5.4)
+        version: 4.14.5(@types/node@22.5.1)(rollup@4.21.1)(typescript@5.5.4)
     devDependencies:
       astro-build:
         specifier: workspace:*
@@ -1116,9 +1116,6 @@ packages:
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
-  '@types/node@20.16.1':
-    resolution: {integrity: sha512-zJDo7wEadFtSyNz5QITDfRcrhqDvQI1xQNQ0VoizPjM/dVAODqqIUWbJPkvsxmTI0MYRGRikcdjMPhOssnPejQ==}
-
   '@types/node@20.16.2':
     resolution: {integrity: sha512-91s/n4qUPV/wg8eE9KHYW1kouTfDk2FPGjXbBMfRWP/2vg1rCXNQL1OCabwGs0XSdukuK+MwCDXE30QpSeMUhQ==}
 
@@ -1542,10 +1539,6 @@ packages:
     resolution: {integrity: sha512-bwy0MGW55bG41VqxxypOsdSdGqLwXPI/focwgTYCFMbdUiBAxLg9CFzG08sz2aqzknwiX7Hkl0bQENjg8iLByw==}
     engines: {node: '>=8'}
 
-  detect-package-manager@3.0.2:
-    resolution: {integrity: sha512-8JFjJHutStYrfWwzfretQoyNGoZVW1Fsrp4JO9spa7h/fBfwgTMEIy4/LBzRDGsxwVPHU0q+T9YvwLDJoOApLQ==}
-    engines: {node: '>=12'}
-
   deterministic-object-hash@2.0.2:
     resolution: {integrity: sha512-KxektNH63SrbfUyDiwXqRb1rLwKt33AmMv+5Nhsw1kqZ13SJBRTgZHtGbE+hH3a1mVW1cz+4pqSWVPAtLVXTzQ==}
     engines: {node: '>=18'}
@@ -1695,6 +1688,14 @@ packages:
 
   fastq@1.17.1:
     resolution: {integrity: sha512-sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==}
+
+  fdir@6.3.0:
+    resolution: {integrity: sha512-QOnuT+BOtivR77wYvCWHfGt9s4Pz1VIMbD463vegT5MLqNXy8rYFT/lPVEqf/bhYeT6qmqrNHhsX+rWwe3rOCQ==}
+    peerDependencies:
+      picomatch: ^3 || ^4
+    peerDependenciesMeta:
+      picomatch:
+        optional: true
 
   fflate@0.8.2:
     resolution: {integrity: sha512-cPJU47OaAoCbg0pBvzsgpTPhmhqI5eJjh/JIu8tPj5q+T7iLvW/JAYUqmE7KOB4R1ZyEhzBaIQpQpardBF5z8A==}
@@ -2410,6 +2411,9 @@ packages:
   package-json-from-dist@1.0.0:
     resolution: {integrity: sha512-dATvCeZN/8wQsGywez1mzHtTlP22H8OEfPrVMLNr4/eGa+ijtLn/6M5f0dY8UKNrC2O9UCU6SSoG3qRKnt7STw==}
 
+  package-manager-detector@0.1.2:
+    resolution: {integrity: sha512-iePyefLTOm2gEzbaZKSW+eBMjg+UYsQvUKxmvGXAQ987K16efBg10MxIjZs08iyX+DY2/owKY9DIdu193kX33w==}
+
   parse-latin@7.0.0:
     resolution: {integrity: sha512-mhHgobPPua5kZ98EF4HWiH167JWBfl4pvAIXXdbaVohtK7a6YBOy56kvhCqduqyo/f3yrHFWmqmiMg/BkBkYYQ==}
 
@@ -2466,6 +2470,10 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
+  picomatch@4.0.2:
+    resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
+    engines: {node: '>=12'}
+
   pify@4.0.1:
     resolution: {integrity: sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==}
     engines: {node: '>=6'}
@@ -2478,8 +2486,8 @@ packages:
     resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==}
     engines: {node: '>=8'}
 
-  pkg-pr-new@0.0.20:
-    resolution: {integrity: sha512-nzTm/c1R5pXKwHW0mkN2FnkHrqW3D29LGAcAYkK28G9n/c8aJEIrb7TAieNV1HPrO9XEj0Z7IHAsKpcsSxO+Pw==}
+  pkg-pr-new@0.0.22:
+    resolution: {integrity: sha512-DbO7SG/kRUIhRggb3cbDdtSm9exTOEigkPMYwCaJXSqxGfYNJnABIcgu78Sx1/A3R/ffYqDOD57RBzulP9H6jQ==}
     hasBin: true
 
   pkg-types@1.2.0:
@@ -2863,6 +2871,10 @@ packages:
 
   tinyexec@0.3.0:
     resolution: {integrity: sha512-tVGE0mVJPGb0chKhqmsoosjsS+qUnJVGJpZgsHYQcGoPlG3B51R3PouqTgEGH2Dc9jjFyOqOpix6ZHNMXp1FZg==}
+
+  tinyglobby@0.2.5:
+    resolution: {integrity: sha512-Dlqgt6h0QkoHttG53/WGADNh9QhcjCAIZMTERAVhdpmIBEejSuLI9ZmGKWzB7tweBjlk30+s/ofi4SLmBeTYhw==}
+    engines: {node: '>=12.0.0'}
 
   tinypool@1.0.1:
     resolution: {integrity: sha512-URZYihUbRPcGv95En+sz6MfghfIc2OJ1sv/RmhWZLouPY0/8Vo80viwPvg3dlaS9fuq7fQMEfgRRK7BBZThBEA==}
@@ -4214,11 +4226,6 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
-  '@types/node@20.16.1':
-    dependencies:
-      undici-types: 6.19.8
-    optional: true
-
   '@types/node@20.16.2':
     dependencies:
       undici-types: 6.19.8
@@ -4389,7 +4396,7 @@ snapshots:
 
   assertion-error@2.0.1: {}
 
-  astro@4.14.5(@types/node@20.16.1)(rollup@4.21.1)(typescript@5.5.4):
+  astro@4.14.5(@types/node@22.5.1)(rollup@4.21.1)(typescript@5.5.4):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -4450,8 +4457,8 @@ snapshots:
       tsconfck: 3.1.1(typescript@5.5.4)
       unist-util-visit: 5.0.0
       vfile: 6.0.2
-      vite: 5.4.2(@types/node@20.16.1)
-      vitefu: 0.2.5(vite@5.4.2(@types/node@20.16.1))
+      vite: 5.4.2(@types/node@22.5.1)
+      vitefu: 0.2.5(vite@5.4.2(@types/node@22.5.1))
       which-pm: 3.0.0
       xxhash-wasm: 1.0.2
       yargs-parser: 21.1.1
@@ -4893,10 +4900,6 @@ snapshots:
   detect-libc@2.0.3:
     optional: true
 
-  detect-package-manager@3.0.2:
-    dependencies:
-      execa: 5.1.1
-
   deterministic-object-hash@2.0.2:
     dependencies:
       base-64: 1.0.0
@@ -5079,6 +5082,10 @@ snapshots:
   fastq@1.17.1:
     dependencies:
       reusify: 1.0.4
+
+  fdir@6.3.0(picomatch@4.0.2):
+    optionalDependencies:
+      picomatch: 4.0.2
 
   fflate@0.8.2: {}
 
@@ -5958,6 +5965,8 @@ snapshots:
 
   package-json-from-dist@1.0.0: {}
 
+  package-manager-detector@0.1.2: {}
+
   parse-latin@7.0.0:
     dependencies:
       '@types/nlcst': 2.0.3
@@ -6004,6 +6013,8 @@ snapshots:
 
   picomatch@2.3.1: {}
 
+  picomatch@4.0.2: {}
+
   pify@4.0.1: {}
 
   pirates@4.0.6: {}
@@ -6012,16 +6023,16 @@ snapshots:
     dependencies:
       find-up: 4.1.0
 
-  pkg-pr-new@0.0.20:
+  pkg-pr-new@0.0.22:
     dependencies:
       '@jsdevtools/ez-spawn': 3.0.4
       '@octokit/action': 6.1.0
-      detect-package-manager: 3.0.2
-      fast-glob: 3.3.2
       ignore: 5.3.2
       isbinaryfile: 5.0.2
+      package-manager-detector: 0.1.2
       pkg-types: 1.2.0
       query-registry: 3.0.1
+      tinyglobby: 0.2.5
 
   pkg-types@1.2.0:
     dependencies:
@@ -6497,6 +6508,11 @@ snapshots:
 
   tinyexec@0.3.0: {}
 
+  tinyglobby@0.2.5:
+    dependencies:
+      fdir: 6.3.0(picomatch@4.0.2)
+      picomatch: 4.0.2
+
   tinypool@1.0.1: {}
 
   tinyrainbow@1.2.0: {}
@@ -6746,20 +6762,11 @@ snapshots:
       - supports-color
       - typescript
 
-  vite@5.4.2(@types/node@20.16.1):
-    dependencies:
-      esbuild: 0.21.5
-      postcss: 8.4.41
-      rollup: 4.21.0
-    optionalDependencies:
-      '@types/node': 20.16.1
-      fsevents: 2.3.3
-
   vite@5.4.2(@types/node@20.16.2):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.41
-      rollup: 4.21.1
+      rollup: 4.21.0
     optionalDependencies:
       '@types/node': 20.16.2
       fsevents: 2.3.3
@@ -6768,18 +6775,18 @@ snapshots:
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.41
-      rollup: 4.21.1
+      rollup: 4.21.0
     optionalDependencies:
       '@types/node': 22.5.1
       fsevents: 2.3.3
 
-  vitefu@0.2.5(vite@5.4.2(@types/node@20.16.1)):
-    optionalDependencies:
-      vite: 5.4.2(@types/node@20.16.1)
-
   vitefu@0.2.5(vite@5.4.2(@types/node@20.16.2)):
     optionalDependencies:
       vite: 5.4.2(@types/node@20.16.2)
+
+  vitefu@0.2.5(vite@5.4.2(@types/node@22.5.1)):
+    optionalDependencies:
+      vite: 5.4.2(@types/node@22.5.1)
 
   vitest@2.0.5(@types/node@20.16.2):
     dependencies:
