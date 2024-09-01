@@ -1,10 +1,10 @@
 import type { AstroIntegration } from 'astro';
 
-function AstroWebhooks(options= {}): AstroIntegration {
+function AstroWebhooks(options = {}): AstroIntegration {
   return {
     name: 'astro-webhooks',
     hooks: {
-      'astro:build:done': async () => console.log("done")
+      'astro:build:done': async () => console.log('done')
     }
   };
 }

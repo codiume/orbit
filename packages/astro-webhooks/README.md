@@ -1,4 +1,4 @@
-# 🚀 Astro Webhooks
+# 🚀 Astro Webhooks (WIP)
 
 [![version][version-badge]][npm]
 [![downloads][downloads-badge]][npm]
@@ -7,6 +7,10 @@
 [![makepr][makepr-badge]][makepr]
 
 Astro Webhooks helps you receive webhooks calls in your Astro apps.
+
+> **Note:**
+>
+> This integration is still a work in progress! As we iron out the kinks, We'll let you know when it's ready for prime time.
 
 ## 📦 Installation
 
@@ -87,6 +91,7 @@ export type WebhookOptions = {};
 Please see the [Changelog](CHANGELOG.md) for more information on what has changed recently.
 
 <!-- Readme Badges -->
+
 [npm]: https://npmjs.com/package/astro-webhooks
 [version-badge]: https://img.shields.io/npm/v/astro-webhooks.svg
 [downloads-badge]: https://img.shields.io/npm/dt/astro-webhooks
