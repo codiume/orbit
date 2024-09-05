@@ -1,8 +1,8 @@
+import { Dirent } from 'node:fs';
 import { unlink, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
-import { Dirent } from 'node:fs';
 import { resolveOutputPath, writeCssFile } from './utils';
 
 describe('resolveOutputPath', () => {
