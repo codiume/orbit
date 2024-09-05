@@ -1,17 +1,31 @@
 import { createHash } from 'node:crypto';
-import { readdir, readFile, unlink, writeFile } from 'node:fs/promises';
+import { readFile, readdir, unlink, writeFile } from 'node:fs/promises';
 import { basename, dirname, join } from 'node:path';
 
-async function replaceStringInFile(
+async function* walkDirectory(dir: string): AsyncIterable<string> {
+  const files = await readdir(dir, { withFileTypes: true });
+  for (const file of files) {
+    const filePath = join(dir, file.name);
+    if (file.isDirectory()) {
+      yield* walkDirectory(filePath);
+    } else if (file.isFile()) {
+      yield filePath;
+    }
+  }
+}
+
+async function processFile(
   filePath: string,
   searchValue: string,
   replaceValue: string
 ) {
   try {
-    const fileContent = await readFile(filePath, 'utf8');
-    if (fileContent.includes(searchValue)) {
-      const re = new RegExp(searchValue, 'g');
-      const newContent = fileContent.replace(re, replaceValue);
+    const content = await readFile(filePath, 'utf8');
+    if (content.includes(searchValue)) {
+      const newContent = content.replace(
+        new RegExp(searchValue, 'g'),
+        replaceValue
+      );
       await writeFile(filePath, newContent, 'utf8');
     }
   } catch (err) {
@@ -19,34 +33,14 @@ async function replaceStringInFile(
   }
 }
 
-async function replaceStringInDirectory(
-  directory: string,
-  searchValue: string,
-  replaceValue: string
-) {
-  try {
-    const files = await readdir(directory, { withFileTypes: true });
-    for (const file of files) {
-      const fullPath = join(directory, file.name);
-      if (file.isDirectory()) {
-        await replaceStringInDirectory(fullPath, searchValue, replaceValue);
-      } else if (file.isFile()) {
-        await replaceStringInFile(fullPath, searchValue, replaceValue);
-      }
-    }
-  } catch (err) {
-    console.error(`Error processing directory ${directory}: ${err}`);
-  }
-}
-
 export function resolveOutputPath(outputPath: string): string {
   if (process.platform !== 'win32') return outputPath;
 
   // Remove trailing backslash if present
-  outputPath = outputPath.replace(/\\+$/, '');
+  const output = outputPath.replace(/\\+$/, '');
 
   // Replace all backslashes with forward slashes
-  return outputPath.replace(/\\/g, '/');
+  return output.replace(/\\/g, '/');
 }
 
 export async function writeCssFile({
@@ -74,11 +68,9 @@ export async function writeCssFile({
   await unlink(file);
 
   // Replace old name references with new file name
-  await replaceStringInDirectory(
-    dirname(outDir), // Search from parent directory
-    basename(file),
-    basename(newFile)
-  );
+  for await (const filePath of walkDirectory(dirname(outDir))) {
+    await processFile(filePath, basename(file), basename(newFile));
+  }
 
   return newFile;
 }

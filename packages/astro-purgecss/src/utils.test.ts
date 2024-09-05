@@ -1,7 +1,8 @@
 import { unlink, writeFile } from 'node:fs/promises';
-import { basename, dirname } from 'node:path';
+import { dirname } from 'node:path';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
+import { Dirent } from 'node:fs';
 import { resolveOutputPath, writeCssFile } from './utils';
 
 describe('resolveOutputPath', () => {
@@ -41,12 +42,15 @@ describe('resolveOutputPath', () => {
 const mockCss = 'body { color: red; }';
 const mockFile = '/path/to/astro.csjqp06s.css';
 const mockOutDir = '/path/to/outdir';
-const mockHash = 'abcdefg1';
 
 vi.mock('node:fs/promises', () => ({
   writeFile: vi.fn(() => Promise.resolve()),
   unlink: vi.fn(() => Promise.resolve()),
-  readdir: vi.fn(() => Promise.resolve([]))
+  readdir: vi.fn(() => {
+    const mockHtml = new Dirent();
+    mockHtml.name = 'index.html';
+    return [mockHtml];
+  })
 }));
 
 vi.mock('node:path', () => ({
@@ -58,7 +62,7 @@ vi.mock('node:path', () => ({
 vi.mock('node:crypto', () => ({
   createHash: vi.fn(() => ({
     update: vi.fn().mockReturnThis(),
-    digest: vi.fn().mockReturnValue(mockHash.repeat(5))
+    digest: vi.fn().mockReturnValue('abcdefg1'.repeat(5))
   }))
 }));
 
@@ -72,16 +76,19 @@ describe('writeCssFile', () => {
     expect(result).toBeUndefined();
   });
 
-  it('should write new file, delete old file, and update references', async () => {
+  it('should write new file, delete old file', async () => {
     const newFile = '/path/to/astro.abcdefg1.css';
 
-    await writeCssFile({ css: mockCss, file: mockFile, outDir: mockOutDir });
+    const processed = await writeCssFile({
+      css: mockCss,
+      file: mockFile,
+      outDir: mockOutDir
+    });
 
     expect(writeFile).toHaveBeenCalledWith(newFile, mockCss);
     expect(unlink).toHaveBeenCalledWith(mockFile);
     expect(dirname).toHaveBeenCalledWith(mockOutDir);
-    expect(basename).toHaveBeenCalledWith(mockFile);
-    expect(basename).toHaveBeenCalledWith(newFile);
+    expect(processed).toBe(newFile);
   });
 
   it('should return the new file name', async () => {

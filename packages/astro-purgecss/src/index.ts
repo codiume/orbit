@@ -22,6 +22,7 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
             ...(options.content || [])
           ]
         });
+
         await Promise.all(
           purged
             .filter(({ file }) => file?.endsWith('.css'))
