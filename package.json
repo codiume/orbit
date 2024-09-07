@@ -20,9 +20,9 @@
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.15.4",
     "@changesets/changelog-github": "^0.5.0",
-    "@changesets/cli": "^2.27.7",
-    "@types/node": "^20.16.2",
-    "astro": "^4.15.1",
+    "@changesets/cli": "^2.27.8",
+    "@types/node": "^20.16.5",
+    "astro": "^4.15.4",
     "commander": "^12.1.0",
     "esbuild": "^0.23.1",
     "esbuild-plugin-clean": "^1.0.1",
