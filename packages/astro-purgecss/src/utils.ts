@@ -22,14 +22,17 @@ export async function replaceValueInFile(
   }
 }
 
-// Clean from extra slash on windows
+// Clean from extra slash on windows and trailing forward slash on non-windows
 export function cleanPath(file: URL): string {
-  const path = fileURLToPath(file);
+  let path = fileURLToPath(file);
+
+  // Remove trailing forward slash if present
+  path = path.replace(/\/+$/, '');
 
   if (process.platform !== 'win32') return path;
 
-  // Remove leading and trailing backslashes if present
-  return path.replace(/^\/+/, '').replace(/\/+$/, '');
+  // Remove leading forward slash if present
+  return path.replace(/^\/+/, '');
 }
 
 export async function writeCssFile({

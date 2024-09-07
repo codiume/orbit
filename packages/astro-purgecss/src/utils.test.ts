@@ -6,14 +6,7 @@ import { cleanPath, replaceValueInFile, writeCssFile } from './utils';
 vi.mock('node:fs/promises', () => ({
   readFile: vi.fn(() => Promise.resolve()),
   writeFile: vi.fn(() => Promise.resolve()),
-  unlink: vi.fn(() => Promise.resolve()),
-  readdir: vi.fn(() => Promise.resolve([]))
-}));
-
-vi.mock('node:path', () => ({
-  dirname: vi.fn(() => '/path/to'),
-  basename: vi.fn((file) => file.split('/').pop() as string),
-  join: vi.fn((...args) => args.join('/'))
+  unlink: vi.fn(() => Promise.resolve())
 }));
 
 vi.mock('node:crypto', () => ({
@@ -96,6 +89,17 @@ describe('cleanPath', () => {
   });
 
   it('should replace backslashes with forward slashes on windows without trailing backslash', () => {
+    const originalPlatform = process.platform;
+    Object.defineProperty(process, 'platform', { value: 'win32' });
+
+    const inputPath = new URL('file:///C:/Users/test/path');
+    const expectedPath = 'C:/Users/test/path';
+    expect(cleanPath(inputPath)).toBe(expectedPath);
+
+    Object.defineProperty(process, 'platform', { value: originalPlatform });
+  });
+
+  it('should remove leading forward slash on windows', () => {
     const originalPlatform = process.platform;
     Object.defineProperty(process, 'platform', { value: 'win32' });
 

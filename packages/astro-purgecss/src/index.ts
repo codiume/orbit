@@ -38,7 +38,7 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
                 css: string;
                 file: string;
               });
-              success(processed[1].replace(outDir, '/'));
+              success(processed[1].replace(outDir, ''));
 
               return processed;
             })
@@ -74,7 +74,7 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
                 }
               })
             );
-            success(page.replace(outDir, '/'));
+            success(page.replace(outDir, ''));
           })
         );
       }
