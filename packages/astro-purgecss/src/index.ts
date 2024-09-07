@@ -59,16 +59,24 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
           })
           .map((route) => cleanPath(route.distURL as URL));
 
-        for (const page of pages) {
-          for (const [oldFilename, newFilename] of processed) {
-            await replaceValueInFile(
-              page,
-              oldFilename.replace(outDir, ''),
-              newFilename.replace(outDir, '')
+        await Promise.all(
+          pages.map(async (page) => {
+            await Promise.all(
+              processed.map(async ([oldFile, newFile]) => {
+                // Replace only if name of the old file
+                // is different from name of the new file (hash changes)
+                if (oldFile !== newFile) {
+                  await replaceValueInFile(
+                    page,
+                    oldFile.replace(outDir, ''),
+                    newFile.replace(outDir, '')
+                  );
+                }
+              })
             );
-          }
-          success(page.replace(outDir, '/'));
-        }
+            success(page.replace(outDir, '/'));
+          })
+        );
       }
     }
   };

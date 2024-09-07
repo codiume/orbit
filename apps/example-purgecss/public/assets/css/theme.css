@@ -1,0 +1,11 @@
+.light-theme {
+  background-color: white;
+  color:black
+}
+
+.unused-class {
+  color: red; /* unused */
+}
+.unused-class-2 {
+  color: blue; /* unused */
+}
