@@ -1,20 +1,9 @@
+import { blue, dim, green } from 'kleur/colors';
 import { createHash } from 'node:crypto';
-import { readFile, readdir, unlink, writeFile } from 'node:fs/promises';
-import { basename, dirname, join } from 'node:path';
+import { readFile, unlink, writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
 
-async function* walkDirectory(dir: string): AsyncIterable<string> {
-  const files = await readdir(dir, { withFileTypes: true });
-  for (const file of files) {
-    const filePath = join(dir, file.name);
-    if (file.isDirectory()) {
-      yield* walkDirectory(filePath);
-    } else if (file.isFile()) {
-      yield filePath;
-    }
-  }
-}
-
-async function processFile(
+export async function replaceValueInFile(
   filePath: string,
   searchValue: string,
   replaceValue: string
@@ -33,27 +22,23 @@ async function processFile(
   }
 }
 
-export function resolveOutputPath(outputPath: string): string {
-  if (process.platform !== 'win32') return outputPath;
+// Clean from extra slash on windows
+export function cleanPath(file: URL): string {
+  const path = fileURLToPath(file);
 
-  // Remove trailing backslash if present
-  const output = outputPath.replace(/\\+$/, '');
+  if (process.platform !== 'win32') return path;
 
-  // Replace all backslashes with forward slashes
-  return output.replace(/\\/g, '/');
+  // Remove leading and trailing backslashes if present
+  return path.replace(/^\/+/, '').replace(/\/+$/, '');
 }
 
 export async function writeCssFile({
   css,
-  file,
-  outDir
+  file
 }: {
   css: string;
-  file?: string;
-  outDir: string;
+  file: string;
 }) {
-  if (!file) return;
-
   // Get content hash before writing to file
   const hash = createHash('sha256').update(css).digest('hex').substring(0, 8);
 
@@ -67,10 +52,22 @@ export async function writeCssFile({
   // Remove old file
   await unlink(file);
 
-  // Replace old name references with new file name
-  for await (const filePath of walkDirectory(dirname(outDir))) {
-    await processFile(filePath, basename(file), basename(newFile));
-  }
+  return [file, newFile];
+}
 
-  return newFile;
+export const dt = new Intl.DateTimeFormat('en-us', {
+  hour: '2-digit',
+  minute: '2-digit',
+  second: '2-digit',
+  hour12: false
+});
+
+export function success(message: string) {
+  const date = dt.format(new Date());
+  console.log(dim(date), green('▶'), message);
+}
+
+export function headline(message: string) {
+  const date = dt.format(new Date());
+  console.log(dim(date), blue('[build]'), message);
 }

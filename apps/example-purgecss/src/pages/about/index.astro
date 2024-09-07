@@ -7,8 +7,8 @@
     <title>Astro</title>
   </head>
   <body>
-    <section class="main">
-      <p>This is an about page</p>
+    <section>
+      <h1>This is an astro page</h1>
       <p class="sm:hidden">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero esse
         accusantium, dignissimos corporis ipsam, atque facere expedita aliquid
@@ -16,28 +16,28 @@
         officiis beatae nam.
       </p>
     </section>
-    <style>
+    <style is:global>
+      .sm\:hidden {
+        color: red; /* should not be removed */
+      }
       /* DO_NOT_REMOVE: The following css rules are unsed,
        * they are left here on purpose, to test out
        * the "astro-purgecss" integration
        */
-      .unused-class-3 {
+      .unused-class {
         color: red; /* unused */
       }
-      .unused-class-4 {
+      .unused-class-2 {
         color: blue; /* unused */
       }
-      #unused-id-3 {
+      #unused-id {
         color: red; /* unused */
       }
-      #unused-id-4 {
+      #unused-id-2 {
         color: red; /* unused */
       }
-      p {
-        color: red; /* used */
-      }
-      .sm\:hidden {
-        color: red; /* should not be removed */
+      footer {
+        color: red; /* unused */
       }
     </style>
   </body>

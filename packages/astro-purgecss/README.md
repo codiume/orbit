@@ -143,8 +143,8 @@ We have also setup an example repository available here: [example-purgecss](../.
 export default defineConfig({
   integrations: [
     purgecss({
-+      keyframes: false
-+      , safelist: {
++      keyframes: false,
++      safelist: {
 +        greedy: [/*astro*/]
 +      }
     }),

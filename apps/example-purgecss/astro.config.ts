@@ -1,5 +1,5 @@
-import purgecss from 'astro-purgecss';
 import { defineConfig } from 'astro/config';
+import purgecss from '../../packages/astro-purgecss/src/index';
 
 export default defineConfig({
   // Add purgecss support to Astro
