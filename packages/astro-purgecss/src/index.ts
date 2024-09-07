@@ -61,7 +61,11 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
 
         for (const page of pages) {
           for (const [oldFilename, newFilename] of processed) {
-            await replaceValueInFile(page, oldFilename, newFilename);
+            await replaceValueInFile(
+              page,
+              oldFilename.replace(outDir, ''),
+              newFilename.replace(outDir, '')
+            );
           }
           success(page.replace(outDir, '/'));
         }
