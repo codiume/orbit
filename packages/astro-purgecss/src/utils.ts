@@ -78,5 +78,5 @@ export function success(message: string) {
 
 export function headline(message: string) {
   const date = dt.format(new Date());
-  console.log(dim(date), blue('[astro-purgecss]'), message);
+  console.log(dim(date), blue('[purgecss]'), message);
 }
