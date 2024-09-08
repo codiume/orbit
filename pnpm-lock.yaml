@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@arethetypeswrong/cli':
-        specifier: ^0.15.4
-        version: 0.15.4
+        specifier: ^0.16.0
+        version: 0.16.1
       '@changesets/changelog-github':
         specifier: ^0.5.0
         version: 0.5.0
@@ -70,27 +70,27 @@ importers:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.3.3(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4))
+        version: 8.3.3(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4)
+        version: 4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.3.3(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4))
+        version: 8.3.3(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4)
+        version: 4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc)
 
   apps/playground:
     dependencies:
@@ -106,7 +106,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4)
+        version: 4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc)
 
   packages/astro-build: {}
 
@@ -114,7 +114,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4)
+        version: 4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc)
       purgecss:
         specifier: ^6.0.0
         version: 6.0.0
@@ -123,7 +123,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4)
+        version: 4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc)
     devDependencies:
       astro-build:
         specifier: workspace:*
@@ -133,10 +133,10 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4)
+        version: 4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc)
       schema-dts:
         specifier: ^1.1.0
-        version: 1.1.2(typescript@5.5.4)
+        version: 1.1.2(typescript@5.6.1-rc)
     devDependencies:
       astro-build:
         specifier: workspace:*
@@ -146,7 +146,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4)
+        version: 4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc)
     devDependencies:
       astro-build:
         specifier: workspace:*
@@ -156,7 +156,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4)
+        version: 4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc)
       ua-parser-js:
         specifier: ^1.0.2
         version: 1.0.38
@@ -178,7 +178,7 @@ importers:
         version: 4.0.15(@types/node@22.5.4)(vite@5.4.3(@types/node@22.5.4))
       astro:
         specifier: ^4.0.0
-        version: 4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4)
+        version: 4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc)
     devDependencies:
       astro-build:
         specifier: workspace:*
@@ -188,7 +188,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4)
+        version: 4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc)
 
 packages:
 
@@ -199,13 +199,13 @@ packages:
   '@andrewbranch/untar.js@1.0.3':
     resolution: {integrity: sha512-Jh15/qVmrLGhkKJBdXlK1+9tY4lZruYjsgkDFj08ZmDiWVBLJcqkok7Z0/R0In+i1rScBpJlSvrTS2Lm41Pbnw==}
 
-  '@arethetypeswrong/cli@0.15.4':
-    resolution: {integrity: sha512-YDbImAi1MGkouT7f2yAECpUMFhhA1J0EaXzIqoC5GGtK0xDgauLtcsZezm8tNq7d3wOFXH7OnY+IORYcG212rw==}
+  '@arethetypeswrong/cli@0.16.1':
+    resolution: {integrity: sha512-GqwCVNwgSyXhn9qzuPU565zYvs+P0P4NbDEieVaYvtS+mtKh0S+98vkWzJMs4gsLHPrHgfJ5ZQfexrow7ENxvQ==}
     engines: {node: '>=18'}
     hasBin: true
 
-  '@arethetypeswrong/core@0.15.1':
-    resolution: {integrity: sha512-FYp6GBAgsNz81BkfItRz8RLZO03w5+BaeiPma1uCfmxTnxbtuMrI/dbzGiOk8VghO108uFI0oJo0OkewdSHw7g==}
+  '@arethetypeswrong/core@0.16.0':
+    resolution: {integrity: sha512-4OC0kwoBr5tVltLRrx8ENX7Dr4xNXDfJZ8uFdA2/+jZXC7+sXBpicQBzq5EMAUF5UmLrl82ArYBE7FymbkCkXw==}
     engines: {node: '>=18'}
 
   '@astrojs/compiler@2.10.3':
@@ -1278,6 +1278,9 @@ packages:
     resolution: {integrity: sha512-TdHqgGf9odd8SXNuxtUBVx8Nv+qZOejE6qyqiy5NtbYYQOeFa6zmHkxlPzmaLxWWHsU6nJmB7AETdVPi+2NBUg==}
     engines: {node: '>=8'}
 
+  cjs-module-lexer@1.4.1:
+    resolution: {integrity: sha512-cuSVIHi9/9E/+821Qjdvngor+xpnlwnuwIyZOaLmHBVdXL+gP+I6QQB9VkO7RI77YIcTV+S1W9AreJ5eN63JBA==}
+
   clean-stack@2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
     engines: {node: '>=6'}
@@ -1999,6 +2002,10 @@ packages:
 
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
+
+  lru-cache@11.0.1:
+    resolution: {integrity: sha512-CgeuL5uom6j/ZVrg7G/+1IXqRY8JXX4Hghfy5YE0EhoYQWvndP1kufu58cmZLNIDKnRhZrXfdS9urVWx98AipQ==}
+    engines: {node: 20 || >=22}
 
   lru-cache@4.1.5:
     resolution: {integrity: sha512-sWZlbEP2OsHNkXrMl5GYk/jKk70MBng6UU4YI/qGDYbgf6YbP4EvmqISbXCoJiRKs+1bSpFHVgQxvJ17F2li5g==}
@@ -2848,9 +2855,6 @@ packages:
   trough@2.2.0:
     resolution: {integrity: sha512-tmMpK00BjZiUyVyvrBK7knerNgmgvcV/KLVyuma/SC+TQN167GrMRciANTz09+k3zW8L8t60jWO1GpfkZdjTaw==}
 
-  ts-expose-internals-conditionally@1.0.0-empty.0:
-    resolution: {integrity: sha512-F8m9NOF6ZhdOClDVdlM8gj3fDCav4ZIFSs/EI3ksQbAAXVSCN/Jh5OCJDDZWBuBy9psFc6jULGDlPwjMYMhJDw==}
-
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
 
@@ -2928,13 +2932,13 @@ packages:
     resolution: {integrity: sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==}
     engines: {node: '>=12.20'}
 
-  typescript@5.3.3:
-    resolution: {integrity: sha512-pXWcraxM0uxAS+tN0AG/BF2TyqmHO014Z070UsJ+pFvYuRSq8KH8DmWpnbXe0pEPDHXZV3FcAbJkijJ5oNEnWw==}
+  typescript@5.5.4:
+    resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.5.4:
-    resolution: {integrity: sha512-Mtq29sKDAEYP7aljRgtPOpTvOfbwRWlS6dPRzwjdE+C0R4brX/GUyhHSecbHMFLNBLcJIPt9nl9yG5TZ1weH+Q==}
+  typescript@5.6.1-rc:
+    resolution: {integrity: sha512-E3b2+1zEFu84jB0YQi9BORDjz9+jGbwwy1Zi3G0LUNw7a7cePUrHMRNy8aPh53nXpkFGVHSxIZo5vKTfYaFiBQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -3254,9 +3258,9 @@ snapshots:
 
   '@andrewbranch/untar.js@1.0.3': {}
 
-  '@arethetypeswrong/cli@0.15.4':
+  '@arethetypeswrong/cli@0.16.1':
     dependencies:
-      '@arethetypeswrong/core': 0.15.1
+      '@arethetypeswrong/core': 0.16.0
       chalk: 4.1.2
       cli-table3: 0.6.5
       commander: 10.0.1
@@ -3264,13 +3268,14 @@ snapshots:
       marked-terminal: 7.1.0(marked@9.1.6)
       semver: 7.6.3
 
-  '@arethetypeswrong/core@0.15.1':
+  '@arethetypeswrong/core@0.16.0':
     dependencies:
       '@andrewbranch/untar.js': 1.0.3
+      cjs-module-lexer: 1.4.1
       fflate: 0.8.2
+      lru-cache: 11.0.1
       semver: 7.6.3
-      ts-expose-internals-conditionally: 1.0.0-empty.0
-      typescript: 5.3.3
+      typescript: 5.6.1-rc
       validate-npm-package-name: 5.0.1
 
   '@astrojs/compiler@2.10.3': {}
@@ -3300,9 +3305,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@8.3.3(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4))':
+  '@astrojs/node@8.3.3(astro@4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc))':
     dependencies:
-      astro: 4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4)
+      astro: 4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc)
       send: 0.18.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -4275,7 +4280,7 @@ snapshots:
 
   assertion-error@2.0.1: {}
 
-  astro@4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4):
+  astro@4.15.2(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -4332,7 +4337,7 @@ snapshots:
       string-width: 7.2.0
       strip-ansi: 7.1.0
       tinyexec: 0.3.0
-      tsconfck: 3.1.3(typescript@5.5.4)
+      tsconfck: 3.1.3(typescript@5.6.1-rc)
       unist-util-visit: 5.0.0
       vfile: 6.0.3
       vite: 5.4.2(@types/node@22.5.4)
@@ -4342,7 +4347,7 @@ snapshots:
       yargs-parser: 21.1.1
       zod: 3.23.8
       zod-to-json-schema: 3.23.2(zod@3.23.8)
-      zod-to-ts: 1.2.0(typescript@5.5.4)(zod@3.23.8)
+      zod-to-ts: 1.2.0(typescript@5.6.1-rc)(zod@3.23.8)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -4441,7 +4446,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.5.4):
+  astro@4.15.4(@types/node@22.5.4)(rollup@4.21.2)(typescript@5.6.1-rc):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -4498,7 +4503,7 @@ snapshots:
       string-width: 7.2.0
       strip-ansi: 7.1.0
       tinyexec: 0.3.0
-      tsconfck: 3.1.3(typescript@5.5.4)
+      tsconfck: 3.1.3(typescript@5.6.1-rc)
       unist-util-visit: 5.0.0
       vfile: 6.0.3
       vite: 5.4.3(@types/node@22.5.4)
@@ -4508,7 +4513,7 @@ snapshots:
       yargs-parser: 21.1.1
       zod: 3.23.8
       zod-to-json-schema: 3.23.2(zod@3.23.8)
-      zod-to-ts: 1.2.0(typescript@5.5.4)(zod@3.23.8)
+      zod-to-ts: 1.2.0(typescript@5.6.1-rc)(zod@3.23.8)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -4634,6 +4639,8 @@ snapshots:
   ci-info@3.9.0: {}
 
   ci-info@4.0.0: {}
+
+  cjs-module-lexer@1.4.1: {}
 
   clean-stack@2.2.0: {}
 
@@ -5337,6 +5344,8 @@ snapshots:
       get-func-name: 2.0.2
 
   lru-cache@10.4.3: {}
+
+  lru-cache@11.0.1: {}
 
   lru-cache@4.1.5:
     dependencies:
@@ -6159,9 +6168,9 @@ snapshots:
     dependencies:
       suf-log: 2.5.3
 
-  schema-dts@1.1.2(typescript@5.5.4):
+  schema-dts@1.1.2(typescript@5.6.1-rc):
     dependencies:
-      typescript: 5.5.4
+      typescript: 5.6.1-rc
 
   section-matter@1.0.0:
     dependencies:
@@ -6411,13 +6420,15 @@ snapshots:
 
   trough@2.2.0: {}
 
-  ts-expose-internals-conditionally@1.0.0-empty.0: {}
-
   ts-interface-checker@0.1.13: {}
 
   tsconfck@3.1.3(typescript@5.5.4):
     optionalDependencies:
       typescript: 5.5.4
+
+  tsconfck@3.1.3(typescript@5.6.1-rc):
+    optionalDependencies:
+      typescript: 5.6.1-rc
 
   tslib@2.7.0:
     optional: true
@@ -6480,9 +6491,9 @@ snapshots:
 
   type-fest@2.19.0: {}
 
-  typescript@5.3.3: {}
-
   typescript@5.5.4: {}
+
+  typescript@5.6.1-rc: {}
 
   ua-parser-js@1.0.38: {}
 
@@ -6783,6 +6794,11 @@ snapshots:
   zod-to-ts@1.2.0(typescript@5.5.4)(zod@3.23.8):
     dependencies:
       typescript: 5.5.4
+      zod: 3.23.8
+
+  zod-to-ts@1.2.0(typescript@5.6.1-rc)(zod@3.23.8):
+    dependencies:
+      typescript: 5.6.1-rc
       zod: 3.23.8
 
   zod@3.23.8: {}
