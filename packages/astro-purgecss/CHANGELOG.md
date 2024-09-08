@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 4.6.0
+
+### Minor Changes
+
+- [#632](https://github.com/codiume/orbit/pull/632) [`2487b00`](https://github.com/codiume/orbit/commit/2487b00a871500d82b7c3157fdbb60275cad9a81) Thanks [@the-dijkstra](https://github.com/the-dijkstra)! - Fix Reached heap limit Allocation failed error
+
 ## 4.5.0
 
 ### Minor Changes
