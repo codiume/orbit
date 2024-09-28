@@ -19,10 +19,10 @@ importers:
         version: 2.27.8
       '@types/node':
         specifier: ^20.16.5
-        version: 20.16.9
+        version: 20.16.10
       astro:
         specifier: ^4.15.4
-        version: 4.15.9(@types/node@20.16.9)(rollup@4.22.4)(typescript@5.6.2)
+        version: 4.15.9(@types/node@20.16.10)(rollup@4.22.4)(typescript@5.6.2)
       commander:
         specifier: ^12.1.0
         version: 12.1.0
@@ -61,36 +61,36 @@ importers:
         version: 5.6.2
       vite-tsconfig-paths:
         specifier: ^5.0.1
-        version: 5.0.1(typescript@5.6.2)(vite@5.4.7(@types/node@20.16.9))
+        version: 5.0.1(typescript@5.6.2)(vite@5.4.7(@types/node@20.16.10))
       vitest:
         specifier: ^2.0.5
-        version: 2.1.1(@types/node@20.16.9)
+        version: 2.1.1(@types/node@20.16.10)
 
   apps/example-purgecss:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.3.4(astro@4.15.9(@types/node@22.7.3)(rollup@4.22.4)(typescript@5.6.2))
+        version: 8.3.4(astro@4.15.9(@types/node@22.7.4)(rollup@4.22.4)(typescript@5.6.2))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.9(@types/node@22.7.3)(rollup@4.22.4)(typescript@5.6.2)
+        version: 4.15.9(@types/node@22.7.4)(rollup@4.22.4)(typescript@5.6.2)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^8.0.0
-        version: 8.3.4(astro@4.15.9(@types/node@22.7.3)(rollup@4.22.4)(typescript@5.6.2))
+        version: 8.3.4(astro@4.15.9(@types/node@22.7.4)(rollup@4.22.4)(typescript@5.6.2))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.9(@types/node@22.7.3)(rollup@4.22.4)(typescript@5.6.2)
+        version: 4.15.9(@types/node@22.7.4)(rollup@4.22.4)(typescript@5.6.2)
 
   apps/playground:
     dependencies:
@@ -106,7 +106,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.9(@types/node@22.7.3)(rollup@4.22.4)(typescript@5.6.2)
+        version: 4.15.9(@types/node@22.7.4)(rollup@4.22.4)(typescript@5.6.2)
 
   packages/astro-build: {}
 
@@ -175,7 +175,7 @@ importers:
         version: 1.15.5
       '@vanilla-extract/vite-plugin':
         specifier: ^4.0.4
-        version: 4.0.15(@types/node@22.7.3)(vite@5.4.7(@types/node@22.7.3))
+        version: 4.0.15(@types/node@22.7.4)(vite@5.4.7(@types/node@22.7.4))
       astro:
         specifier: ^4.0.0
         version: 4.15.8(@types/node@22.7.3)(rollup@4.22.4)(typescript@5.6.2)
@@ -1190,11 +1190,14 @@ packages:
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
-  '@types/node@20.16.9':
-    resolution: {integrity: sha512-rkvIVJxsOfBejxK7I0FO5sa2WxFmJCzoDwcd88+fq/CUfynNywTo/1/T6hyFz22CyztsnLS9nVlHOnTI36RH5w==}
+  '@types/node@20.16.10':
+    resolution: {integrity: sha512-vQUKgWTjEIRFCvK6CyriPH3MZYiYlNy0fKiEYHWbcoWLEgs4opurGGKlebrTLqdSMIbXImH6XExNiIyNUv3WpA==}
 
   '@types/node@22.7.3':
     resolution: {integrity: sha512-qXKfhXXqGTyBskvWEzJZPUxSslAiLaB6JGP1ic/XTH9ctGgzdgYguuLP1C601aRTSDNlLb0jbKqXjZ48GNraSA==}
+
+  '@types/node@22.7.4':
+    resolution: {integrity: sha512-y+NPi1rFzDs1NdQHHToqeiX2TIS79SWEAw9GYhkkx8bD0ChpfqC+n2j5OXOCpzfojBEBt6DnEnnG9MY0zk1XLg==}
 
   '@types/semver@7.5.8':
     resolution: {integrity: sha512-I8EUhyrgfLrcTkzV3TSsGyl1tSuPrEDzr0yd5m90UgNxQkyDXULk3b6MlQqTCpZpNtWe1K0hzclnZkTcLBe2UQ==}
@@ -3385,9 +3388,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@8.3.4(astro@4.15.9(@types/node@22.7.3)(rollup@4.22.4)(typescript@5.6.2))':
+  '@astrojs/node@8.3.4(astro@4.15.9(@types/node@22.7.4)(rollup@4.22.4)(typescript@5.6.2))':
     dependencies:
-      astro: 4.15.9(@types/node@22.7.3)(rollup@4.22.4)(typescript@5.6.2)
+      astro: 4.15.9(@types/node@22.7.4)(rollup@4.22.4)(typescript@5.6.2)
       send: 0.19.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -4281,11 +4284,16 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
-  '@types/node@20.16.9':
+  '@types/node@20.16.10':
     dependencies:
       undici-types: 6.19.8
 
   '@types/node@22.7.3':
+    dependencies:
+      undici-types: 6.19.8
+    optional: true
+
+  '@types/node@22.7.4':
     dependencies:
       undici-types: 6.19.8
 
@@ -4320,7 +4328,7 @@ snapshots:
     transitivePeerDependencies:
       - babel-plugin-macros
 
-  '@vanilla-extract/integration@7.1.9(@types/node@22.7.3)':
+  '@vanilla-extract/integration@7.1.9(@types/node@22.7.4)':
     dependencies:
       '@babel/core': 7.25.2
       '@babel/plugin-syntax-typescript': 7.25.4(@babel/core@7.25.2)
@@ -4332,8 +4340,8 @@ snapshots:
       find-up: 5.0.0
       javascript-stringify: 2.1.0
       mlly: 1.7.1
-      vite: 5.4.7(@types/node@22.7.3)
-      vite-node: 1.6.0(@types/node@22.7.3)
+      vite: 5.4.7(@types/node@22.7.4)
+      vite-node: 1.6.0(@types/node@22.7.4)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -4348,10 +4356,10 @@ snapshots:
 
   '@vanilla-extract/private@1.0.6': {}
 
-  '@vanilla-extract/vite-plugin@4.0.15(@types/node@22.7.3)(vite@5.4.7(@types/node@22.7.3))':
+  '@vanilla-extract/vite-plugin@4.0.15(@types/node@22.7.4)(vite@5.4.7(@types/node@22.7.4))':
     dependencies:
-      '@vanilla-extract/integration': 7.1.9(@types/node@22.7.3)
-      vite: 5.4.7(@types/node@22.7.3)
+      '@vanilla-extract/integration': 7.1.9(@types/node@22.7.4)
+      vite: 5.4.7(@types/node@22.7.4)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -4371,13 +4379,13 @@ snapshots:
       chai: 5.1.1
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.1(@vitest/spy@2.1.1)(vite@5.4.7(@types/node@20.16.9))':
+  '@vitest/mocker@2.1.1(@vitest/spy@2.1.1)(vite@5.4.7(@types/node@20.16.10))':
     dependencies:
       '@vitest/spy': 2.1.1
       estree-walker: 3.0.3
       magic-string: 0.30.11
     optionalDependencies:
-      vite: 5.4.7(@types/node@20.16.9)
+      vite: 5.4.7(@types/node@20.16.10)
 
   '@vitest/pretty-format@2.1.1':
     dependencies:
@@ -4538,7 +4546,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.15.9(@types/node@20.16.9)(rollup@4.22.4)(typescript@5.6.2):
+  astro@4.15.9(@types/node@20.16.10)(rollup@4.22.4)(typescript@5.6.2):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -4597,8 +4605,8 @@ snapshots:
       tsconfck: 3.1.3(typescript@5.6.2)
       unist-util-visit: 5.0.0
       vfile: 6.0.3
-      vite: 5.4.7(@types/node@20.16.9)
-      vitefu: 1.0.2(vite@5.4.7(@types/node@20.16.9))
+      vite: 5.4.7(@types/node@20.16.10)
+      vitefu: 1.0.2(vite@5.4.7(@types/node@20.16.10))
       which-pm: 3.0.0
       xxhash-wasm: 1.0.2
       yargs-parser: 21.1.1
@@ -4620,7 +4628,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.15.9(@types/node@22.7.3)(rollup@4.22.4)(typescript@5.6.2):
+  astro@4.15.9(@types/node@22.7.4)(rollup@4.22.4)(typescript@5.6.2):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -4679,8 +4687,8 @@ snapshots:
       tsconfck: 3.1.3(typescript@5.6.2)
       unist-util-visit: 5.0.0
       vfile: 6.0.3
-      vite: 5.4.7(@types/node@22.7.3)
-      vitefu: 1.0.2(vite@5.4.7(@types/node@20.16.9))
+      vite: 5.4.7(@types/node@22.7.4)
+      vitefu: 1.0.2(vite@5.4.7(@types/node@20.16.10))
       which-pm: 3.0.0
       xxhash-wasm: 1.0.2
       yargs-parser: 21.1.1
@@ -5113,7 +5121,7 @@ snapshots:
 
   eval@0.1.8:
     dependencies:
-      '@types/node': 22.7.3
+      '@types/node': 22.7.4
       require-like: 0.1.2
 
   eventemitter3@5.0.1: {}
@@ -6739,13 +6747,13 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-node@1.6.0(@types/node@22.7.3):
+  vite-node@1.6.0(@types/node@22.7.4):
     dependencies:
       cac: 6.7.14
       debug: 4.3.7
       pathe: 1.1.2
       picocolors: 1.1.0
-      vite: 5.4.7(@types/node@22.7.3)
+      vite: 5.4.7(@types/node@22.7.4)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -6757,12 +6765,12 @@ snapshots:
       - supports-color
       - terser
 
-  vite-node@2.1.1(@types/node@20.16.9):
+  vite-node@2.1.1(@types/node@20.16.10):
     dependencies:
       cac: 6.7.14
       debug: 4.3.7
       pathe: 1.1.2
-      vite: 5.4.7(@types/node@20.16.9)
+      vite: 5.4.7(@types/node@20.16.10)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -6774,24 +6782,24 @@ snapshots:
       - supports-color
       - terser
 
-  vite-tsconfig-paths@5.0.1(typescript@5.6.2)(vite@5.4.7(@types/node@20.16.9)):
+  vite-tsconfig-paths@5.0.1(typescript@5.6.2)(vite@5.4.7(@types/node@20.16.10)):
     dependencies:
       debug: 4.3.7
       globrex: 0.1.2
       tsconfck: 3.1.3(typescript@5.6.2)
     optionalDependencies:
-      vite: 5.4.7(@types/node@20.16.9)
+      vite: 5.4.7(@types/node@20.16.10)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@5.4.7(@types/node@20.16.9):
+  vite@5.4.7(@types/node@20.16.10):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47
       rollup: 4.22.4
     optionalDependencies:
-      '@types/node': 20.16.9
+      '@types/node': 20.16.10
       fsevents: 2.3.3
 
   vite@5.4.7(@types/node@22.7.3):
@@ -6803,18 +6811,27 @@ snapshots:
       '@types/node': 22.7.3
       fsevents: 2.3.3
 
-  vitefu@1.0.2(vite@5.4.7(@types/node@20.16.9)):
+  vite@5.4.7(@types/node@22.7.4):
+    dependencies:
+      esbuild: 0.21.5
+      postcss: 8.4.47
+      rollup: 4.22.4
     optionalDependencies:
-      vite: 5.4.7(@types/node@20.16.9)
+      '@types/node': 22.7.4
+      fsevents: 2.3.3
+
+  vitefu@1.0.2(vite@5.4.7(@types/node@20.16.10)):
+    optionalDependencies:
+      vite: 5.4.7(@types/node@20.16.10)
 
   vitefu@1.0.2(vite@5.4.7(@types/node@22.7.3)):
     optionalDependencies:
       vite: 5.4.7(@types/node@22.7.3)
 
-  vitest@2.1.1(@types/node@20.16.9):
+  vitest@2.1.1(@types/node@20.16.10):
     dependencies:
       '@vitest/expect': 2.1.1
-      '@vitest/mocker': 2.1.1(@vitest/spy@2.1.1)(vite@5.4.7(@types/node@20.16.9))
+      '@vitest/mocker': 2.1.1(@vitest/spy@2.1.1)(vite@5.4.7(@types/node@20.16.10))
       '@vitest/pretty-format': 2.1.1
       '@vitest/runner': 2.1.1
       '@vitest/snapshot': 2.1.1
@@ -6829,11 +6846,11 @@ snapshots:
       tinyexec: 0.3.0
       tinypool: 1.0.1
       tinyrainbow: 1.2.0
-      vite: 5.4.7(@types/node@20.16.9)
-      vite-node: 2.1.1(@types/node@20.16.9)
+      vite: 5.4.7(@types/node@20.16.10)
+      vite-node: 2.1.1(@types/node@20.16.10)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 20.16.9
+      '@types/node': 20.16.10
     transitivePeerDependencies:
       - less
       - lightningcss
