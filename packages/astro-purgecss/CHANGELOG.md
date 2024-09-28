@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 4.6.1
+
+### Patch Changes
+
+- [#662](https://github.com/codiume/orbit/pull/662) [`2bef1ec`](https://github.com/codiume/orbit/commit/2bef1ecb448b9257db8ed42b6008cb747a03c773) Thanks [@mef](https://github.com/mef)! - Fix race-condition in calls to replaceValueInFile
+
 ## 4.6.0
 
 ### Minor Changes
