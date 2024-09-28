@@ -3,22 +3,49 @@ import { createHash } from 'node:crypto';
 import { readFile, unlink, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 
-export async function replaceValueInFile(
-  filePath: string,
-  searchValue: string,
-  replaceValue: string
-) {
+export async function readFileContent(
+  filePath: string
+): Promise<string> {
   try {
     const content = await readFile(filePath, 'utf8');
+    return content;
+  } catch (err) {
+    console.error(`Error reading file ${filePath}: ${err}`);
+    return '';
+  }
+}
+
+export function replaceValueInFile(
+  filePath: string,
+  content: string,
+  searchValue: string,
+  replaceValue: string
+): string {
+  try {
     if (content.includes(searchValue)) {
       const newContent = content.replace(
         new RegExp(searchValue, 'g'),
         replaceValue
       );
-      await writeFile(filePath, newContent, 'utf8');
+      return newContent;
+    }
+    else {
+      return content;
     }
   } catch (err) {
     console.error(`Error processing file ${filePath}: ${err}`);
+    return '';
+  }
+}
+
+export async function saveUpdatedFile(
+  filePath: string,
+  newContent: string
+) {
+  try {
+    await writeFile(filePath, newContent, 'utf8');
+  } catch (err) {
+    console.error(`Error saving updated file ${filePath}: ${err}`);
   }
 }
 

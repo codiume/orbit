@@ -4,7 +4,9 @@ import { PurgeCSS, type UserDefinedOptions } from 'purgecss';
 import {
   cleanPath,
   headline,
+  readFileContent,
   replaceValueInFile,
+  saveUpdatedFile,
   success,
   writeCssFile
 } from './utils';
@@ -61,19 +63,22 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
 
         await Promise.all(
           pages.map(async (page) => {
-            await Promise.all(
-              processed.map(async ([oldFile, newFile]) => {
-                // Replace only if name of the old file
-                // is different from name of the new file (hash changes)
-                if (oldFile !== newFile) {
-                  await replaceValueInFile(
-                    page,
-                    oldFile.replace(outDir, ''),
-                    newFile.replace(outDir, '')
-                  );
-                }
-              })
-            );
+
+            let fileContent = await readFileContent(page);
+
+            for (const [oldFile, newFile] of processed) {
+              // Replace only if name of the old file
+              // is different from name of the new file (hash changes)
+              if (oldFile !== newFile) {
+                fileContent = replaceValueInFile(
+                  page,
+                  fileContent,
+                  oldFile.replace(outDir, ''),
+                  newFile.replace(outDir, '')
+                );
+              }
+			}
+			await saveUpdatedFile(page, fileContent);
             success(page.replace(outDir, ''));
           })
         );

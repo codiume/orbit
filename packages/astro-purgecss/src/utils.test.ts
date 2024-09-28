@@ -1,7 +1,7 @@
 import { readFile, unlink, writeFile } from 'node:fs/promises';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
-import { cleanPath, replaceValueInFile, writeCssFile } from './utils';
+import { cleanPath, readFileContent, replaceValueInFile, saveUpdatedFile, writeCssFile } from './utils';
 
 vi.mock('node:fs/promises', () => ({
   readFile: vi.fn(() => Promise.resolve()),
@@ -123,13 +123,12 @@ describe('replaceValueInFile', () => {
     const originalContent = 'This is the oldValue example.';
     const expectedContent = 'This is the newValue example.';
 
-    // Mock the file content
-    vi.mocked(readFile).mockResolvedValue(originalContent);
+    const replaceValueInFileSpy = vi.fn(replaceValueInFile)
 
-    await replaceValueInFile(filePath, searchValue, replaceValue);
+    await replaceValueInFileSpy(filePath, originalContent, searchValue, replaceValue);
 
     // Expect the file to be written with the new content
-    expect(writeFile).toHaveBeenCalledWith(filePath, expectedContent, 'utf8');
+    expect(replaceValueInFileSpy).toHaveReturnedWith(expectedContent);
   });
 
   it('should not modify the file if the search value is not found', async () => {
@@ -141,27 +140,43 @@ describe('replaceValueInFile', () => {
     // Mock the file content
     vi.mocked(readFile).mockResolvedValue(originalContent);
 
-    await replaceValueInFile(filePath, searchValue, replaceValue);
+    await replaceValueInFile(filePath, originalContent, searchValue, replaceValue);
 
     // Expect the file not to be written
     expect(writeFile).not.toHaveBeenCalled();
   });
 
-  it("should log an error if there's an error reading or writing the file", async () => {
+  it("should log an error if there's an error reading a file", async () => {
     const filePath = '/path/to/file.txt';
-    const searchValue = 'oldValue';
-    const replaceValue = 'newValue';
     const error = new Error('File operation failed');
 
     // Mock the file content to throw an error
     vi.mocked(readFile).mockRejectedValue(error);
     vi.spyOn(console, 'error');
 
-    await replaceValueInFile(filePath, searchValue, replaceValue);
+    await readFileContent(filePath);
 
     // Expect the error to be logged
     expect(console.error).toHaveBeenCalledWith(
-      `Error processing file ${filePath}: ${error}`
+      `Error reading file ${filePath}: ${error}`
     );
   });
+
+  it("should log an error if there's an error saving a file", async () => {
+    const filePath = '/path/to/file.txt';
+    const newContent = 'file content';
+    const error = new Error('File operation failed');
+
+    // Mock the file content to throw an error
+    vi.mocked(writeFile).mockRejectedValue(error);
+    vi.spyOn(console, 'error');
+
+    await saveUpdatedFile(filePath, newContent);
+
+    // Expect the error to be logged
+    expect(console.error).toHaveBeenCalledWith(
+      `Error saving updated file ${filePath}: ${error}`
+    );
+  });
+
 });
