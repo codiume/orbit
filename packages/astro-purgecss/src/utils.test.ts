@@ -123,13 +123,12 @@ describe('replaceValueInFile', () => {
     const originalContent = 'This is the oldValue example.';
     const expectedContent = 'This is the newValue example.';
 
-    // Mock the file content
-    vi.mocked(readFile).mockResolvedValue(originalContent);
+    const replaceValueInFileSpy = vi.fn(replaceValueInFile)
 
-    await replaceValueInFile(filePath, originalContent, searchValue, replaceValue);
+    await replaceValueInFileSpy(filePath, originalContent, searchValue, replaceValue);
 
     // Expect the file to be written with the new content
-    expect(writeFile).toHaveBeenCalledWith(filePath, expectedContent, 'utf8');
+    expect(replaceValueInFileSpy).toHaveReturnedWith(expectedContent);
   });
 
   it('should not modify the file if the search value is not found', async () => {
@@ -152,7 +151,7 @@ describe('replaceValueInFile', () => {
     const error = new Error('File operation failed');
 
     // Mock the file content to throw an error
-    vi.mocked(writeFile).mockRejectedValue(error);
+    vi.mocked(readFile).mockRejectedValue(error);
     vi.spyOn(console, 'error');
 
     await readFileContent(filePath);
@@ -162,13 +161,14 @@ describe('replaceValueInFile', () => {
       `Error reading file ${filePath}: ${error}`
     );
   });
+
   it("should log an error if there's an error saving a file", async () => {
     const filePath = '/path/to/file.txt';
     const newContent = 'file content';
     const error = new Error('File operation failed');
 
     // Mock the file content to throw an error
-    vi.mocked(readFile).mockRejectedValue(error);
+    vi.mocked(writeFile).mockRejectedValue(error);
     vi.spyOn(console, 'error');
 
     await saveUpdatedFile(filePath, newContent);
