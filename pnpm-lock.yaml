@@ -39,8 +39,8 @@ importers:
         specifier: ^8.1.0
         version: 8.1.0
       pkg-pr-new:
-        specifier: ^0.0.28
-        version: 0.0.28
+        specifier: ^0.0.29
+        version: 0.0.29
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -114,7 +114,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.9(@types/node@20.16.10)(rollup@4.22.5)(typescript@5.6.2)
+        version: 4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2)
       purgecss:
         specifier: ^6.0.0
         version: 6.0.0
@@ -123,7 +123,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.9(@types/node@20.16.10)(rollup@4.22.5)(typescript@5.6.2)
+        version: 4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2)
     devDependencies:
       astro-build:
         specifier: workspace:*
@@ -133,7 +133,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.9(@types/node@20.16.10)(rollup@4.22.5)(typescript@5.6.2)
+        version: 4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2)
       schema-dts:
         specifier: ^1.1.0
         version: 1.1.2(typescript@5.6.2)
@@ -146,7 +146,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.9(@types/node@20.16.10)(rollup@4.22.5)(typescript@5.6.2)
+        version: 4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2)
     devDependencies:
       astro-build:
         specifier: workspace:*
@@ -156,7 +156,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.9(@types/node@20.16.10)(rollup@4.22.5)(typescript@5.6.2)
+        version: 4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2)
       ua-parser-js:
         specifier: ^1.0.2
         version: 1.0.39
@@ -178,7 +178,7 @@ importers:
         version: 4.0.16(@types/node@22.7.4)(vite@5.4.8(@types/node@22.7.4))
       astro:
         specifier: ^4.0.0
-        version: 4.15.9(@types/node@20.16.10)(rollup@4.22.5)(typescript@5.6.2)
+        version: 4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2)
     devDependencies:
       astro-build:
         specifier: workspace:*
@@ -188,7 +188,7 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.15.9(@types/node@20.16.10)(rollup@4.22.5)(typescript@5.6.2)
+        version: 4.15.9(@types/node@22.7.4)(rollup@4.22.5)(typescript@5.6.2)
 
 packages:
 
@@ -2541,8 +2541,8 @@ packages:
     resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==}
     engines: {node: '>=8'}
 
-  pkg-pr-new@0.0.28:
-    resolution: {integrity: sha512-aPY6VAz60fIqee1i1kyMdI1ap+3xpVZBvnzMZ+1E1Lqz22XJEy9sgJTx62tzVpAWysDeVtfLAyX3JILDrp0TWg==}
+  pkg-pr-new@0.0.29:
+    resolution: {integrity: sha512-u7pN2RoycdAeTXcfJ0n+1C2+bZFZ+Jo95FFmhf0GKRQp7WCjnutBAC7906UsmJqb4KrReFbqRnPZ+MldvfDBMQ==}
     hasBin: true
 
   pkg-types@1.2.0:
@@ -4603,7 +4603,7 @@ snapshots:
       unist-util-visit: 5.0.0
       vfile: 6.0.3
       vite: 5.4.8(@types/node@22.7.4)
-      vitefu: 1.0.2(vite@5.4.8(@types/node@20.16.10))
+      vitefu: 1.0.2(vite@5.4.8(@types/node@22.7.4))
       which-pm: 3.0.0
       xxhash-wasm: 1.0.2
       yargs-parser: 21.1.1
@@ -6003,7 +6003,7 @@ snapshots:
     dependencies:
       find-up: 4.1.0
 
-  pkg-pr-new@0.0.28:
+  pkg-pr-new@0.0.29:
     dependencies:
       '@jsdevtools/ez-spawn': 3.0.4
       '@octokit/action': 6.1.0
@@ -6729,6 +6729,10 @@ snapshots:
   vitefu@1.0.2(vite@5.4.8(@types/node@20.16.10)):
     optionalDependencies:
       vite: 5.4.8(@types/node@20.16.10)
+
+  vitefu@1.0.2(vite@5.4.8(@types/node@22.7.4)):
+    optionalDependencies:
+      vite: 5.4.8(@types/node@22.7.4)
 
   vitest@2.1.1(@types/node@20.16.10):
     dependencies:
