@@ -175,7 +175,7 @@ importers:
         version: 1.16.0
       '@vanilla-extract/vite-plugin':
         specifier: ^4.0.4
-        version: 4.0.16(@types/node@22.7.9)(vite@5.4.9(@types/node@22.7.9))
+        version: 4.0.17(@types/node@22.7.9)(vite@5.4.10(@types/node@22.7.9))
       astro:
         specifier: ^4.0.0
         version: 4.16.6(@types/node@20.16.13)(rollup@4.24.0)(typescript@5.6.3)
@@ -376,8 +376,8 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
-  '@babel/plugin-syntax-typescript@7.25.7':
-    resolution: {integrity: sha512-rR+5FDjpCHqqZN2bzZm18bVYGaejGq5ZkpVCJLXor/+zlSrSoc4KWcHI0URVWjl/68Dyr1uwZUz/1njycEAv9g==}
+  '@babel/plugin-syntax-typescript@7.25.9':
+    resolution: {integrity: sha512-hjMgRy5hb8uJJjUcdWunWVcoi9bGpJp8p5Ol1229PoN6aytsLwNMgmdftO23wnCLMfVmTwZDWMPNq/D1SY60JQ==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -1305,8 +1305,8 @@ packages:
   '@vanilla-extract/private@1.0.6':
     resolution: {integrity: sha512-ytsG/JLweEjw7DBuZ/0JCN4WAQgM9erfSTdS1NQY778hFQSZ6cfCDEZZ0sgVm4k54uNz6ImKB33AYvSR//fjxw==}
 
-  '@vanilla-extract/vite-plugin@4.0.16':
-    resolution: {integrity: sha512-1yaIwn/2QXHvHfUeEcQ+OWVYvfYCfxIpWfY1y/dcGSMHu/fiFHbLgX75rX6SGnepsaYCTqsdtEiGWJhwxMHouw==}
+  '@vanilla-extract/vite-plugin@4.0.17':
+    resolution: {integrity: sha512-qyAEmBcwih7E3lMrcFZX1Ph81TQos1FFyxOu5JmNmu/F/g7HkcCXFV897pNKFmXgED/TzuyrFVcIRimg5pPc9A==}
     peerDependencies:
       vite: ^4.0.3 || ^5.0.0
 
@@ -3202,6 +3202,37 @@ packages:
       vite:
         optional: true
 
+  vite@5.4.10:
+    resolution: {integrity: sha512-1hvaPshuPUtxeQ0hsVH3Mud0ZanOLwVTneA1EgbAM5LhaZEqyPWGRQ7BtaMvUrTDeEaC8pxtj6a6jku3x4z6SQ==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': ^18.0.0 || >=20.0.0
+      less: '*'
+      lightningcss: ^1.21.0
+      sass: '*'
+      sass-embedded: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+
   vite@5.4.9:
     resolution: {integrity: sha512-20OVpJHh0PAM0oSOELa5GaZNWeDjcAvQjGXy2Uyr+Tp+/D2/Hdz6NLgpJLsarPTA2QJ6v8mX2P1ZfbsSKvdMkg==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -3654,10 +3685,10 @@ snapshots:
       '@babel/core': 7.25.9
       '@babel/helper-plugin-utils': 7.25.9
 
-  '@babel/plugin-syntax-typescript@7.25.7(@babel/core@7.25.8)':
+  '@babel/plugin-syntax-typescript@7.25.9(@babel/core@7.25.9)':
     dependencies:
-      '@babel/core': 7.25.8
-      '@babel/helper-plugin-utils': 7.25.7
+      '@babel/core': 7.25.9
+      '@babel/helper-plugin-utils': 7.25.9
 
   '@babel/plugin-transform-react-jsx@7.25.7(@babel/core@7.25.8)':
     dependencies:
@@ -4476,7 +4507,7 @@ snapshots:
 
   '@vanilla-extract/babel-plugin-debug-ids@1.1.0':
     dependencies:
-      '@babel/core': 7.25.8
+      '@babel/core': 7.25.9
     transitivePeerDependencies:
       - supports-color
 
@@ -4499,8 +4530,8 @@ snapshots:
 
   '@vanilla-extract/integration@7.1.10(@types/node@22.7.9)':
     dependencies:
-      '@babel/core': 7.25.8
-      '@babel/plugin-syntax-typescript': 7.25.7(@babel/core@7.25.8)
+      '@babel/core': 7.25.9
+      '@babel/plugin-syntax-typescript': 7.25.9(@babel/core@7.25.9)
       '@vanilla-extract/babel-plugin-debug-ids': 1.1.0
       '@vanilla-extract/css': 1.16.0
       dedent: 1.5.3
@@ -4509,7 +4540,7 @@ snapshots:
       find-up: 5.0.0
       javascript-stringify: 2.1.0
       mlly: 1.7.2
-      vite: 5.4.9(@types/node@22.7.9)
+      vite: 5.4.10(@types/node@22.7.9)
       vite-node: 1.6.0(@types/node@22.7.9)
     transitivePeerDependencies:
       - '@types/node'
@@ -4525,10 +4556,10 @@ snapshots:
 
   '@vanilla-extract/private@1.0.6': {}
 
-  '@vanilla-extract/vite-plugin@4.0.16(@types/node@22.7.9)(vite@5.4.9(@types/node@22.7.9))':
+  '@vanilla-extract/vite-plugin@4.0.17(@types/node@22.7.9)(vite@5.4.10(@types/node@22.7.9))':
     dependencies:
       '@vanilla-extract/integration': 7.1.10(@types/node@22.7.9)
-      vite: 5.4.9(@types/node@22.7.9)
+      vite: 5.4.10(@types/node@22.7.9)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -6874,7 +6905,7 @@ snapshots:
       debug: 4.3.7
       pathe: 1.1.2
       picocolors: 1.1.1
-      vite: 5.4.9(@types/node@22.7.9)
+      vite: 5.4.10(@types/node@22.7.9)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -6913,6 +6944,15 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  vite@5.4.10(@types/node@22.7.9):
+    dependencies:
+      esbuild: 0.21.5
+      postcss: 8.4.47
+      rollup: 4.24.0
+    optionalDependencies:
+      '@types/node': 22.7.9
+      fsevents: 2.3.3
 
   vite@5.4.9(@types/node@20.16.13):
     dependencies:
