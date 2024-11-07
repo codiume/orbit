@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 4.6.2
+
+### Patch Changes
+
+- [#729](https://github.com/codiume/orbit/pull/729) [`bcf3b44`](https://github.com/codiume/orbit/commit/bcf3b44307ba32a2556f72aacdbdbeb0c50cc0b7) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Fix wrong css filenames when using content collections
+
 ## 4.6.1
 
 ### Patch Changes
