@@ -1,5 +1,5 @@
 ---
-title: "Article 3"
+title: 'Article 3'
 ---
 
 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero esse
