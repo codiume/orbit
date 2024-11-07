@@ -1,7 +1,7 @@
 import { readFile, unlink, writeFile } from 'node:fs/promises';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
-import { cleanPath, readFileContent, replaceValueInFile, saveUpdatedFile, writeCssFile } from './utils';
+import { cleanPath, replaceValueInFile, writeCssFile } from './utils';
 
 vi.mock('node:fs/promises', () => ({
   readFile: vi.fn(() => Promise.resolve()),
@@ -33,7 +33,7 @@ describe('writeCssFile', () => {
       file: mockFile
     });
 
-    expect(writeFile).toHaveBeenCalledWith(newFile, mockCss);
+    expect(writeFile).toHaveBeenCalledWith(newFile, mockCss, 'utf8');
     expect(unlink).toHaveBeenCalledWith(mockFile);
     expect(processed).toEqual([mockFile, newFile]);
   });
@@ -44,7 +44,7 @@ describe('writeCssFile', () => {
       file: nonAstroFile
     });
 
-    expect(writeFile).toHaveBeenCalledWith(nonAstroFile, mockCss);
+    expect(writeFile).toHaveBeenCalledWith(nonAstroFile, mockCss, 'utf8');
     expect(unlink).not.toHaveBeenCalled();
     expect(processed).toEqual([nonAstroFile, nonAstroFile]);
   });
@@ -123,9 +123,14 @@ describe('replaceValueInFile', () => {
     const originalContent = 'This is the oldValue example.';
     const expectedContent = 'This is the newValue example.';
 
-    const replaceValueInFileSpy = vi.fn(replaceValueInFile)
+    const replaceValueInFileSpy = vi.fn(replaceValueInFile);
 
-    await replaceValueInFileSpy(filePath, originalContent, searchValue, replaceValue);
+    await replaceValueInFileSpy(
+      filePath,
+      originalContent,
+      searchValue,
+      replaceValue
+    );
 
     // Expect the file to be written with the new content
     expect(replaceValueInFileSpy).toHaveReturnedWith(expectedContent);
@@ -140,43 +145,9 @@ describe('replaceValueInFile', () => {
     // Mock the file content
     vi.mocked(readFile).mockResolvedValue(originalContent);
 
-    await replaceValueInFile(filePath, originalContent, searchValue, replaceValue);
+    replaceValueInFile(filePath, originalContent, searchValue, replaceValue);
 
     // Expect the file not to be written
     expect(writeFile).not.toHaveBeenCalled();
   });
-
-  it("should log an error if there's an error reading a file", async () => {
-    const filePath = '/path/to/file.txt';
-    const error = new Error('File operation failed');
-
-    // Mock the file content to throw an error
-    vi.mocked(readFile).mockRejectedValue(error);
-    vi.spyOn(console, 'error');
-
-    await readFileContent(filePath);
-
-    // Expect the error to be logged
-    expect(console.error).toHaveBeenCalledWith(
-      `Error reading file ${filePath}: ${error}`
-    );
-  });
-
-  it("should log an error if there's an error saving a file", async () => {
-    const filePath = '/path/to/file.txt';
-    const newContent = 'file content';
-    const error = new Error('File operation failed');
-
-    // Mock the file content to throw an error
-    vi.mocked(writeFile).mockRejectedValue(error);
-    vi.spyOn(console, 'error');
-
-    await saveUpdatedFile(filePath, newContent);
-
-    // Expect the error to be logged
-    expect(console.error).toHaveBeenCalledWith(
-      `Error saving updated file ${filePath}: ${error}`
-    );
-  });
-
 });

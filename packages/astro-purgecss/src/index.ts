@@ -1,4 +1,5 @@
 import type { AstroIntegration } from 'astro';
+import { extname, join } from 'node:path';
 import { PurgeCSS, type UserDefinedOptions } from 'purgecss';
 
 import {
@@ -6,9 +7,9 @@ import {
   headline,
   readFileContent,
   replaceValueInFile,
-  saveUpdatedFile,
   success,
-  writeCssFile
+  writeCssFile,
+  writeFileContent
 } from './utils';
 
 export interface PurgeCSSOptions extends Partial<UserDefinedOptions> {}
@@ -17,7 +18,7 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
   return {
     name: 'astro-purgecss',
     hooks: {
-      'astro:build:done': async ({ dir, routes }) => {
+      'astro:build:done': async ({ dir, pages }) => {
         headline('Generating purged css files...');
 
         const outDir = cleanPath(dir);
@@ -47,38 +48,33 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
         );
 
         headline('Generating purged html pages...');
-        const pages = routes
-          .filter((route) => {
-            if (
-              route.pathname === undefined ||
-              route.distURL === undefined ||
-              route.type !== 'page'
-            ) {
-              return false;
-            }
-
-            return true;
-          })
-          .map((route) => cleanPath(route.distURL as URL));
+        const htmlPages = pages
+          .filter((e: any) => typeof e.pathname == 'string')
+          .map((page) => {
+            // see: https://docs.astro.build/en/reference/configuration-reference/#buildformat
+            const isHtmlFile = extname(page.pathname).toLowerCase() === '.html';
+            return isHtmlFile
+              ? join(outDir, page.pathname)
+              : join(outDir, page.pathname, 'index.html');
+          });
 
         await Promise.all(
-          pages.map(async (page) => {
+          htmlPages.map(async (page) => {
+            let content = await readFileContent(page);
 
-            let fileContent = await readFileContent(page);
-
-            for (const [oldFile, newFile] of processed) {
+            for (const [oldFilename, newFilename] of processed) {
               // Replace only if name of the old file
               // is different from name of the new file (hash changes)
-              if (oldFile !== newFile) {
-                fileContent = replaceValueInFile(
+              if (oldFilename !== newFilename) {
+                content = replaceValueInFile(
                   page,
-                  fileContent,
-                  oldFile.replace(outDir, ''),
-                  newFile.replace(outDir, '')
+                  content,
+                  oldFilename.replace(outDir, ''),
+                  newFilename.replace(outDir, '')
                 );
               }
-			}
-			await saveUpdatedFile(page, fileContent);
+            }
+            await writeFileContent(page, content);
             success(page.replace(outDir, ''));
           })
         );

@@ -1,44 +1,18 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <section>
-      <h1>This is an astro page</h1>
-      <p class="sm:hidden">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero esse
-        accusantium, dignissimos corporis ipsam, atque facere expedita aliquid
-        repellat, unde alias voluptatem officia ullam. Perferendis ipsam facilis
-        officiis beatae nam.
-      </p>
-    </section>
-    <style is:global>
-      .sm\:hidden {
-        color: red; /* should not be removed */
-      }
-      /* DO_NOT_REMOVE: The following css rules are unsed,
-       * they are left here on purpose, to test out
-       * the "astro-purgecss" integration
-       */
-      .unused-class {
-        color: red; /* unused */
-      }
-      .unused-class-2 {
-        color: blue; /* unused */
-      }
-      #unused-id {
-        color: red; /* unused */
-      }
-      #unused-id-2 {
-        color: red; /* unused */
-      }
-      footer {
-        color: red; /* unused */
-      }
-    </style>
-  </body>
-</html>
+---
+import Layout from '../layouts/main.astro';
+---
+
+<Layout>
+  <section class="main">
+    <h1>Astro PurgeCSS</h1>
+    <p>
+      This is a playground to check all the <code>astro-purgecss</code> integration
+    </p>
+    <p class="sm:hidden">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero esse
+      accusantium, dignissimos corporis ipsam, atque facere expedita aliquid
+      repellat, unde alias voluptatem officia ullam. Perferendis ipsam facilis
+      officiis beatae nam.
+    </p>
+  </section>
+</Layout>
