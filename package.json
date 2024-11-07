@@ -11,7 +11,7 @@
     "build": "turbo run build && turbo run typecheck",
     "build:no-cache": "turbo run build --no-cache && turbo run typecheck",
     "dev": "turbo run dev --no-cache --parallel --continue",
-    "format": "prettier --write \"**/*.{ts,tsx,md,astro,mjs}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,md,astro,mjs,mts,d.ts}\"",
     "clean": "turbo run clean && rm -rf node_modules",
     "changeset": "changeset",
     "changeset:version": "changeset version",

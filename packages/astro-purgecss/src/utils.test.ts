@@ -1,7 +1,13 @@
 import { readFile, unlink, writeFile } from 'node:fs/promises';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 
-import { cleanPath, readFileContent, replaceValueInFile, saveUpdatedFile, writeCssFile } from './utils';
+import {
+  cleanPath,
+  readFileContent,
+  replaceValueInFile,
+  writeCssFile,
+  writeFileContent
+} from './utils';
 
 vi.mock('node:fs/promises', () => ({
   readFile: vi.fn(() => Promise.resolve()),
@@ -123,9 +129,14 @@ describe('replaceValueInFile', () => {
     const originalContent = 'This is the oldValue example.';
     const expectedContent = 'This is the newValue example.';
 
-    const replaceValueInFileSpy = vi.fn(replaceValueInFile)
+    const replaceValueInFileSpy = vi.fn(replaceValueInFile);
 
-    await replaceValueInFileSpy(filePath, originalContent, searchValue, replaceValue);
+    await replaceValueInFileSpy(
+      filePath,
+      originalContent,
+      searchValue,
+      replaceValue
+    );
 
     // Expect the file to be written with the new content
     expect(replaceValueInFileSpy).toHaveReturnedWith(expectedContent);
@@ -140,7 +151,12 @@ describe('replaceValueInFile', () => {
     // Mock the file content
     vi.mocked(readFile).mockResolvedValue(originalContent);
 
-    await replaceValueInFile(filePath, originalContent, searchValue, replaceValue);
+    await replaceValueInFile(
+      filePath,
+      originalContent,
+      searchValue,
+      replaceValue
+    );
 
     // Expect the file not to be written
     expect(writeFile).not.toHaveBeenCalled();
@@ -171,12 +187,11 @@ describe('replaceValueInFile', () => {
     vi.mocked(writeFile).mockRejectedValue(error);
     vi.spyOn(console, 'error');
 
-    await saveUpdatedFile(filePath, newContent);
+    await writeFileContent(filePath, newContent);
 
     // Expect the error to be logged
     expect(console.error).toHaveBeenCalledWith(
       `Error saving updated file ${filePath}: ${error}`
     );
   });
-
 });
