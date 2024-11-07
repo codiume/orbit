@@ -1,4 +1,5 @@
 import type { AstroIntegration } from 'astro';
+import { extname, join } from 'node:path';
 import { PurgeCSS, type UserDefinedOptions } from 'purgecss';
 
 import {
@@ -17,7 +18,7 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
   return {
     name: 'astro-purgecss',
     hooks: {
-      'astro:build:done': async ({ dir, routes }) => {
+      'astro:build:done': async ({ dir, pages }) => {
         headline('Generating purged css files...');
 
         const outDir = cleanPath(dir);
@@ -47,22 +48,18 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
         );
 
         headline('Generating purged html pages...');
-        const pages = routes
-          .filter((route) => {
-            if (
-              route.pathname === undefined ||
-              route.distURL === undefined ||
-              route.type !== 'page'
-            ) {
-              return false;
-            }
-
-            return true;
-          })
-          .map((route) => cleanPath(route.distURL as URL));
+        const htmlPages = pages
+          .filter((e: any) => typeof e.pathname == 'string')
+          .map((page) => {
+            // see: https://docs.astro.build/en/reference/configuration-reference/#buildformat
+            const isHtmlFile = extname(page.pathname).toLowerCase() === '.html';
+            return isHtmlFile
+              ? join(outDir, page.pathname)
+              : join(outDir, page.pathname, 'index.html');
+          });
 
         await Promise.all(
-          pages.map(async (page) => {
+          htmlPages.map(async (page) => {
             let content = await readFileContent(page);
 
             for (const [oldFilename, newFilename] of processed) {

@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/assets/css/theme.css" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="light-theme">
+    <slot />
+  </body>
+  <style is:global>
+    html {
+      height: 100vh;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Courier New', Courier, monospace;
+      color: white;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #3023ae;
+      background: linear-gradient(135deg, #3023ae 0%, #c86dd7 100%);
+    }
+    /* 
+     * DO_NOT_REMOVE: The following css rules,
+     * they are left here on purpose, to test out
+     * the "astro-purgecss" integration
+     */
+    .sm\:hidden {
+      color: red; /* used */
+    }
+    .unused-class {
+      color: red; /* unused */
+    }
+    .unused-class-2 {
+      color: blue; /* unused */
+    }
+    #unused-id {
+      color: red; /* unused */
+    }
+    #unused-id-2 {
+      color: red; /* unused */
+    }
+    footer {
+      color: red; /* unused */
+    }
+  </style>
+</html>
