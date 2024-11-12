@@ -1,5 +1,11 @@
 # astro-seo-schema
 
+## 4.0.3
+
+### Patch Changes
+
+- [#735](https://github.com/codiume/orbit/pull/735) [`997fd6d`](https://github.com/codiume/orbit/commit/997fd6d636c7d84ccbf5930893bc3265a7c33948) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Fix broken links in the docs
+
 ## 4.0.2
 
 ### Patch Changes
