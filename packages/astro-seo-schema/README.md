@@ -73,7 +73,7 @@ import { Schema } from "astro-seo-schema"
 ## Looking for a simpler approach ?
 
 If you are not into `schema.org` and want a simpler approach,
-you might want to check another alternative [astro-seo-meta][npm].
+you might want to check another alternative [astro-seo-meta][astro-seo-meta].
 
 `astro-seo-meta` helps you to add tags that are relevant for search engine optimization (SEO) to your astro pages.
 
@@ -89,6 +89,7 @@ Please see the [Changelog](CHANGELOG.md) for more information on what has change
 <!-- Links -->
 
 [npm]: https://npmjs.com/package/astro-seo-schema
+[astro-seo-meta]: https://npmjs.com/package/astro-seo-meta
 [react-schemaorg]: https://www.npmjs.com/package/react-schemaorg
 [tony-sull]: https://github.com/tony-sull/rfcs/blob/main/proposals/025-seo-components.md
 
