@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 4.7.0
+
+### Minor Changes
+
+- [#743](https://github.com/codiume/orbit/pull/743) [`785d6bf`](https://github.com/codiume/orbit/commit/785d6bf14be08dc61da91d06a401c7b511d38c49) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Improve how we handle build.format & outDir
+
 ## 4.6.2
 
 ### Patch Changes
