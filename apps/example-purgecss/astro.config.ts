@@ -11,7 +11,9 @@ export default defineConfig({
       blocklist: ['usedClass', /^nav-/]
     })
   ],
+  outDir: 'build',
   build: {
+    format: 'preserve',
     inlineStylesheets: 'never'
   }
 });
