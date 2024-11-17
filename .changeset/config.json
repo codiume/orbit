@@ -1,6 +1,11 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@2.1.1/schema.json",
-  "changelog": ["@changesets/changelog-github", { "repo": "codiume/orbit" }],
+  "changelog": [
+    "@changesets/changelog-github",
+    {
+      "repo": "codiume/orbit"
+    }
+  ],
   "commit": true,
   "fixed": [],
   "linked": [],
@@ -9,6 +14,7 @@
   "updateInternalDependencies": "patch",
   "ignore": [
     "@orbit/example-purgecss",
+    "@orbit/example-purgecss-ssr",
     "@orbit/example-useragent",
     "@orbit/playground"
   ]

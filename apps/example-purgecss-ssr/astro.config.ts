@@ -1,5 +1,5 @@
+import purgecss from 'astro-purgecss';
 import { defineConfig } from 'astro/config';
-import purgecss from '../../packages/astro-purgecss/src';
 
 import node from '@astrojs/node';
 
