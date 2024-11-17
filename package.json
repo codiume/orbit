@@ -22,7 +22,7 @@
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.9",
     "@types/node": "^22.9.0",
-    "astro": "^4.16.10",
+    "astro": "^4.16.13",
     "commander": "^12.1.0",
     "esbuild": "^0.24.0",
     "esbuild-plugin-clean": "^1.0.1",
@@ -33,9 +33,9 @@
     "prettier-plugin-astro": "^0.14.1",
     "tiny-glob": "^0.2.9",
     "tsup": "^8.3.5",
-    "turbo": "^2.2.3",
+    "turbo": "^2.3.0",
     "typescript": "^5.6.3",
     "vite-tsconfig-paths": "^5.1.2",
-    "vitest": "^2.1.4"
+    "vitest": "^2.1.5"
   }
 }

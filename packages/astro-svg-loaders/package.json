@@ -3,8 +3,7 @@
   "description": "Astro loading icons and small animations built with pure SVG.",
   "version": "4.0.1",
   "scripts": {
-    "build": "astro-build --src src/index.ts src/loaders/*.astro",
-    "typecheck": "tsc --declaration --emitDeclarationOnly"
+    "build": "astro-build --src src/index.ts src/loaders/*.astro"
   },
   "type": "module",
   "types": "dist/index.d.ts",

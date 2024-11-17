@@ -10,7 +10,7 @@
 
 ## 📦 Installation
 
-### Quick Install
+### ⚡ Quick Install
 
 the `astro add` command-line tool automates the installation for you. Run one of the following commands in a new terminal window. (If you aren’t sure which package manager you’re using, run the first command.) Then, follow the prompts, and type “y” in the terminal (meaning “yes”) for each one.
 
@@ -23,7 +23,7 @@ npx astro add astro-purgecss
 yarn astro add astro-purgecss
 ```
 
-### Manual Install
+### 🔧 Manual Install
 
 First, install the `purgecss` & `astro-purgecss` packages using your package manager. (If you aren’t sure which package manager you’re using, run the first command.)
 
@@ -75,7 +75,7 @@ export default defineConfig({
 });
 ```
 
-## 📖 Configuration
+## ⚙️ Configuration
 
 [PurgeCSS][purgecss] has a list of options that allow you to customize its behavior. And this Astro integration allow you to pass those options easily in your `astro.config.mjs` file:
 
@@ -88,7 +88,7 @@ export default defineConfig({
       safelist: ['random', 'yep', 'button', /^nav-/],
       blocklist: ['usedClass', /^nav-/],
       content: [
-        process.cwd() + '/src/**/*.{astro,vue}' // Watching astro and vue sources (for SSR, read the note below)
+        process.cwd() + '/src/**/*.{astro,vue}' // Watching astro and vue sources (read SSR docs below)
       ],
       extractors: [
         {
@@ -103,15 +103,11 @@ export default defineConfig({
 });
 ```
 
-> **Note**
->
-> If you are using **Astro SSR** in your project, you must add your astro and framework sources files into the `content` option (see in the example). Otherwise, as the package only look at the final build sent to the client, with SSR, some pages may not be included and may break your CSS.
-
-### Available Options
+### 📖 Available Options
 
 Here is a list of options, that are allowed to be passed in the config:
 
-```ts
+```typescript
 export type PurgeCSSOptions = {
   fontFace?: boolean; // removes any unused @font-face if set to true
   keyframes?: boolean; // removes unused keyframes by setting if set to true
@@ -121,11 +117,11 @@ export type PurgeCSSOptions = {
   safelist?: UserDefinedSafelist; // indicates which selectors are safe to leave in the final CSS
   blocklist?: StringRegExpArray; // blocks the CSS selectors from appearing in the final output CSS
   content?: Array<string | RawContent>;
-  extractors?: // provides custom functions to extract CSS classes in specific ways (eg. when using tailwind.css)
-  Array<{
+  // provides custom functions to extract CSS classes in specific ways (eg. when using tailwind.css)
+  extractors?: {
     extractor: (content: string) => string[]; // matched css classes
     extensions: string[]; // file extensions for which this extractor is to be used
-  }>;
+  }[];
 };
 ```
 
@@ -133,22 +129,51 @@ To learn more about the available options, please refer to [PurgeCSS][purgecss-o
 
 We have also setup an example repository available here: [example-purgecss](../../apps/example-purgecss)
 
-### Caveats
+## 🌐 SSR Mode
+
+If you are using **Astro SSR** in your project, you must add your Astro and framework source files into the `content` option (see example below). Since the integration analyzes the final client-side build, some SSR-rendered pages might not be included in the initial scan, which could result in necessary CSS being incorrectly purged.
+
+Example configuration for SSR:
+
+```js
+export default defineConfig({
+  integrations: [
+    purgecss({
+      content: [
+        './src/**/*.{astro,js,jsx,ts,tsx,vue,svelte}'
+        // Add any other template files that contain styles
+      ]
+    })
+  ]
+});
+```
+
+### Important Notes
+
+1. **CSS Retention**: Due to the integration's file scanning approach, some unused CSS might be retained. This is a deliberate trade-off to prevent accidentally removing dynamically used styles.
+
+2. **Inline Styles vs External Stylesheets**: The integration can more accurately analyze and purge external stylesheets compared to inline styles embedded within components:
+   - ✅ **Recommended**: Use external stylesheet files (`.css`)
+   - ⚠️ **Less Effective**: Inline styles in component files
+
+## ⚠️ Caveats
 
 - Some options are not allowed to be passed in your `astro.config.mjs` config file, to not interfere with the internals of this integration.
 
 - If you are using Astro view transitions, use the following options so that purgecss keeps the corresponding animations:
 
-```diff
+```js
 export default defineConfig({
   integrations: [
     purgecss({
-+      keyframes: false,
-+      safelist: {
-+        greedy: [/*astro*/]
-+      }
-    }),
-  ],
+      keyframes: false,
+      safelist: {
+        greedy: [
+          /*astro*/
+        ]
+      }
+    })
+  ]
 });
 ```
 
@@ -170,11 +195,11 @@ export default defineConfig({
 });
 ```
 
-## Changelog
+## 📝 Changelog
 
 Please see the [Changelog](CHANGELOG.md) for more information on what has changed recently.
 
-## Acknowledgements
+## 💝 Acknowledgements
 
 - [Purgecss][purgecss]
 
