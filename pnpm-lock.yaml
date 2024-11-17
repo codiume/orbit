@@ -68,9 +68,6 @@ importers:
 
   apps/example-purgecss:
     dependencies:
-      '@astrojs/node':
-        specifier: ^8.0.0
-        version: 8.3.4(astro@4.16.13(@types/node@22.9.0)(rollup@4.27.2)(typescript@5.6.3))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
@@ -95,7 +92,7 @@ importers:
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
-        specifier: ^8.0.0
+        specifier: ^8.3.4
         version: 8.3.4(astro@4.16.13(@types/node@22.9.0)(rollup@4.27.2)(typescript@5.6.3))
       astro-useragent:
         specifier: workspace:*
