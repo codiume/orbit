@@ -2,27 +2,31 @@
   "name": "astro-useragent",
   "description": "Parses browser user-agent strings for Astro",
   "version": "4.0.2",
+  "homepage": "https://github.com/codiume/orbit",
+  "bugs": "https://github.com/codiume/orbit/issues",
+  "author": "codiume",
+  "license": "MIT",
+  "keywords": [
+    "astro",
+    "astro-component",
+    "astro-integration",
+    "astro-useragent",
+    "accessibility",
+    "useragent",
+    "user-agent-parser",
+    "browser-detection"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codiume/orbit.git",
+    "directory": "packages/astro-useragent"
+  },
   "scripts": {
     "build": "astro-build --src src/index.ts src/parse.ts src/useUserAgent.ts",
     "typecheck": "tsc --declaration --emitDeclarationOnly"
   },
   "type": "module",
   "types": "dist/index.d.ts",
-  "author": "codiume",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/codiume/orbit.git",
-    "directory": "packages/astro-useragent"
-  },
-  "keywords": [
-    "astro",
-    "astro-component",
-    "astro-integration",
-    "accessibility"
-  ],
-  "bugs": "https://github.com/codiume/orbit/issues",
-  "homepage": "https://github.com/codiume/orbit",
   "files": [
     "dist"
   ],

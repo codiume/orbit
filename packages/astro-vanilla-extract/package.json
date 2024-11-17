@@ -2,15 +2,18 @@
   "name": "astro-vanilla-extract",
   "description": "Adds vanilla-extract support to Astro",
   "version": "5.0.1",
+  "homepage": "https://github.com/codiume/orbit",
+  "bugs": "https://github.com/codiume/orbit/issues",
   "author": "codiume",
   "license": "MIT",
   "keywords": [
     "astro",
     "astro-component",
     "astro-integration",
-    "css"
+    "astro-vanilla-extract",
+    "css",
+    "vanilla-extract"
   ],
-  "bugs": "https://github.com/codiume/orbit/issues",
   "repository": {
     "type": "git",
     "url": "https://github.com/codiume/orbit.git",

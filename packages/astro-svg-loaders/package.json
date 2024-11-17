@@ -2,18 +2,10 @@
   "name": "astro-svg-loaders",
   "description": "Astro loading icons and small animations built with pure SVG.",
   "version": "4.0.1",
-  "scripts": {
-    "build": "astro-build --src src/index.ts src/loaders/*.astro"
-  },
-  "type": "module",
-  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/codiume/orbit",
+  "bugs": "https://github.com/codiume/orbit/issues",
   "author": "codiume",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/codiume/orbit.git",
-    "directory": "packages/astro-svg-loaders"
-  },
   "keywords": [
     "astro",
     "astro-component",
@@ -22,8 +14,16 @@
     "loaders",
     "svg"
   ],
-  "bugs": "https://github.com/codiume/orbit/issues",
-  "homepage": "https://github.com/codiume/orbit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codiume/orbit.git",
+    "directory": "packages/astro-svg-loaders"
+  },
+  "scripts": {
+    "build": "astro-build --src src/index.ts src/loaders/*.astro"
+  },
+  "type": "module",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
