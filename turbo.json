@@ -7,20 +7,12 @@
       "cache": false
     },
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "outputs": [
-        "dist/**"
-      ]
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
     },
     "typecheck": {
-      "dependsOn": [
-        "^typecheck"
-      ],
-      "outputs": [
-        "dist/**"
-      ]
+      "dependsOn": ["^typecheck"],
+      "outputs": ["dist/**"]
     },
     "dev": {
       "cache": false

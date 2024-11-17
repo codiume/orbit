@@ -2,19 +2,10 @@
   "name": "astro-seo-meta",
   "description": "Astro seo provides a <Seo> component to update meta tags",
   "version": "4.1.1",
-  "scripts": {
-    "build": "astro-build --src src/index.ts src/**/*.astro",
-    "typecheck": "tsc --declaration --emitDeclarationOnly"
-  },
-  "type": "module",
-  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/codiume/orbit",
+  "bugs": "https://github.com/codiume/orbit/issues",
   "author": "codiume",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/codiume/orbit.git",
-    "directory": "packages/astro-seo-meta"
-  },
   "keywords": [
     "astro",
     "astro-integration",
@@ -23,8 +14,17 @@
     "meta",
     "seo"
   ],
-  "bugs": "https://github.com/codiume/orbit/issues",
-  "homepage": "https://github.com/codiume/orbit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codiume/orbit.git",
+    "directory": "packages/astro-seo-meta"
+  },
+  "scripts": {
+    "build": "astro-build --src src/index.ts src/**/*.astro",
+    "typecheck": "tsc --declaration --emitDeclarationOnly"
+  },
+  "type": "module",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
