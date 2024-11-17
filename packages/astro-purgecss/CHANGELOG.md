@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 4.8.0
+
+### Minor Changes
+
+- [#746](https://github.com/codiume/orbit/pull/746) [`8407251`](https://github.com/codiume/orbit/commit/8407251d09881323ac726b54017fad3facb6de32) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Disable renaming css files with new hashes in ssr mode
+
 ## 4.7.0
 
 ### Minor Changes
