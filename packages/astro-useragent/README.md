@@ -8,7 +8,7 @@
 
 Astro UserAgent is a simple helper for parsing `user-agent` header strings for browser matching inside your Astro Pages / API routes, when using [SSR Mode][astro-ssr]
 
-> **Note** Due to the nature of Astro being an SSG by trade, This package only works when used with astro in [SSR Mode][astro-ssr].
+> **Note** Due to the nature of Astro being an SSG by trade, This package only works when used with Astro in [SSR Mode][astro-ssr].
 
 ## 📦 Installation
 
@@ -112,31 +112,42 @@ The parsed `UserAgent` object will have the following interface:
 
 ```typescript
 export interface UserAgent {
-  readonly source: string; // original user agent string.
+  readonly source: string | null; // The original user agent string.
+  readonly browser: string | null;
+  readonly browserVersion: number;
+  readonly cpu: string | null;
   readonly deviceType: string | null;
   readonly deviceVendor: string | null;
-  readonly os: string;
-  readonly osVersion: number;
-  readonly browser: string;
-  readonly browserVersion: number;
-  readonly engine: string;
-  readonly engineVersion: number;
-  readonly isIphone: boolean;
-  readonly isIpad: boolean;
-  readonly isMobile: boolean;
-  readonly isTablet: boolean;
-  readonly isDesktop: boolean;
-  readonly isChrome: boolean;
-  readonly isFirefox: boolean;
-  readonly isSafari: boolean;
-  readonly isIE: boolean;
-  readonly isEdge: boolean;
-  readonly isOpera: boolean;
-  readonly isMac: boolean;
-  readonly isChromeOS: boolean;
-  readonly isWindows: boolean;
-  readonly isIos: boolean;
+  readonly engine: string | null;
+  readonly engineVersion: number | null;
+  readonly os: string | null;
+  readonly osVersion: number | null;
   readonly isAndroid: boolean;
+  readonly isChrome: boolean;
+  readonly isChromeOS: boolean;
+  readonly isDesktop: boolean;
+  readonly isEdge: boolean;
+  readonly isFirefox: boolean;
+  readonly isIE: boolean;
+  readonly isIos: boolean;
+  readonly isIpad: boolean;
+  readonly isIphone: boolean;
+  readonly isMac: boolean;
+  readonly isMobile: boolean;
+  readonly isOpera: boolean;
+  readonly isSafari: boolean;
+  readonly isTablet: boolean;
+  readonly isWindows: boolean;
+  readonly isBot: boolean;
+  readonly isAIBot: boolean;
+  readonly isChromeFamily: boolean;
+  readonly isAppleSilicon: boolean;
+  getUA(): string;
+  getBrowser(): IBrowser;
+  getCPU(): ICPU;
+  getDevice(): IDevice;
+  getEngine(): IEngine;
+  getOS(): IOS;
 }
 ```
 
@@ -157,12 +168,11 @@ Please see the [Changelog](CHANGELOG.md) for more information on what has change
 
 ## Acknowledgements
 
-`astro-useragent` is a port from [next-useragent][next-useragent] to Astro. so big thanks to [Tsuyoshi Tokuda][tokuda109] and the contributors behind next-useragent package.
+`astro-useragent` is a port from [next-useragent][next-useragent] to Astro. so big thanks to the contributors behind next-useragent package.
 
 [astro-ssr]: https://docs.astro.build/en/guides/server-side-rendering
 [npm]: https://npmjs.com/package/astro-useragent
-[next-useragent]: https://github.com/tokuda109/next-useragent
-[tokuda109]: https://github.com/tokuda109
+[next-useragent]: https://github.com/warent/next-useragent
 
 <!-- Readme Badges -->
 

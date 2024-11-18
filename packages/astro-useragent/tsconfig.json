@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "noEmit": false,
+    "noEmit": true,
     "outDir": "./dist",
     "allowImportingTsExtensions": false
   }
