@@ -1,5 +1,11 @@
 # astro-useragent
 
+## 4.1.0
+
+### Minor Changes
+
+- [#751](https://github.com/codiume/orbit/pull/751) [`4af2208`](https://github.com/codiume/orbit/commit/4af2208be68b2bc68b1ee97e415ac05d7330fb8b) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Upgrade ua-parser-js to v2
+
 ## 4.0.2
 
 ### Patch Changes
