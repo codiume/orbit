@@ -1,73 +1,113 @@
-import { UAParser } from 'ua-parser-js';
+import {
+  UAParser,
+  type IBrowser,
+  type ICPU,
+  type IDevice,
+  type IEngine,
+  type IOS
+} from 'ua-parser-js';
+
+import {
+  isAIBot,
+  isAppleSilicon,
+  isBot,
+  isChromeFamily
+} from 'ua-parser-js/helpers';
 
 // mostly ported from https://github.com/tokuda109/next-useragent
 export interface UserAgent {
-  // The original user agent string.
-  readonly source: string;
+  readonly source: string | null; // The original user agent string.
+  readonly browser: string | null;
+  readonly browserVersion: number;
+  readonly cpu: string | null;
   readonly deviceType: string | null;
   readonly deviceVendor: string | null;
-  readonly os: string;
-  readonly osVersion: number;
-  readonly browser: string;
-  readonly browserVersion: number;
-  readonly engine: string;
-  readonly engineVersion: number;
-  readonly isIphone: boolean;
-  readonly isIpad: boolean;
-  readonly isMobile: boolean;
-  readonly isTablet: boolean;
-  readonly isDesktop: boolean;
-  readonly isChrome: boolean;
-  readonly isFirefox: boolean;
-  readonly isSafari: boolean;
-  readonly isIE: boolean;
-  readonly isEdge: boolean;
-  readonly isOpera: boolean;
-  readonly isMac: boolean;
-  readonly isChromeOS: boolean;
-  readonly isWindows: boolean;
-  readonly isIos: boolean;
+  readonly engine: string | null;
+  readonly engineVersion: number | null;
+  readonly os: string | null;
+  readonly osVersion: number | null;
   readonly isAndroid: boolean;
+  readonly isChrome: boolean;
+  readonly isChromeOS: boolean;
+  readonly isDesktop: boolean;
+  readonly isEdge: boolean;
+  readonly isFirefox: boolean;
+  readonly isIE: boolean;
+  readonly isIos: boolean;
+  readonly isIpad: boolean;
+  readonly isIphone: boolean;
+  readonly isMac: boolean;
+  readonly isMobile: boolean;
+  readonly isOpera: boolean;
+  readonly isSafari: boolean;
+  readonly isTablet: boolean;
+  readonly isWindows: boolean;
+  readonly isBot: boolean;
+  readonly isAIBot: boolean;
+  readonly isChromeFamily: boolean;
+  readonly isAppleSilicon: boolean;
+  getUA(): string;
+  getBrowser(): IBrowser;
+  getCPU(): ICPU;
+  getDevice(): IDevice;
+  getEngine(): IEngine;
+  getOS(): IOS;
 }
 
-export const parse = (uastring: string | null): UserAgent => {
-  const ua = uastring ?? '';
-  const result: UAParser.IResult = new UAParser(ua).getResult();
+export const parse = (ua: string | null): UserAgent => {
+  const uap = new UAParser(ua ?? '');
 
-  const browser: string = result.browser.name || '';
-  const deviceType: string = result.device.type || '';
-  const os: string = result.os.name || '';
-  const engine: string = result.engine.name || '';
-  const isMobile: boolean = deviceType === 'mobile';
-  const isTablet: boolean = deviceType === 'tablet';
-  const isIos: boolean = os === 'iOS';
+  const browser = uap.getBrowser();
+  const cpu = uap.getCPU();
+  const device = uap.getDevice();
+  const engine = uap.getEngine();
+  const os = uap.getOS();
 
   const userAgent: UserAgent = Object.freeze({
-    browser,
-    deviceType,
-    os,
-    engine,
-    isMobile,
-    isTablet,
-    isIos,
     source: ua,
-    deviceVendor: result.device.vendor || null,
-    osVersion: parseInt(result.os.version || '0', 10),
-    browserVersion: parseFloat(result.browser.version || '0'),
-    engineVersion: parseFloat(result.engine.version || '0'),
-    isIphone: isMobile && isIos,
-    isIpad: isTablet && isIos,
-    isDesktop: !isMobile && !isTablet,
-    isChrome: browser === 'Chrome',
-    isFirefox: browser === 'Firefox',
-    isSafari: browser === 'Safari',
-    isIE: browser === 'IE',
-    isEdge: browser === 'Edge',
-    isOpera: browser === 'Opera',
-    isMac: os === 'Mac OS',
-    isChromeOS: os === 'Chromium OS',
-    isWindows: os === 'Windows',
-    isAndroid: os === 'Android'
+    browser: browser.name || null,
+    browserVersion: parseFloat(browser.version || '0'),
+    cpu: cpu.architecture || null,
+    deviceType: device.type || 'mobile',
+    deviceVendor: device.vendor || null,
+    engine: engine.name || null,
+    engineVersion: parseFloat(engine.version || '0'),
+    os: os.name || null,
+    osVersion: parseInt(os.version || '0', 10),
+    isAndroid: os.is('Android') || os.is('Android-x86'),
+    isChrome: browser.is('Chrome') || browser.is('Chrome Mobile'),
+    isChromeOS: os.is('Chrome OS'),
+    isDesktop: !device.is('mobile') && !device.is('tablet'),
+    isEdge: browser.is('Edge'),
+    isFirefox: browser.is('Firefox') || browser.is('Firefox Mobile'),
+    isIE: browser.is('IE') || browser.is('IEMobile'),
+    isIos: os.is('iOS'),
+    isIpad: device.is('tablet') && os.is('iOS'),
+    isIphone: device.is('mobile') && os.is('iOS'),
+    isMac: os.is('macOS'),
+    isMobile: device.is('mobile'),
+    isOpera:
+      browser.is('Opera') ||
+      browser.is('Opera GX') ||
+      browser.is('Opera Mini') ||
+      browser.is('Opera Mobi') ||
+      browser.is('Opera Tablet'),
+    isSafari: browser.is('Safari') || browser.is('Safari Mobile'),
+    isTablet: device.is('tablet'),
+    isWindows:
+      os.is('Windows') || os.is('Windows Phone') || os.is('Windows Mobile'),
+    isBot: isBot(ua ?? ''),
+    isAIBot: isAIBot(ua ?? ''),
+    isChromeFamily: isChromeFamily(ua ?? ''),
+    isAppleSilicon: isAppleSilicon(ua ?? ''),
+
+    // methods
+    getBrowser: uap.getBrowser,
+    getCPU: uap.getCPU,
+    getDevice: uap.getDevice,
+    getEngine: uap.getEngine,
+    getOS: uap.getOS,
+    getUA: uap.getUA
   });
 
   return userAgent;

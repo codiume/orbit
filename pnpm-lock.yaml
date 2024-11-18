@@ -171,9 +171,6 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
     devDependencies:
-      '@types/ua-parser-js':
-        specifier: ^0.7.36
-        version: 0.7.39
       astro-build:
         specifier: workspace:*
         version: link:../astro-build
@@ -1194,9 +1191,6 @@ packages:
 
   '@types/node@22.9.0':
     resolution: {integrity: sha512-vuyHg81vvWA1Z1ELfvLko2c8f34gyA0zaic0+Rllc5lbCnbSyuvb2Oxpm6TAUAC/2xZN3QGqxBNggD1nNR2AfQ==}
-
-  '@types/ua-parser-js@0.7.39':
-    resolution: {integrity: sha512-P/oDfpofrdtF5xw433SPALpdSchtJmY7nsJItf8h3KXqOslkbySh8zq4dSWXH2oTjRvJ5PczVEoCZPow6GicLg==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -4202,8 +4196,6 @@ snapshots:
   '@types/node@22.9.0':
     dependencies:
       undici-types: 6.19.8
-
-  '@types/ua-parser-js@0.7.39': {}
 
   '@types/unist@3.0.3': {}
 
