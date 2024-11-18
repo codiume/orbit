@@ -34,4 +34,3 @@ jobs:
 
       - run: pnpm run test
       - run: pnpm run build
-      - run: pnpx pkg-pr-new publish './packages/astro-purgecss'
