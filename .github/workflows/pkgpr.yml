@@ -1,5 +1,5 @@
 name: Publish packages
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   build:
@@ -20,5 +20,4 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - run: pnpx pkg-pr-new publish './packages/astro-purgecss'
-      - run: pnpx pkg-pr-new publish './packages/astro-useragent'
+      - run: pnpx pkg-pr-new publish './packages/astro-purgecss' './packages/astro-useragent'
