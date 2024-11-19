@@ -20,4 +20,4 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - run: pnpx pkg-pr-new publish './packages/astro-purgecss' './packages/astro-useragent'
+      - run: pnpx pkg-pr-new publish './packages/astro-purgecss' './packages/astro-useragent' './packages/astro-seo-meta'
