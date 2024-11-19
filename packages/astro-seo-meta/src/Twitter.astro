@@ -1,13 +1,13 @@
 ---
 type CardType = 'summary' | 'summary_large_image' | 'app' | 'player';
 
-export type Props = {
+export interface Props {
   title?: string;
   description?: string;
   image?: string;
   card?: CardType;
   site?: string;
-};
+}
 
 const { card, site, title, description, image } = Astro.props;
 ---

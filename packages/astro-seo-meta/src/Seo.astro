@@ -1,18 +1,18 @@
 ---
 import Facebook, { type Props as FacebookProps } from './Facebook.astro';
-import Meta, { type ColorScheme } from './Meta.astro';
+import Meta, { type Props as MetaProps } from './Meta.astro';
 import Twitter, { type Props as TwitterProps } from './Twitter.astro';
 
-export type Props = {
+export interface Props {
   title?: string;
   description?: string;
   keywords?: string[];
   icon?: string;
   themeColor?: string;
-  colorScheme?: ColorScheme;
+  colorScheme?: MetaProps['colorScheme'];
   facebook?: Pick<FacebookProps, 'image' | 'type' | 'url'>;
   twitter?: Pick<TwitterProps, 'image' | 'card' | 'site'>;
-};
+}
 
 const {
   title,
