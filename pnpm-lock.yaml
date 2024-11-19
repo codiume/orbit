@@ -134,10 +134,6 @@ importers:
       astro:
         specifier: ^4.0.0
         version: 4.16.13(@types/node@22.9.0)(rollup@4.27.2)(typescript@5.6.3)
-    devDependencies:
-      astro-build:
-        specifier: workspace:*
-        version: link:../astro-build
 
   packages/astro-seo-schema:
     dependencies:

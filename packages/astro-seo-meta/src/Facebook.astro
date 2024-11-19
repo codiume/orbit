@@ -13,13 +13,13 @@ type ObjectType =
   | 'profile'
   | 'website';
 
-export type Props = {
+export interface Props {
   url?: string;
   title?: string;
   description?: string;
   image?: string;
   type?: ObjectType;
-};
+}
 
 const { url, type, title, description, image } = Astro.props;
 ---

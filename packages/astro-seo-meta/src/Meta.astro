@@ -1,14 +1,14 @@
 ---
-export type ColorScheme = 'normal' | 'light' | 'dark' | 'only light';
+type ColorScheme = 'normal' | 'light' | 'dark' | 'only light';
 
-export type Props = {
+export interface Props {
   title?: string;
   description?: string;
   keywords?: string[];
   icon?: string;
   themeColor?: string;
   colorScheme?: ColorScheme;
-};
+}
 
 const { title, description, keywords, icon, themeColor, colorScheme } =
   Astro.props;

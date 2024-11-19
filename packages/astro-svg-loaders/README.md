@@ -81,7 +81,7 @@ Astro SVG Loaders relies _heavily_ on the amazing work **Sam Herbert** is doing 
 [downloads-badge]: https://img.shields.io/npm/dt/astro-svg-loaders
 [github-actions]: https://github.com/codiume/orbit/actions
 [github-actions-badge]: https://github.com/codiume/orbit/actions/workflows/node.js.yml/badge.svg
-[typescript]: https://www.typescriptlang.org/dt/search?search=astro-svg-loaders
+[typescript]: https://npmjs.com/package/astro-svg-loaders
 [typescript-badge]: https://img.shields.io/npm/types/astro-svg-loaders
 [makepr]: https://makeapullrequest.com
 [makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square?style=flat

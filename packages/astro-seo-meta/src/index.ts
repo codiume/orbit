@@ -1,1 +1,2 @@
-export { default as Seo, type Props as SeoProps } from './components/Seo.astro';
+export { default as Seo } from './Seo.astro';
+export type { Props as SeoProps } from './Seo.astro';

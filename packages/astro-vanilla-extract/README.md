@@ -84,7 +84,7 @@ Please see the [Changelog](CHANGELOG.md) for more information on what has change
 [downloads-badge]: https://img.shields.io/npm/dt/astro-vanilla-extract
 [github-actions]: https://github.com/codiume/orbit/actions
 [github-actions-badge]: https://github.com/codiume/orbit/actions/workflows/node.js.yml/badge.svg
-[typescript]: https://www.typescriptlang.org/dt/search?search=astro-vanilla-extract
+[typescript]: https://npmjs.com/package/astro-vanilla-extract
 [typescript-badge]: https://img.shields.io/npm/types/astro-vanilla-extract
 [makepr]: https://makeapullrequest.com
 [makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square?style=flat

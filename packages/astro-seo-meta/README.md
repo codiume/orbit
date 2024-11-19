@@ -131,7 +131,7 @@ Also great thanks to [Jonas Schumacher][jonasmerlin] Author of [Astro SEO](https
 [downloads-badge]: https://img.shields.io/npm/dt/astro-seo-meta
 [github-actions]: https://github.com/codiume/orbit/actions
 [github-actions-badge]: https://github.com/codiume/orbit/actions/workflows/node.js.yml/badge.svg
-[typescript]: https://www.typescriptlang.org/dt/search?search=astro-seo-meta
+[typescript]: https://npmjs.com/package/astro-seo-meta
 [typescript-badge]: https://img.shields.io/npm/types/astro-seo-meta
 [makepr]: https://makeapullrequest.com
 [makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square?style=flat
