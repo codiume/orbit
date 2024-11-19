@@ -1,5 +1,11 @@
 # astro-seo-meta
 
+## 4.2.0
+
+### Minor Changes
+
+- [#753](https://github.com/codiume/orbit/pull/753) [`e38522b`](https://github.com/codiume/orbit/commit/e38522b7030a039ed35ae1230e15afc894b6a650) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Replace astro-build with tsup
+
 ## 4.1.1
 
 ### Patch Changes
