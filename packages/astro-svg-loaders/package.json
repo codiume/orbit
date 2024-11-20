@@ -9,10 +9,11 @@
   "keywords": [
     "astro",
     "astro-component",
+    "astro-svg-loaders",
     "ui",
     "css",
     "loaders",
-    "svg"
+    "svg-loaders"
   ],
   "repository": {
     "type": "git",
@@ -20,24 +21,25 @@
     "directory": "packages/astro-svg-loaders"
   },
   "scripts": {
-    "build": "astro-build --src src/index.ts src/loaders/*.astro"
+    "build": "tsup",
+    "check-types": "tsc --declaration --emitDeclarationOnly",
+    "check-exports": "attw --pack . --profile esm-only --ignore-rules internal-resolution-error",
+    "typecheck": "pnpm check-types && pnpm check-exports"
   },
   "type": "module",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "main": "./dist/index.mjs",
   "exports": {
     ".": {
       "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/index.mjs"
+        "default": "./dist/index.js"
       }
     }
-  },
-  "devDependencies": {
-    "astro-build": "workspace:*"
   },
   "peerDependencies": {
     "astro": "^4.0.0"
