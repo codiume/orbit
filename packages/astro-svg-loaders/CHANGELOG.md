@@ -1,5 +1,11 @@
 # astro-svg-loaders
 
+## 4.1.0
+
+### Minor Changes
+
+- [#757](https://github.com/codiume/orbit/pull/757) [`e8e8a19`](https://github.com/codiume/orbit/commit/e8e8a19b364fddfb955d90fd6c857fd832469c59) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Replace astro-build with tsup
+
 ## 4.0.1
 
 ### Patch Changes
