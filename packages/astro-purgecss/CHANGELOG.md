@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 4.9.0
+
+### Minor Changes
+
+- [#765](https://github.com/codiume/orbit/pull/765) [`9616b42`](https://github.com/codiume/orbit/commit/9616b42ac3a98dd83547e92addad96204b433d52) Thanks [@renovate](https://github.com/apps/renovate)! - Upgrade to purgecss@7.x
+
 ## 4.8.0
 
 ### Minor Changes
