@@ -170,7 +170,7 @@ importers:
         version: 1.16.1
       '@vanilla-extract/vite-plugin':
         specifier: ^4.0.4
-        version: 4.0.17(@types/node@22.9.3)(vite@5.4.11(@types/node@22.9.3))
+        version: 4.0.18(@types/node@22.9.3)(vite@5.4.11(@types/node@22.9.3))
       astro:
         specifier: ^4.0.0
         version: 4.16.13(@types/node@22.9.1)(rollup@4.27.3)(typescript@5.6.3)
@@ -1207,14 +1207,14 @@ packages:
   '@vanilla-extract/css@1.16.1':
     resolution: {integrity: sha512-3jKxH5ty/ZjmGoLAx8liY7e87FRCIJfnuufX/K9fQklu0YHP3ClrNisU++LkZuD+GZleqMSAQMF0r8Otln+OPQ==}
 
-  '@vanilla-extract/integration@7.1.10':
-    resolution: {integrity: sha512-EXe8l0u51ta2H78kksf7gJENkdYnvDW9c+18FUvKfxtjHmpc4KthXnUTuALt5k9wbAjfFakIR4IsqzvOP43cDQ==}
+  '@vanilla-extract/integration@7.1.11':
+    resolution: {integrity: sha512-IGRaLrpkjyVHTHDZQBQvFBl399yRfSMJoVI2KaocEZB33aP+H4Qup83od2hc6R5IxGWdvbiiCOJCYsnmFiy85Q==}
 
   '@vanilla-extract/private@1.0.6':
     resolution: {integrity: sha512-ytsG/JLweEjw7DBuZ/0JCN4WAQgM9erfSTdS1NQY778hFQSZ6cfCDEZZ0sgVm4k54uNz6ImKB33AYvSR//fjxw==}
 
-  '@vanilla-extract/vite-plugin@4.0.17':
-    resolution: {integrity: sha512-qyAEmBcwih7E3lMrcFZX1Ph81TQos1FFyxOu5JmNmu/F/g7HkcCXFV897pNKFmXgED/TzuyrFVcIRimg5pPc9A==}
+  '@vanilla-extract/vite-plugin@4.0.18':
+    resolution: {integrity: sha512-j5vJVbvW33THGXG3ZI+nfgeYCknlBEWTJVphZWSAGmLO4XO4690m/iQQg+3gUtla3wvU8eyA2qmJNa05Wa7mVA==}
     peerDependencies:
       vite: ^4.0.3 || ^5.0.0
 
@@ -4276,7 +4276,7 @@ snapshots:
     transitivePeerDependencies:
       - babel-plugin-macros
 
-  '@vanilla-extract/integration@7.1.10(@types/node@22.9.3)':
+  '@vanilla-extract/integration@7.1.11(@types/node@22.9.3)':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-syntax-typescript': 7.25.9(@babel/core@7.26.0)
@@ -4304,9 +4304,9 @@ snapshots:
 
   '@vanilla-extract/private@1.0.6': {}
 
-  '@vanilla-extract/vite-plugin@4.0.17(@types/node@22.9.3)(vite@5.4.11(@types/node@22.9.3))':
+  '@vanilla-extract/vite-plugin@4.0.18(@types/node@22.9.3)(vite@5.4.11(@types/node@22.9.3))':
     dependencies:
-      '@vanilla-extract/integration': 7.1.10(@types/node@22.9.3)
+      '@vanilla-extract/integration': 7.1.11(@types/node@22.9.3)
       vite: 5.4.11(@types/node@22.9.3)
     transitivePeerDependencies:
       - '@types/node'
