@@ -22,7 +22,7 @@ importers:
         version: 22.10.1
       astro:
         specifier: ^5.0.1
-        version: 5.0.1(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
+        version: 5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
       commander:
         specifier: ^12.1.0
         version: 12.1.0
@@ -74,33 +74,33 @@ importers:
     devDependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.0.1(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
+        version: 5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
 
   apps/example-purgecss-ssr:
     dependencies:
       '@astrojs/node':
         specifier: ^9.0.0
-        version: 9.0.0(astro@5.0.1(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2))
+        version: 9.0.0(astro@5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.0.1(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
+        version: 5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^9.0.0
-        version: 9.0.0(astro@5.0.1(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2))
+        version: 9.0.0(astro@5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.0.1(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
+        version: 5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
 
   apps/playground:
     dependencies:
@@ -116,7 +116,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.0.1(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
+        version: 5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
 
   packages/astro-build: {}
 
@@ -1266,6 +1266,11 @@ packages:
 
   astro@5.0.1:
     resolution: {integrity: sha512-7XzFq3eFdSkeT/aCNealVv4klwmKoOYb6LZymbyZQrdUA9vEoUCKFcujVo4YbJJ8WXyEm515ZHPCxHTdDneEug==}
+    engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
+    hasBin: true
+
+  astro@5.0.2:
+    resolution: {integrity: sha512-MKf82vUiTZ2aK+c/8EDnLYIsToBdVVk4PuhhGdE8F/PcuUyS+oIcuCPf30iVf8WCQwXOfnYGnv1JbRjzkqUc3w==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3282,9 +3287,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@9.0.0(astro@5.0.1(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2))':
+  '@astrojs/node@9.0.0(astro@5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2))':
     dependencies:
-      astro: 5.0.1(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
+      astro: 5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
       send: 1.1.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -4282,6 +4287,84 @@ snapshots:
   assertion-error@2.0.1: {}
 
   astro@5.0.1(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2):
+    dependencies:
+      '@astrojs/compiler': 2.10.3
+      '@astrojs/internal-helpers': 0.4.2
+      '@astrojs/markdown-remark': 6.0.0
+      '@astrojs/telemetry': 3.2.0
+      '@oslojs/encoding': 1.1.0
+      '@rollup/pluginutils': 5.1.3(rollup@4.28.0)
+      '@types/cookie': 0.6.0
+      acorn: 8.14.0
+      aria-query: 5.3.2
+      axobject-query: 4.1.0
+      boxen: 8.0.1
+      ci-info: 4.1.0
+      clsx: 2.1.1
+      common-ancestor-path: 1.0.1
+      cookie: 0.7.2
+      cssesc: 3.0.0
+      debug: 4.3.7
+      deterministic-object-hash: 2.0.2
+      devalue: 5.1.1
+      diff: 5.2.0
+      dlv: 1.1.3
+      dset: 3.1.4
+      es-module-lexer: 1.5.4
+      esbuild: 0.21.5
+      estree-walker: 3.0.3
+      fast-glob: 3.3.2
+      flattie: 1.1.1
+      github-slugger: 2.0.0
+      html-escaper: 3.0.3
+      http-cache-semantics: 4.1.1
+      js-yaml: 4.1.0
+      kleur: 4.1.5
+      magic-string: 0.30.14
+      magicast: 0.3.5
+      micromatch: 4.0.8
+      mrmime: 2.0.0
+      neotraverse: 0.6.18
+      p-limit: 6.1.0
+      p-queue: 8.0.1
+      preferred-pm: 4.0.0
+      prompts: 2.4.2
+      rehype: 13.0.2
+      semver: 7.6.3
+      shiki: 1.24.0
+      tinyexec: 0.3.1
+      tsconfck: 3.1.4(typescript@5.7.2)
+      ultrahtml: 1.5.3
+      unist-util-visit: 5.0.0
+      vfile: 6.0.3
+      vite: 6.0.2(@types/node@22.10.1)
+      vitefu: 1.0.4(vite@6.0.2(@types/node@22.10.1))
+      which-pm: 3.0.0
+      xxhash-wasm: 1.1.0
+      yargs-parser: 21.1.1
+      yocto-spinner: 0.1.1
+      zod: 3.23.8
+      zod-to-json-schema: 3.23.5(zod@3.23.8)
+      zod-to-ts: 1.2.0(typescript@5.7.2)(zod@3.23.8)
+    optionalDependencies:
+      sharp: 0.33.5
+    transitivePeerDependencies:
+      - '@types/node'
+      - jiti
+      - less
+      - lightningcss
+      - rollup
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - tsx
+      - typescript
+      - yaml
+
+  astro@5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.2
