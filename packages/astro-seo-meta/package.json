@@ -1,7 +1,7 @@
 {
   "name": "astro-seo-meta",
   "description": "Astro seo provides a <Seo> component to update meta tags",
-  "version": "4.2.0",
+  "version": "5.0.0",
   "homepage": "https://github.com/codiume/orbit",
   "bugs": "https://github.com/codiume/orbit/issues",
   "author": "codiume",

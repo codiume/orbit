@@ -1,7 +1,7 @@
 {
   "name": "astro-vanilla-extract",
   "description": "Adds vanilla-extract support to Astro",
-  "version": "5.0.1",
+  "version": "6.0.0",
   "homepage": "https://github.com/codiume/orbit",
   "bugs": "https://github.com/codiume/orbit/issues",
   "author": "codiume",

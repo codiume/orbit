@@ -1,7 +1,7 @@
 {
   "name": "astro-seo-schema",
   "description": "Easily insert valid Schema.org JSON-LD in your Astro apps.",
-  "version": "4.0.3",
+  "version": "5.0.0",
   "homepage": "https://github.com/codiume/orbit",
   "bugs": "https://github.com/codiume/orbit/issues",
   "author": "codiume",
