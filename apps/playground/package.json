@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^4.0.0"
+    "astro": "^5.0.0"
   },
   "dependencies": {
     "astro-seo-meta": "workspace:*",
