@@ -22,7 +22,7 @@ importers:
         version: 22.10.1
       astro:
         specifier: ^5.0.1
-        version: 5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
+        version: 5.0.3(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
       commander:
         specifier: ^12.1.0
         version: 12.1.0
@@ -74,33 +74,33 @@ importers:
     devDependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
+        version: 5.0.3(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
 
   apps/example-purgecss-ssr:
     dependencies:
       '@astrojs/node':
         specifier: ^9.0.0
-        version: 9.0.0(astro@5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2))
+        version: 9.0.0(astro@5.0.3(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
+        version: 5.0.3(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^9.0.0
-        version: 9.0.0(astro@5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2))
+        version: 9.0.0(astro@5.0.3(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
+        version: 5.0.3(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
 
   apps/playground:
     dependencies:
@@ -116,7 +116,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
+        version: 5.0.3(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
 
   packages/astro-build: {}
 
@@ -170,7 +170,7 @@ importers:
         version: 1.16.1
       '@vanilla-extract/vite-plugin':
         specifier: ^4.0.4
-        version: 4.0.18(@types/node@22.10.1)(vite@6.0.2(@types/node@22.10.1))
+        version: 4.0.18(@types/node@22.10.1)(vite@6.0.3(@types/node@22.10.1))
       astro:
         specifier: ^5.0.0
         version: 5.0.1(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
@@ -276,6 +276,11 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
+  '@babel/parser@7.26.3':
+    resolution: {integrity: sha512-WJ/CvmY8Mea8iDXo6a7RK2wbmJITT5fN3BEkRuFlxVyNx8jOKIIhmC4fSkTcPcf8JyavbBwIe6OpiCOBXt/IcA==}
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+
   '@babel/plugin-syntax-typescript@7.25.9':
     resolution: {integrity: sha512-hjMgRy5hb8uJJjUcdWunWVcoi9bGpJp8p5Ol1229PoN6aytsLwNMgmdftO23wnCLMfVmTwZDWMPNq/D1SY60JQ==}
     engines: {node: '>=6.9.0'}
@@ -296,6 +301,10 @@ packages:
 
   '@babel/types@7.26.0':
     resolution: {integrity: sha512-Z/yiTPj+lDVnF7lWeKCIJzaIkI0vYO87dMpZ4bg4TDrFe4XXLFWL1TbXU27gBP3QccxV9mZICCrnjnYlJjXHOA==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/types@7.26.3':
+    resolution: {integrity: sha512-vN5p+1kl59GVKMvTHt55NzzmYVxprfJD+ql7U9NFIfKCBkYE55LYtS+WtPlaYOyzydrKI8Nezd+aZextrd+FMA==}
     engines: {node: '>=6.9.0'}
 
   '@changesets/apply-release-plan@7.0.6':
@@ -1269,8 +1278,8 @@ packages:
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
-  astro@5.0.2:
-    resolution: {integrity: sha512-MKf82vUiTZ2aK+c/8EDnLYIsToBdVVk4PuhhGdE8F/PcuUyS+oIcuCPf30iVf8WCQwXOfnYGnv1JbRjzkqUc3w==}
+  astro@5.0.3:
+    resolution: {integrity: sha512-qpeN+POmmfAQu/XDXaI2CxkUgQFwH9uMUVaA1reV9rybzIbOVYc3E3BU5SkiP/W4BMUFPdJtyw6+/n/0AUv6rw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3086,6 +3095,46 @@ packages:
       yaml:
         optional: true
 
+  vite@6.0.3:
+    resolution: {integrity: sha512-Cmuo5P0ENTN6HxLSo6IHsjCLn/81Vgrp81oaiFFMRa8gGDj5xEjIcEpf2ZymZtZR8oU0P2JX5WuUp/rlXcHkAw==}
+    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': ^18.0.0 || ^20.0.0 || >=22.0.0
+      jiti: '>=1.21.0'
+      less: '*'
+      lightningcss: ^1.21.0
+      sass: '*'
+      sass-embedded: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.16.0
+      tsx: ^4.8.1
+      yaml: ^2.4.2
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      jiti:
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+      tsx:
+        optional: true
+      yaml:
+        optional: true
+
   vitefu@1.0.4:
     resolution: {integrity: sha512-y6zEE3PQf6uu/Mt6DTJ9ih+kyJLr4XcSgHR2zUkM8SWDhuixEJxfJ6CZGMHh1Ec3vPLoEA0IHU5oWzVqw8ulow==}
     peerDependencies:
@@ -3287,9 +3336,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@9.0.0(astro@5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2))':
+  '@astrojs/node@9.0.0(astro@5.0.3(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2))':
     dependencies:
-      astro: 5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
+      astro: 5.0.3(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2)
       send: 1.1.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -3388,6 +3437,10 @@ snapshots:
     dependencies:
       '@babel/types': 7.26.0
 
+  '@babel/parser@7.26.3':
+    dependencies:
+      '@babel/types': 7.26.3
+
   '@babel/plugin-syntax-typescript@7.25.9(@babel/core@7.26.0)':
     dependencies:
       '@babel/core': 7.26.0
@@ -3416,6 +3469,11 @@ snapshots:
       - supports-color
 
   '@babel/types@7.26.0':
+    dependencies:
+      '@babel/helper-string-parser': 7.25.9
+      '@babel/helper-validator-identifier': 7.25.9
+
+  '@babel/types@7.26.3':
     dependencies:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
@@ -4187,10 +4245,10 @@ snapshots:
 
   '@vanilla-extract/private@1.0.6': {}
 
-  '@vanilla-extract/vite-plugin@4.0.18(@types/node@22.10.1)(vite@6.0.2(@types/node@22.10.1))':
+  '@vanilla-extract/vite-plugin@4.0.18(@types/node@22.10.1)(vite@6.0.3(@types/node@22.10.1))':
     dependencies:
       '@vanilla-extract/integration': 7.1.11(@types/node@22.10.1)
-      vite: 6.0.2(@types/node@22.10.1)
+      vite: 6.0.3(@types/node@22.10.1)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -4364,7 +4422,7 @@ snapshots:
       - typescript
       - yaml
 
-  astro@5.0.2(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2):
+  astro@5.0.3(@types/node@22.10.1)(rollup@4.28.0)(typescript@5.7.2):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.2
@@ -4415,8 +4473,8 @@ snapshots:
       ultrahtml: 1.5.3
       unist-util-visit: 5.0.0
       vfile: 6.0.3
-      vite: 6.0.2(@types/node@22.10.1)
-      vitefu: 1.0.4(vite@6.0.2(@types/node@22.10.1))
+      vite: 6.0.3(@types/node@22.10.1)
+      vitefu: 1.0.4(vite@6.0.3(@types/node@22.10.1))
       which-pm: 3.0.0
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
@@ -5219,8 +5277,8 @@ snapshots:
 
   magicast@0.3.5:
     dependencies:
-      '@babel/parser': 7.26.2
-      '@babel/types': 7.26.0
+      '@babel/parser': 7.26.3
+      '@babel/types': 7.26.3
       source-map-js: 1.2.1
 
   markdown-table@3.0.4: {}
@@ -6473,9 +6531,22 @@ snapshots:
       '@types/node': 22.10.1
       fsevents: 2.3.3
 
+  vite@6.0.3(@types/node@22.10.1):
+    dependencies:
+      esbuild: 0.24.0
+      postcss: 8.4.49
+      rollup: 4.28.0
+    optionalDependencies:
+      '@types/node': 22.10.1
+      fsevents: 2.3.3
+
   vitefu@1.0.4(vite@6.0.2(@types/node@22.10.1)):
     optionalDependencies:
       vite: 6.0.2(@types/node@22.10.1)
+
+  vitefu@1.0.4(vite@6.0.3(@types/node@22.10.1)):
+    optionalDependencies:
+      vite: 6.0.3(@types/node@22.10.1)
 
   vitest@2.1.8(@types/node@22.10.1):
     dependencies:
