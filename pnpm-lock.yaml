@@ -22,7 +22,7 @@ importers:
         version: 22.10.2
       astro:
         specifier: ^5.0.3
-        version: 5.0.6(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2)
+        version: 5.0.9(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2)
       commander:
         specifier: ^12.1.0
         version: 12.1.0
@@ -74,33 +74,33 @@ importers:
     devDependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.0.6(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2)
+        version: 5.0.9(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2)
 
   apps/example-purgecss-ssr:
     dependencies:
       '@astrojs/node':
         specifier: ^9.0.0
-        version: 9.0.0(astro@5.0.6(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2))
+        version: 9.0.0(astro@5.0.9(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.0.6(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2)
+        version: 5.0.9(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^9.0.0
-        version: 9.0.0(astro@5.0.6(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2))
+        version: 9.0.0(astro@5.0.9(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.0.6(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2)
+        version: 5.0.9(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2)
 
   apps/playground:
     dependencies:
@@ -116,7 +116,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.0.6(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2)
+        version: 5.0.9(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2)
 
   packages/astro-build: {}
 
@@ -1274,8 +1274,8 @@ packages:
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
-  astro@5.0.6:
-    resolution: {integrity: sha512-bkvM56lLHPtdfjgej+swWMud/1HAM3Lc/yObeLL39Ry3UEsbARyzTYrorxWlr8SX7TtQZn9KDivU3KI8RnMVhA==}
+  astro@5.0.9:
+    resolution: {integrity: sha512-6jRMPSB+V82y/l8XOylPYJz78ux268nNNV2SLRvUaT4faf18rvIFAR33Y25wTM0Oeukcv1951xFuFsmAkQc+jg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2904,8 +2904,8 @@ packages:
     resolution: {integrity: sha512-Acylog8/luQ8L7il+geoSxhEkazvkslg7PSNKOX59mbB9cOveP5aq9h74Y7YU8yDpJwetzQQrfIwtf4Wp4LKcw==}
     engines: {node: '>=4'}
 
-  type-fest@4.30.1:
-    resolution: {integrity: sha512-ojFL7eDMX2NF0xMbDwPZJ8sb7ckqtlAi1GsmgsFXvErT9kFTk1r0DuQKvrCh73M6D4nngeHJmvogF9OluXs7Hw==}
+  type-fest@4.30.2:
+    resolution: {integrity: sha512-UJShLPYi1aWqCdq9HycOL/gwsuqda1OISdBO3t8RlXQC4QvtuIz4b5FCfe2dQIWEpmlRExKmcTBfP1r9bhY7ig==}
     engines: {node: '>=16'}
 
   typescript@5.6.1-rc:
@@ -3295,9 +3295,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@9.0.0(astro@5.0.6(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2))':
+  '@astrojs/node@9.0.0(astro@5.0.9(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2))':
     dependencies:
-      astro: 5.0.6(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2)
+      astro: 5.0.9(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2)
       send: 1.1.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -4375,7 +4375,7 @@ snapshots:
       - typescript
       - yaml
 
-  astro@5.0.6(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2):
+  astro@5.0.9(@types/node@22.10.2)(rollup@4.28.1)(typescript@5.7.2):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.2
@@ -4474,7 +4474,7 @@ snapshots:
       chalk: 5.3.0
       cli-boxes: 3.0.0
       string-width: 7.2.0
-      type-fest: 4.30.1
+      type-fest: 4.30.2
       widest-line: 5.0.0
       wrap-ansi: 9.0.0
 
@@ -6317,7 +6317,7 @@ snapshots:
 
   type-detect@4.1.0: {}
 
-  type-fest@4.30.1: {}
+  type-fest@4.30.2: {}
 
   typescript@5.6.1-rc: {}
 
