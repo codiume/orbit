@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 5.1.0
+
+### Minor Changes
+
+- [#817](https://github.com/codiume/orbit/pull/817) [`260f066`](https://github.com/codiume/orbit/commit/260f066627f2b5f2a8168c4c982d3762aee2f829) Thanks [@Jaanilj](https://github.com/Jaanilj)! - Added dedicated handling for custom 404 error pages in build output paths, ensuring proper file generation at root level
+
 ## 5.0.0
 
 ### Major Changes
