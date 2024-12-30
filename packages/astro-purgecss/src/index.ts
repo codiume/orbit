@@ -152,6 +152,11 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
                 return join(outDir, 'index.html');
               }
 
+              // Handle custom 404 page (https://docs.astro.build/en/basics/astro-pages/#custom-404-error-page)
+              if (pathname === '404/') {
+                return join(outDir, '404.html');
+              }
+
               switch (config.build.format) {
                 case 'file':
                   // Format: /blog -> /blog.html

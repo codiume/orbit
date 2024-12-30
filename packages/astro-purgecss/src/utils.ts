@@ -18,7 +18,6 @@ export async function writeFileContent(filePath: string, content: string) {
     await writeFile(filePath, content, 'utf8');
   } catch (err) {
     error(`Error writing file ${filePath}: ${err}`);
-    return '';
   }
 }
 
@@ -40,7 +39,7 @@ export function generateFileHash(filePath: string, content: string) {
   const hash = createHash('sha256').update(content).digest('hex').slice(0, 8);
 
   // Generate new file name with hash
-  // Astro orignal hash is 8 characters long
+  // Astro original hash is 8 characters long
   return `${filePath.slice(0, -13)}.${hash}.css`;
 }
 
