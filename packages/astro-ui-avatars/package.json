@@ -1,7 +1,7 @@
 {
   "name": "astro-ui-avatars",
   "description": "Astro component to generate avatars with initials from names.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/codiume/orbit",
   "bugs": "https://github.com/codiume/orbit/issues",
   "author": "codiume",
