@@ -100,4 +100,4 @@ Please see the [Changelog](CHANGELOG.md) for more information on what has change
 [typescript]: https://npmjs.com/package/astro-webhooks
 [typescript-badge]: https://img.shields.io/npm/types/astro-webhooks
 [makepr]: https://makeapullrequest.com
-[makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square?style=flat
+[makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
