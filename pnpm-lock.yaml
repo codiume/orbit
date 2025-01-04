@@ -9,25 +9,25 @@ importers:
   .:
     devDependencies:
       '@arethetypeswrong/cli':
-        specifier: ^0.17.1
+        specifier: ^0.17.2
         version: 0.17.2
       '@changesets/changelog-github':
         specifier: ^0.5.0
         version: 0.5.0
       '@changesets/cli':
-        specifier: ^2.27.10
+        specifier: ^2.27.11
         version: 2.27.11
       '@types/node':
-        specifier: ^22.10.1
+        specifier: ^22.10.5
         version: 22.10.5
       astro:
-        specifier: ^5.0.8
+        specifier: ^5.1.2
         version: 5.1.2(@types/node@22.10.5)(rollup@4.29.1)(typescript@5.7.2)
       commander:
         specifier: ^13.0.0
         version: 13.0.0
       esbuild:
-        specifier: ^0.24.0
+        specifier: ^0.24.2
         version: 0.24.2
       esbuild-plugin-clean:
         specifier: ^1.0.1
