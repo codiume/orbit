@@ -84,4 +84,4 @@ Astro SVG Loaders relies _heavily_ on the amazing work **Sam Herbert** is doing 
 [typescript]: https://npmjs.com/package/astro-svg-loaders
 [typescript-badge]: https://img.shields.io/npm/types/astro-svg-loaders
 [makepr]: https://makeapullrequest.com
-[makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square?style=flat
+[makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg

@@ -134,4 +134,4 @@ Also great thanks to [Jonas Schumacher][jonasmerlin] Author of [Astro SEO](https
 [typescript]: https://npmjs.com/package/astro-seo-meta
 [typescript-badge]: https://img.shields.io/npm/types/astro-seo-meta
 [makepr]: https://makeapullrequest.com
-[makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square?style=flat
+[makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
