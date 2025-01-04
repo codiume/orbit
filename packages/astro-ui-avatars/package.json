@@ -1,0 +1,45 @@
+{
+	"name": "astro-ui-avatars",
+	"description": "Astro loading icons and small animations built with pure SVG.",
+	"version": "0.0.1",
+	"homepage": "https://github.com/codiume/orbit",
+	"bugs": "https://github.com/codiume/orbit/issues",
+	"author": "codiume",
+	"license": "MIT",
+	"keywords": [
+		"astro",
+		"astro-component",
+		"astro-ui-avatars",
+		"ui",
+		"avatar",
+		"ui-avatars",
+		"user-avatars"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/codiume/orbit.git",
+		"directory": "packages/astro-ui-avatars"
+	},
+	"scripts": {
+		"build": "tsup",
+		"check-types": "tsc --declaration --emitDeclarationOnly",
+		"check-exports": "attw --pack . --profile esm-only --ignore-rules internal-resolution-error",
+		"typecheck": "pnpm check-types && pnpm check-exports"
+	},
+	"type": "module",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"files": ["dist"],
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			}
+		}
+	},
+	"peerDependencies": {
+		"astro": "^5.0.0"
+	}
+}

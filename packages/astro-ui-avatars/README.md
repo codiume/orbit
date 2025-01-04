@@ -1,0 +1,69 @@
+# 🧔 Astro UI Avatars
+
+[![version][version-badge]][npm]
+[![downloads][downloads-badge]][npm]
+[![github actions][github-actions-badge]][github-actions]
+[![typescript][typescript-badge]][typescript]
+[![makepr][makepr-badge]][makepr]
+
+This [Astro](https://astro.build/) package provides [TODO].
+
+## 📦 Installation
+
+This package is hosted on [`npm`][npm].
+
+Install using pnpm
+
+```bash
+pnpm add astro-ui-avatars
+```
+
+Or using npm
+
+```bash
+npm install astro-ui-avatars
+```
+
+Or using yarn
+
+```bash
+yarn add astro-ui-avatars
+```
+
+## 🥑 Usage
+
+To add a loading indicator in any of your Astro pages or components, just import a loader from `astro-ui-avatars` then use it inside the your HTML:
+
+```jsx index.astro
+---
+import { Avatar } from "astro-ui-avatars"
+---
+
+<html lang="en">
+    <body>
+        // renders a spining cercle animation
+        <p>Please wait while content is loading</p>
+        <SpinningCircles />
+    </body>
+</html>
+```
+
+## Changelog
+
+Please see the [changelog](CHANGELOG.md) for more information on what has changed recently.
+
+[npm]: https://npmjs.com/package/astro-ui-avatars
+[svg-loaders]: https://github.com/SamHerbert/SVG-Loaders
+[sam-herbert]: https://github.com/SamHerbert
+[demo]: https://samherbert.net/svg-loaders
+
+<!-- Readme Badges -->
+
+[version-badge]: https://img.shields.io/npm/v/astro-ui-avatars.svg
+[downloads-badge]: https://img.shields.io/npm/dt/astro-ui-avatars
+[github-actions]: https://github.com/codiume/orbit/actions
+[github-actions-badge]: https://github.com/codiume/orbit/actions/workflows/node.js.yml/badge.svg
+[typescript]: https://npmjs.com/package/astro-ui-avatars
+[typescript-badge]: https://img.shields.io/npm/types/astro-ui-avatars
+[makepr]: https://makeapullrequest.com
+[makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square?style=flat

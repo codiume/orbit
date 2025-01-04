@@ -1,0 +1,96 @@
+---
+export type Props = {
+	// The name to be displayed in the avatar
+	name?: string;
+	// The size of the avatar
+	size?: number;
+	// The background color of the avatar
+	background?: string;
+	// The text color of the avatar
+	color?: string;
+	// The number of initials to display
+	length?: 1 | 2;
+	// The font size of the initials
+	fontSize?: number;
+	// Whether the avatar should have rounded corners
+	rounded?: boolean;
+	// Whether the initials should be in uppercase
+	uppercase?: boolean;
+	// Whether the initials should be bold
+	bold?: boolean;
+};
+
+const {
+	name = "John Doe",
+	size = 64,
+	background = "#007bff",
+	color = "#ffffff",
+	length = 2,
+	fontSize = 0.5,
+	rounded = false,
+	uppercase = true,
+	bold = true,
+} = Astro.props;
+
+const getRandomColor = () => {
+	const colors = [
+		"#1abc9c",
+		"#2ecc71",
+		"#3498db",
+		"#9b59b6",
+		"#34495e",
+		"#16a085",
+		"#27ae60",
+		"#2980b9",
+		"#8e44ad",
+		"#2c3e50",
+		"#f1c40f",
+		"#e67e22",
+		"#e74c3c",
+		"#95a5a6",
+		"#f39c12",
+		"#d35400",
+		"#c0392b",
+		"#bdc3c7",
+		"#7f8c8d",
+	];
+	return colors[Math.floor(Math.random() * colors.length)];
+};
+
+function getInitials(name: string, uppercase: boolean) {
+	return name
+		.split(" ")
+		.map((part) => (uppercase ? part[0].toUpperCase() : part[0]))
+		.slice(0, length)
+		.join("");
+}
+
+const initials = getInitials(name, uppercase);
+const bgColor = background === "random" ? getRandomColor() : background;
+const fontWeight = bold ? "bold" : "normal";
+const adjustedFontSize = Math.floor(size * fontSize);
+---
+<svg
+    width={size}
+    height={size}
+    viewBox={`0 0 ${size} ${size}`}
+    style="display: inline-block;"
+  >
+  <rect
+    width={size}
+    height={size}
+    fill={bgColor}
+    rx={rounded ? size / 2 : 0}
+  />
+  <text
+    x="50%"
+    y="50%"
+    dy=".1em"
+    fill={color}
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-size={adjustedFontSize}
+    font-family="system-ui, -apple-system, sans-serif"
+    font-weight={fontWeight}
+  >{initials}</text>
+</svg>
