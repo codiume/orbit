@@ -16,13 +16,14 @@
 
 ## Packages
 
-| Package                                         | Release Notes                                                                                             | Description                                                              | Downloads                                                    |
-| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------ |
-| [astro-purgecss](packages/astro-purgecss)       | [![version](https://img.shields.io/npm/v/astro-purgecss.svg)](packages/astro-purgecss/CHANGELOG.md)       | Purgecss helps you remove unused CSS rules from your final astro bundle. | [![downloads][downloads-badge-purgecss]][npm-purgecss]       |
-| [astro-seo-schema](packages/astro-seo-schema)   | [![version](https://img.shields.io/npm/v/astro-seo-schema.svg)](packages/astro-seo-schema/CHANGELOG.md)   | Easily insert valid Schema.org JSON-LD in your Astro apps.               | [![downloads][downloads-badge-seo-schema]][npm-seo-schema]   |
-| [astro-seo-meta](packages/astro-seo-meta)       | [![version](https://img.shields.io/npm/v/astro-seo-meta.svg)](packages/astro-seo-meta/CHANGELOG.md)       | Astro seo provides an Seo component to update meta tags                  | [![downloads][downloads-badge-seo-meta]][npm-seo-meta]       |
-| [astro-useragent](packages/astro-useragent)     | [![version](https://img.shields.io/npm/v/astro-useragent.svg)](packages/astro-useragent/CHANGELOG.md)     | This package parses browser user-agent strings for Astro.                | [![downloads][downloads-badge-useragent]][npm-useragent]     |
-| [astro-svg-loaders](packages/astro-svg-loaders) | [![version](https://img.shields.io/npm/v/astro-svg-loaders.svg)](packages/astro-svg-loaders/CHANGELOG.md) | Astro loading icons and small animations built with pure SVG.            | [![downloads][downloads-badge-svg-loaders]][npm-svg-loaders] |
+| Package                                         | Release notes                                                                                             | Description                                                   | Downloads                                                    |
+| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------ |
+| [astro-purgecss](packages/astro-purgecss)       | [![version](https://img.shields.io/npm/v/astro-purgecss.svg)](packages/astro-purgecss/CHANGELOG.md)       | Remove unused CSS rules from your final astro bundle.         | [![downloads][downloads-badge-purgecss]][npm-purgecss]       |
+| [astro-seo-schema](packages/astro-seo-schema)   | [![version](https://img.shields.io/npm/v/astro-seo-schema.svg)](packages/astro-seo-schema/CHANGELOG.md)   | Easily insert valid Schema.org JSON-LD in your Astro apps.    | [![downloads][downloads-badge-seo-schema]][npm-seo-schema]   |
+| [astro-seo-meta](packages/astro-seo-meta)       | [![version](https://img.shields.io/npm/v/astro-seo-meta.svg)](packages/astro-seo-meta/CHANGELOG.md)       | Easily insert Seo meta tags in your Astro apps                | [![downloads][downloads-badge-seo-meta]][npm-seo-meta]       |
+| [astro-useragent](packages/astro-useragent)     | [![version](https://img.shields.io/npm/v/astro-useragent.svg)](packages/astro-useragent/CHANGELOG.md)     | Parse browser user-agent strings for Astro.                   | [![downloads][downloads-badge-useragent]][npm-useragent]     |
+| [astro-svg-loaders](packages/astro-svg-loaders) | [![version](https://img.shields.io/npm/v/astro-svg-loaders.svg)](packages/astro-svg-loaders/CHANGELOG.md) | Astro loading icons and small animations built with pure SVG. | [![downloads][downloads-badge-svg-loaders]][npm-svg-loaders] |
+| [astro-ui-avatars](packages/astro-ui-avatars)   | [![version](https://img.shields.io/npm/v/astro-ui-avatars.svg)](packages/astro-ui-avatars/CHANGELOG.md)   | Generate customizable user avatars with initials from names.  | [![downloads][downloads-badge-ui-avatars]][npm-ui-avatars]   |
 
 ## Support
 
@@ -60,3 +61,5 @@ Please see the [LICENSE](LICENSE) for more information.
 [npm-svg-loaders]: https://npmjs.com/package/astro-svg-loaders
 [downloads-badge-useragent]: https://img.shields.io/npm/dt/astro-useragent
 [npm-useragent]: https://npmjs.com/package/astro-useragent
+[downloads-badge-ui-avatars]: https://img.shields.io/npm/dt/astro-ui-avatars
+[npm-ui-avatars]: https://npmjs.com/package/astro-ui-avatars

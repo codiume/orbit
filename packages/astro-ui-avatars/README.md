@@ -45,6 +45,22 @@ import { Avatar } from "astro-ui-avatars"
 </html>
 ```
 
+## 📖 API Reference
+
+| Name         | Required | Example      | Description                                     |
+| :----------- | :------: | :----------- | :---------------------------------------------- |
+| `name`       | `false`  | `"John Doe"` | The name to be displayed in the avatar.         |
+| `size`       | `false`  | `50`         | The size of the avatar.                         |
+| `background` | `false`  | `"#000000"`  | The background color of the avatar.             |
+| `color`      | `false`  | `"#FFFFFF"`  | The text color of the avatar.                   |
+| `length`     | `false`  | `2`          | The number of initials to display.              |
+| `fontSize`   | `false`  | `20`         | The font size of the initials.                  |
+| `rounded`    | `false`  | `true`       | Whether the avatar should have rounded corners. |
+| `uppercase`  | `false`  | `true`       | Whether the initials should be in uppercase.    |
+| `bold`       | `false`  | `true`       | Whether the initials should be bold.            |
+
+All `Avatar` props are optional. If no props are provided, the avatar will use default settings.
+
 ## Changelog
 
 Please see the [changelog](CHANGELOG.md) for more information on what has changed recently.
