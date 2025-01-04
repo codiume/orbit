@@ -6,11 +6,9 @@
 [![typescript][typescript-badge]][typescript]
 [![makepr][makepr-badge]][makepr]
 
-This [Astro](https://astro.build/) package provides [TODO].
+This [Astro](https://astro.build/) package provides you with a component to generate avatars with initials from names.
 
 ## 📦 Installation
-
-This package is hosted on [`npm`][npm].
 
 Install using pnpm
 
@@ -32,7 +30,7 @@ yarn add astro-ui-avatars
 
 ## 🥑 Usage
 
-To add a loading indicator in any of your Astro pages or components, just import a loader from `astro-ui-avatars` then use it inside the your HTML:
+To generate a user avatar in any of your Astro pages or components, just import the `Avatar` component from `astro-ui-avatars` and use it inside your HTML:
 
 ```jsx index.astro
 ---
@@ -40,11 +38,10 @@ import { Avatar } from "astro-ui-avatars"
 ---
 
 <html lang="en">
-    <body>
-        // renders a spining cercle animation
-        <p>Please wait while content is loading</p>
-        <SpinningCircles />
-    </body>
+  <body>
+    <p>User Avatar:</p>
+    <Avatar name="John Doe" />
+  </body>
 </html>
 ```
 
@@ -53,9 +50,6 @@ import { Avatar } from "astro-ui-avatars"
 Please see the [changelog](CHANGELOG.md) for more information on what has changed recently.
 
 [npm]: https://npmjs.com/package/astro-ui-avatars
-[svg-loaders]: https://github.com/SamHerbert/SVG-Loaders
-[sam-herbert]: https://github.com/SamHerbert
-[demo]: https://samherbert.net/svg-loaders
 
 <!-- Readme Badges -->
 

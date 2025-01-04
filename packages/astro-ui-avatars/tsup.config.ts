@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['src/index.ts', 'src/loaders/*.astro'],
+  entry: ['src/index.ts', 'src/*.astro'],
   format: ['esm'],
   outDir: 'dist',
   clean: true,
