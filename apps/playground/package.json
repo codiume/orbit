@@ -15,6 +15,7 @@
   "dependencies": {
     "astro-seo-meta": "workspace:*",
     "astro-seo-schema": "workspace:*",
-    "astro-svg-loaders": "workspace:*"
+    "astro-svg-loaders": "workspace:*",
+    "astro-ui-avatars": "workspace:*"
   }
 }
