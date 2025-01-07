@@ -36,10 +36,10 @@ import { Seo } from "astro-seo-meta"
 <html lang="en">
     <head>
         <Seo
-          title="My astro website"
-          description="My fast astro website"
-          icon="favicon.ico"
-        />
+			title="My astro website"
+			description="My fast astro website"
+			icon="/favicon.svg"
+		/>
     </head>
 
     <body>
@@ -55,16 +55,17 @@ import { Seo } from "astro-seo-meta"
 | Name             | Required | Example                           | Description                                                |
 | :--------------- | :------: | :-------------------------------- | :--------------------------------------------------------- |
 | `title`          | `false`  | `"My Astro website"`              | Page title.                                                |
-| `description`    | `false`  | `"My blazing fast astro website"` | Description of the page.                                   |
+| `description`    | `false`  | `"My blazing fast Astro website"` | Description of the page.                                   |
 | `keywords`       | `false`  | `["website", "blog", "astro"]`    | Array of keywords.                                         |
-| `icon`           | `false`  | `"/favicon.ico"`                  | Tab icon url.                                              |
+| `icon`           | `false`  | `"/favicon.ico"`                  | Tab icon URL.                                              |
 | `themeColor`     | `false`  | `"#000000"`                       | Browser theme color.                                       |
 | `colorScheme`    | `false`  | `"light"`                         | Preferred color scheme.                                    |
+| `robots`         | `false`  | `["index", "follow"]`             | Array of robots directives (e.g., `index`, `noindex`, `follow`). |
 | `facebook.image` | `false`  | `"/facebook.png"`                 | Facebook share image.                                      |
 | `facebook.url`   | `false`  | `"https://astro.build"`           | Page URL.                                                  |
 | `facebook.type`  | `false`  | `"website"`                       | Type of resource. See all types [here][types].             |
 | `twitter.image`  | `false`  | `"/twitter.png"`                  | Twitter share image.                                       |
-| `twitter.site`   | `false`  | `"@astrodotbuild"`                | Twitter handle of publishing site.                         |
+| `twitter.site`   | `false`  | `"@astrodotbuild"`                | Twitter handle of the publishing site.                    |
 | `twitter.card`   | `false`  | `"summary"`                       | Format of Twitter share card. See all types [here][cards]. |
 
 All of the `Seo` props are optional. If a prop is not provided, the associated meta tag will not be rendered.
@@ -81,6 +82,7 @@ All of the `Seo` props are optional. If a prop is not provided, the associated m
     icon="/favicon.ico"
     themeColor="#000000"
     colorScheme="light"
+	robots={['index', 'follow']}
     facebook={{
         image: "/facebook.png",
         url: "https://astro.build",
@@ -98,6 +100,7 @@ All of the `Seo` props are optional. If a prop is not provided, the associated m
     title="My Astro website"
     description="My blazing fast astro website"
     keywords={["website", "blog", "technology"]}
+    robots={['index', 'follow']}
 />
 ```
 
