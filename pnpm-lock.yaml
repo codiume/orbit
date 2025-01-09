@@ -22,7 +22,7 @@ importers:
         version: 22.10.5
       astro:
         specifier: ^5.1.2
-        version: 5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.2)
+        version: 5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.3)
       commander:
         specifier: ^13.0.0
         version: 13.0.0
@@ -52,16 +52,16 @@ importers:
         version: 0.2.9
       tsup:
         specifier: ^8.3.5
-        version: 8.3.5(postcss@8.4.49)(typescript@5.7.2)
+        version: 8.3.5(postcss@8.4.49)(typescript@5.7.3)
       turbo:
         specifier: ^2.3.3
         version: 2.3.3
       typescript:
         specifier: ^5.7.2
-        version: 5.7.2
+        version: 5.7.3
       vite-tsconfig-paths:
         specifier: ^5.1.4
-        version: 5.1.4(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.5))
+        version: 5.1.4(typescript@5.7.3)(vite@5.4.11(@types/node@22.10.5))
       vitest:
         specifier: ^2.1.8
         version: 2.1.8(@types/node@22.10.5)
@@ -74,33 +74,33 @@ importers:
     devDependencies:
       astro:
         specifier: ^5.0.8
-        version: 5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.2)
+        version: 5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.3)
 
   apps/example-purgecss-ssr:
     dependencies:
       '@astrojs/node':
         specifier: ^9.0.0
-        version: 9.0.0(astro@5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.2))
+        version: 9.0.0(astro@5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.3))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^5.0.8
-        version: 5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.2)
+        version: 5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.3)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^9.0.0
-        version: 9.0.0(astro@5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.2))
+        version: 9.0.0(astro@5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.3))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^5.0.8
-        version: 5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.2)
+        version: 5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.3)
 
   apps/playground:
     dependencies:
@@ -119,7 +119,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^5.0.8
-        version: 5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.2)
+        version: 5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.3)
 
   packages/astro-build: {}
 
@@ -3150,6 +3150,11 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
+  typescript@5.7.3:
+    resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   ua-is-frozen@0.1.2:
     resolution: {integrity: sha512-RwKDW2p3iyWn4UbaxpP2+VxwqXh0jpvdxsYpZ5j/MLLiQOfbsV5shpgQiw93+KMYQPcteeMQ289MaAFzs3G9pw==}
 
@@ -3640,9 +3645,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@9.0.0(astro@5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.2))':
+  '@astrojs/node@9.0.0(astro@5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.3))':
     dependencies:
-      astro: 5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.2)
+      astro: 5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.3)
       send: 1.1.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -4977,7 +4982,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.2):
+  astro@5.1.4(@types/node@22.10.5)(rollup@4.30.1)(typescript@5.7.3):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.2
@@ -5024,7 +5029,7 @@ snapshots:
       semver: 7.6.3
       shiki: 1.26.1
       tinyexec: 0.3.2
-      tsconfck: 3.1.4(typescript@5.7.2)
+      tsconfck: 3.1.4(typescript@5.7.3)
       ultrahtml: 1.5.3
       unist-util-visit: 5.0.0
       unstorage: 1.14.4
@@ -5037,7 +5042,7 @@ snapshots:
       yocto-spinner: 0.1.2
       zod: 3.24.1
       zod-to-json-schema: 3.24.1(zod@3.24.1)
-      zod-to-ts: 1.2.0(typescript@5.7.2)(zod@3.24.1)
+      zod-to-ts: 1.2.0(typescript@5.7.3)(zod@3.24.1)
     optionalDependencies:
       sharp: 0.33.5
     transitivePeerDependencies:
@@ -7003,10 +7008,14 @@ snapshots:
     optionalDependencies:
       typescript: 5.7.2
 
+  tsconfck@3.1.4(typescript@5.7.3):
+    optionalDependencies:
+      typescript: 5.7.3
+
   tslib@2.8.1:
     optional: true
 
-  tsup@8.3.5(postcss@8.4.49)(typescript@5.7.2):
+  tsup@8.3.5(postcss@8.4.49)(typescript@5.7.3):
     dependencies:
       bundle-require: 5.1.0(esbuild@0.24.2)
       cac: 6.7.14
@@ -7026,7 +7035,7 @@ snapshots:
       tree-kill: 1.2.2
     optionalDependencies:
       postcss: 8.4.49
-      typescript: 5.7.2
+      typescript: 5.7.3
     transitivePeerDependencies:
       - jiti
       - supports-color
@@ -7067,6 +7076,8 @@ snapshots:
   typescript@5.6.1-rc: {}
 
   typescript@5.7.2: {}
+
+  typescript@5.7.3: {}
 
   ua-is-frozen@0.1.2: {}
 
@@ -7226,11 +7237,11 @@ snapshots:
       - supports-color
       - terser
 
-  vite-tsconfig-paths@5.1.4(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.5)):
+  vite-tsconfig-paths@5.1.4(typescript@5.7.3)(vite@5.4.11(@types/node@22.10.5)):
     dependencies:
       debug: 4.4.0
       globrex: 0.1.2
-      tsconfck: 3.1.4(typescript@5.7.2)
+      tsconfck: 3.1.4(typescript@5.7.3)
     optionalDependencies:
       vite: 5.4.11(@types/node@22.10.5)
     transitivePeerDependencies:
@@ -7408,6 +7419,11 @@ snapshots:
   zod-to-ts@1.2.0(typescript@5.7.2)(zod@3.24.1):
     dependencies:
       typescript: 5.7.2
+      zod: 3.24.1
+
+  zod-to-ts@1.2.0(typescript@5.7.3)(zod@3.24.1):
+    dependencies:
+      typescript: 5.7.3
       zod: 3.24.1
 
   zod@3.24.1: {}
