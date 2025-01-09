@@ -1,5 +1,11 @@
 # astro-seo-meta
 
+## 5.1.0
+
+### Minor Changes
+
+- [#835](https://github.com/codiume/orbit/pull/835) [`8a5028e`](https://github.com/codiume/orbit/commit/8a5028ef377df6c6a0c5476d9c472452840e7a55) Thanks [@NekoSakuraLucia](https://github.com/NekoSakuraLucia)! - Added the robots configuration section in SEO to provide a complete solution.
+
 ## 5.0.0
 
 ### Major Changes
