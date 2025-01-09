@@ -60,7 +60,7 @@ import { Seo } from "astro-seo-meta"
 | `icon`           | `false`  | `"/favicon.ico"`                  | Tab icon URL.                                              |
 | `themeColor`     | `false`  | `"#000000"`                       | Browser theme color.                                       |
 | `colorScheme`    | `false`  | `"light"`                         | Preferred color scheme.                                    |
-| `robots`         | `false`  | `["index", "follow"]`             | Array of robots directives (e.g., `index`, `noindex`, `follow`). |
+| `robots`         | `false`  | `"index", "follow"`             | string of robots directives (e.g., `index`, `noindex`, `follow`). |
 | `facebook.image` | `false`  | `"/facebook.png"`                 | Facebook share image.                                      |
 | `facebook.url`   | `false`  | `"https://astro.build"`           | Page URL.                                                  |
 | `facebook.type`  | `false`  | `"website"`                       | Type of resource. See all types [here][types].             |
