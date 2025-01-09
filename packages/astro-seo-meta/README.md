@@ -36,9 +36,9 @@ import { Seo } from "astro-seo-meta"
 <html lang="en">
     <head>
         <Seo
-			title="My astro website"
-			description="My fast astro website"
-			icon="/favicon.svg"
+		title="My astro website"
+		description="My fast astro website"
+		icon="/favicon.ico"
 		/>
     </head>
 
@@ -100,7 +100,6 @@ All of the `Seo` props are optional. If a prop is not provided, the associated m
     title="My Astro website"
     description="My blazing fast astro website"
     keywords={["website", "blog", "technology"]}
-    robots={['index', 'follow']}
 />
 ```
 
