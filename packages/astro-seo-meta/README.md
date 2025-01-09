@@ -82,7 +82,7 @@ All of the `Seo` props are optional. If a prop is not provided, the associated m
     icon="/favicon.ico"
     themeColor="#000000"
     colorScheme="light"
-	robots={['index', 'follow']}
+	robots="index, follow"
     facebook={{
         image: "/facebook.png",
         url: "https://astro.build",
