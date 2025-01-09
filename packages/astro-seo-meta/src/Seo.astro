@@ -12,6 +12,7 @@ export interface Props {
   colorScheme?: MetaProps['colorScheme'];
   facebook?: Pick<FacebookProps, 'image' | 'type' | 'url'>;
   twitter?: Pick<TwitterProps, 'image' | 'card' | 'site'>;
+  robots?: string;
 }
 
 const {
@@ -22,7 +23,8 @@ const {
   themeColor,
   colorScheme,
   facebook,
-  twitter
+  twitter,
+  robots
 } = Astro.props;
 ---
 
@@ -34,6 +36,7 @@ const {
     icon={icon}
     themeColor={themeColor}
     colorScheme={colorScheme}
+    robots={robots}
   />
   <Facebook
     title={title}

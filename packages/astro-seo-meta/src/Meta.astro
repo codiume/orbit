@@ -8,9 +8,10 @@ export interface Props {
   icon?: string;
   themeColor?: string;
   colorScheme?: ColorScheme;
+  robots?: string;
 }
 
-const { title, description, keywords, icon, themeColor, colorScheme } =
+const { title, description, keywords, icon, themeColor, colorScheme, robots } =
   Astro.props;
 ---
 
@@ -21,4 +22,5 @@ const { title, description, keywords, icon, themeColor, colorScheme } =
   {icon && <link rel="icon" href={icon} />}
   {colorScheme && <meta name="color-scheme" content={colorScheme} />}
   {themeColor && <meta name="theme-color" content={themeColor} />}
+  {robots && <meta name="robots" content={robots} />}
 </Fragment>
