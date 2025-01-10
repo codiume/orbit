@@ -24,6 +24,18 @@ Or using yarn
 yarn add astro-seo-meta
 ```
 
+Or using pnpm
+
+```base
+pnpm add astro-seo-meta
+```
+
+Or using bun
+
+```
+bun add astro-seo-meta
+```
+
 ## 🥑 Usage
 
 To add a base set of SEO tags in any of your Astro pages, import Astro `Seo` and then use the component inside the `<head>` section of your HTML:
