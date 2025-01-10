@@ -12,19 +12,13 @@ It supports [Facebook][facebook], [Twitter][twitter-cards], [Open Graph][og], an
 
 ## 📦 Installation
 
-Install using pnpm:
-
-```bash
-pnpm add astro-seo-meta
-```
-
-Or using npm:
+This package is hosted on [`npm`][npm].
 
 ```bash
 npm install astro-seo-meta
 ```
 
-Or using yarn:
+Or using yarn
 
 ```bash
 yarn add astro-seo-meta
@@ -40,17 +34,17 @@ import { Seo } from "astro-seo-meta"
 ---
 
 <html lang="en">
-  <head>
-    <Seo
-      title="My astro website"
-      description="My fast astro website"
-      icon="/favicon.ico"
-    />
-  </head>
+    <head>
+        <Seo
+		title="My astro website"
+		description="My fast astro website"
+		icon="/favicon.ico"
+		/>
+    </head>
 
-  <body>
-    <h1>Hello from astro</h1>
-  </body>
+    <body>
+        <h1>Hello from astro</h1>
+    </body>
 </html>
 ```
 
@@ -58,21 +52,21 @@ import { Seo } from "astro-seo-meta"
 
 ### `<Seo>`
 
-| Name             | Required | Example                           | Description                                                       |
-| :--------------- | :------: | :-------------------------------- | :---------------------------------------------------------------- |
-| `title`          | `false`  | `"My Astro website"`              | Page title.                                                       |
-| `description`    | `false`  | `"My blazing fast Astro website"` | Description of the page.                                          |
-| `keywords`       | `false`  | `["website", "blog", "astro"]`    | Array of keywords.                                                |
-| `icon`           | `false`  | `"/favicon.ico"`                  | Tab icon URL.                                                     |
-| `themeColor`     | `false`  | `"#000000"`                       | Browser theme color.                                              |
-| `colorScheme`    | `false`  | `"light"`                         | Preferred color scheme.                                           |
-| `robots`         | `false`  | `"index, follow"`                 | string of robots directives (e.g., `index`, `noindex`, `follow`). |
-| `facebook.image` | `false`  | `"/facebook.png"`                 | Facebook share image.                                             |
-| `facebook.url`   | `false`  | `"https://astro.build"`           | Page URL.                                                         |
-| `facebook.type`  | `false`  | `"website"`                       | Type of resource. See all types [here][types].                    |
-| `twitter.image`  | `false`  | `"/twitter.png"`                  | Twitter share image.                                              |
-| `twitter.site`   | `false`  | `"@astrodotbuild"`                | Twitter handle of the publishing site.                            |
-| `twitter.card`   | `false`  | `"summary"`                       | Format of Twitter share card. See all types [here][cards].        |
+| Name             | Required | Example                           | Description                                                |
+| :--------------- | :------: | :-------------------------------- | :--------------------------------------------------------- |
+| `title`          | `false`  | `"My Astro website"`              | Page title.                                                |
+| `description`    | `false`  | `"My blazing fast Astro website"` | Description of the page.                                   |
+| `keywords`       | `false`  | `["website", "blog", "astro"]`    | Array of keywords.                                         |
+| `icon`           | `false`  | `"/favicon.ico"`                  | Tab icon URL.                                              |
+| `themeColor`     | `false`  | `"#000000"`                       | Browser theme color.                                       |
+| `colorScheme`    | `false`  | `"light"`                         | Preferred color scheme.                                    |
+| `robots`         | `false`  | `"index", "follow"`             | string of robots directives (e.g., `index`, `noindex`, `follow`). |
+| `facebook.image` | `false`  | `"/facebook.png"`                 | Facebook share image.                                      |
+| `facebook.url`   | `false`  | `"https://astro.build"`           | Page URL.                                                  |
+| `facebook.type`  | `false`  | `"website"`                       | Type of resource. See all types [here][types].             |
+| `twitter.image`  | `false`  | `"/twitter.png"`                  | Twitter share image.                                       |
+| `twitter.site`   | `false`  | `"@astrodotbuild"`                | Twitter handle of the publishing site.                    |
+| `twitter.card`   | `false`  | `"summary"`                       | Format of Twitter share card. See all types [here][cards]. |
 
 All of the `Seo` props are optional. If a prop is not provided, the associated meta tag will not be rendered.
 
@@ -82,30 +76,30 @@ All of the `Seo` props are optional. If a prop is not provided, the associated m
 
 // renders all seo tags
 <Seo
-  title="My Astro website"
-  description="My blazing fast astro website"
-  keywords={["website", "blog", "astro"]}
-  icon="/favicon.ico"
-  themeColor="#000000"
-  colorScheme="light"
-  robots="index, follow"
-  facebook={{
-    image: "/facebook.png",
-    url: "https://astro.build",
-    type: "website",
-  }}
-  twitter={{
-    image: "/twitter.png",
-    site: "@astrodotbuild",
-    card: "summary",
-  }}
+    title="My Astro website"
+    description="My blazing fast astro website"
+    keywords={["website", "blog", "astro"]}
+    icon="/favicon.ico"
+    themeColor="#000000"
+    colorScheme="light"
+	robots="index, follow"
+    facebook={{
+        image: "/facebook.png",
+        url: "https://astro.build",
+        type: "website",
+    }}
+    twitter={{
+        image: "/twitter.png",
+        site: "@astrodotbuild",
+        card: "summary",
+    }}
 />
 
 // renders some seo tags
 <Seo
-  title="My Astro website"
-  description="My blazing fast astro website"
-  keywords={["website", "blog", "technology"]}
+    title="My Astro website"
+    description="My blazing fast astro website"
+    keywords={["website", "blog", "technology"]}
 />
 ```
 
