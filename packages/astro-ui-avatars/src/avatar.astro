@@ -1,17 +1,19 @@
 ---
+type FontSize = 0.1 | 0.2 | 0.3 | 0.4 | 0.5 | 0.6 | 0.7 | 0.8 | 0.9 | 1;
+
 export type Props = {
   // The name to be displayed in the avatar
   name?: string;
   // The size of the avatar
-  size?: number;
+  size?: 16 | 32 | 64 | 128 | 256 | 512 | number;
   // The background color of the avatar
-  background?: string;
+  background?: 'random' | string;
   // The text color of the avatar
   color?: string;
   // The number of initials to display
   length?: 1 | 2;
   // The font size of the initials
-  fontSize?: number;
+  fontSize?: FontSize;
   // Whether the avatar should have rounded corners
   rounded?: boolean;
   // Whether the initials should be in uppercase
