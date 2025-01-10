@@ -1,5 +1,11 @@
 # astro-ui-avatars
 
+## 0.0.3
+
+### Patch Changes
+
+- [#841](https://github.com/codiume/orbit/pull/841) [`b6def04`](https://github.com/codiume/orbit/commit/b6def04ec3cd52e7a4d14013365a654b87acf474) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Update docs to add usage examples
+
 ## 0.0.2
 
 ### Patch Changes
