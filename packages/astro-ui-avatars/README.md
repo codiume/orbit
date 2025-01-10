@@ -1,5 +1,7 @@
 # 🧔 Astro UI Avatars
 
+<img src="../../assets/astro-ui-avatars/banner.png" alt="Astro UI Avatars banner">
+
 [![version][version-badge]][npm]
 [![downloads][downloads-badge]][npm]
 [![github actions][github-actions-badge]][github-actions]
@@ -45,32 +47,62 @@ import { Avatar } from "astro-ui-avatars"
 </html>
 ```
 
+## 🎨 Examples
+
+- Generate an avatar with default settings
+
+```jsx
+<Avatar name="John Doe" />
+```
+
+- Generate a blue avatar
+
+```jsx
+<Avatar background="#0D8ABC" color="#fff" />
+```
+
+- Generate a random background avatar
+
+```jsx
+<Avatar background="random" />
+```
+
+- Generate a rounded avatar
+
+```jsx
+<Avatar rounded={true} />
+```
+
 ## 📖 API Reference
 
-| Name         | Required | Example      | Description                                     |
-| :----------- | :------: | :----------- | :---------------------------------------------- |
-| `name`       | `false`  | `"John Doe"` | The name to be displayed in the avatar.         |
-| `size`       | `false`  | `50`         | The size of the avatar.                         |
-| `background` | `false`  | `"#000000"`  | The background color of the avatar.             |
-| `color`      | `false`  | `"#FFFFFF"`  | The text color of the avatar.                   |
-| `length`     | `false`  | `2`          | The number of initials to display.              |
-| `fontSize`   | `false`  | `20`         | The font size of the initials.                  |
-| `rounded`    | `false`  | `true`       | Whether the avatar should have rounded corners. |
-| `uppercase`  | `false`  | `true`       | Whether the initials should be in uppercase.    |
-| `bold`       | `false`  | `true`       | Whether the initials should be bold.            |
+| Name         | Required | Default    | Description                                                     |
+| :----------- | :------: | :--------- | :-------------------------------------------------------------- |
+| `name`       | `false`  | `John Doe` | The name used to generate initials.                             |
+| `size`       | `false`  | `64`       | The size of the avatar in pixels.                               |
+| `background` | `false`  | `#007bff`  | The background color of the avatar.                             |
+| `color`      | `false`  | `#FFFFFF`  | The text color of the avatar.                                   |
+| `length`     | `false`  | `2`        | The number of initials to display.                              |
+| `fontSize`   | `false`  | `0.5`      | The font size of the initials in percentage. Between 0.1 and 1. |
+| `rounded`    | `false`  | `true`     | Whether the avatar should have rounded corners.                 |
+| `uppercase`  | `false`  | `true`     | Whether the initials should be in uppercase.                    |
+| `bold`       | `false`  | `true`     | Whether the initials should be bold.                            |
 
 All `Avatar` props are optional. If no props are provided, the avatar will use default settings.
 
 > **Note**
 >
-> You can check a demo of all the available options [here][demo]
+> We have also setup an example repository available here: [playground](../../apps/playground)
 
 ## Changelog
 
 Please see the [changelog](CHANGELOG.md) for more information on recent changes.
 
+## Acknowledgements
+
+Astro UI Avatars is _heavily_ inspired by [ui-avatars.com][ui-avatars]. Thanks ❤️
+
 [npm]: https://npmjs.com/package/astro-ui-avatars
-[demo]: /apps/playground
+[ui-avatars]: https://ui-avatars.com
 
 <!-- Readme Badges -->
 
