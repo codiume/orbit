@@ -1,8 +1,6 @@
 # ğŸ§” Astro UI Avatars
 
-<p align="center">
-  <img src="../../assets/astro-ui-avatars/banner.png" alt="Astro UI Avatars banner">
-</p>
+<img src="../../assets/astro-ui-avatars/banner.png" alt="Astro UI Avatars banner">
 
 [![version][version-badge]][npm]
 [![downloads][downloads-badge]][npm]
@@ -105,7 +103,6 @@ Astro UI Avatars is _heavily_ inspired by [ui-avatars.com][ui-avatars]. Thanks â
 
 [npm]: https://npmjs.com/package/astro-ui-avatars
 [ui-avatars]: https://ui-avatars.com
-[demo]: /apps/playground
 
 <!-- Readme Badges -->
 
