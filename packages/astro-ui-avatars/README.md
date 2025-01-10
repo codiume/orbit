@@ -49,7 +49,7 @@ import { Avatar } from "astro-ui-avatars"
 
 ## 🎨 Examples
 
-- Generate a avatar with default settings
+- Generate an avatar with default settings
 
 ```jsx
 <Avatar name="John Doe" />
@@ -58,7 +58,7 @@ import { Avatar } from "astro-ui-avatars"
 - Generate a blue avatar
 
 ```jsx
-<Avatar background="0D8ABC" color="fff" />
+<Avatar background="#0D8ABC" color="#fff" />
 ```
 
 - Generate a random background avatar
@@ -91,7 +91,7 @@ All `Avatar` props are optional. If no props are provided, the avatar will use d
 
 > **Note**
 >
-> We have also setup an example repository available here: [example-playground](../../apps/example-playground)
+> We have also setup an example repository available here: [playground](../../apps/playground)
 
 ## Changelog
 
