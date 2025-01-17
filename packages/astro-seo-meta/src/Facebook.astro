@@ -19,9 +19,10 @@ export interface Props {
   description?: string;
   image?: string;
   type?: ObjectType;
+  siteName?: string;
 }
 
-const { url, type, title, description, image } = Astro.props;
+const { url, type, title, description, image, siteName } = Astro.props;
 ---
 
 <Fragment>
@@ -30,4 +31,5 @@ const { url, type, title, description, image } = Astro.props;
   {title && <meta property="og:title" content={title} />}
   {description && <meta property="og:description" content={description} />}
   {image && <meta property="og:image" content={image} />}
+  {siteName && <meta property="og:site_name" content={siteName} />}
 </Fragment>

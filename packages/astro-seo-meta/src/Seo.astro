@@ -10,7 +10,7 @@ export interface Props {
   icon?: string;
   themeColor?: string;
   colorScheme?: MetaProps['colorScheme'];
-  facebook?: Pick<FacebookProps, 'image' | 'type' | 'url'>;
+  facebook?: Pick<FacebookProps, 'image' | 'type' | 'url' | 'siteName'>;
   twitter?: Pick<TwitterProps, 'image' | 'card' | 'site'>;
   robots?: string;
 }
@@ -44,6 +44,7 @@ const {
     image={facebook?.image}
     url={facebook?.url}
     type={facebook?.type}
+    siteName={facebook?.siteName}
   />
   <Twitter
     title={title}
