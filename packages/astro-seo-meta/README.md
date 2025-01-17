@@ -18,6 +18,12 @@ Install using pnpm:
 pnpm add astro-seo-meta
 ```
 
+or using bun:
+
+```bash
+bun add astro-seo-meta
+```
+
 Or using npm:
 
 ```bash
@@ -70,6 +76,7 @@ import { Seo } from "astro-seo-meta"
 | `facebook.image` | `false`  | `"/facebook.png"`                 | Facebook share image.                                             |
 | `facebook.url`   | `false`  | `"https://astro.build"`           | Page URL.                                                         |
 | `facebook.type`  | `false`  | `"website"`                       | Type of resource. See all types [here][types].                    |
+| `facebook.siteName` | `false` | `"astrodotbuild"`               | Name of the website displayed in Facebook sharing metadata.       |
 | `twitter.image`  | `false`  | `"/twitter.png"`                  | Twitter share image.                                              |
 | `twitter.site`   | `false`  | `"@astrodotbuild"`                | Twitter handle of the publishing site.                            |
 | `twitter.card`   | `false`  | `"summary"`                       | Format of Twitter share card. See all types [here][cards].        |
@@ -93,6 +100,7 @@ All of the `Seo` props are optional. If a prop is not provided, the associated m
     image: "/facebook.png",
     url: "https://astro.build",
     type: "website",
+    siteName: 'astrodotbuild'
   }}
   twitter={{
     image: "/twitter.png",
