@@ -61,7 +61,7 @@ importers:
         version: 5.7.3
       vite-tsconfig-paths:
         specifier: ^5.1.4
-        version: 5.1.4(typescript@5.7.3)(vite@6.0.10(@types/node@22.10.7))
+        version: 5.1.4(typescript@5.7.3)(vite@6.0.11(@types/node@22.10.7))
       vitest:
         specifier: ^3.0.0
         version: 3.0.3(@types/node@22.10.7)
@@ -80,7 +80,7 @@ importers:
     dependencies:
       '@astrojs/node':
         specifier: ^9.0.0
-        version: 9.0.1(astro@5.1.8(@types/node@22.10.7)(rollup@4.31.0)(typescript@5.7.3))
+        version: 9.0.2(astro@5.1.8(@types/node@22.10.7)(rollup@4.31.0)(typescript@5.7.3))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
@@ -93,7 +93,7 @@ importers:
     dependencies:
       '@astrojs/node':
         specifier: ^9.0.0
-        version: 9.0.1(astro@5.1.8(@types/node@22.10.7)(rollup@4.31.0)(typescript@5.7.3))
+        version: 9.0.2(astro@5.1.8(@types/node@22.10.7)(rollup@4.31.0)(typescript@5.7.3))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
@@ -217,8 +217,8 @@ packages:
   '@astrojs/markdown-remark@6.0.2':
     resolution: {integrity: sha512-aAoHGVRK3rebCYbaLjyyR+3VeAuTz4q49syUxJP29Oo5yZHdy4cCAXRqLBdr9mJVlxCUUjZiF0Dau6YBf65SGg==}
 
-  '@astrojs/node@9.0.1':
-    resolution: {integrity: sha512-vIKmKYhzK9o3NXANkHyjcFqi9e9N84mhgCESC/+rQ8danWnktu9uR6rGvbj3bdTb9+Dn5LDsmEm123P2Cun9nQ==}
+  '@astrojs/node@9.0.2':
+    resolution: {integrity: sha512-MFFYRa5yQEBegKrSUPMeKnjDMB4okTrkVRA40/mU3ADKrKY5VV3af0LS+NYkH9pFOvj/OsPbdeQVxQ0jI3f6aQ==}
     peerDependencies:
       astro: ^5.0.0
 
@@ -3548,7 +3548,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@9.0.1(astro@5.1.8(@types/node@22.10.7)(rollup@4.31.0)(typescript@5.7.3))':
+  '@astrojs/node@9.0.2(astro@5.1.8(@types/node@22.10.7)(rollup@4.31.0)(typescript@5.7.3))':
     dependencies:
       astro: 5.1.8(@types/node@22.10.7)(rollup@4.31.0)(typescript@5.7.3)
       send: 1.1.0
@@ -6908,13 +6908,13 @@ snapshots:
       - tsx
       - yaml
 
-  vite-tsconfig-paths@5.1.4(typescript@5.7.3)(vite@6.0.10(@types/node@22.10.7)):
+  vite-tsconfig-paths@5.1.4(typescript@5.7.3)(vite@6.0.11(@types/node@22.10.7)):
     dependencies:
       debug: 4.4.0
       globrex: 0.1.2
       tsconfck: 3.1.4(typescript@5.7.3)
     optionalDependencies:
-      vite: 6.0.10(@types/node@22.10.7)
+      vite: 6.0.11(@types/node@22.10.7)
     transitivePeerDependencies:
       - supports-color
       - typescript
