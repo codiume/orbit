@@ -49,6 +49,6 @@
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.14.1",
-    "@vanilla-extract/vite-plugin": "^4.0.4"
+    "@vanilla-extract/vite-plugin": "^5.0.0"
   }
 }
