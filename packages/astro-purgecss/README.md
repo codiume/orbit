@@ -92,7 +92,7 @@ export default defineConfig({
       ],
       extractors: [
         {
-          // Example using a taiwindcss compatible class extractor
+          // Example using a tailwindcss compatible class extractor
           extractor: (content) =>
             content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [],
           extensions: ['astro', 'html']
