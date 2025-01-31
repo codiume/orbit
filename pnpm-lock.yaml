@@ -21,7 +21,7 @@ importers:
         specifier: ^22.10.5
         version: 22.12.0
       astro:
-        specifier: ^5.1.2
+        specifier: ^5.2.2
         version: 5.2.2(@types/node@22.12.0)(rollup@4.32.1)(typescript@5.7.3)
       commander:
         specifier: ^13.0.0
@@ -127,7 +127,7 @@ importers:
     dependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.0)(typescript@5.7.3)
+        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.1)(typescript@5.7.3)
       purgecss:
         specifier: ^7.0.0
         version: 7.0.2
@@ -136,13 +136,13 @@ importers:
     dependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.0)(typescript@5.7.3)
+        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.1)(typescript@5.7.3)
 
   packages/astro-seo-schema:
     dependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.0)(typescript@5.7.3)
+        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.1)(typescript@5.7.3)
       schema-dts:
         specifier: ^1.1.0
         version: 1.1.2(typescript@5.7.3)
@@ -155,19 +155,19 @@ importers:
     dependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.0)(typescript@5.7.3)
+        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.1)(typescript@5.7.3)
 
   packages/astro-ui-avatars:
     dependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.0)(typescript@5.7.3)
+        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.1)(typescript@5.7.3)
 
   packages/astro-useragent:
     dependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.0)(typescript@5.7.3)
+        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.1)(typescript@5.7.3)
       ua-parser-js:
         specifier: ^2.0.0
         version: 2.0.0
@@ -182,13 +182,13 @@ importers:
         version: 5.0.0(@types/node@22.12.0)(vite@6.0.11(@types/node@22.12.0))
       astro:
         specifier: ^5.0.0
-        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.0)(typescript@5.7.3)
+        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.1)(typescript@5.7.3)
 
   packages/astro-webhooks:
     dependencies:
       astro:
         specifier: ^5.0.0
-        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.0)(typescript@5.7.3)
+        version: 5.1.9(@types/node@22.12.0)(rollup@4.32.1)(typescript@5.7.3)
 
 packages:
 
@@ -3877,14 +3877,6 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@rollup/pluginutils@5.1.4(rollup@4.32.0)':
-    dependencies:
-      '@types/estree': 1.0.6
-      estree-walker: 2.0.2
-      picomatch: 4.0.2
-    optionalDependencies:
-      rollup: 4.32.0
-
   '@rollup/pluginutils@5.1.4(rollup@4.32.1)':
     dependencies:
       '@types/estree': 1.0.6
@@ -4279,14 +4271,14 @@ snapshots:
 
   assertion-error@2.0.1: {}
 
-  astro@5.1.9(@types/node@22.12.0)(rollup@4.32.0)(typescript@5.7.3):
+  astro@5.1.9(@types/node@22.12.0)(rollup@4.32.1)(typescript@5.7.3):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.2
       '@astrojs/markdown-remark': 6.0.2
       '@astrojs/telemetry': 3.2.0
       '@oslojs/encoding': 1.1.0
-      '@rollup/pluginutils': 5.1.4(rollup@4.32.0)
+      '@rollup/pluginutils': 5.1.4(rollup@4.32.1)
       '@types/cookie': 0.6.0
       acorn: 8.14.0
       aria-query: 5.3.2
