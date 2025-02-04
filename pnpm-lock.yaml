@@ -170,7 +170,7 @@ importers:
         version: 5.1.9(@types/node@22.12.0)(rollup@4.32.1)(typescript@5.7.3)
       ua-parser-js:
         specifier: ^2.0.0
-        version: 2.0.0
+        version: 2.0.1
 
   packages/astro-vanilla-extract:
     dependencies:
@@ -2959,8 +2959,8 @@ packages:
   ua-is-frozen@0.1.2:
     resolution: {integrity: sha512-RwKDW2p3iyWn4UbaxpP2+VxwqXh0jpvdxsYpZ5j/MLLiQOfbsV5shpgQiw93+KMYQPcteeMQ289MaAFzs3G9pw==}
 
-  ua-parser-js@2.0.0:
-    resolution: {integrity: sha512-SASgD4RlB7+SCMmlVNqrhPw0f/2pGawWBzJ2+LwGTD0GgNnrKGzPJDiraGHJDwW9Zm5DH2lTmUpqDpbZjJY4+Q==}
+  ua-parser-js@2.0.1:
+    resolution: {integrity: sha512-PgWLeyhIgff0Jomd3U2cYCdfp5iHbaCMlylG9NoV19tAlvXWUzM3bG2DIasLTI1PrbLtVutGr1CaezttVV2PeA==}
     hasBin: true
 
   ufo@1.5.4:
@@ -6600,7 +6600,7 @@ snapshots:
 
   ua-is-frozen@0.1.2: {}
 
-  ua-parser-js@2.0.0:
+  ua-parser-js@2.0.1:
     dependencies:
       detect-europe-js: 0.1.2
       is-standalone-pwa: 0.1.1
