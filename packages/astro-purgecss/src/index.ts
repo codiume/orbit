@@ -1,10 +1,10 @@
 import type { AstroConfig, AstroIntegration } from 'astro';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { PurgeCSS, type UserDefinedOptions } from 'purgecss';
 
 import {
+  cleanPath,
   generateFileHash,
   readFileContent,
   success,
@@ -45,8 +45,8 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
         const buildMode = config.output;
         logger.info(`📦 Running in '${buildMode}' mode`);
 
-        // Convert the URL to a filesystem path
-        const outDir = fileURLToPath(dir);
+        // Convert the URL to a filesystem path & removes trailing slashes
+        const outDir = cleanPath(dir);
 
         // Used to skip file rehashing for SSR/Hybrid modes
         const isSSR = buildMode !== 'static';
