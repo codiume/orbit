@@ -46,15 +46,15 @@ export function generateFileHash(filePath: string, content: string) {
 
 // Clean from extra slash on windows and trailing forward slash on non-windows
 export function cleanPath(file: URL): string {
-  let path = fileURLToPath(file);
+  if (!(file instanceof URL)) {
+    throw new TypeError('Expected a URL object');
+  }
 
   // Remove trailing forward slash if present
-  path = path.replace(/\/+$/, '');
+  let path = fileURLToPath(file).replace(/\/+$/, '');
 
-  if (process.platform !== 'win32') return path;
-
-  // Remove leading forward slash if present
-  return path.replace(/^\/+/, '');
+  // Remove leading forward slash on windows if present
+  return process.platform === 'win32' ? path.replace(/^\/+/, '') : path;
 }
 
 export const dt = new Intl.DateTimeFormat('en-us', {

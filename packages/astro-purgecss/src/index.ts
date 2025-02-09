@@ -45,7 +45,7 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
         const buildMode = config.output;
         logger.info(`📦 Running in '${buildMode}' mode`);
 
-        // Convert the URL to a filesystem path & removes trailing slashes
+        // Convert the URL to a filesystem path
         const outDir = cleanPath(dir);
 
         // Used to skip file rehashing for SSR/Hybrid modes
