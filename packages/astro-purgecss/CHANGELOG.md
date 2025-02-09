@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 5.2.0
+
+### Minor Changes
+
+- [#894](https://github.com/codiume/orbit/pull/894) [`796821b`](https://github.com/codiume/orbit/commit/796821b4c80aff1beee417bf94b4434d512c10b1) Thanks [@mhdcodes](https://github.com/mhdcodes)! - fix regression in handling windows paths
+
 ## 5.1.0
 
 ### Minor Changes
