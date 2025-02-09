@@ -2,6 +2,7 @@ import { dim, green, red } from 'kleur/colors';
 import { createHash } from 'node:crypto';
 import { existsSync } from 'node:fs';
 import { readFile, unlink, writeFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
 
 export async function readFileContent(filePath: string): Promise<string> {
   try {
@@ -41,6 +42,19 @@ export function generateFileHash(filePath: string, content: string) {
   // Generate new file name with hash
   // Astro original hash is 8 characters long
   return `${filePath.slice(0, -13)}.${hash}.css`;
+}
+
+// Clean from extra slash on windows and trailing forward slash on non-windows
+export function cleanPath(file: URL): string {
+  if (!(file instanceof URL)) {
+    throw new TypeError('Expected a URL object');
+  }
+
+  // Remove trailing forward slash if present
+  let path = fileURLToPath(file).replace(/\/+$/, '');
+
+  // Remove leading forward slash on windows if present
+  return process.platform === 'win32' ? path.replace(/^\/+/, '') : path;
 }
 
 export const dt = new Intl.DateTimeFormat('en-us', {
