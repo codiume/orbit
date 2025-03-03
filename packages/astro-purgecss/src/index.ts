@@ -60,13 +60,14 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
         }
 
         // Run PurgeCSS on all CSS files
+        // Replace is needed to make sure to pass correct glob format on windows machines
         const purgeResults = await new PurgeCSS().purge({
-          css: [join(outDir, '/**/*.css')],
+          css: [`${outDir}/**/*.css`.replace(/\\/g, '/')],
           defaultExtractor,
           ...options,
           content: [
-            join(outDir, '/**/*.html'),
-            join(outDir, '/**/*.js'),
+            `${outDir}/**/*.html`.replace(/\\/g, '/'),
+            `${outDir}/**/*.js`.replace(/\\/g, '/'),
             ...(options.content || [])
           ]
         });
