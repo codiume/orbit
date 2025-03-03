@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 5.2.1
+
+### Patch Changes
+
+- [#930](https://github.com/codiume/orbit/pull/930) [`a4fe364`](https://github.com/codiume/orbit/commit/a4fe36469bca08ca16a944d4b8ea2ea6d8407b03) Thanks [@sjwilczynski](https://github.com/sjwilczynski)! - fix handling of globs for purgecss on windows
+
 ## 5.2.0
 
 ### Minor Changes
