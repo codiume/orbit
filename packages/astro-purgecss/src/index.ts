@@ -182,12 +182,10 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
               let content = await readFileContent(htmlFile);
 
               for (const { oldFilename, newFilename } of changedFiles) {
-                if (content.includes(oldFilename)) {
-                  content = content.replace(
-                    new RegExp(oldFilename, 'g'),
-                    newFilename
-                  );
-                }
+                const normalizedOldPath = oldFilename.replace(/\\/g, '/');
+                const normalizedNewPath = newFilename.replace(/\\/g, '/');
+                
+                content = content.replace(new RegExp(normalizedOldPath, 'g'), normalizedNewPath);
               }
 
               await writeFileContent(htmlFile, content);
