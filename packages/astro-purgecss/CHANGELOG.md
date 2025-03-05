@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 5.2.2
+
+### Patch Changes
+
+- [#936](https://github.com/codiume/orbit/pull/936) [`a51d84e`](https://github.com/codiume/orbit/commit/a51d84ea50ba58e5868629db8afb45d559d3d61c) Thanks [@sjwilczynski](https://github.com/sjwilczynski)! - Fix issue with path replacement on windows
+
 ## 5.2.1
 
 ### Patch Changes
