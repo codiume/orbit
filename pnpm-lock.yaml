@@ -179,7 +179,7 @@ importers:
         version: 1.17.1
       '@vanilla-extract/vite-plugin':
         specifier: ^5.0.0
-        version: 5.0.1(@types/node@22.14.1)(vite@6.3.2(@types/node@22.14.1))
+        version: 5.0.1(@types/node@22.14.1)(vite@6.3.3(@types/node@22.14.1))
       astro:
         specifier: ^5.0.0
         version: 5.7.4(@types/node@22.14.1)(rollup@4.40.0)(typescript@5.8.3)
@@ -3059,6 +3059,46 @@ packages:
       yaml:
         optional: true
 
+  vite@6.3.3:
+    resolution: {integrity: sha512-5nXH+QsELbFKhsEfWLkHrvgRpTdGJzqOZ+utSdmPTvwHmvU6ITTm3xx+mRusihkcI8GeC7lCDyn3kDtiki9scw==}
+    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': ^18.0.0 || ^20.0.0 || >=22.0.0
+      jiti: '>=1.21.0'
+      less: '*'
+      lightningcss: ^1.21.0
+      sass: '*'
+      sass-embedded: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.16.0
+      tsx: ^4.8.1
+      yaml: ^2.4.2
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      jiti:
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+      tsx:
+        optional: true
+      yaml:
+        optional: true
+
   vitefu@1.0.6:
     resolution: {integrity: sha512-+Rex1GlappUyNN6UfwbVZne/9cYC4+R2XDk9xkNXBKMw6HQagdX9PgZ8V2v1WUSK1wfBLp7qbI1+XSNIlB1xmA==}
     peerDependencies:
@@ -4060,7 +4100,7 @@ snapshots:
     dependencies:
       '@vanilla-extract/css': 1.17.1
       '@vanilla-extract/integration': 8.0.1
-      vite: 6.3.2(@types/node@22.14.1)
+      vite: 6.3.3(@types/node@22.14.1)
       vite-node: 3.1.2(@types/node@22.14.1)
     transitivePeerDependencies:
       - '@types/node'
@@ -4112,11 +4152,11 @@ snapshots:
 
   '@vanilla-extract/private@1.0.6': {}
 
-  '@vanilla-extract/vite-plugin@5.0.1(@types/node@22.14.1)(vite@6.3.2(@types/node@22.14.1))':
+  '@vanilla-extract/vite-plugin@5.0.1(@types/node@22.14.1)(vite@6.3.3(@types/node@22.14.1))':
     dependencies:
       '@vanilla-extract/compiler': 0.1.2(@types/node@22.14.1)
       '@vanilla-extract/integration': 8.0.1
-      vite: 6.3.2(@types/node@22.14.1)
+      vite: 6.3.3(@types/node@22.14.1)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -4371,8 +4411,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.15.0
       vfile: 6.0.3
-      vite: 6.3.2(@types/node@22.14.1)
-      vitefu: 1.0.6(vite@6.3.2(@types/node@22.14.1))
+      vite: 6.3.3(@types/node@22.14.1)
+      vitefu: 1.0.6(vite@6.3.3(@types/node@22.14.1))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.2
@@ -6574,9 +6614,25 @@ snapshots:
       '@types/node': 22.14.1
       fsevents: 2.3.3
 
+  vite@6.3.3(@types/node@22.14.1):
+    dependencies:
+      esbuild: 0.25.3
+      fdir: 6.4.4(picomatch@4.0.2)
+      picomatch: 4.0.2
+      postcss: 8.5.3
+      rollup: 4.40.0
+      tinyglobby: 0.2.13
+    optionalDependencies:
+      '@types/node': 22.14.1
+      fsevents: 2.3.3
+
   vitefu@1.0.6(vite@6.3.2(@types/node@22.14.1)):
     optionalDependencies:
       vite: 6.3.2(@types/node@22.14.1)
+
+  vitefu@1.0.6(vite@6.3.3(@types/node@22.14.1)):
+    optionalDependencies:
+      vite: 6.3.3(@types/node@22.14.1)
 
   vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.14.1):
     dependencies:
