@@ -2220,8 +2220,8 @@ packages:
   oniguruma-to-es@4.2.0:
     resolution: {integrity: sha512-MDPs6KSOLS0tKQ7joqg44dRIRZUyotfTy0r+7oEEs6VwWWP0+E2PPDYWMFN0aqOjRyWHBYq7RfKw9GQk2S2z5g==}
 
-  oniguruma-to-es@4.3.0:
-    resolution: {integrity: sha512-5wzs2Ht53nljfaGiUOFvNgBUni2xf9xOzQkRyNxiMfCmMvXLGEnOpG3CgRe+eLx4bOw7govN5h8NzZA828F4Jw==}
+  oniguruma-to-es@4.3.1:
+    resolution: {integrity: sha512-VtX1kepWO+7HG7IWV5v72JhiqofK7XsiHmtgnvurnNOTdIvE5mrdWYtsOrQyrXCv1L2Ckm08hywp+MFO7rC4Ug==}
 
   ora@8.2.0:
     resolution: {integrity: sha512-weP+BZ8MVNnlCm8c0Qdc1WSWq4Qn7I+9CJGm7Qali6g44e/PUzbjNqJX5NJ9ljlNMosfJvg1fKEGILklK9cwnw==}
@@ -4015,7 +4015,7 @@ snapshots:
     dependencies:
       '@shikijs/types': 3.3.0
       '@shikijs/vscode-textmate': 10.0.2
-      oniguruma-to-es: 4.3.0
+      oniguruma-to-es: 4.3.1
 
   '@shikijs/engine-oniguruma@3.2.2':
     dependencies:
@@ -5763,7 +5763,7 @@ snapshots:
       regex: 6.0.1
       regex-recursion: 6.0.2
 
-  oniguruma-to-es@4.3.0:
+  oniguruma-to-es@4.3.1:
     dependencies:
       oniguruma-parser: 0.12.0
       regex: 6.0.1
