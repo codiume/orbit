@@ -19,7 +19,7 @@
     "directory": "packages/astro-purgecss"
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsdown",
     "check-types": "tsc",
     "check-exports": "attw --pack . --ignore-rules false-export-default",
     "typecheck": "pnpm check-types && pnpm check-exports"
