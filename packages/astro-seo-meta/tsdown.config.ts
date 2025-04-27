@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsdown';
 
 export default defineConfig({
   entry: ['src/index.ts', 'src/*.astro'],
@@ -10,7 +10,7 @@ export default defineConfig({
   splitting: false,
   treeshake: true,
   platform: 'node',
-  // Workaround: tsup lacks native Astro file type extraction
+  // Workaround: tsdown lacks native Astro file type extraction
   // Alternative type generation methods required (e.g., manual .d.ts files)
   dts: false,
   loader: {
