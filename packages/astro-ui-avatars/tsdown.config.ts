@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsdown';
 
 export default defineConfig({
   entry: ['src/index.ts', 'src/*.astro'],
@@ -10,10 +10,14 @@ export default defineConfig({
   splitting: false,
   treeshake: true,
   platform: 'node',
-  // Workaround: tsup lacks native Astro file type extraction
+  // Workaround: tsdown lacks native Astro file type extraction
   // Alternative type generation methods required (e.g., manual .d.ts files)
   dts: false,
-  loader: {
-    '.astro': 'copy'
+  // tsdown lacks support for custom loaders loader extraction
+  // @see https://github.com/rolldown/tsdown/issues/162#issuecomment-2833715449
+  inputOptions: {
+    moduleTypes: {
+      '.astro': 'asset'
+    }
   }
 });
