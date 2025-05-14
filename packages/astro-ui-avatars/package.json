@@ -21,7 +21,7 @@
     "directory": "packages/astro-ui-avatars"
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsdown",
     "check-types": "tsc --declaration --emitDeclarationOnly",
     "check-exports": "attw --pack . --profile esm-only --ignore-rules internal-resolution-error",
     "typecheck": "pnpm check-types && pnpm check-exports"
