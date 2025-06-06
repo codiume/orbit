@@ -16,7 +16,12 @@ import {
  * Extended PurgeCSS options interface that allows partial configuration
  * of the standard PurgeCSS options
  */
-export interface PurgeCSSOptions extends Partial<UserDefinedOptions> {}
+export interface PurgeCSSOptions extends Partial<UserDefinedOptions> {
+  /**
+   * @default true
+   */
+  includeDefaultContent?: boolean;
+}
 
 const INTEGRATION_NAME = 'astro-purgecss' as const;
 
@@ -59,17 +64,26 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
           return;
         }
 
+        const { includeDefaultContent, ...purgeOptions } = options;
+        const normalizePath = (path: string) =>
+          path.replace('{outDir}', outDir).replace(/\\/g, '/');
+        const tryNormalizePath = <T>(input: T) =>
+          typeof input === 'string' ? normalizePath(input) : input;
+
         // Run PurgeCSS on all CSS files
         // Replace is needed to make sure to pass correct glob format on windows machines
         const purgeResults = await new PurgeCSS().purge({
-          css: [`${outDir}/**/*.css`.replace(/\\/g, '/')],
           defaultExtractor,
-          ...options,
+          ...purgeOptions,
+          css: [...(options.css || ['{outDir}/**/*.css'])].map(
+            tryNormalizePath
+          ),
           content: [
-            `${outDir}/**/*.html`.replace(/\\/g, '/'),
-            `${outDir}/**/*.js`.replace(/\\/g, '/'),
+            ...((includeDefaultContent ?? true)
+              ? [`{outDir}/**/*.html`, `{outDir}/**/*.js`]
+              : []),
             ...(options.content || [])
-          ]
+          ].map(tryNormalizePath)
         });
 
         // Filter out non-CSS files from purge results
