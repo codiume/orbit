@@ -25,7 +25,7 @@ const INTEGRATION_NAME = 'astro-purgecss' as const;
  * @param content string
  */
 const defaultExtractor = (content: string) =>
-  content.match(/[\w-/:]+(?<!:)/g) || [];
+  content.match(/[\w-/:\.#\(\),';%]+(?<!:)/g) || [];
 
 /**
  * Astro integration for PurgeCSS that removes unused CSS from the final build
