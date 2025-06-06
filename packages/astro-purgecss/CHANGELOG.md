@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 5.2.3
+
+### Patch Changes
+
+- [#1044](https://github.com/codiume/orbit/pull/1044) [`db70372`](https://github.com/codiume/orbit/commit/db70372dd50b11ba17f73e893dee9f7e6a091236) Thanks [@juanrgm](https://github.com/juanrgm)! - Fix compatibility with CSS selectors in PandaCSS.
+
 ## 5.2.2
 
 ### Patch Changes
