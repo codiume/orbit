@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 5.3.0
+
+### Minor Changes
+
+- [#1066](https://github.com/codiume/orbit/pull/1066) [`465e44e`](https://github.com/codiume/orbit/commit/465e44e192c1099ea5f5daedc7c8dc65f4d10b90) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Fix custom error pages handling
+
 ## 5.2.3
 
 ### Patch Changes
