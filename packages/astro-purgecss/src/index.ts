@@ -153,9 +153,22 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
                 return join(outDir, 'index.html');
               }
 
-              // Handle custom 404 page (https://docs.astro.build/en/basics/astro-pages/#custom-404-error-page)
-              if (pathname === '404/') {
+              /**
+               * Custom 404 Error Page
+               *
+               * @see https://docs.astro.build/en/basics/astro-pages/#custom-404-error-page
+               */
+              if (pathname === '404/' || pathname === '404') {
                 return join(outDir, '404.html');
+              }
+
+              /**
+               * Custom 500 Error Page
+               *
+               * @see https://docs.astro.build/en/basics/astro-pages/#custom-500-error-page
+               */
+              if (pathname === '500/' || pathname === '500') {
+                return join(outDir, '500.html');
               }
 
               switch (config.build.format) {
@@ -184,8 +197,11 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
               for (const { oldFilename, newFilename } of changedFiles) {
                 const normalizedOldPath = oldFilename.replace(/\\/g, '/');
                 const normalizedNewPath = newFilename.replace(/\\/g, '/');
-                
-                content = content.replace(new RegExp(normalizedOldPath, 'g'), normalizedNewPath);
+
+                content = content.replace(
+                  new RegExp(normalizedOldPath, 'g'),
+                  normalizedNewPath
+                );
               }
 
               await writeFileContent(htmlFile, content);
