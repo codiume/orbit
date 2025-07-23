@@ -22,7 +22,7 @@ importers:
         version: 22.16.5
       astro:
         specifier: ^5.11.0
-        version: 5.12.2(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3)
+        version: 5.12.3(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3)
       commander:
         specifier: ^14.0.0
         version: 14.0.0
@@ -74,33 +74,33 @@ importers:
     devDependencies:
       astro:
         specifier: ^5.0.8
-        version: 5.12.2(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3)
+        version: 5.12.3(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3)
 
   apps/example-purgecss-ssr:
     dependencies:
       '@astrojs/node':
         specifier: ^9.0.0
-        version: 9.3.0(astro@5.12.2(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3))
+        version: 9.3.0(astro@5.12.3(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^5.0.8
-        version: 5.12.2(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3)
+        version: 5.12.3(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^9.0.0
-        version: 9.3.0(astro@5.12.2(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3))
+        version: 9.3.0(astro@5.12.3(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^5.0.8
-        version: 5.12.2(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3)
+        version: 5.12.3(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3)
 
   apps/playground:
     dependencies:
@@ -119,7 +119,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^5.0.8
-        version: 5.12.2(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3)
+        version: 5.12.3(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3)
 
   packages/astro-build: {}
 
@@ -1059,8 +1059,8 @@ packages:
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
-  astro@5.12.2:
-    resolution: {integrity: sha512-/qTPSD8bSxjsh5KNXvOsf6Md7dqNuH3WSx6KLa1YbxPR2JZDgPWEKEyulS3/9L5h5aP0SkjONrqwOGdgWw97fg==}
+  astro@5.12.3:
+    resolution: {integrity: sha512-fU1hNPMkccm+FuonGsY5DFkC2QyuLCju++8L2ubzBtYBDBf6bmfgmVM7A2dK+Hl+ZJCUNgepsClhBpczj+2LRw==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3302,10 +3302,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@9.3.0(astro@5.12.2(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3))':
+  '@astrojs/node@9.3.0(astro@5.12.3(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3))':
     dependencies:
       '@astrojs/internal-helpers': 0.6.1
-      astro: 5.12.2(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3)
+      astro: 5.12.3(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3)
       send: 1.2.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -4336,7 +4336,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@5.12.2(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3):
+  astro@5.12.3(@types/node@22.16.5)(rollup@4.45.1)(typescript@5.8.3):
     dependencies:
       '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.6.1
