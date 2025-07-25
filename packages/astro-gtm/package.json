@@ -1,6 +1,6 @@
 {
   "name": "astro-gtm",
-  "description": "Astro seo provides a <Seo> component to update meta tags",
+  "description": "Astro plugin to easily integrate Google Tag Manager (GTM) into your astro site",
   "version": "0.0.1",
   "homepage": "https://github.com/codiume/orbit",
   "bugs": "https://github.com/codiume/orbit/issues",
@@ -8,10 +8,13 @@
   "license": "MIT",
   "keywords": [
     "astro",
+    "astro-gtm",
     "astro-integration",
-    "astro-component",
-    "astro-google-tag-manager",
-    "gtm"
+    "astro-plugin",
+    "analytics",
+    "google-tag-manager",
+    "gtm",
+    "tag-manager"
   ],
   "repository": {
     "type": "git",
