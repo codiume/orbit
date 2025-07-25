@@ -1,1 +1,76 @@
-<script set:html={''} />
+---
+export interface Props {
+  /**
+   * Google Tag Manager container ID (required)
+   * @example 'GTM-XXXXXXX'
+   */
+  id: string;
+
+  /**
+   * Whether to include the noscript iframe
+   * @default true
+   */
+  includeNoScript?: boolean;
+
+  /**
+   * Additional configuration options for Google Tag Manager
+   */
+  config?: Record<string, unknown>;
+
+  /**
+   * Whether to enable Google Tag Manager in development mode
+   * @default false
+   */
+  enableInDevMode?: boolean;
+}
+
+const {
+  id,
+  includeNoScript = true,
+  config = {},
+  enableInDevMode = false
+} = Astro.props;
+
+// Skip in development mode unless explicitly enabled
+const isDevelopment = import.meta.env.DEV;
+const shouldRender = !isDevelopment || enableInDevMode;
+
+// Prepare the dataLayer with any provided config
+const dataLayerConfig = JSON.stringify(config);
+---
+
+{shouldRender && (
+  <Fragment>
+    <script define:vars={{ id, dataLayerConfig }}>
+      // Initialize dataLayer
+      window.dataLayer = window.dataLayer || [];
+
+      // Add any configuration
+      if (dataLayerConfig && Object.keys(JSON.parse(dataLayerConfig)).length > 0) {
+        window.dataLayer.push(JSON.parse(dataLayerConfig));
+      }
+
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", id);
+    </script>
+
+    {includeNoScript && (
+      <noscript>
+        <iframe
+          src={`https://www.googletagmanager.com/ns.html?id=${id}`}
+          height="0"
+          width="0"
+          style="display:none;visibility:hidden"
+        ></iframe>
+      </noscript>
+    )}
+  </Fragment>
+)}
