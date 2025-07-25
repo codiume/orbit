@@ -36,19 +36,28 @@ import { GoogleTagManager } from "astro-gtm"
 ---
 
 <html lang="en">
-  <head>
-    <GoogleTagManager id: 'GTM-000000'/>
-  </head>
+<head>
+  <GoogleTagManager id="GTM-000000" />
+</head>
 
-  <body>
-    <h1>Hello from astro</h1>
-  </body>
+<body>
+  <slot />
+</body>
 </html>
 ```
 
 ## 📖 API Reference
 
-TBA
+### `<GoogleTagManager>`
+
+| Name              | Required | Default | Example           | Description                                               |
+| :---------------- | :------: | :-----: | :---------------- | :-------------------------------------------------------- |
+| `id`              |  `true`  |    -    | `'GTM-XXXXXXX'`   | Google Tag Manager container ID.                          |
+| `includeNoScript` | `false`  | `true`  | `false`           | Whether to include the noscript iframe.                   |
+| `config`          | `false`  |  `{}`   | `{ debug: true }` | Additional configuration options for Google Tag Manager.  |
+| `enableInDevMode` | `false`  | `false` | `true`            | Whether to enable Google Tag Manager in development mode. |
+
+All props except `id` are optional. The component will not render in development mode unless `enableInDevMode` is set to `true`.
 
 ## What does this component do, exactly?
 
