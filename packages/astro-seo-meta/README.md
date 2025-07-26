@@ -69,10 +69,10 @@ import { Seo } from "astro-seo-meta"
 | `robots`         | `false`  | `"index, follow"`                 | string of robots directives (e.g., `index`, `noindex`, `follow`). |
 | `facebook.image` | `false`  | `"/facebook.png"`                 | Facebook share image.                                             |
 | `facebook.url`   | `false`  | `"https://astro.build"`           | Page URL.                                                         |
-| `facebook.type`  | `false`  | `"website"`                       | Type of resource. See all types [here][types].                    |
+| `facebook.type`  | `false`  | `"website"`                       | Type of resource. See all [types][types].                         |
 | `twitter.image`  | `false`  | `"/twitter.png"`                  | Twitter share image.                                              |
 | `twitter.site`   | `false`  | `"@astrodotbuild"`                | Twitter handle of the publishing site.                            |
-| `twitter.card`   | `false`  | `"summary"`                       | Format of Twitter share card. See all types [here][cards].        |
+| `twitter.card`   | `false`  | `"summary"`                       | Format of Twitter share card. See all [types][cards].             |
 
 All of the `Seo` props are optional. If a prop is not provided, the associated meta tag will not be rendered.
 
