@@ -28,6 +28,16 @@ export interface Props {
    * @default false
    */
   enableInDevMode?: boolean;
+
+  /**
+   * Set environments auth, something like env-XXX.
+   */
+  auth?: string;
+
+  /**
+   * Set environments, something like env-XXX.
+   */
+  preview?: string;
 }
 
 const {
@@ -36,6 +46,8 @@ const {
   dataLayerName = "dataLayer",
   includeNoScript = true,
   enableInDevMode = false,
+  auth = "",
+  preview = "",
 } = Astro.props;
 
 // Skip in development mode unless explicitly enabled
@@ -44,7 +56,7 @@ const shouldRender = !isDevelopment || enableInDevMode;
 ---
 
 {shouldRender && (
-  <script define:vars={{ gtmId, dataLayerName, dataLayer }}>
+  <script define:vars={{ gtmId, dataLayerName, dataLayer, auth, preview }}>
     var w = window,
       d = document;
 
@@ -52,14 +64,16 @@ const shouldRender = !isDevelopment || enableInDevMode;
     w[dataLayerName] = w[dataLayerName] || [];
     w[dataLayerName].push(dataLayer);
     w[dataLayerName].push({
-      'gtm.start': new Date().getTime(),
-      event: 'gtm.js',
+      "gtm.start": new Date().getTime(),
+      event: "gtm.js",
     });
-    var s = d.createElement('script');
-    var dl = dataLayerName != 'dataLayer' ? '&l=' + dataLayerName : '';
+    var s = d.createElement("script");
+    var dl = dataLayerName != "dataLayer" ? "&l=" + dataLayerName : "";
+    var ath = auth != "" ? `&gtm_auth=${auth}` : "";
+    var prv = preview != "" ? `&gtm_preview=${preview}` : "";
     s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtmId + dl;
-    d.head.prepend(s);
+    s.src = "https://www.googletagmanager.com/gtm.js?id=" + gtmId + dl + ath + prv;
+    d.head.append(s);
   </script>
 )}
 
