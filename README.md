@@ -11,7 +11,6 @@
 [![github actions][github-actions-badge]][github-actions]
 [![typescript][typescript-badge]][typescript]
 [![makepr][makepr-badge]][makepr]
-[![maintainability][codeclimate-badge]][codeclimate]
 [![Built with Astro][astro-badge]][astro]
 
 ## Packages
@@ -24,6 +23,7 @@
 | [astro-useragent](packages/astro-useragent)     | [![version](https://img.shields.io/npm/v/astro-useragent.svg)](packages/astro-useragent/CHANGELOG.md)     | Parse browser user-agent strings for Astro.                   | [![downloads][downloads-badge-useragent]][npm-useragent]     |
 | [astro-svg-loaders](packages/astro-svg-loaders) | [![version](https://img.shields.io/npm/v/astro-svg-loaders.svg)](packages/astro-svg-loaders/CHANGELOG.md) | Astro loading icons and small animations built with pure SVG. | [![downloads][downloads-badge-svg-loaders]][npm-svg-loaders] |
 | [astro-ui-avatars](packages/astro-ui-avatars)   | [![version](https://img.shields.io/npm/v/astro-ui-avatars.svg)](packages/astro-ui-avatars/CHANGELOG.md)   | Generate customizable user avatars with initials from names.  | [![downloads][downloads-badge-ui-avatars]][npm-ui-avatars]   |
+| [astro-gtm](packages/astro-gtm)                 | [![version](https://img.shields.io/npm/v/astro-gtm.svg)](packages/astro-gtm/CHANGELOG.md)                 | Integrate Google Tag Manager into your Astro project.         | [![downloads][downloads-badge-gtm]][npm-gtm]                 |
 
 ## Support
 
@@ -47,8 +47,6 @@ Please see the [LICENSE](LICENSE) for more information.
 [typescript-badge]: https://img.shields.io/npm/types/astro-seo-schema
 [makepr]: https://makeapullrequest.com
 [makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
-[codeclimate]: https://codeclimate.com/github/codiume/orbit/maintainability
-[codeclimate-badge]: https://api.codeclimate.com/v1/badges/d9f004c55ba5a19a8810/maintainability
 [astro]: https://astro.build
 [astro-badge]: https://astro.badg.es/v2/built-with-astro/tiny.svg
 [downloads-badge-purgecss]: https://img.shields.io/npm/dt/astro-purgecss
@@ -63,3 +61,5 @@ Please see the [LICENSE](LICENSE) for more information.
 [npm-useragent]: https://npmjs.com/package/astro-useragent
 [downloads-badge-ui-avatars]: https://img.shields.io/npm/dt/astro-ui-avatars
 [npm-ui-avatars]: https://npmjs.com/package/astro-ui-avatars
+[downloads-badge-gtm]: https://img.shields.io/npm/dt/astro-gtm
+[npm-gtm]: https://npmjs.com/package/astro-gtm

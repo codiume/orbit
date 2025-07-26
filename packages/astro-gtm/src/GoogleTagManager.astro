@@ -4,7 +4,18 @@ export interface Props {
    * Google Tag Manager container ID (required)
    * @example 'GTM-XXXXXXX'
    */
-  id: string;
+  gtmId: string;
+
+  /**
+   * Object that contains all of the information
+   * that you want to pass to Google Tag Manager.
+   */
+  dataLayer?: Record<string, unknown>;
+
+  /**
+   * Custom name for dataLayer object.
+   */
+  dataLayerName?: string;
 
   /**
    * Whether to include the noscript iframe
@@ -13,64 +24,74 @@ export interface Props {
   includeNoScript?: boolean;
 
   /**
-   * Additional configuration options for Google Tag Manager
-   */
-  config?: Record<string, unknown>;
-
-  /**
    * Whether to enable Google Tag Manager in development mode
    * @default false
    */
   enableInDevMode?: boolean;
+
+  /**
+   * Set preview auth for GTM workspace previews
+   * @example 'WFcf6HDw'
+   */
+  auth?: string;
+
+  /**
+   * Set preview environment ID for GTM workspace previews
+   * @example 'env-1'
+   */
+  preview?: string;
 }
 
 const {
-  id,
+  gtmId,
+  dataLayer = {},
+  dataLayerName = "dataLayer",
   includeNoScript = true,
-  config = {},
-  enableInDevMode = false
+  enableInDevMode = false,
+  auth,
+  preview,
 } = Astro.props;
 
 // Skip in development mode unless explicitly enabled
 const isDevelopment = import.meta.env.DEV;
 const shouldRender = !isDevelopment || enableInDevMode;
-
-// Prepare the dataLayer with any provided config
-const dataLayerConfig = JSON.stringify(config);
 ---
 
 {shouldRender && (
-  <Fragment>
-    <script define:vars={{ id, dataLayerConfig }}>
-      // Initialize dataLayer
-      window.dataLayer = window.dataLayer || [];
+  <script define:vars={{ gtmId, dataLayerName, dataLayer, auth, preview }}>
+    const w = window;
+    const d = document;
 
-      // Add any configuration
-      if (dataLayerConfig && Object.keys(JSON.parse(dataLayerConfig)).length > 0) {
-        window.dataLayer.push(JSON.parse(dataLayerConfig));
-      }
+    // Initialize data layer
+    w[dataLayerName] = w[dataLayerName] || [];
+    w[dataLayerName].push(dataLayer);
 
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", id);
-    </script>
+    w[dataLayerName].push({
+      "gtm.start": new Date().getTime(),
+      event: "gtm.js",
+    });
 
-    {includeNoScript && (
-      <noscript>
-        <iframe
-          src={`https://www.googletagmanager.com/ns.html?id=${id}`}
-          height="0"
-          width="0"
-          style="display:none;visibility:hidden"
-        ></iframe>
-      </noscript>
-    )}
-  </Fragment>
+    // Build script URL
+    const dl = dataLayerName !== 'dataLayer' ? '&l=' + dataLayerName : '';
+    const ath = auth ? `&gtm_auth=${auth}` : '';
+    const prv = preview ? `&gtm_preview=${preview}` : '';
+
+    const s = d.createElement('script');
+    s.async = true;
+    s.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}${dl}${ath}${prv}`;
+
+    d.head.appendChild(s);
+  </script>
 )}
+
+{ shouldRender && includeNoScript && (
+    <noscript>
+      <iframe
+        src={`https://www.googletagmanager.com/ns.html?id=${gtmId}${auth ? `&gtm_auth=${auth}` : ''}${preview ? `&gtm_preview=${preview}` : ''}`}
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      />
+    </noscript>
+  )
+}

@@ -5,8 +5,14 @@
 [![github actions][github-actions-badge]][github-actions]
 [![typescript][typescript-badge]][typescript]
 [![makepr][makepr-badge]][makepr]
+[![Built with Astro][astro-badge]][astro]
 
-This [Astro](https://astro.build/) plugin makes it easy to integrate [Google Tag Manager](https://tagmanager.google.com/) into your project, allowing you to manage marketing and analytics tags without modifying your codebase directly.
+This [Astro](https://astro.build/) plugin makes it easy to integrate [Google Tag Manager](https://tagmanager.google.com/) into your project, letting you manage marketing and analytics tags directly from your Astro website.
+
+## 📋 Requirements
+
+- Astro 4.0 or higher
+- A Google Tag Manager account and container ID
 
 ## 📦 Installation
 
@@ -30,19 +36,22 @@ yarn add astro-gtm
 
 ## 🥑 Usage
 
-```jsx layout.astro
+Add the `GoogleTagManager` component to your layout or page:
+
+```astro
 ---
-import { GoogleTagManager } from "astro-gtm"
+import { GoogleTagManager } from 'astro-gtm';
 ---
 
 <html lang="en">
-<head>
-  <GoogleTagManager id="GTM-000000" />
-</head>
+  <head>
+    <!-- Your head content -->
+  </head>
 
-<body>
-  <slot />
-</body>
+  <body>
+    <GoogleTagManager gtmId="GTM-XXXXXXX" />
+    <slot />
+  </body>
 </html>
 ```
 
@@ -50,20 +59,28 @@ import { GoogleTagManager } from "astro-gtm"
 
 ### `<GoogleTagManager>`
 
-| Name              | Required | Default | Example           | Description                                               |
-| :---------------- | :------: | :-----: | :---------------- | :-------------------------------------------------------- |
-| `id`              |  `true`  |    -    | `'GTM-XXXXXXX'`   | Google Tag Manager container ID.                          |
-| `includeNoScript` | `false`  | `true`  | `false`           | Whether to include the noscript iframe.                   |
-| `config`          | `false`  |  `{}`   | `{ debug: true }` | Additional configuration options for Google Tag Manager.  |
-| `enableInDevMode` | `false`  | `false` | `true`            | Whether to enable Google Tag Manager in development mode. |
+| Name              | Required |    Default    | Example                        | Description                                                                              |
+| :---------------- | :------: | :-----------: | :----------------------------- | :--------------------------------------------------------------------------------------- |
+| `gtmId`           |  `Yes`   |       -       | `'GTM-XXXXXXX'`                | Google Tag Manager container ID.                                                         |
+| `dataLayer`       |   `No`   |       -       | `{ userId: '123', page: '/' }` | Object that contains all of the information that you want to pass to Google Tag Manager. |
+| `dataLayerName`   |   `No`   | `'dataLayer'` | `'customDataLayer'`            | Custom name for dataLayer object.                                                        |
+| `includeNoScript` |   `No`   |    `true`     | `false`                        | Whether to include the noscript iframe.                                                  |
+| `enableInDevMode` |   `No`   |    `false`    | `true`                         | Whether to enable Google Tag Manager in development mode.                                |
+| `auth`            |   `No`   |  `undefined`  | `'WFcfQBD6HDw'`                | Set preview auth for GTM workspace previews.                                             |
+| `preview`         |   `No`   |  `undefined`  | `'env-XXX'`                    | Set preview environment ID for GTM workspace previews.                                   |
 
-All props except `id` are optional. The component will not render in development mode unless `enableInDevMode` is set to `true`.
+All props except `gtmId` are optional. The component will not render in development mode unless `enableInDevMode` is set to `true`.
 
-## What does this component do, exactly?
+## 🔍 How It Works
 
-This package adds the necessary google tag manager scripts inside your page's `<head>` tag.
+This package adds the necessary Google Tag Manager scripts to your page's `<body>` tag. It:
 
-## Changelog
+1. Creates a data layer with your custom data
+2. Injects the GTM script in the head of your document
+3. Adds a noscript fallback (optional)
+4. Automatically disables itself in development mode (unless explicitly enabled)
+
+## 📝 Changelog
 
 Please see the [changelog](CHANGELOG.md) for more information on what has changed recently.
 
@@ -78,3 +95,5 @@ Please see the [changelog](CHANGELOG.md) for more information on what has change
 [typescript-badge]: https://img.shields.io/npm/types/astro-gtm
 [makepr]: https://makeapullrequest.com
 [makepr-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
+[astro]: https://astro.build
+[astro-badge]: https://astro.badg.es/v2/built-with-astro/tiny.svg
