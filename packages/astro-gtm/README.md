@@ -66,6 +66,8 @@ import { GoogleTagManager } from 'astro-gtm';
 | `dataLayerName`   |   `No`   | `'dataLayer'` | `'customDataLayer'`            | Custom name for dataLayer object.                                                        |
 | `includeNoScript` |   `No`   |    `true`     | `false`                        | Whether to include the noscript iframe.                                                  |
 | `enableInDevMode` |   `No`   |    `false`    | `true`                         | Whether to enable Google Tag Manager in development mode.                                |
+| `auth`            |   `No`   |  `undefined`  | `'WFcfQBD6HDw'`                | Set preview auth for GTM workspace previews.                                             |
+| `preview`         |   `No`   |  `undefined`  | `'env-XXX'`                    | Set preview environment ID for GTM workspace previews.                                   |
 
 All props except `gtmId` are optional. The component will not render in development mode unless `enableInDevMode` is set to `true`.
 
