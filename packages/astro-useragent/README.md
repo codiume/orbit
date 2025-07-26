@@ -52,11 +52,11 @@ export default defineConfig({
 
 To parse a `user-agent` string inside any of your top level Astro pages, import `useUserAgent` and then use it inside the frontmatter section:
 
-```jsx
+```astro layout.astro
 ---
-import { useUserAgent } from "astro-useragent";
+import { useUserAgent } from 'astro-useragent';
 
-const uaString = Astro.request.headers.get("user-agent");
+const uaString = Astro.request.headers.get('user-agent');
 const { source, isMobile } = useUserAgent(uaString);
 ---
 

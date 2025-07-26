@@ -34,9 +34,9 @@ yarn add astro-ui-avatars
 
 To generate a user avatar in any of your Astro pages or components, import the `Avatar` component from `astro-ui-avatars` and use it inside your HTML:
 
-```jsx
+```astro
 ---
-import { Avatar } from "astro-ui-avatars"
+import { Avatar } from 'astro-ui-avatars';
 ---
 
 <html lang="en">
@@ -51,25 +51,25 @@ import { Avatar } from "astro-ui-avatars"
 
 - Generate an avatar with default settings
 
-```jsx
+```astro
 <Avatar name="John Doe" />
 ```
 
 - Generate a blue avatar
 
-```jsx
+```astro
 <Avatar background="#0D8ABC" color="#fff" />
 ```
 
 - Generate a random background avatar
 
-```jsx
+```astro
 <Avatar background="random" />
 ```
 
 - Generate a rounded avatar
 
-```jsx
+```astro
 <Avatar rounded={true} />
 ```
 

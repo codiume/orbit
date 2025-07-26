@@ -42,31 +42,31 @@ yarn add schema-dts astro-seo-schema
 
 To insert a simple JSON-LD snippet in any of your Astro pages, import `Schema` component and then use the component inside the `<head>` section of your HTML:
 
-```jsx index.astro
+```astro index.astro
 ---
-import { Schema } from "astro-seo-schema"
+import { Schema } from 'astro-seo-schema';
 ---
 
 <html lang="en">
-    <head>
-        <Schema
-            item={{
-                "@context": "https://schema.org",
-                "@type": "Person",
-                name: "Grace Brewster",
-                alternateName: "Grace Brewster Murray Hopper",
-                alumniOf: {
-                    "@type": "CollegeOrUniversity",
-                    name: ["Yale University", "Vassar College"],
-                },
-                knowsAbout: ["Compilers", "Computer Science"],
-            }}
-        />
-    </head>
+  <head>
+    <Schema
+      item={{
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Grace Brewster',
+        alternateName: 'Grace Brewster Murray Hopper',
+        alumniOf: {
+          '@type': 'CollegeOrUniversity',
+          name: ['Yale University', 'Vassar College']
+        },
+        knowsAbout: ['Compilers', 'Computer Science']
+      }}
+    />
+  </head>
 
-    <body>
-        <h1>Hello from astro</h1>
-    </body>
+  <body>
+    <h1>Hello from astro</h1>
+  </body>
 </html>
 ```
 

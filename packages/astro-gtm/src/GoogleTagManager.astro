@@ -52,13 +52,13 @@ const shouldRender = !isDevelopment || enableInDevMode;
     w[dataLayerName] = w[dataLayerName] || [];
     w[dataLayerName].push(dataLayer);
     w[dataLayerName].push({
-      "gtm.start": new Date().getTime(),
-      event: "gtm.js",
+      'gtm.start': new Date().getTime(),
+      event: 'gtm.js',
     });
-    var s = d.createElement("script");
-    var dl = dataLayerName != "dataLayer" ? "&l=" + dataLayerName : "";
+    var s = d.createElement('script');
+    var dl = dataLayerName != 'dataLayer' ? '&l=' + dataLayerName : '';
     s.async = true;
-    s.src = "https://www.googletagmanager.com/gtm.js?id=" + gtmId + dl;
+    s.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtmId + dl;
     d.head.prepend(s);
   </script>
 )}

@@ -34,9 +34,9 @@ yarn add astro-seo-meta
 
 To add a base set of SEO tags in any of your Astro pages, import Astro `Seo` and then use the component inside the `<head>` section of your HTML:
 
-```jsx index.astro
+```astro index.astro
 ---
-import { Seo } from "astro-seo-meta"
+import { Seo } from 'astro-seo-meta';
 ---
 
 <html lang="en">
@@ -76,28 +76,28 @@ import { Seo } from "astro-seo-meta"
 
 All of the `Seo` props are optional. If a prop is not provided, the associated meta tag will not be rendered.
 
-```jsx
+```astro
 // renders no seo tags
-<Seo/>
+<Seo />
 
 // renders all seo tags
 <Seo
   title="My Astro website"
   description="My blazing fast astro website"
-  keywords={["website", "blog", "astro"]}
+  keywords={['website', 'blog', 'astro']}
   icon="/favicon.ico"
   themeColor="#000000"
   colorScheme="light"
   robots="index, follow"
   facebook={{
-    image: "/facebook.png",
-    url: "https://astro.build",
-    type: "website",
+    image: '/facebook.png',
+    url: 'https://astro.build',
+    type: 'website'
   }}
   twitter={{
-    image: "/twitter.png",
-    site: "@astrodotbuild",
-    card: "summary",
+    image: '/twitter.png',
+    site: '@astrodotbuild',
+    card: 'summary'
   }}
 />
 
@@ -105,7 +105,7 @@ All of the `Seo` props are optional. If a prop is not provided, the associated m
 <Seo
   title="My Astro website"
   description="My blazing fast astro website"
-  keywords={["website", "blog", "technology"]}
+  keywords={['website', 'blog', 'technology']}
 />
 ```
 
@@ -113,7 +113,7 @@ All of the `Seo` props are optional. If a prop is not provided, the associated m
 
 This package adds all the necessary and SEO-relevant HTML tags inside your page's `<head>` tag.
 
-## Change log
+## 📝 Changelog
 
 Please see the [changelog](CHANGELOG.md) for more information on what has changed recently.
 

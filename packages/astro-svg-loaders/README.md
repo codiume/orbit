@@ -26,17 +26,17 @@ yarn add astro-svg-loaders
 
 To add a loading indicator in any of your Astro pages or components, just import a loader from `astro-svg-loaders` then use it inside the your HTML:
 
-```jsx index.astro
+```astro index.astro
 ---
-import { SpinningCircles } from "astro-svg-loaders"
+import { SpinningCircles } from 'astro-svg-loaders';
 ---
 
 <html lang="en">
-    <body>
-        // renders a spining cercle animation
-        <p>Please wait while content is loading</p>
-        <SpinningCircles />
-    </body>
+  <body>
+    // renders a spining cercle animation
+    <p>Please wait while content is loading</p>
+    <SpinningCircles />
+  </body>
 </html>
 ```
 
@@ -44,10 +44,11 @@ List of all available loaders:
 
 > **Note**
 >
-> You can check a demo of all the available animations [here][demo]
+> You can check a demo of all the available animations [demo][demo]
 
-```jsx
-// renders all available loader animations
+Renders all available loader animations
+
+```astro
 <Audio />
 <BallTriangle />
 <Bars />

@@ -24,6 +24,7 @@
 | [astro-useragent](packages/astro-useragent)     | [![version](https://img.shields.io/npm/v/astro-useragent.svg)](packages/astro-useragent/CHANGELOG.md)     | Parse browser user-agent strings for Astro.                   | [![downloads][downloads-badge-useragent]][npm-useragent]     |
 | [astro-svg-loaders](packages/astro-svg-loaders) | [![version](https://img.shields.io/npm/v/astro-svg-loaders.svg)](packages/astro-svg-loaders/CHANGELOG.md) | Astro loading icons and small animations built with pure SVG. | [![downloads][downloads-badge-svg-loaders]][npm-svg-loaders] |
 | [astro-ui-avatars](packages/astro-ui-avatars)   | [![version](https://img.shields.io/npm/v/astro-ui-avatars.svg)](packages/astro-ui-avatars/CHANGELOG.md)   | Generate customizable user avatars with initials from names.  | [![downloads][downloads-badge-ui-avatars]][npm-ui-avatars]   |
+| [astro-gtm](packages/astro-gtm)                 | [![version](https://img.shields.io/npm/v/astro-gtm.svg)](packages/astro-gtm/CHANGELOG.md)                 | Integrate Google Tag Manager into your Astro project.         | [![downloads][downloads-badge-gtm]][npm-gtm]                 |
 
 ## Support
 
@@ -63,3 +64,5 @@ Please see the [LICENSE](LICENSE) for more information.
 [npm-useragent]: https://npmjs.com/package/astro-useragent
 [downloads-badge-ui-avatars]: https://img.shields.io/npm/dt/astro-ui-avatars
 [npm-ui-avatars]: https://npmjs.com/package/astro-ui-avatars
+[downloads-badge-gtm]: https://img.shields.io/npm/dt/astro-gtm
+[npm-gtm]: https://npmjs.com/package/astro-gtm
