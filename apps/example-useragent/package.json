@@ -13,7 +13,7 @@
     "astro": "^5.0.8"
   },
   "dependencies": {
-    "@astrojs/node": "^9.0.0",
+    "@astrojs/node": "^9.4.1",
     "astro-useragent": "workspace:*"
   }
 }

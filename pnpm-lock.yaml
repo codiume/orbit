@@ -79,8 +79,8 @@ importers:
   apps/example-purgecss-ssr:
     dependencies:
       '@astrojs/node':
-        specifier: ^9.0.0
-        version: 9.4.0(astro@5.12.9(@types/node@22.17.1)(rollup@4.46.2)(typescript@5.9.2))
+        specifier: ^9.4.1
+        version: 9.4.1(astro@5.12.9(@types/node@22.17.1)(rollup@4.46.2)(typescript@5.9.2))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
@@ -92,8 +92,8 @@ importers:
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
-        specifier: ^9.0.0
-        version: 9.4.0(astro@5.12.9(@types/node@22.17.1)(rollup@4.46.2)(typescript@5.9.2))
+        specifier: ^9.4.1
+        version: 9.4.1(astro@5.12.9(@types/node@22.17.1)(rollup@4.46.2)(typescript@5.9.2))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
@@ -223,8 +223,8 @@ packages:
   '@astrojs/markdown-remark@6.3.5':
     resolution: {integrity: sha512-MiR92CkE2BcyWf3b86cBBw/1dKiOH0qhLgXH2OXA6cScrrmmks1Rr4Tl0p/lFpvmgQQrP54Pd1uidJfmxGrpWQ==}
 
-  '@astrojs/node@9.4.0':
-    resolution: {integrity: sha512-Gxs0iVUvOmQmK+H1DBoabcgvdSDg277SwbujRv2cUBlnpcOTJQDFRhRvyJ7G+Zkd06/jhRphsTTmmrBY0PqI4g==}
+  '@astrojs/node@9.4.1':
+    resolution: {integrity: sha512-lpSAQFS4IiCFGQHL/q/1CcX+AmFbma4NOoV5j7Z7Ml2wevyDe/2kAjScKIKk2DA7k/MrXSZ5ZN+IxJgpPbnAOQ==}
     peerDependencies:
       astro: ^5.3.0
 
@@ -3304,7 +3304,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@9.4.0(astro@5.12.9(@types/node@22.17.1)(rollup@4.46.2)(typescript@5.9.2))':
+  '@astrojs/node@9.4.1(astro@5.12.9(@types/node@22.17.1)(rollup@4.46.2)(typescript@5.9.2))':
     dependencies:
       '@astrojs/internal-helpers': 0.7.1
       astro: 5.12.9(@types/node@22.17.1)(rollup@4.46.2)(typescript@5.9.2)
