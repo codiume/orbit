@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^5.0.8"
+    "astro": "^5.13.1"
   },
   "dependencies": {
     "astro-purgecss": "workspace:*"
