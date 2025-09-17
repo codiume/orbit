@@ -1,5 +1,11 @@
 # astro-useragent
 
+## 5.2.0
+
+### Minor Changes
+
+- [#1127](https://github.com/codiume/orbit/pull/1127) [`3df4830`](https://github.com/codiume/orbit/commit/3df4830811e2e509ac96d370f651ee72713eabae) Thanks [@mhdcodes](https://github.com/mhdcodes)! - update docs to cover both server and browser usage
+
 ## 5.1.0
 
 ### Minor Changes
