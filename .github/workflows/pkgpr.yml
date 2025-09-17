@@ -10,18 +10,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
 
-      - name: Use Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
           node-version: '22'
+          cache: 'pnpm'
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: true
-
-      - name: Build
-        run: pnpm build
-
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
       - run: pnpx pkg-pr-new publish './packages/astro-purgecss' './packages/astro-seo-meta' './packages/astro-gtm'
