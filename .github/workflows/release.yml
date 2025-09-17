@@ -18,9 +18,6 @@ jobs:
       NODE_OPTIONS: --no-deprecation
     steps:
       - uses: actions/checkout@v5
-      - uses: pnpm/action-setup@v4
-        with:
-          run_install: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v5
@@ -28,13 +25,17 @@ jobs:
           node-version: '22'
           cache: 'pnpm'
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: true
+
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
           version: pnpm run changeset:version
           publish: pnpm run changeset:publish
-
         env:
           NPM_CONFIG_PROVENANCE: true
           GITHUB_TOKEN: ${{ github.token }}
