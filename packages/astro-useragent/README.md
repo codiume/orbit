@@ -66,7 +66,7 @@ You can parse the user agent entirely in the browser. This does not require SSR.
 
 If you prefer, you can use a framework component (React/Vue/Svelte) and call `useUserAgent(navigator.userAgent)` inside a client component with your desired hydration directive (e.g. `client:load`).
 
-### Using on the server (SSR)
+### Usage on the server (SSR)
 
 If you want to parse the user agent on the server (e.g., in Astro Pages or API routes), enable SSR features with the `output: 'server'` configuration option:
 
@@ -84,11 +84,11 @@ export default defineConfig({
 
 To parse a `user-agent` string inside any of your top level Astro pages, import `useUserAgent` and then use it inside the frontmatter section:
 
-```astro layout.astro
+```astro title=src/pages/layout.astro
 ---
 import { useUserAgent } from 'astro-useragent';
 
-const uaString = Astro.request.headers.get('user-agent');
+const uaString = Astro.request.headers.get('user-agent') ?? '';
 const { source, isMobile } = useUserAgent(uaString);
 ---
 
@@ -121,7 +121,7 @@ export async function get({ request }: APIContext) {
   const { isMobile } = useUserAgent(uaString);
 
   if (isMobile) {
-    return Response.redirect('mobile.mysite.com', 307);
+    return Response.redirect('https://mobile.mysite.com/', 307);
   }
 
   const greetings = {

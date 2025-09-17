@@ -58,25 +58,24 @@ const shouldRender = !isDevelopment || enableInDevMode;
 ---
 
 {shouldRender && (
-  <script define:vars={{ gtmId, dataLayerName, dataLayer, auth, preview }}>
-    const w = window;
-    const d = document;
+  <script define:vars={{ gtmId, dataLayerName, dataLayer, auth, preview }} is:inline>
+    var w = window;
+    var d = document;
 
     // Initialize data layer
     w[dataLayerName] = w[dataLayerName] || [];
     w[dataLayerName].push(dataLayer);
-
     w[dataLayerName].push({
       "gtm.start": new Date().getTime(),
       event: "gtm.js",
     });
 
     // Build script URL
-    const dl = dataLayerName !== 'dataLayer' ? '&l=' + dataLayerName : '';
-    const ath = auth ? `&gtm_auth=${auth}` : '';
-    const prv = preview ? `&gtm_preview=${preview}` : '';
+    var dl = dataLayerName !== "dataLayer" ? "&l=" + dataLayerName : "";
+    var ath = auth ? `&gtm_auth=${auth}` : "";
+    var prv = preview ? `&gtm_preview=${preview}` : "";
 
-    const s = d.createElement('script');
+    var s = d.createElement("script");
     s.async = true;
     s.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}${dl}${ath}${prv}`;
 
