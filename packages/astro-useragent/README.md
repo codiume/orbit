@@ -6,9 +6,12 @@
 [![typescript][typescript-badge]][typescript]
 [![makepr][makepr-badge]][makepr]
 
-Astro UserAgent is a simple helper for parsing `user-agent` header strings for browser matching inside your Astro Pages / API routes, when using [SSR Mode][astro-ssr]
+Astro UserAgent is a simple helper for parsing user agent strings so you can detect browsers and devices in your Astro projects.
 
-> **Note** Due to the nature of Astro being an SSG by trade, This package only works when used with Astro in [SSR Mode][astro-ssr].
+It works both:
+
+- On the server (SSR) by reading the request's `user-agent` header.
+- In the browser (client-side) by reading `navigator.userAgent`.
 
 ## 📦 Installation
 
@@ -34,9 +37,38 @@ yarn add astro-useragent
 
 ## 🥑 Usage
 
-### Enable SSR mode
+### Usage in the browser (client-side)
 
-To get started, enable SSR features in development mode with the `output: server` configuration option:
+You can parse the user agent entirely in the browser. This does not require SSR. Just pass `navigator.userAgent` to `useUserAgent`:
+
+```astro
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Client-side UA detection</title>
+  </head>
+  <body>
+    <p id="ua"></p>
+    <p id="device"></p>
+
+    <script type="module">
+      import { useUserAgent } from 'astro-useragent';
+
+      const { source, isMobile, browser } = useUserAgent(navigator.userAgent);
+      document.getElementById('ua').textContent = `UA: ${source}`;
+      document.getElementById('device').textContent = isMobile
+        ? 'On mobile'
+        : `On ${browser || 'unknown'} desktop/tablet`;
+    </script>
+  </body>
+</html>
+```
+
+If you prefer, you can use a framework component (React/Vue/Svelte) and call `useUserAgent(navigator.userAgent)` inside a client component with your desired hydration directive (e.g. `client:load`).
+
+### Using on the server (SSR)
+
+If you want to parse the user agent on the server (e.g., in Astro Pages or API routes), enable SSR features with the `output: 'server'` configuration option:
 
 ```javascript
 import { defineConfig } from 'astro/config';
@@ -46,9 +78,9 @@ export default defineConfig({
 });
 ```
 
-> **Note** For more info about SSR mode, please refer to the official [docs][astro-ssr].
+> You only need SSR if you plan to detect the user agent on the server. For more info about SSR mode, please refer to the official [docs][astro-ssr].
 
-### Usage with Astro pages
+#### Usage with Astro pages (server-side)
 
 To parse a `user-agent` string inside any of your top level Astro pages, import `useUserAgent` and then use it inside the frontmatter section:
 
@@ -74,7 +106,7 @@ const { source, isMobile } = useUserAgent(uaString);
 
 > **Note** Read more about Astro request headers here: [Astro Docs](https://docs.astro.build/en/guides/server-side-rendering/#astrorequestheaders)
 
-### Usage with Astro API routes
+#### Usage with Astro API routes (server-side)
 
 `useUserAgent` can also be used inside your API routes, to perform some logic based on the client user-agent.
 
