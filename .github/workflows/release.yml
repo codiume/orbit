@@ -16,16 +16,15 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v5
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: true
 
-      - name: Use Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
           node-version: '22'
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          run_install: true
+          cache: 'pnpm'
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
