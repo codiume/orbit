@@ -22,7 +22,7 @@ importers:
         version: 22.18.11
       astro:
         specifier: ^5.14.3
-        version: 5.14.5(@types/node@22.18.11)(rollup@4.52.4)(typescript@5.9.3)
+        version: 5.14.6(@types/node@22.18.11)(rollup@4.52.4)(typescript@5.9.3)
       commander:
         specifier: ^14.0.1
         version: 14.0.1
@@ -74,33 +74,33 @@ importers:
     devDependencies:
       astro:
         specifier: ^5.14.3
-        version: 5.14.5(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3)
+        version: 5.14.6(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3)
 
   apps/example-purgecss-ssr:
     dependencies:
       '@astrojs/node':
         specifier: ^9.4.1
-        version: 9.5.0(astro@5.14.5(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3))
+        version: 9.5.0(astro@5.14.6(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^5.14.3
-        version: 5.14.5(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3)
+        version: 5.14.6(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^9.4.1
-        version: 9.5.0(astro@5.14.5(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3))
+        version: 9.5.0(astro@5.14.6(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^5.14.3
-        version: 5.14.5(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3)
+        version: 5.14.6(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3)
 
   apps/playground:
     dependencies:
@@ -119,7 +119,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^5.14.3
-        version: 5.14.5(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3)
+        version: 5.14.6(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3)
 
   packages/astro-build: {}
 
@@ -1280,8 +1280,8 @@ packages:
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
-  astro@5.14.5:
-    resolution: {integrity: sha512-EHt7y3+nHYyKzBats1AL3N4Pyrvqyr+zXBC7njUa9Tfe+gsiHlunaw+lXitTT/DDVwO2R/f/qVG7Xc6rl0b2KQ==}
+  astro@5.14.6:
+    resolution: {integrity: sha512-MSdjKt2W2a56x868DqDWgbfw4D689/8EGhHG4465h7eivTI237u1aBx4iJvgI6WfgdUE61+coAvMjUkEvOWbpA==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1588,6 +1588,9 @@ packages:
 
   devalue@5.3.2:
     resolution: {integrity: sha512-UDsjUbpQn9kvm68slnrs+mfxwFkIflOhkanmyabZ8zOYk8SMEIbJ3TK+88g70hSIeytu4y18f0z/hYHMTrXIWw==}
+
+  devalue@5.4.1:
+    resolution: {integrity: sha512-YtoaOfsqjbZQKGIMRYDWKjUmSB4VJ/RElB+bXZawQAQYAo4xu08GKTMVlsZDTF6R2MbAgjcAQRPI5eIyRAT2OQ==}
 
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
@@ -2405,6 +2408,9 @@ packages:
   package-manager-detector@1.4.0:
     resolution: {integrity: sha512-rRZ+pR1Usc+ND9M2NkmCvE/LYJS+8ORVV9X0KuNSY/gFsp7RBHJM/ADh9LYq4Vvfq6QkKrW6/weuh8SMEtN5gw==}
 
+  package-manager-detector@1.4.1:
+    resolution: {integrity: sha512-dSMiVLBEA4XaNJ0PRb4N5cV/SEP4BWrWZKBmfF+OUm2pQTiZ6DDkKeWaltwu3JRhLoy59ayIkJ00cx9K9CaYTg==}
+
   pako@0.2.9:
     resolution: {integrity: sha512-NUcwaKxUxWrZLpDG+z/xZaCgQITkA/Dv4V/T6bw7VON6l1Xz/VnrBqrYjZQ12TamKHzITTfOEIYUj48y2KXImA==}
 
@@ -3027,8 +3033,8 @@ packages:
   unist-util-find-after@5.0.0:
     resolution: {integrity: sha512-amQa0Ep2m6hE2g72AugUItjbuM8X8cGQnFoHk0pGfrFeT9GZhzN5SW8nRsiGKK7Aif4CrACPENkA6P/Lw6fHGQ==}
 
-  unist-util-is@6.0.0:
-    resolution: {integrity: sha512-2qCTHimwdxLfz+YzdGfkqNlH0tLi9xjTnHddPmJwtIG9MGsdbutfTc4P+haPD7l7Cjxf/WZj+we5qfVPvvxfYw==}
+  unist-util-is@6.0.1:
+    resolution: {integrity: sha512-LsiILbtBETkDz8I9p1dQ0uyRUWuaQzd/cuEeS1hoRSyW5E5XGmTzlwY1OrNzzakGowI9Dr/I8HVaw4hTtnxy8g==}
 
   unist-util-modify-children@4.0.0:
     resolution: {integrity: sha512-+tdN5fGNddvsQdIzUF3Xx82CU9sMM+fA0dLgR9vOmT0oPT2jH+P1nd5lSqfCfXAw+93NhcXNY2qqvTUtE4cQkw==}
@@ -3045,8 +3051,8 @@ packages:
   unist-util-visit-children@3.0.0:
     resolution: {integrity: sha512-RgmdTfSBOg04sdPcpTSD1jzoNBjt9a80/ZCzp5cI9n1qPzLZWF9YdvWGN2zmTumP1HWhXKdUWexjy/Wy/lJ7tA==}
 
-  unist-util-visit-parents@6.0.1:
-    resolution: {integrity: sha512-L/PqWzfTP9lzzEa6CKs0k2nARxTdZduw3zyh8d2NVBnsyvHjSX4TWse388YrrQKbvI8w20fGjGlhgT96WwKykw==}
+  unist-util-visit-parents@6.0.2:
+    resolution: {integrity: sha512-goh1s1TBrqSqukSc8wrjwWhL0hiJxgA8m4kFxGlQ+8FYQ3C/m11FcTs4YYem7V664AhHVvgoQLk890Ssdsr2IQ==}
 
   unist-util-visit@5.0.0:
     resolution: {integrity: sha512-MR04uvD+07cwl/yhVuVWAtw+3GOR/knlL55Nd/wAdblk27GCVt3lqpTivy/tkJcZoNPzTwS1Y+KMojlLDhoTzg==}
@@ -3199,8 +3205,8 @@ packages:
       yaml:
         optional: true
 
-  vite@6.3.7:
-    resolution: {integrity: sha512-mQYaKepA0NGMBsz8Xktt3tJUG5ELE2iT7IJ+ssXI6nxVdE2sFc/d/6w/JByqMLvWg8hNKHpPgzjgOkrhpKFnrA==}
+  vite@6.4.0:
+    resolution: {integrity: sha512-oLnWs9Hak/LOlKjeSpOwD6JMks8BeICEdYMJBf6P4Lac/pO9tKiv/XhXnAM7nNfSkZahjlCZu9sS50zL8fSnsw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -3528,15 +3534,15 @@ snapshots:
       unified: 11.0.5
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.0.0
-      unist-util-visit-parents: 6.0.1
+      unist-util-visit-parents: 6.0.2
       vfile: 6.0.3
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@9.5.0(astro@5.14.5(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3))':
+  '@astrojs/node@9.5.0(astro@5.14.6(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3))':
     dependencies:
       '@astrojs/internal-helpers': 0.7.4
-      astro: 5.14.5(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3)
+      astro: 5.14.6(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3)
       send: 1.2.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -4681,7 +4687,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@5.14.5(@types/node@22.18.11)(rollup@4.52.4)(typescript@5.9.3):
+  astro@5.14.6(@types/node@22.18.11)(rollup@4.52.4)(typescript@5.9.3):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.4
@@ -4701,7 +4707,7 @@ snapshots:
       cssesc: 3.0.0
       debug: 4.4.3
       deterministic-object-hash: 2.0.2
-      devalue: 5.3.2
+      devalue: 5.4.1
       diff: 5.2.0
       dlv: 1.1.3
       dset: 3.1.4
@@ -4722,7 +4728,7 @@ snapshots:
       neotraverse: 0.6.18
       p-limit: 6.2.0
       p-queue: 8.1.1
-      package-manager-detector: 1.4.0
+      package-manager-detector: 1.4.1
       picomatch: 4.0.3
       prompts: 2.4.2
       rehype: 13.0.2
@@ -4737,8 +4743,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.17.1
       vfile: 6.0.3
-      vite: 6.3.7(@types/node@22.18.11)
-      vitefu: 1.1.1(vite@6.3.7(@types/node@22.18.11))
+      vite: 6.4.0(@types/node@22.18.11)
+      vitefu: 1.1.1(vite@6.4.0(@types/node@22.18.11))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
@@ -4782,7 +4788,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@5.14.5(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3):
+  astro@5.14.6(@types/node@24.8.1)(rollup@4.52.4)(typescript@5.9.3):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.4
@@ -4802,7 +4808,7 @@ snapshots:
       cssesc: 3.0.0
       debug: 4.4.3
       deterministic-object-hash: 2.0.2
-      devalue: 5.3.2
+      devalue: 5.4.1
       diff: 5.2.0
       dlv: 1.1.3
       dset: 3.1.4
@@ -4823,7 +4829,7 @@ snapshots:
       neotraverse: 0.6.18
       p-limit: 6.2.0
       p-queue: 8.1.1
-      package-manager-detector: 1.4.0
+      package-manager-detector: 1.4.1
       picomatch: 4.0.3
       prompts: 2.4.2
       rehype: 13.0.2
@@ -4838,8 +4844,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.17.1
       vfile: 6.0.3
-      vite: 6.3.7(@types/node@24.8.1)
-      vitefu: 1.1.1(vite@6.3.7(@types/node@24.8.1))
+      vite: 6.4.0(@types/node@24.8.1)
+      vitefu: 1.1.1(vite@6.4.0(@types/node@24.8.1))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
@@ -5128,6 +5134,8 @@ snapshots:
       base-64: 1.0.0
 
   devalue@5.3.2: {}
+
+  devalue@5.4.1: {}
 
   devlop@1.1.0:
     dependencies:
@@ -5695,8 +5703,8 @@ snapshots:
     dependencies:
       '@types/mdast': 4.0.4
       escape-string-regexp: 5.0.0
-      unist-util-is: 6.0.0
-      unist-util-visit-parents: 6.0.1
+      unist-util-is: 6.0.1
+      unist-util-visit-parents: 6.0.2
 
   mdast-util-from-markdown@2.0.2:
     dependencies:
@@ -5775,7 +5783,7 @@ snapshots:
   mdast-util-phrasing@4.1.0:
     dependencies:
       '@types/mdast': 4.0.4
-      unist-util-is: 6.0.0
+      unist-util-is: 6.0.1
 
   mdast-util-to-hast@13.2.0:
     dependencies:
@@ -6169,6 +6177,8 @@ snapshots:
       quansync: 0.2.11
 
   package-manager-detector@1.4.0: {}
+
+  package-manager-detector@1.4.1: {}
 
   pako@0.2.9: {}
 
@@ -6844,9 +6854,9 @@ snapshots:
   unist-util-find-after@5.0.0:
     dependencies:
       '@types/unist': 3.0.3
-      unist-util-is: 6.0.0
+      unist-util-is: 6.0.1
 
-  unist-util-is@6.0.0:
+  unist-util-is@6.0.1:
     dependencies:
       '@types/unist': 3.0.3
 
@@ -6872,16 +6882,16 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
-  unist-util-visit-parents@6.0.1:
+  unist-util-visit-parents@6.0.2:
     dependencies:
       '@types/unist': 3.0.3
-      unist-util-is: 6.0.0
+      unist-util-is: 6.0.1
 
   unist-util-visit@5.0.0:
     dependencies:
       '@types/unist': 3.0.3
-      unist-util-is: 6.0.0
-      unist-util-visit-parents: 6.0.1
+      unist-util-is: 6.0.1
+      unist-util-visit-parents: 6.0.2
 
   universal-user-agent@6.0.1: {}
 
@@ -6990,7 +7000,7 @@ snapshots:
       '@types/node': 22.18.10
       fsevents: 2.3.3
 
-  vite@6.3.7(@types/node@22.18.11):
+  vite@6.4.0(@types/node@22.18.11):
     dependencies:
       esbuild: 0.25.11
       fdir: 6.5.0(picomatch@4.0.3)
@@ -7002,7 +7012,7 @@ snapshots:
       '@types/node': 22.18.11
       fsevents: 2.3.3
 
-  vite@6.3.7(@types/node@24.8.1):
+  vite@6.4.0(@types/node@24.8.1):
     dependencies:
       esbuild: 0.25.11
       fdir: 6.5.0(picomatch@4.0.3)
@@ -7054,13 +7064,13 @@ snapshots:
     optionalDependencies:
       vite: 6.3.6(@types/node@22.18.10)
 
-  vitefu@1.1.1(vite@6.3.7(@types/node@22.18.11)):
+  vitefu@1.1.1(vite@6.4.0(@types/node@22.18.11)):
     optionalDependencies:
-      vite: 6.3.7(@types/node@22.18.11)
+      vite: 6.4.0(@types/node@22.18.11)
 
-  vitefu@1.1.1(vite@6.3.7(@types/node@24.8.1)):
+  vitefu@1.1.1(vite@6.4.0(@types/node@24.8.1)):
     optionalDependencies:
-      vite: 6.3.7(@types/node@24.8.1)
+      vite: 6.4.0(@types/node@24.8.1)
 
   vitest@3.2.4(@types/debug@4.1.12)(@types/node@22.18.11):
     dependencies:
