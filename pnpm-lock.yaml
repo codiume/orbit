@@ -25,7 +25,7 @@ importers:
         version: 5.14.8(@types/node@22.18.12)(rollup@4.52.5)(typescript@5.9.3)
       commander:
         specifier: ^14.0.1
-        version: 14.0.1
+        version: 14.0.2
       esbuild:
         specifier: ^0.25.9
         version: 0.25.11
@@ -61,7 +61,7 @@ importers:
         version: 5.9.3
       vite-tsconfig-paths:
         specifier: ^5.1.4
-        version: 5.1.4(typescript@5.9.3)(vite@6.4.1(@types/node@22.18.12))
+        version: 5.1.4(typescript@5.9.3)(vite@7.1.12(@types/node@22.18.12))
       vitest:
         specifier: ^4.0.0
         version: 4.0.3(@types/debug@4.1.12)(@types/node@22.18.12)
@@ -1298,8 +1298,8 @@ packages:
     resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
     engines: {node: '>=18'}
 
-  commander@14.0.1:
-    resolution: {integrity: sha512-2JkV3gUZUVrbNA+1sjBOYLsMZ5cEEl8GTFP2a4AVz5hvasAMCQ1D2l2le/cX+pV4N6ZU17zjUahLpIXRrnWL8A==}
+  commander@14.0.2:
+    resolution: {integrity: sha512-TywoWNNRbhoD0BXs1P3ZEScW8W5iKrnbithIl0YH+uCmBd0QpPOA8yc82DS3BIE5Ma6FnBVUsJ7wVUDz4dvOWQ==}
     engines: {node: '>=20'}
 
   commander@4.1.1:
@@ -4538,7 +4538,7 @@ snapshots:
       unstorage: 1.17.1
       vfile: 6.0.3
       vite: 6.4.1(@types/node@24.9.1)
-      vitefu: 1.1.1(vite@6.4.1(@types/node@22.18.12))
+      vitefu: 1.1.1(vite@6.4.1(@types/node@24.9.1))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
@@ -4727,7 +4727,7 @@ snapshots:
 
   commander@12.1.0: {}
 
-  commander@14.0.1: {}
+  commander@14.0.2: {}
 
   commander@4.1.1: {}
 
@@ -6598,13 +6598,13 @@ snapshots:
       - tsx
       - yaml
 
-  vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@6.4.1(@types/node@22.18.12)):
+  vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@7.1.12(@types/node@22.18.12)):
     dependencies:
       debug: 4.4.3
       globrex: 0.1.2
       tsconfck: 3.1.6(typescript@5.9.3)
     optionalDependencies:
-      vite: 6.4.1(@types/node@22.18.12)
+      vite: 7.1.12(@types/node@22.18.12)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -6676,6 +6676,10 @@ snapshots:
   vitefu@1.1.1(vite@6.4.1(@types/node@22.18.12)):
     optionalDependencies:
       vite: 6.4.1(@types/node@22.18.12)
+
+  vitefu@1.1.1(vite@6.4.1(@types/node@24.9.1)):
+    optionalDependencies:
+      vite: 6.4.1(@types/node@24.9.1)
 
   vitest@4.0.3(@types/debug@4.1.12)(@types/node@22.18.12):
     dependencies:
