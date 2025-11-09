@@ -24,7 +24,7 @@
     "@types/node": "^22.18.5",
     "astro": "^5.14.3",
     "commander": "^14.0.1",
-    "esbuild": "^0.25.9",
+    "esbuild": "^0.26.0",
     "esbuild-plugin-clean": "^1.0.1",
     "kleur": "^4.1.5",
     "ora": "^9.0.0",
