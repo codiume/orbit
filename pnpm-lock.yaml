@@ -16,13 +16,13 @@ importers:
         version: 0.5.2
       '@changesets/cli':
         specifier: ^2.29.7
-        version: 2.29.8(@types/node@22.19.2)
+        version: 2.29.8(@types/node@22.19.3)
       '@types/node':
         specifier: ^22.18.5
-        version: 22.19.2
+        version: 22.19.3
       astro:
         specifier: ^5.15.6
-        version: 5.16.5(@types/node@22.19.2)(rollup@4.53.3)(typescript@5.9.3)
+        version: 5.16.5(@types/node@22.19.3)(rollup@4.53.3)(typescript@5.9.3)
       commander:
         specifier: ^14.0.1
         version: 14.0.2
@@ -61,10 +61,10 @@ importers:
         version: 5.9.3
       vite-tsconfig-paths:
         specifier: ^5.1.4
-        version: 5.1.4(typescript@5.9.3)(vite@7.2.6(@types/node@22.19.2))
+        version: 5.1.4(typescript@5.9.3)(vite@7.2.6(@types/node@22.19.3))
       vitest:
         specifier: ^4.0.0
-        version: 4.0.15(@types/node@22.19.2)
+        version: 4.0.15(@types/node@22.19.3)
 
   apps/example-purgecss:
     dependencies:
@@ -74,33 +74,33 @@ importers:
     devDependencies:
       astro:
         specifier: ^5.15.6
-        version: 5.16.5(@types/node@25.0.0)(rollup@4.53.3)(typescript@5.9.3)
+        version: 5.16.5(@types/node@25.0.2)(rollup@4.53.3)(typescript@5.9.3)
 
   apps/example-purgecss-ssr:
     dependencies:
       '@astrojs/node':
         specifier: ^9.4.1
-        version: 9.5.1(astro@5.16.5(@types/node@25.0.0)(rollup@4.53.3)(typescript@5.9.3))
+        version: 9.5.1(astro@5.16.5(@types/node@25.0.2)(rollup@4.53.3)(typescript@5.9.3))
       astro-purgecss:
         specifier: workspace:*
         version: link:../../packages/astro-purgecss
     devDependencies:
       astro:
         specifier: ^5.15.6
-        version: 5.16.5(@types/node@25.0.0)(rollup@4.53.3)(typescript@5.9.3)
+        version: 5.16.5(@types/node@25.0.2)(rollup@4.53.3)(typescript@5.9.3)
 
   apps/example-useragent:
     dependencies:
       '@astrojs/node':
         specifier: ^9.4.1
-        version: 9.5.1(astro@5.16.5(@types/node@25.0.0)(rollup@4.53.3)(typescript@5.9.3))
+        version: 9.5.1(astro@5.16.5(@types/node@25.0.2)(rollup@4.53.3)(typescript@5.9.3))
       astro-useragent:
         specifier: workspace:*
         version: link:../../packages/astro-useragent
     devDependencies:
       astro:
         specifier: ^5.15.6
-        version: 5.16.5(@types/node@25.0.0)(rollup@4.53.3)(typescript@5.9.3)
+        version: 5.16.5(@types/node@25.0.2)(rollup@4.53.3)(typescript@5.9.3)
 
   apps/playground:
     dependencies:
@@ -119,7 +119,7 @@ importers:
     devDependencies:
       astro:
         specifier: ^5.15.6
-        version: 5.16.5(@types/node@25.0.0)(rollup@4.53.3)(typescript@5.9.3)
+        version: 5.16.5(@types/node@25.0.2)(rollup@4.53.3)(typescript@5.9.3)
 
   packages/astro-build: {}
 
@@ -185,7 +185,7 @@ importers:
         version: 1.17.5
       '@vanilla-extract/vite-plugin':
         specifier: ^5.0.0
-        version: 5.1.3(@types/node@25.0.0)(vite@7.2.7(@types/node@25.0.0))
+        version: 5.1.3(@types/node@25.0.2)(vite@7.2.7(@types/node@25.0.2))
       astro:
         specifier: ^5.0.0
         version: 5.16.4(@types/node@22.19.1)(rollup@4.53.3)(typescript@5.9.3)
@@ -1163,11 +1163,11 @@ packages:
   '@types/node@22.19.1':
     resolution: {integrity: sha512-LCCV0HdSZZZb34qifBsyWlUmok6W7ouER+oQIGBScS8EsZsQbrtFTUrDX4hOl+CS6p7cnNC4td+qrSVGSCTUfQ==}
 
-  '@types/node@22.19.2':
-    resolution: {integrity: sha512-LPM2G3Syo1GLzXLGJAKdqoU35XvrWzGJ21/7sgZTUpbkBaOasTj8tjwn6w+hCkqaa1TfJ/w67rJSwYItlJ2mYw==}
+  '@types/node@22.19.3':
+    resolution: {integrity: sha512-1N9SBnWYOJTrNZCdh/yJE+t910Y128BoyY+zBLWhL3r0TYzlTmFdXrPwHL9DyFZmlEXNQQolTZh3KHV31QDhyA==}
 
-  '@types/node@25.0.0':
-    resolution: {integrity: sha512-rl78HwuZlaDIUSeUKkmogkhebA+8K1Hy7tddZuJ3D0xV8pZSfsYGTsliGUol1JPzu9EKnTxPC4L1fiWouStRew==}
+  '@types/node@25.0.2':
+    resolution: {integrity: sha512-gWEkeiyYE4vqjON/+Obqcoeffmk0NF15WSBwSs7zwVA2bAbTaE0SJ7P0WNGoJn8uE7fiaV5a7dKYIJriEqOrmA==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -3526,10 +3526,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@9.5.1(astro@5.16.5(@types/node@25.0.0)(rollup@4.53.3)(typescript@5.9.3))':
+  '@astrojs/node@9.5.1(astro@5.16.5(@types/node@25.0.2)(rollup@4.53.3)(typescript@5.9.3))':
     dependencies:
       '@astrojs/internal-helpers': 0.7.5
-      astro: 5.16.5(@types/node@25.0.0)(rollup@4.53.3)(typescript@5.9.3)
+      astro: 5.16.5(@types/node@25.0.2)(rollup@4.53.3)(typescript@5.9.3)
       send: 1.2.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -3703,7 +3703,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@changesets/cli@2.29.8(@types/node@22.19.2)':
+  '@changesets/cli@2.29.8(@types/node@22.19.3)':
     dependencies:
       '@changesets/apply-release-plan': 7.0.14
       '@changesets/assemble-release-plan': 6.0.9
@@ -3719,7 +3719,7 @@ snapshots:
       '@changesets/should-skip-package': 0.1.2
       '@changesets/types': 6.1.0
       '@changesets/write': 0.4.0
-      '@inquirer/external-editor': 1.0.3(@types/node@22.19.2)
+      '@inquirer/external-editor': 1.0.3(@types/node@22.19.3)
       '@manypkg/get-packages': 1.1.3
       ansi-colors: 4.1.3
       ci-info: 3.9.0
@@ -4090,12 +4090,12 @@ snapshots:
   '@img/sharp-win32-x64@0.34.5':
     optional: true
 
-  '@inquirer/external-editor@1.0.3(@types/node@22.19.2)':
+  '@inquirer/external-editor@1.0.3(@types/node@22.19.3)':
     dependencies:
       chardet: 2.1.1
       iconv-lite: 0.7.0
     optionalDependencies:
-      '@types/node': 22.19.2
+      '@types/node': 22.19.3
 
   '@isaacs/balanced-match@4.0.1': {}
 
@@ -4374,7 +4374,7 @@ snapshots:
 
   '@types/fontkit@2.0.8':
     dependencies:
-      '@types/node': 22.19.2
+      '@types/node': 22.19.3
 
   '@types/hast@3.0.4':
     dependencies:
@@ -4397,11 +4397,11 @@ snapshots:
       undici-types: 6.21.0
     optional: true
 
-  '@types/node@22.19.2':
+  '@types/node@22.19.3':
     dependencies:
       undici-types: 6.21.0
 
-  '@types/node@25.0.0':
+  '@types/node@25.0.2':
     dependencies:
       undici-types: 7.16.0
 
@@ -4415,12 +4415,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vanilla-extract/compiler@0.3.3(@types/node@25.0.0)':
+  '@vanilla-extract/compiler@0.3.3(@types/node@25.0.2)':
     dependencies:
       '@vanilla-extract/css': 1.17.5
       '@vanilla-extract/integration': 8.0.6
-      vite: 7.2.7(@types/node@25.0.0)
-      vite-node: 3.2.4(@types/node@25.0.0)
+      vite: 7.2.7(@types/node@25.0.2)
+      vite-node: 3.2.4(@types/node@25.0.2)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -4471,11 +4471,11 @@ snapshots:
 
   '@vanilla-extract/private@1.0.9': {}
 
-  '@vanilla-extract/vite-plugin@5.1.3(@types/node@25.0.0)(vite@7.2.7(@types/node@25.0.0))':
+  '@vanilla-extract/vite-plugin@5.1.3(@types/node@25.0.2)(vite@7.2.7(@types/node@25.0.2))':
     dependencies:
-      '@vanilla-extract/compiler': 0.3.3(@types/node@25.0.0)
+      '@vanilla-extract/compiler': 0.3.3(@types/node@25.0.2)
       '@vanilla-extract/integration': 8.0.6
-      vite: 7.2.7(@types/node@25.0.0)
+      vite: 7.2.7(@types/node@25.0.2)
     transitivePeerDependencies:
       - '@types/node'
       - babel-plugin-macros
@@ -4500,13 +4500,13 @@ snapshots:
       chai: 6.2.1
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.15(vite@7.2.6(@types/node@22.19.2))':
+  '@vitest/mocker@4.0.15(vite@7.2.6(@types/node@22.19.3))':
     dependencies:
       '@vitest/spy': 4.0.15
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.2.6(@types/node@22.19.2)
+      vite: 7.2.6(@types/node@22.19.3)
 
   '@vitest/pretty-format@4.0.15':
     dependencies:
@@ -4680,7 +4680,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@5.16.5(@types/node@22.19.2)(rollup@4.53.3)(typescript@5.9.3):
+  astro@5.16.5(@types/node@22.19.3)(rollup@4.53.3)(typescript@5.9.3):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.5
@@ -4737,8 +4737,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.17.3
       vfile: 6.0.3
-      vite: 6.4.1(@types/node@22.19.2)
-      vitefu: 1.1.1(vite@6.4.1(@types/node@22.19.2))
+      vite: 6.4.1(@types/node@22.19.3)
+      vitefu: 1.1.1(vite@6.4.1(@types/node@22.19.3))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
@@ -4782,7 +4782,7 @@ snapshots:
       - uploadthing
       - yaml
 
-  astro@5.16.5(@types/node@25.0.0)(rollup@4.53.3)(typescript@5.9.3):
+  astro@5.16.5(@types/node@25.0.2)(rollup@4.53.3)(typescript@5.9.3):
     dependencies:
       '@astrojs/compiler': 2.13.0
       '@astrojs/internal-helpers': 0.7.5
@@ -4839,8 +4839,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.17.3
       vfile: 6.0.3
-      vite: 6.4.1(@types/node@25.0.0)
-      vitefu: 1.1.1(vite@6.4.1(@types/node@25.0.0))
+      vite: 6.4.1(@types/node@25.0.2)
+      vitefu: 1.1.1(vite@6.4.1(@types/node@25.0.2))
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
       yocto-spinner: 0.2.3
@@ -5286,7 +5286,7 @@ snapshots:
 
   eval@0.1.8:
     dependencies:
-      '@types/node': 25.0.0
+      '@types/node': 25.0.2
       require-like: 0.1.2
 
   eventemitter3@5.0.1: {}
@@ -6927,13 +6927,13 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite-node@3.2.4(@types/node@25.0.0):
+  vite-node@3.2.4(@types/node@25.0.2):
     dependencies:
       cac: 6.7.14
       debug: 4.4.3
       es-module-lexer: 1.7.0
       pathe: 2.0.3
-      vite: 7.2.7(@types/node@25.0.0)
+      vite: 7.2.7(@types/node@25.0.2)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -6948,13 +6948,13 @@ snapshots:
       - tsx
       - yaml
 
-  vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@7.2.6(@types/node@22.19.2)):
+  vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@7.2.6(@types/node@22.19.3)):
     dependencies:
       debug: 4.4.3
       globrex: 0.1.2
       tsconfck: 3.1.6(typescript@5.9.3)
     optionalDependencies:
-      vite: 7.2.6(@types/node@22.19.2)
+      vite: 7.2.6(@types/node@22.19.3)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -6971,7 +6971,7 @@ snapshots:
       '@types/node': 22.19.1
       fsevents: 2.3.3
 
-  vite@6.4.1(@types/node@22.19.2):
+  vite@6.4.1(@types/node@22.19.3):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -6980,10 +6980,10 @@ snapshots:
       rollup: 4.53.3
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 22.19.2
+      '@types/node': 22.19.3
       fsevents: 2.3.3
 
-  vite@6.4.1(@types/node@25.0.0):
+  vite@6.4.1(@types/node@25.0.2):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -6992,10 +6992,10 @@ snapshots:
       rollup: 4.53.3
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 25.0.0
+      '@types/node': 25.0.2
       fsevents: 2.3.3
 
-  vite@7.2.6(@types/node@22.19.2):
+  vite@7.2.6(@types/node@22.19.3):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -7004,10 +7004,10 @@ snapshots:
       rollup: 4.53.3
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 22.19.2
+      '@types/node': 22.19.3
       fsevents: 2.3.3
 
-  vite@7.2.7(@types/node@25.0.0):
+  vite@7.2.7(@types/node@25.0.2):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.3)
@@ -7016,25 +7016,25 @@ snapshots:
       rollup: 4.53.3
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 25.0.0
+      '@types/node': 25.0.2
       fsevents: 2.3.3
 
   vitefu@1.1.1(vite@6.4.1(@types/node@22.19.1)):
     optionalDependencies:
       vite: 6.4.1(@types/node@22.19.1)
 
-  vitefu@1.1.1(vite@6.4.1(@types/node@22.19.2)):
+  vitefu@1.1.1(vite@6.4.1(@types/node@22.19.3)):
     optionalDependencies:
-      vite: 6.4.1(@types/node@22.19.2)
+      vite: 6.4.1(@types/node@22.19.3)
 
-  vitefu@1.1.1(vite@6.4.1(@types/node@25.0.0)):
+  vitefu@1.1.1(vite@6.4.1(@types/node@25.0.2)):
     optionalDependencies:
-      vite: 6.4.1(@types/node@25.0.0)
+      vite: 6.4.1(@types/node@25.0.2)
 
-  vitest@4.0.15(@types/node@22.19.2):
+  vitest@4.0.15(@types/node@22.19.3):
     dependencies:
       '@vitest/expect': 4.0.15
-      '@vitest/mocker': 4.0.15(vite@7.2.6(@types/node@22.19.2))
+      '@vitest/mocker': 4.0.15(vite@7.2.6(@types/node@22.19.3))
       '@vitest/pretty-format': 4.0.15
       '@vitest/runner': 4.0.15
       '@vitest/snapshot': 4.0.15
@@ -7051,10 +7051,10 @@ snapshots:
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.2.6(@types/node@22.19.2)
+      vite: 7.2.6(@types/node@22.19.3)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 22.19.2
+      '@types/node': 22.19.3
     transitivePeerDependencies:
       - jiti
       - less
