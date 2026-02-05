@@ -37,7 +37,7 @@ importers:
         version: 4.1.5
       ora:
         specifier: ^9.0.0
-        version: 9.2.0
+        version: 9.3.0
       pkg-pr-new:
         specifier: ^0.0.63
         version: 0.0.63
@@ -2352,8 +2352,8 @@ packages:
   oniguruma-to-es@4.3.4:
     resolution: {integrity: sha512-3VhUGN3w2eYxnTzHn+ikMI+fp/96KoRSVK9/kMTcFqj1NRDh2IhQCKvYxDnWePKRXY/AqH+Fuiyb7VHSzBjHfA==}
 
-  ora@9.2.0:
-    resolution: {integrity: sha512-4sGT6oNDbqIuciDfD2aCkoPgHLmOe+g+xpFK2WDO0aQuD/bNHNwfdFosWP+DXmcxRyXeF8vnki6kXnOOHTuRSA==}
+  ora@9.3.0:
+    resolution: {integrity: sha512-lBX72MWFduWEf7v7uWf5DHp9Jn5BI8bNPGuFgtXMmr2uDz2Gz2749y3am3agSDdkhHPHYmmxEGSKH85ZLGzgXw==}
     engines: {node: '>=20'}
 
   outdent@0.5.0:
@@ -5784,7 +5784,7 @@ snapshots:
       regex: 6.1.0
       regex-recursion: 6.0.2
 
-  ora@9.2.0:
+  ora@9.3.0:
     dependencies:
       chalk: 5.6.2
       cli-cursor: 5.0.0
