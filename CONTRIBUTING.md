@@ -24,9 +24,9 @@ To include a changeset in your PR:
 
 1. Create a changeset using the following command within your project directory:
 
-```bash
-pnpm changeset
-```
+    ```bash
+    pnpm changeset
+    ```
 
 2. Follow the prompts to describe the changes introduced in your PR. Ensure the changeset adheres to our contribution guidelines.
 
