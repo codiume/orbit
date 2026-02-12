@@ -4,5 +4,6 @@
     "noEmit": false,
     "outDir": "./dist",
     "allowImportingTsExtensions": false
-  }
+  },
+  "include": ["./src/*.ts"]
 }
