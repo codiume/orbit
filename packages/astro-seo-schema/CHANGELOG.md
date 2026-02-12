@@ -1,5 +1,11 @@
 # astro-seo-schema
 
+## 5.2.0
+
+### Minor Changes
+
+- [#1283](https://github.com/codiume/orbit/pull/1283) [`45f7056`](https://github.com/codiume/orbit/commit/45f7056552d715f7f077c5a8df097f4f991a567c) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Switch build system to tsup
+
 ## 5.1.0
 
 ### Minor Changes
