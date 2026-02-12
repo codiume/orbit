@@ -127,6 +127,43 @@ export type PurgeCSSOptions = {
 
 To learn more about the available options, please refer to [PurgeCSS][purgecss-options] official docs.
 
+## 🎯 Strategies
+
+This integration supports two strategies for handling CSS file hashes after purging:
+
+### `rehash` (default)
+
+The default strategy regenerates CSS filenames with content hashes after purging. This ensures the filename hash matches the actual purged content.
+
+```js
+export default defineConfig({
+  integrations: [
+    purgecss({
+      strategy: 'rehash' // default, can be omitted
+    })
+  ]
+});
+```
+
+**Characteristics:**
+
+- Filename hash matches the purged CSS content
+- Same purged CSS = same filename (deterministic)
+
+### `cachebuster`
+
+The cachebuster strategy injects random CSS during the build, causing Astro to generate unique new filename hashes automatically. After each build.
+
+```js
+export default defineConfig({
+  integrations: [
+    purgecss({
+      strategy: 'cachebuster'
+    })
+  ]
+});
+```
+
 We have also setup an example repository available here: [example-purgecss](../../apps/example-purgecss)
 
 ## 🌐 SSR Mode
