@@ -55,7 +55,7 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
             apply: 'build',
             enforce: 'pre',
             transform(code, id) {
-              if (!/\.(css|scss|sass|less|styl)$/.test(id)) {
+              if (!/\.(css|scss|sass|less|styl)(\?|$)/.test(id)) {
                 return null;
               }
               logger.info(`Injecting cache-buster CSS into: ${id}`);
