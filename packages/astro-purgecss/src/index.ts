@@ -2,7 +2,7 @@ import type { AstroConfig, AstroIntegration } from 'astro';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { randomUUID } from 'node:crypto';
-import { PurgeCSS, type UserDefinedOptions } from 'purgecss';
+import { PurgeCSS, type UserDefinedOptions, type RawContent } from 'purgecss';
 
 import {
   cleanPath,
@@ -21,6 +21,26 @@ type PurgeStrategy = 'default' | 'cache-buster';
  */
 export interface PurgeCSSOptions extends Partial<UserDefinedOptions> {
   strategy?: PurgeStrategy;
+  /**
+   * ⚠️ UNSAFE: Completely overrides the default content globs.
+   * When provided, only these content sources will be scanned by PurgeCSS.
+   * The default globs (outDir/**\/*.html and outDir/**\/*.js) will be ignored.
+   *
+   * Use this ONLY if the default globs cause performance issues on very large sites.
+   * The double underscore prefix indicates this is an advanced option that should
+   * be used with extreme caution.
+   *
+   * @example
+   * ```ts
+   * {
+   *   __unsafeContent: [
+   *     './dist/**\/*.js',
+   *     './src/**\/*.{astro,vue,jsx,tsx}'
+   *   ]
+   * }
+   * ```
+   */
+  __unsafeContent?: Array<string | RawContent>;
 }
 
 const INTEGRATION_NAME = 'astro-purgecss' as const;
@@ -39,7 +59,7 @@ const defaultExtractor = (content: string) =>
  */
 function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
   let config: AstroConfig;
-  const { strategy = 'default', ...purgecssOptions } = options;
+  const { strategy = 'default', __unsafeContent, ...purgecssOptions } = options;
 
   return {
     name: INTEGRATION_NAME,
@@ -87,12 +107,11 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
         }
 
         // Run PurgeCSS on all CSS files
-        // Replace is needed to make sure to pass correct glob format on windows machines
         const purgeResults = await new PurgeCSS().purge({
           css: [`${outDir}/**/*.css`.replace(/\\/g, '/')],
           defaultExtractor,
           ...purgecssOptions,
-          content: [
+          content: __unsafeContent ?? [
             `${outDir}/**/*.html`.replace(/\\/g, '/'),
             `${outDir}/**/*.js`.replace(/\\/g, '/'),
             ...(purgecssOptions.content || [])

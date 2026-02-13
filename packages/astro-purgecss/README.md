@@ -253,6 +253,47 @@ export default defineConfig({
 });
 ```
 
+## ⚠️ Advanced: Overriding Content Sources (`__unsafeContent`)
+
+> **WARNING**: This is an advanced option that should only be used as a last resort for performance issues on extremely large sites.
+
+By default, `astro-purgecss` scans all HTML and JavaScript files in your build output to determine which CSS classes are in use:
+
+```js
+// Default content sources (added automatically):
+[`${outDir}/**/*.html`, `${outDir}/**/*.js`];
+```
+
+For very large sites (e.g., 120,000+ pages), these globs can cause "Maximum call stack size exceeded" errors or severe performance degradation, see [`#1001`](https://github.com/codiume/orbit/issues/1001).
+
+The `__unsafeContent` option allows you to **completely override** the default content sources with your own custom array. When this option is provided, the default globs are **completely ignored**.
+
+### Usage Example
+
+```js
+export default defineConfig({
+  integrations: [
+    purgecss({
+      // ⚠️ WARNING: This completely bypasses default content scanning!
+      // Only use if the default globs cause performance issues.
+      // Ensure you include ALL files that contain CSS class references.
+      __unsafeContent: [
+        // Scan only JS files from the build output (skip HTML files)
+        process.cwd() + '/dist/**/*.js',
+        // Scan source files to catch SSR-rendered classes
+        process.cwd() + '/src/**/*.{astro,vue,jsx,tsx}'
+      ]
+    })
+  ]
+});
+```
+
+### ⚠️ Important Warnings
+
+1. **Complete Override**: When `__unsafeContent` is provided, the default globs (`${outDir}/**/*.html` and `${outDir}/**/*.js`) are **completely ignored**. Make sure your custom content array includes all necessary sources.
+
+2. **Risk of Over-Purging**: If your content array doesn't include all files that reference CSS classes, those classes will be incorrectly removed from your final CSS bundle, breaking your site's styling.
+
 ## 📝 Changelog
 
 Please see the [Changelog](CHANGELOG.md) for more information on what has changed recently.
