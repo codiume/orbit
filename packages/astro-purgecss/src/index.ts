@@ -1,6 +1,7 @@
 import type { AstroConfig, AstroIntegration } from 'astro';
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { randomUUID } from 'node:crypto';
 import { PurgeCSS, type UserDefinedOptions } from 'purgecss';
 
 import {
@@ -12,11 +13,15 @@ import {
   writeFileContent
 } from './utils';
 
+type PurgeStrategy = 'default' | 'cache-buster';
+
 /**
  * Extended PurgeCSS options interface that allows partial configuration
  * of the standard PurgeCSS options
  */
-export interface PurgeCSSOptions extends Partial<UserDefinedOptions> {}
+export interface PurgeCSSOptions extends Partial<UserDefinedOptions> {
+  strategy?: PurgeStrategy;
+}
 
 const INTEGRATION_NAME = 'astro-purgecss' as const;
 
@@ -34,6 +39,7 @@ const defaultExtractor = (content: string) =>
  */
 function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
   let config: AstroConfig;
+  const { strategy = 'default', ...purgecssOptions } = options;
 
   return {
     name: INTEGRATION_NAME,
@@ -41,6 +47,26 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
       'astro:config:done': ({ config: cfg }) => {
         config = cfg;
       },
+      ...(strategy === 'cache-buster' && {
+        'astro:build:setup': ({ vite, logger }) => {
+          if (!vite.plugins) vite.plugins = [];
+          vite.plugins.push({
+            name: 'inject-css-cache-buster',
+            apply: 'build',
+            enforce: 'pre',
+            transform(code, id) {
+              if (!/\.(css|scss|sass|less|styl)(\?|$)/.test(id)) {
+                return null;
+              }
+              logger.info(`Injecting cache-buster CSS into: ${id}`);
+              return {
+                code: `/*! Build: ${randomUUID().slice(0, 8)} */\n` + code,
+                map: null
+              };
+            }
+          });
+        }
+      }),
       'astro:build:done': async ({ dir, pages, logger }) => {
         const buildMode = config.output;
         logger.info(`📦 Running in '${buildMode}' mode`);
@@ -48,8 +74,9 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
         // Convert the URL to a filesystem path
         const outDir = cleanPath(dir);
 
-        // Used to skip file rehashing for SSR/Hybrid modes
-        const isSSR = buildMode !== 'static';
+        // skip file rehashing for SSR/Server mode or cache-buster strategy
+        const skipRehash =
+          buildMode !== 'static' || strategy === 'cache-buster';
 
         // Validate required Astro configuration
         if (!outDir || !config.build.format || !config.build.assets) {
@@ -64,11 +91,11 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
         const purgeResults = await new PurgeCSS().purge({
           css: [`${outDir}/**/*.css`.replace(/\\/g, '/')],
           defaultExtractor,
-          ...options,
+          ...purgecssOptions,
           content: [
             `${outDir}/**/*.html`.replace(/\\/g, '/'),
             `${outDir}/**/*.js`.replace(/\\/g, '/'),
-            ...(options.content || [])
+            ...(purgecssOptions.content || [])
           ]
         });
 
@@ -89,8 +116,8 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
           `Found ${purgedCssFiles.length} CSS ${purgedCssFiles.length === 1 ? 'file' : 'files'} to process`
         );
 
-        // Handle SSR/Hybrid mode
-        if (isSSR) {
+        // If SSR/Server mode or cache-buster strategy skip file rehash
+        if (skipRehash) {
           await Promise.all(
             purgedCssFiles.map(async ({ css, file }) => {
               await writeCssFile(file, css, file);

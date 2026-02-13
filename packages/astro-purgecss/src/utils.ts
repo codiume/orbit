@@ -30,7 +30,7 @@ export async function writeCssFile(
   await writeFileContent(newFilePath, css);
 
   // Remove old file if it exists and is different from new file
-  if (existsSync(oldFilePath) && oldFilePath !== newFilePath) {
+  if (oldFilePath !== newFilePath && existsSync(oldFilePath)) {
     await unlink(oldFilePath);
   }
 }

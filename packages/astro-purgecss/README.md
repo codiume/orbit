@@ -122,12 +122,57 @@ export type PurgeCSSOptions = {
     extractor: (content: string) => string[]; // matched css classes
     extensions: string[]; // file extensions for which this extractor is to be used
   }[];
+  strategy?: 'default' | 'cache-buster';
 };
 ```
 
 To learn more about the available options, please refer to [PurgeCSS][purgecss-options] official docs.
 
-We have also setup an example repository available here: [example-purgecss](../../apps/example-purgecss)
+## 🎯 Strategies
+
+This integration supports two strategies for handling CSS file hashes after purging. Choose the strategy that best fits your deployment and caching needs.
+
+### `default` (Recommended)
+
+The default strategy recalculates CSS file hashes based on the purged content and renames the files accordingly. This ensures the filename hash accurately reflects the final CSS content after unused rules are removed. best for static site generation (`output: 'static'`)
+
+```js
+export default defineConfig({
+  integrations: [
+    purgecss({
+      strategy: 'default' // default, can be omitted
+    })
+  ]
+});
+```
+
+- **Known issues:** See [#1000](https://github.com/codiume/orbit/issues/1000) for edge cases with certain build configurations.
+
+### `cache-buster`
+
+The cache-buster strategy injects a random UUID comment into each CSS file during the build process. This causes Vite to generate unique filename hashes automatically, without requiring manual file renaming.
+
+```js
+export default defineConfig({
+  integrations: [
+    purgecss({
+      strategy: 'cache-buster'
+    })
+  ]
+});
+```
+
+**When to use:**
+
+- Quick deployments where cache busting is more important than optimization
+- SSR builds where you prefer consistent behavior across modes
+
+**Notes:**
+
+- ⚠️ **Non-deterministic**: Every build generates different filenames, even with identical content
+- ⚠️ **Cache invalidation**: Forces browsers to download CSS on every deployment
+
+**Example repository:** [example-purgecss](../../apps/example-purgecss)
 
 ## 🌐 SSR Mode
 
@@ -190,6 +235,19 @@ export default defineConfig({
           extensions: ['astro', 'html']
         }
       ]
+    })
+  ]
+});
+```
+
+- If you have CSS files that are shared between both SSR and static pages, it's recommended to use the `cache-buster` strategy, See issue [#1000](https://github.com/codiume/orbit/issues/1000). The `default` strategy only processes static build output, which means SSR-rendered pages might reference outdated CSS filenames after the files are renamed during the build process. The `cache-buster` strategy avoids this issue by letting Vite handle hash generation without requiring file renaming:
+
+```js
+export default defineConfig({
+  output: 'server',
+  integrations: [
+    purgecss({
+      strategy: 'cache-buster' // Recommended for SSR builds with shared CSS
     })
   ]
 });
