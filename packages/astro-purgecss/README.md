@@ -264,7 +264,7 @@ By default, `astro-purgecss` scans all HTML and JavaScript files in your build o
 [`${outDir}/**/*.html`, `${outDir}/**/*.js`];
 ```
 
-For very large sites (e.g., 120,000+ pages), these globs can cause "Maximum call stack size exceeded" errors or severe performance degradation, see [1001](https://github.com/codiume/orbit/issues/1001).
+For very large sites (e.g., 120,000+ pages), these globs can cause "Maximum call stack size exceeded" errors or severe performance degradation, see [`#1001`](https://github.com/codiume/orbit/issues/1001).
 
 The `__unsafeContent` option allows you to **completely override** the default content sources with your own custom array. When this option is provided, the default globs are **completely ignored**.
 
