@@ -122,6 +122,7 @@ export type PurgeCSSOptions = {
     extractor: (content: string) => string[]; // matched css classes
     extensions: string[]; // file extensions for which this extractor is to be used
   }[];
+  strategy?: 'default' | 'cache-buster';
 };
 ```
 
