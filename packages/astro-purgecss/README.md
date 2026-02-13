@@ -165,7 +165,7 @@ export default defineConfig({
 **When to use:**
 
 - Quick deployments where cache busting is more important than optimization
-- SSR/Hybrid builds where you prefer consistent behavior across modes
+- SSR builds where you prefer consistent behavior across modes
 
 **Notes:**
 
@@ -240,14 +240,14 @@ export default defineConfig({
 });
 ```
 
-- If you have CSS files that are shared between both SSR and static pages in a hybrid setup, it's recommended to use the `cache-buster` strategy, See issue [#1000](https://github.com/codiume/orbit/issues/1000). The `default` strategy only processes static build output, which means SSR-rendered pages might reference outdated CSS filenames after the files are renamed during the build process. The `cache-buster` strategy avoids this issue by letting Vite handle hash generation without requiring file renaming:
+- If you have CSS files that are shared between both SSR and static pages, it's recommended to use the `cache-buster` strategy, See issue [#1000](https://github.com/codiume/orbit/issues/1000). The `default` strategy only processes static build output, which means SSR-rendered pages might reference outdated CSS filenames after the files are renamed during the build process. The `cache-buster` strategy avoids this issue by letting Vite handle hash generation without requiring file renaming:
 
 ```js
 export default defineConfig({
-  output: 'hybrid',
+  output: 'server',
   integrations: [
     purgecss({
-      strategy: 'cache-buster' // Recommended for hybrid/SSR builds with shared CSS
+      strategy: 'cache-buster' // Recommended for SSR builds with shared CSS
     })
   ]
 });

@@ -74,7 +74,7 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
         // Convert the URL to a filesystem path
         const outDir = cleanPath(dir);
 
-        // skip file rehashing for SSR/Hybrid modes or cache-buster strategy
+        // skip file rehashing for SSR/Server mode or cache-buster strategy
         const skipRehash =
           buildMode !== 'static' || strategy === 'cache-buster';
 
@@ -116,7 +116,7 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
           `Found ${purgedCssFiles.length} CSS ${purgedCssFiles.length === 1 ? 'file' : 'files'} to process`
         );
 
-        // If SSR/Hybrid mode or cache-buster strategy skip file rehash
+        // If SSR/Server mode or cache-buster strategy skip file rehash
         if (skipRehash) {
           await Promise.all(
             purgedCssFiles.map(async ({ css, file }) => {
