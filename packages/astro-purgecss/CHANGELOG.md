@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 5.5.0
+
+### Minor Changes
+
+- [#1288](https://github.com/codiume/orbit/pull/1288) [`74403e2`](https://github.com/codiume/orbit/commit/74403e2103b5fd7a49f4834bad4e5778f956d0f3) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Add \_\_unsafeContent option for custom content sources
+
 ## 5.4.0
 
 ### Minor Changes
