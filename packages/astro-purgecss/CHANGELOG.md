@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 5.4.0
+
+### Minor Changes
+
+- [#1286](https://github.com/codiume/orbit/pull/1286) [`ee6536c`](https://github.com/codiume/orbit/commit/ee6536cee6ca16232ef7f8961847e008b9406799) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Add new option for CSS cache busting
+
 ## 5.3.0
 
 ### Minor Changes
