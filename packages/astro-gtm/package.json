@@ -1,7 +1,7 @@
 {
   "name": "astro-gtm",
   "description": "Astro plugin to easily integrate Google Tag Manager (GTM) into your astro site",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/codiume/orbit",
   "bugs": "https://github.com/codiume/orbit/issues",
   "author": "codiume",

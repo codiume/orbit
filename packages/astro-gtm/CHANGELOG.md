@@ -1,5 +1,11 @@
 # astro-gtm
 
+## 1.1.0
+
+### Minor Changes
+
+- [#1291](https://github.com/codiume/orbit/pull/1291) [`116bc8a`](https://github.com/codiume/orbit/commit/116bc8a92cf36ebf7b6a28862aaab0dfb9fa39ff) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Add GDPR Consent Mode v2 with configurable default
+
 ## 1.0.0
 
 ### Major Changes
