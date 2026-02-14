@@ -1,7 +1,7 @@
 {
   "name": "astro-ui-avatars",
   "description": "Generate customizable user avatars with initials from names",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/codiume/orbit",
   "bugs": "https://github.com/codiume/orbit/issues",
   "author": "codiume",
