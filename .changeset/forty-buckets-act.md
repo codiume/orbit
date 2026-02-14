@@ -2,4 +2,4 @@
 'astro-gtm': minor
 ---
 
-Add google consent mode v2
+Add GDPR Consent Mode v2 with configurable default
