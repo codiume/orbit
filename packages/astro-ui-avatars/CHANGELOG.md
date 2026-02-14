@@ -1,5 +1,11 @@
 # astro-ui-avatars
 
+## 1.0.0
+
+### Major Changes
+
+- [`9b0509d`](https://github.com/codiume/orbit/commit/9b0509d4cb79b85ab81bf2d26ddf413be7dcf766) Thanks [@mhdcodes](https://github.com/mhdcodes)! - release v1
+
 ## 0.1.0
 
 ### Minor Changes
