@@ -1,4 +1,14 @@
 ---
+export type ConsentDefaults = {
+  ad_storage?: 'granted' | 'denied';
+  analytics_storage?: 'granted' | 'denied';
+  ad_user_data?: 'granted' | 'denied';
+  ad_personalization?: 'granted' | 'denied';
+  functionality_storage?: 'granted' | 'denied';
+  personalization_storage?: 'granted' | 'denied';
+  security_storage?: 'granted' | 'denied';
+};
+
 export interface Props {
   /**
    * Google Tag Manager container ID (required)
@@ -40,6 +50,13 @@ export interface Props {
    * @example 'env-1'
    */
   preview?: string;
+
+  /**
+   * Default consent state for Google Consent Mode v2
+   * Set consent defaults before GTM initializes for GDPR compliance
+   * @see https://developers.google.com/tag-platform/security/guides/consent
+   */
+  defaultConsent?: ConsentDefaults;
 }
 
 const {
@@ -50,20 +67,34 @@ const {
   enableInDevMode = false,
   auth,
   preview,
+  defaultConsent,
 } = Astro.props;
 
 // Skip in development mode unless explicitly enabled
 const isDevelopment = import.meta.env.DEV;
 const shouldRender = !isDevelopment || enableInDevMode;
+
+// Validate GTM ID format
+if (shouldRender && !/^GTM-[A-Z0-9]{5,}$/i.test(gtmId)) {
+  console.warn(
+    `[astro-gtm] Invalid GTM ID format: "${gtmId}". Expected format: GTM-XXXXXXX (e.g., GTM-ABC123)`
+  );
+}
 ---
 
 {shouldRender && (
-  <script define:vars={{ gtmId, dataLayerName, dataLayer, auth, preview }} is:inline>
+  <script define:vars={{ gtmId, dataLayerName, dataLayer, auth, preview, defaultConsent }} is:inline>
     var w = window;
     var d = document;
 
     // Initialize data layer
     w[dataLayerName] = w[dataLayerName] || [];
+
+    // Set consent defaults if provided (must be first)
+    if (defaultConsent) {
+      w[dataLayerName].push(['consent', 'default', defaultConsent]);
+    }
+
     w[dataLayerName].push(dataLayer);
     w[dataLayerName].push({
       "gtm.start": new Date().getTime(),
