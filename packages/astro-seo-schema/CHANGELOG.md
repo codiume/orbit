@@ -1,5 +1,11 @@
 # astro-seo-schema
 
+## 6.0.0
+
+### Major Changes
+
+- [#1295](https://github.com/codiume/orbit/pull/1295) [`7d5e6de`](https://github.com/codiume/orbit/commit/7d5e6de61cf264a1a66243833bdfbd510f8cfcfc) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Update Astro to version 6.x and related adapter dependencies
+
 ## 5.2.0
 
 ### Minor Changes
