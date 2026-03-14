@@ -10,10 +10,10 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^5.18.0"
+    "astro": "^6.0.4"
   },
   "dependencies": {
-    "@astrojs/node": "^9.5.4",
+    "@astrojs/node": "^10.0.1",
     "astro-purgecss": "workspace:*"
   }
 }
