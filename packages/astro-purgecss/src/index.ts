@@ -1,6 +1,6 @@
 import type { AstroConfig, AstroIntegration } from 'astro';
 import { existsSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, relative } from 'node:path';
 import { randomUUID } from 'node:crypto';
 import { PurgeCSS, type UserDefinedOptions, type RawContent } from 'purgecss';
 
@@ -140,7 +140,7 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
           await Promise.all(
             purgedCssFiles.map(async ({ css, file }) => {
               await writeCssFile(file, css, file);
-              success(file.replace(outDir, ''));
+              success(relative(outDir, file));
             })
           );
           logger.info('🎉 Purging completed successfully!');
@@ -156,7 +156,7 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
             // ex: assets/styles/light.css
             if (!isAssetFile) {
               await writeCssFile(file, css, file);
-              const relativePath = file.replace(outDir, '');
+              const relativePath = relative(outDir, file);
               success(relativePath);
               return {
                 oldFilename: relativePath,
@@ -168,8 +168,8 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
             const hashedFilename = generateFileHash(file, css);
             await writeCssFile(hashedFilename, css, file);
 
-            const relativeOldPath = file.replace(outDir, '');
-            const relativeNewPath = hashedFilename.replace(outDir, '');
+            const relativeOldPath = relative(outDir, file);
+            const relativeNewPath = relative(outDir, hashedFilename);
             success(relativeNewPath);
 
             return {
@@ -251,7 +251,7 @@ function Plugin(options: PurgeCSSOptions = {}): AstroIntegration {
               }
 
               await writeFileContent(htmlFile, content);
-              success(htmlFile.replace(outDir, ''));
+              success(relative(outDir, htmlFile));
             })
           );
         }

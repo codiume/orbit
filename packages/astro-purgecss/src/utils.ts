@@ -44,14 +44,14 @@ export function generateFileHash(filePath: string, content: string) {
   return `${filePath.slice(0, -13)}.${hash}.css`;
 }
 
-// Clean from extra slash on windows and trailing forward slash on non-windows
+// Clean from trailing slash and extra leading slash on windows
 export function cleanPath(file: URL): string {
   if (!(file instanceof URL)) {
     throw new TypeError('Expected a URL object');
   }
 
-  // Remove trailing forward slash if present
-  let path = fileURLToPath(file).replace(/\/+$/, '');
+  // Remove trailing slash if present
+  let path = fileURLToPath(file).replace(/(?:\/+|\\+)$/, '');
 
   // Remove leading forward slash on windows if present
   return process.platform === 'win32' ? path.replace(/^\/+/, '') : path;
