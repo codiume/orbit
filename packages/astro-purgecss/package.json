@@ -1,7 +1,7 @@
 {
   "name": "astro-purgecss",
   "description": "Remove unused CSS rules from your final Astro bundle",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "homepage": "https://github.com/codiume/orbit",
   "bugs": "https://github.com/codiume/orbit/issues",
   "author": "codiume",
