@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 6.0.1
+
+### Patch Changes
+
+- [#1297](https://github.com/codiume/orbit/pull/1297) [`1cb2e51`](https://github.com/codiume/orbit/commit/1cb2e518b0c4a2cfad2f468c019fe5547e6f1f73) Thanks [@adams85](https://github.com/adams85)! - Fix broken path handling on Windows
+
 ## 6.0.0
 
 ### Major Changes
