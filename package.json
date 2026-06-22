@@ -6,6 +6,11 @@
     "apps/*",
     "packages/*"
   ],
+  "pnpm": {
+    "overrides": {
+      "vite-node": "^6.0.0"
+    }
+  },
   "scripts": {
     "test": "vitest run",
     "build": "turbo run build && turbo run typecheck",
