@@ -45,7 +45,7 @@
     }
   },
   "peerDependencies": {
-    "astro": "^6.0.0"
+    "astro": "^7.0.0"
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.14.1",
