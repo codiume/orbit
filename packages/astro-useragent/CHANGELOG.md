@@ -1,5 +1,11 @@
 # astro-useragent
 
+## 7.0.0
+
+### Major Changes
+
+- [#1307](https://github.com/codiume/orbit/pull/1307) [`1f275d4`](https://github.com/codiume/orbit/commit/1f275d451c6c116883103470b4e988770d8ba0c1) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Upgrade Astro to v7
+
 ## 6.0.0
 
 ### Major Changes
