@@ -50,6 +50,6 @@
     "ua-parser-js": "^2.0.10"
   },
   "peerDependencies": {
-    "astro": "^6.0.0"
+    "astro": "^7.0.0"
   }
 }
