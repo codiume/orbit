@@ -28,10 +28,10 @@ jobs:
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
-        uses: changesets/action@v1
+        uses: changesets/action@v2.1.0
         with:
-          version: pnpm run changeset:version
-          publish: pnpm run changeset:publish
+          version-script: pnpm run changeset:version
+          publish-script: pnpm run changeset:publish
         env:
           NPM_CONFIG_PROVENANCE: true
           GITHUB_TOKEN: ${{ github.token }}
