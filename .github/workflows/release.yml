@@ -21,8 +21,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: '22'
+          node-version: '24'
           cache: 'pnpm'
+
+      - run: npm install -g npm@latest
+      - run: npm -v
 
       - run: pnpm install --frozen-lockfile
 
@@ -33,6 +36,4 @@ jobs:
           version-script: pnpm run changeset:version
           publish-script: pnpm run changeset:publish
         env:
-          NPM_CONFIG_PROVENANCE: true
           GITHUB_TOKEN: ${{ github.token }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
