@@ -1,5 +1,5 @@
 import { createHmac } from 'node:crypto';
-import { describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   concatBytes,
   defineWebhook,
@@ -35,6 +35,18 @@ const call = (
       headers: { 'content-type': 'application/json', ...headers }
     })
   });
+
+// The library logs misconfigurations and handler failures. Keep that out of the
+// test output; tests that expect a log assert on these spies instead.
+let consoleError: ReturnType<typeof vi.spyOn>;
+let consoleWarn: ReturnType<typeof vi.spyOn>;
+beforeEach(() => {
+  consoleError = vi.spyOn(console, 'error').mockImplementation(() => {});
+  consoleWarn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+});
+afterEach(() => {
+  vi.restoreAllMocks();
+});
 
 const body = JSON.stringify({ action: 'push' });
 const now = () => String(Math.floor(Date.now() / 1000));
@@ -84,6 +96,7 @@ describe('secrets', () => {
     expect(
       (await call(r, body, { Signature: sign('sha256', '', body) })).status
     ).toBe(500);
+    expect(consoleError).toHaveBeenCalledOnce();
   });
 });
 
@@ -189,6 +202,7 @@ describe('payload and handler', () => {
       }
     });
     expect((await call(r, body, headers)).status).toBe(500);
+    expect(consoleError).toHaveBeenCalledOnce();
   });
 
   it('lets handle return a custom Response', async () => {
@@ -247,6 +261,7 @@ describe('edge cases', () => {
       handle
     });
     expect((await call(r, body, headers)).status).toBe(401);
+    expect(consoleWarn).toHaveBeenCalledOnce();
   });
 
   it('keeps the request body readable in handle', async () => {
@@ -439,6 +454,7 @@ describe('secret resolution errors (regression)', () => {
       handle
     });
     expect((await call(r, body, { Signature: 'x' })).status).toBe(500);
+    expect(consoleError).toHaveBeenCalledOnce();
   });
 });
 
