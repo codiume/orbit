@@ -2,4 +2,4 @@
 'astro-webhooks': major
 ---
 
-[astro-webhooks] Rewrite as a webhook verification library
+[astro-webhooks] Add signature validation, payload parsing, optional schema checks
