@@ -213,9 +213,7 @@ export default defineConfig({
     purgecss({
       keyframes: false,
       safelist: {
-        greedy: [
-          /*astro*/
-        ]
+        greedy: [/*astro*/]
       }
     })
   ]
