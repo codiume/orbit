@@ -29,9 +29,7 @@ export function JsonLd(
 
 type JsonValueScalar = string | boolean | number;
 type JsonValue =
-  | JsonValueScalar
-  | Array<JsonValue>
-  | { [key: string]: JsonValue };
+  JsonValueScalar | Array<JsonValue> | { [key: string]: JsonValue };
 type JsonReplacer = (_: string, value: JsonValue) => JsonValue | undefined;
 
 const ESCAPE_ENTITIES = Object.freeze({
