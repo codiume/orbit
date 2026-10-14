@@ -1,5 +1,11 @@
 # astro-webhooks
 
+## 1.0.1
+
+### Patch Changes
+
+- [#1321](https://github.com/codiume/orbit/pull/1321) [`590208d`](https://github.com/codiume/orbit/commit/590208dad634c7b4ec2eaaa7683f03b15e941991) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Switch build system from tsup to tsdown
+
 ## 1.0.0
 
 ### Major Changes
