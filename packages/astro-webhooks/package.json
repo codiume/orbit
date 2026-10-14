@@ -1,7 +1,7 @@
 {
   "name": "astro-webhooks",
   "description": "Verify incoming webhooks in Astro endpoints with signature validation, schemas and provider presets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/codiume/orbit",
   "bugs": "https://github.com/codiume/orbit/issues",
   "author": "codiume",
