@@ -1,5 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["tsdown.base.mjs"],
 
   "tasks": {
     "test": {
