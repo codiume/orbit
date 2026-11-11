@@ -1,4 +1,6 @@
 ---
+import GoogleTagManagerScript from './GoogleTagManagerScript.astro';
+
 export type ConsentDefaults = {
   ad_storage?: 'granted' | 'denied';
   analytics_storage?: 'granted' | 'denied';
@@ -62,12 +64,12 @@ export interface Props {
 const {
   gtmId,
   dataLayer = {},
-  dataLayerName = "dataLayer",
+  dataLayerName = 'dataLayer',
   includeNoScript = true,
   enableInDevMode = false,
   auth,
   preview,
-  defaultConsent,
+  defaultConsent
 } = Astro.props;
 
 // Skip in development mode unless explicitly enabled
@@ -82,39 +84,21 @@ if (shouldRender && !/^GTM-[A-Z0-9]{5,}$/i.test(gtmId)) {
 }
 ---
 
-{shouldRender && (
-  <script define:vars={{ gtmId, dataLayerName, dataLayer, auth, preview, defaultConsent }} is:inline>
-    var w = window;
-    var d = document;
+{
+  shouldRender && (
+    <GoogleTagManagerScript
+      gtmId={gtmId}
+      dataLayerName={dataLayerName}
+      dataLayer={dataLayer}
+      auth={auth}
+      preview={preview}
+      defaultConsent={defaultConsent}
+    />
+  )
+}
 
-    // Initialize data layer
-    w[dataLayerName] = w[dataLayerName] || [];
-
-    // Set consent defaults if provided (must be first)
-    if (defaultConsent) {
-      w[dataLayerName].push(['consent', 'default', defaultConsent]);
-    }
-
-    w[dataLayerName].push(dataLayer);
-    w[dataLayerName].push({
-      "gtm.start": new Date().getTime(),
-      event: "gtm.js",
-    });
-
-    // Build script URL
-    var dl = dataLayerName !== "dataLayer" ? "&l=" + dataLayerName : "";
-    var ath = auth ? `&gtm_auth=${auth}` : "";
-    var prv = preview ? `&gtm_preview=${preview}` : "";
-
-    var s = d.createElement("script");
-    s.async = true;
-    s.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}${dl}${ath}${prv}`;
-
-    d.head.appendChild(s);
-  </script>
-)}
-
-{ shouldRender && includeNoScript && (
+{
+  shouldRender && includeNoScript && (
     <noscript>
       <iframe
         src={`https://www.googletagmanager.com/ns.html?id=${gtmId}${auth ? `&gtm_auth=${auth}` : ''}${preview ? `&gtm_preview=${preview}` : ''}`}
