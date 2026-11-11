@@ -1,5 +1,11 @@
 # astro-purgecss
 
+## 7.0.2
+
+### Patch Changes
+
+- [#1326](https://github.com/codiume/orbit/pull/1326) [`96bce8b`](https://github.com/codiume/orbit/commit/96bce8b6a7aaf6f46f4354ceb69f0801063130bb) Thanks [@mhdcodes](https://github.com/mhdcodes)! - Add "Getting Started with AI" section to package READMEs
+
 ## 7.0.1
 
 ### Patch Changes
