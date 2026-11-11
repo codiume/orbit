@@ -8,6 +8,14 @@
 
 [Purgecss][purgecss] helps you remove unused CSS rules from your final astro bundle.
 
+## 🤖 Getting Started with AI
+
+Paste this into your AI coding tool and let it handle the setup:
+
+```text
+Install astro-purgecss and its purgecss peer dependency in this Astro project, then read `node_modules/astro-purgecss/README.md` to learn the options. Add `purgecss()` from `astro-purgecss` to `integrations` in my Astro config, as the last entry. Set `build.inlineStylesheets: 'never'` so inlined CSS gets purged too. Run a production build and tell me how much CSS was removed.
+```
+
 ## 📦 Installation
 
 ### ⚡ Quick Install

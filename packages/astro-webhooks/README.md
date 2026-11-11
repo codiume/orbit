@@ -14,6 +14,24 @@ Astro Webhooks verifies incoming webhooks in Astro endpoints. Each webhook is on
 - Key rotation, and secrets read per request for Cloudflare and other edge runtimes
 - Uses only Web Crypto, so it runs on Node, Deno, Bun and edge runtimes
 
+## 🤖 Getting Started with AI
+
+Paste this into your AI coding tool and let it handle the setup:
+
+### Set up a webhook endpoint
+
+```text
+Install astro-webhooks in this Astro project, then read `node_modules/astro-webhooks/README.md` to learn the API. Ask me which provider will send webhooks (GitHub, Slack, Stripe, Shopify or a custom one) and which events I care about. Create an endpoint under `src/pages/webhooks/` that exports `POST = defineWebhook(...)` with the matching preset, and read the signing secret from an environment variable declared with `astro:env` (or from `ctx.locals.runtime.env` on Cloudflare). Make sure the project has an adapter and the endpoint is not prerendered.
+```
+
+Then define the payload. A schema turns unexpected payloads into a `400` instead of a crash inside your handler:
+
+### Validate and handle events
+
+```text
+Add a `schema` using `z` from `astro/zod` that covers only the fields my handler reads, using `.passthrough()` for the rest. In `handle`, ignore events I don't care about by returning early, and throw only on failures the sender should retry. Never accept unsigned requests or hardcode the secret. Show me how to send a signed test request to the endpoint before moving on.
+```
+
 ## 📦 Installation
 
 Install the `astro-webhooks` package using your package manager.

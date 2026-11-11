@@ -10,6 +10,24 @@
 
 This [Astro](https://astro.build/) package provides a component to generate user avatars with initials from names.
 
+## 🤖 Getting Started with AI
+
+Paste this into your AI coding tool and let it handle the setup:
+
+### Set up avatars
+
+```text
+Install astro-ui-avatars in this Astro project, then read `node_modules/astro-ui-avatars/README.md` to learn the props. Find where this app shows users, authors or team members without a photo, and render the `Avatar` component from `astro-ui-avatars` there with the person's `name`. Keep real photos where they exist and use `Avatar` as the fallback.
+```
+
+Then match the app's look. Avatars repeat across the UI, so it is worth settling the style once:
+
+### Style the avatars
+
+```text
+Ask me how avatars should look: `rounded` or square, a fixed `background` from my brand colors or `'random'`, and one or two initials (`length`). Default to rounded, `size` 64, and my primary color if I have no preference. Wrap the choice in a small component of my own so every usage stays consistent, and show me the result before moving on.
+```
+
 ## 📦 Installation
 
 Install using pnpm:
