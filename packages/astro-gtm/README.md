@@ -29,7 +29,7 @@ Ask me whether this site needs cookie consent (for example, visitors from the EU
 
 ## 📋 Requirements
 
-- Astro 7.4 or higher
+- Astro 7.0 or higher
 - A Google Tag Manager account and container ID
 
 ## 📦 Installation
