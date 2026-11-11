@@ -9,6 +9,24 @@
 
 This [Astro](https://astro.build/) plugin makes it easy to integrate [Google Tag Manager](https://tagmanager.google.com/) into your project, letting you manage marketing and analytics tags directly from your Astro website.
 
+## 🤖 Getting Started with AI
+
+Paste this into your AI coding tool and let it handle the setup:
+
+### Set up Google Tag Manager
+
+```text
+Install astro-gtm in this Astro project, then read `node_modules/astro-gtm/README.md` to learn the API. Add the `GoogleTagManager` component from `astro-gtm` inside the `<body>` of my main layout so it runs on every page. Read the container ID from a `PUBLIC_GTM_ID` environment variable: add it to `.env` (and `.env.example` if there is one) and type it in `src/env.d.ts`. Ask me for my GTM container ID if you can't find one in the project, and don't enable it in dev mode unless I ask.
+```
+
+Then sort out consent. Tags fire on the first page view, so it is worth deciding this before anything goes live:
+
+### Configure consent mode
+
+```text
+Ask me whether this site needs cookie consent (for example, visitors from the EU/UK). If it does, pass `defaultConsent` to `<GoogleTagManager>` with `ad_storage`, `ad_user_data`, `ad_personalization` and `analytics_storage` set to `'denied'`, then wire my cookie banner to push a `consent` `update` to the dataLayer when the visitor accepts. If there is no banner yet, ask me before building one. Show me the consent flow before moving on.
+```
+
 ## 📋 Requirements
 
 - Astro 5.0 or higher

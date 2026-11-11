@@ -10,6 +10,24 @@ This [Astro](https://astro.build/) component makes it easy to add tags that are 
 
 It supports [Facebook][facebook], [Twitter][twitter-cards], [Open Graph][og], and `meta` tags.
 
+## 🤖 Getting Started with AI
+
+Paste this into your AI coding tool and let it handle the setup:
+
+### Set up SEO meta tags
+
+```text
+Install astro-seo-meta in this Astro project, then read `node_modules/astro-seo-meta/README.md` to learn the props. Add the `Seo` component from `astro-seo-meta` to the `<head>` of my base layout and expose `title`, `description` and a share image as layout props so each page can set its own. Remove any hand-written `<title>`, description, Open Graph or Twitter tags that `<Seo>` now renders, so nothing is duplicated.
+```
+
+Then fill in the content. Search engines and link previews show whatever is there, so it is worth one pass over every page:
+
+### Write per-page metadata
+
+```text
+List my pages and give each one a specific `title` and `description`; ask me where the right wording isn't obvious from the page content. Set `facebook` and `twitter` share images, `twitter.site` if I have a handle, `themeColor`, and `robots` (use `noindex` for pages that shouldn't be searchable, and ask me which those are). Show me the rendered `<head>` of the home page before moving on.
+```
+
 ## 📦 Installation
 
 Install using pnpm:

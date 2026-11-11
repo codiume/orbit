@@ -13,6 +13,24 @@ It works both:
 - On the server (SSR) by reading the request's `user-agent` header.
 - In the browser (client-side) by reading `navigator.userAgent`.
 
+## 🤖 Getting Started with AI
+
+Paste this into your AI coding tool and let it handle the setup:
+
+### Set up user agent detection
+
+```text
+Install astro-useragent in this Astro project, then read `node_modules/astro-useragent/README.md` to learn the API. Ask me what I want to detect (mobile vs desktop, a specific browser, bots or AI crawlers) and whether that should happen on the server or in the browser. On the server, call `useUserAgent` from `astro-useragent` with `Astro.request.headers.get('user-agent')` in on-demand pages or endpoints; in the browser, call it with `navigator.userAgent` in a client script.
+```
+
+Then check the fallback. User agent strings can be missing or spoofed, so the default path matters as much as the detection:
+
+### Handle the edge cases
+
+```text
+Make sure every branch has a sensible default when the user agent is missing or unknown, and that pages using server-side detection are not prerendered (set `export const prerender = false` or use `output: 'server'`). For layout decisions such as mobile vs desktop, prefer CSS media queries and use the user agent only where CSS can't help. Show me where detection is used before moving on.
+```
+
 ## 📦 Installation
 
 First, install the `astro-useragent` package using your package manager. (If you aren’t sure which package manager you’re using, run the first command.)

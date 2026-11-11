@@ -16,6 +16,24 @@ This `<Schema>` component:
 2. Escapes the JSON data.
 3. Outputs a `<script type="type="application/ld+json">` with the escaped schema.
 
+## 🤖 Getting Started with AI
+
+Paste this into your AI coding tool and let it handle the setup:
+
+### Set up structured data
+
+```text
+Install astro-seo-schema and its schema-dts peer dependency in this Astro project, then read `node_modules/astro-seo-schema/README.md` to learn the API. Ask me what this site is (a business, a person, a blog, a store, ...) and add the `Schema` component from `astro-seo-schema` to the `<head>` of my base layout with a matching `WebSite` and `Organization` or `Person` item. Use the `schema-dts` types so mistakes fail the type check, and don't make up details like addresses or social profiles: ask me for them.
+```
+
+Then cover the rest of the site. Rich results depend on each page type having its own schema:
+
+### Add per-page schema
+
+```text
+Find the page types in this project (blog posts, products, events, FAQs, ...) and add the matching schema.org type to each, filled from the page's frontmatter or content collection data: for example `BlogPosting` with headline, dates and author, or `Product` with offers. Run the type check, then show me the rendered JSON-LD for one page of each type so I can test it in Google's Rich Results Test before moving on.
+```
+
 ## 📦 Installation
 
 First, install the `schema-dts` & `astro-seo-schema` packages using your package manager. (If you aren’t sure which package manager you’re using, run the first command.)

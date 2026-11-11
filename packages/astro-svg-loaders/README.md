@@ -8,6 +8,24 @@
 
 This [Astro](https://astro.build/) package provides you with a collection of loading animations built with pure SVG by the amazing [@sherb][sam-herbert].
 
+## 🤖 Getting Started with AI
+
+Paste this into your AI coding tool and let it handle the setup:
+
+### Set up loading indicators
+
+```text
+Install astro-svg-loaders in this Astro project, then read `node_modules/astro-svg-loaders/README.md`. List every place this app shows a loading state (spinners, "Loading..." text, `Suspense`/`server:defer` fallbacks, form submit buttons) and show me the list. Don't replace anything yet.
+```
+
+Then pick a look. The loaders draw in white and take no props, so the style and the background they sit on are worth one question:
+
+### Pick a loader
+
+```text
+Ask me which loader fits this app: `Audio`, `BallTriangle`, `Bars`, `Circles`, `Grid`, `Hearts`, `Oval`, `Puff`, `Rings`, `SpinningCircles`, `TailSpin` or `ThreeDots`. Default to `TailSpin` if I have no preference. Use it in the places from the list, wrapped in an element with `role="status"` and visually hidden "Loading" text. The SVGs are white, so on light backgrounds wrap them in a dark container or invert them with CSS. Show me the result before moving on.
+```
+
 ## 📦 Installation
 
 This package is hosted on [`npm`][npm].
